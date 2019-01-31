@@ -1,7 +1,10 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
+import { NgbCollapseModule } from '@ng-bootstrap/ng-bootstrap';
+
 import { NavbarComponent } from './navbar/navbar.component';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [
@@ -11,7 +14,9 @@ import { NavbarComponent } from './navbar/navbar.component';
     NavbarComponent
   ],
   imports: [
-    CommonModule
+    RouterModule,
+    CommonModule,
+    NgbCollapseModule,
   ]
 })
 export class LayoutModule { }
