@@ -1,9 +1,9 @@
 {
-    "language": {
-        "english": "EN",
-        "spanish": "ES"
-    },
-    "home": {
-        "title": "Initial Home View"
-    }
+  "home": {
+    "title": "Initial Home View"
+  },
+  "language": {
+    "english": "EN",
+	"spanish": "ES"
+  }
 }

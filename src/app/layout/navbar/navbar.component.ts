@@ -7,11 +7,11 @@ import {TranslateService} from '@ngx-translate/core';
   styleUrls: ['./navbar.component.less']
 })
 export class NavbarComponent {
-  language = navigator.language.split(/[-_]/)[0];
-  constructor(private translate: TranslateService) {
+
+  constructor(private translateService: TranslateService) {
   }
 
   switchLanguage(language: string) {
-    this.translate.use(language);
+    this.translateService.use(language);
   }
 }

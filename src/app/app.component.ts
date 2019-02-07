@@ -7,8 +7,10 @@ import { TranslateService } from '@ngx-translate/core';
   styleUrls: ['./app.component.less']
 })
 export class AppComponent {
-  language = navigator.language.split(/[-_]/)[0];
-  constructor(private translate: TranslateService) {
-    this.translate.use(this.language);
+
+  constructor(private translateService: TranslateService) {
+    const browserLanguage = translateService.getBrowserLang();
+    translateService.setDefaultLang('en');
+    translateService.use(browserLanguage);
   }
 }
