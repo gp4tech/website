@@ -1,6 +1,13 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <div class="container">
-    <a class="navbar-brand" href="#">GP4Tech</a>
+<nav class="navbar-fixed">
+  <div class="nav-wrapper">
+    <div class="container">
+      <a href="#" class="brand-logo left">GP4Tech</a>
+      <ul id="nav-mobile" class="left hide-on-med-and-down links">
+        <li>
+          <a>About Us</a>
+        </li>
+      </ul>
+    </div>
   </div>
   <a (click)="switchLanguage('en')">{{ 'language.english' | translate }}</a> |
   <a (click)="switchLanguage('es')">{{ 'language.spanish' | translate }}</a>
