@@ -1,6 +1,13 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
+import {
+  TranslateModule,
+  TranslateLoader,
+  TranslateFakeLoader
+} from '@ngx-translate/core';
+
 import { NavbarComponent } from './navbar.component';
+import { LanguageButtonComponent } from 'src/app/custom/language-button/language-button.component';
 
 describe('NavbarComponent', () => {
   let component: NavbarComponent;
@@ -8,9 +15,13 @@ describe('NavbarComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ NavbarComponent ]
-    })
-    .compileComponents();
+      declarations: [NavbarComponent, LanguageButtonComponent],
+      imports: [
+        TranslateModule.forRoot({
+          loader: { provide: TranslateLoader, useClass: TranslateFakeLoader }
+        })
+      ]
+    }).compileComponents();
   }));
 
   beforeEach(() => {
