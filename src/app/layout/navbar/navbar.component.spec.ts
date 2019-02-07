@@ -7,7 +7,7 @@ import {
 } from '@ngx-translate/core';
 
 import { NavbarComponent } from './navbar.component';
-import { LanguageButtonComponent } from 'src/app/custom/language-button/language-button.component';
+import { LanguageButtonComponent } from './language-button/language-button.component';
 
 describe('NavbarComponent', () => {
   let component: NavbarComponent;

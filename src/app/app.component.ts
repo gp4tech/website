@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 
-import { LanguageService } from './custom/language-button/language.service';
+import { LanguageService } from './layout/navbar/language-button/language.service';
 
 @Component({
   selector: 'app-root',
