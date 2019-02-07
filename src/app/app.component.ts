@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-import { TranslateService } from '@ngx-translate/core';
+
+import { LanguageService } from './custom/language-button/language.service';
 
 @Component({
   selector: 'app-root',
@@ -7,10 +8,7 @@ import { TranslateService } from '@ngx-translate/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-
-  constructor(private translateService: TranslateService) {
-    const browserLanguage = translateService.getBrowserLang();
-    translateService.setDefaultLang('en');
-    translateService.use(browserLanguage);
+  constructor(languageService: LanguageService) {
+    languageService.setDefaultLanguage();
   }
 }

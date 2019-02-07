@@ -1,17 +1,8 @@
-import { Component, OnInit } from '@angular/core';
-import {TranslateService} from '@ngx-translate/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-navbar',
   templateUrl: './navbar.component.html',
   styleUrls: ['./navbar.component.scss']
 })
-export class NavbarComponent {
-
-  constructor(private translateService: TranslateService) {
-  }
-
-  switchLanguage(language: string) {
-    this.translateService.use(language);
-  }
-}
+export class NavbarComponent {}

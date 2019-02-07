@@ -1,14 +1,15 @@
 <nav class="navbar-fixed">
   <div class="nav-wrapper">
     <div class="container">
-      <a href="#" class="brand-logo left">GP4Tech</a>
-      <ul id="nav-mobile" class="left hide-on-med-and-down links">
+      <a class="brand-logo">GP4Tech</a>
+      <ul class="left hide-on-med-and-down links">
         <li>
-          <a>About Us</a>
+          <a>{{ 'links.about' | translate }}</a>
         </li>
       </ul>
+      <div class="right">
+        <app-language-button></app-language-button>
+      </div>
     </div>
   </div>
-  <a (click)="switchLanguage('en')">{{ 'language.english' | translate }}</a> |
-  <a (click)="switchLanguage('es')">{{ 'language.spanish' | translate }}</a>
 </nav>
