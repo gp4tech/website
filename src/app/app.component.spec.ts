@@ -1,6 +1,12 @@
 import { TestBed, async } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
 
+import {
+  TranslateModule,
+  TranslateLoader,
+  TranslateFakeLoader
+} from '@ngx-translate/core';
+
 import { AppComponent } from './app.component';
 import { LayoutModule } from './layout/layout.module';
 import { HomeModule } from './home/home.module';
@@ -12,10 +18,11 @@ describe('AppComponent', () => {
         RouterTestingModule,
         LayoutModule,
         HomeModule,
+        TranslateModule.forRoot({
+          loader: { provide: TranslateLoader, useClass: TranslateFakeLoader }
+        })
       ],
-      declarations: [
-        AppComponent
-      ],
+      declarations: [AppComponent]
     }).compileComponents();
   }));
 

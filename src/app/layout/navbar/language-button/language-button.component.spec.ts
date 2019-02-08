@@ -6,16 +6,15 @@ import {
   TranslateFakeLoader
 } from '@ngx-translate/core';
 
-import { NavbarComponent } from './navbar.component';
-import { LanguageButtonComponent } from './language-button/language-button.component';
+import { LanguageButtonComponent } from './language-button.component';
 
-describe('NavbarComponent', () => {
-  let component: NavbarComponent;
-  let fixture: ComponentFixture<NavbarComponent>;
+describe('LanguageButtonComponent', () => {
+  let component: LanguageButtonComponent;
+  let fixture: ComponentFixture<LanguageButtonComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [NavbarComponent, LanguageButtonComponent],
+      declarations: [LanguageButtonComponent],
       imports: [
         TranslateModule.forRoot({
           loader: { provide: TranslateLoader, useClass: TranslateFakeLoader }
@@ -25,7 +24,7 @@ describe('NavbarComponent', () => {
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(NavbarComponent);
+    fixture = TestBed.createComponent(LanguageButtonComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
