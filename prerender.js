@@ -41,7 +41,7 @@ async function main() {
     }
 
     await writeFile(file, result);
-    console.log('Writed', file);
+    console.log('Written file:', file);
   }
 
   browser.close();
