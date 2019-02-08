@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { LanguageService } from 'src/app/layout/navbar/language-button/language.service';
 
 @Component({
   selector: 'app-activity-indicators',
@@ -6,10 +7,31 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./activity-indicators.component.scss']
 })
 export class ActivityIndicatorsComponent implements OnInit {
+  activityIndicators: Array<any> = [];
 
-  constructor() { }
-
-  ngOnInit() {
+  constructor(private languajeService: LanguageService) {
+    this.getActivityIndicators();
+    this.languajeService.changeLanguajeObservable.subscribe(() => {
+      this.getActivityIndicators();
+    });
+  }
+  getJSON() {
+    return this.languajeService.getJsonValue('');
   }
 
+  ngOnInit() {}
+
+  private getActivityIndicators(): void {
+    this.languajeService
+      .getJsonValue('activity-indicator')
+      .subscribe((activityIndicators: Array<any>) => {
+        console.log(
+          this.activityIndicators,
+          [...activityIndicators],
+          typeof activityIndicators
+        );
+        console.log(activityIndicators);
+        this.activityIndicators = activityIndicators;
+      });
+  }
 }

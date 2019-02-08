@@ -8,5 +8,31 @@
   },
   "links": {
     "about": "Sobre Nosotras"
-  }
+  },
+  "activity-indicator": [
+    {
+      "title": "Estudiantes Entrenados",
+      "number": 400
+    },
+    {
+      "title": "Horas Entrenamiento",
+      "number": 200
+    },
+    {
+      "title": "Hackaton",
+      "number": 1
+    },
+    {
+      "title": "Weekend Conding",
+      "number": 2
+    },
+    {
+      "title": "Seguidores",
+      "number": 120
+    },
+    {
+      "title": "Miembros",
+      "number": 65
+    }
+  ]
 }
