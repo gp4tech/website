@@ -24,7 +24,7 @@ async function main() {
   app.get('*', (req, res) => res.send(index));
 
   let server = await (new Promise((resolve, reject) => {
-    let createdServer = app.listen(PORT, e => e ? reject(e) : resolve(createdServer));
+    let createdServer = app.listen(PORT, error => error ? reject(error) : resolve(createdServer));
   }));
   let browser = await puppeteer.launch();
   let page = await browser.newPage();
@@ -32,7 +32,7 @@ async function main() {
   for (let currentPath of staticPaths.PATHS) {
     await page.goto(`${HOST}/${currentPath}`);
 
-    let result = await page.evaluate(() => document.documentElement.outerHTML);
+    let result = await page.evaluate(() => '<!doctype html>' + document.documentElement.outerHTML);
     let file = join(process.cwd(), ROOT_PATH, (currentPath || 'index') + '.html');
     let dir = dirname(file);
 
@@ -41,7 +41,7 @@ async function main() {
     }
 
     await writeFile(file, result);
-    console.log(`Writed ${file}`);
+    console.log('Writed', file);
   }
 
   browser.close();
@@ -50,7 +50,7 @@ async function main() {
 
 main()
   .then(() => console.log('All right!'))
-  .catch(err => {
-    console.error('Error:', err);
+  .catch(error => {
+    console.error('Error:', error);
     process.exit(1);
   });
