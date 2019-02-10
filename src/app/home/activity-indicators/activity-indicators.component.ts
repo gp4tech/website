@@ -18,9 +18,7 @@ export class ActivityIndicatorsComponent implements OnInit, OnDestroy {
   ngOnInit(): void {
     this.activityIndicators$ = this.getActivityIndicators();
     this.activityIndicatorSubscription = this.languageService.changeLanguage$.subscribe(
-      () => {
-        this.activityIndicators$ = this.getActivityIndicators();
-      }
+      () => (this.activityIndicators$ = this.getActivityIndicators())
     );
   }
 
