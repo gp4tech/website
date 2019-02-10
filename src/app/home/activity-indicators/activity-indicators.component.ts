@@ -1,4 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
+
+import { Subscription, Observable } from 'rxjs';
+
 import { LanguageService } from 'src/app/layout/navbar/language-button/language.service';
 
 @Component({
@@ -6,32 +9,26 @@ import { LanguageService } from 'src/app/layout/navbar/language-button/language.
   templateUrl: './activity-indicators.component.html',
   styleUrls: ['./activity-indicators.component.scss']
 })
-export class ActivityIndicatorsComponent implements OnInit {
-  activityIndicators: Array<any> = [];
+export class ActivityIndicatorsComponent implements OnInit, OnDestroy {
+  activityIndicators$: Observable<any>;
+  activityIndicatorSubscription: Subscription;
 
-  constructor(private languajeService: LanguageService) {
-    this.getActivityIndicators();
-    this.languajeService.changeLanguajeObservable.subscribe(() => {
-      this.getActivityIndicators();
-    });
+  constructor(private languageService: LanguageService) {}
+
+  ngOnInit(): void {
+    this.activityIndicators$ = this.getActivityIndicators();
+    this.activityIndicatorSubscription = this.languageService.changeLanguage$.subscribe(
+      () => {
+        this.activityIndicators$ = this.getActivityIndicators();
+      }
+    );
   }
-  getJSON() {
-    return this.languajeService.getJsonValue('');
+
+  ngOnDestroy(): void {
+    this.activityIndicatorSubscription.unsubscribe();
   }
 
-  ngOnInit() {}
-
-  private getActivityIndicators(): void {
-    this.languajeService
-      .getJsonValue('activity-indicator')
-      .subscribe((activityIndicators: Array<any>) => {
-        console.log(
-          this.activityIndicators,
-          [...activityIndicators],
-          typeof activityIndicators
-        );
-        console.log(activityIndicators);
-        this.activityIndicators = activityIndicators;
-      });
+  private getActivityIndicators(): Observable<any> {
+    return this.languageService.getValueFromTranslation('activity-indicator');
   }
 }

@@ -8,19 +8,18 @@ import { Observable, Subject } from 'rxjs';
 })
 export class LanguageService {
   currentLanguage: string;
-  changeLanguajeObservable: Observable<any>;
+  changeLanguage$: Observable<any>;
 
   private changeLanguageSubject: Subject<any>;
 
   constructor(private translateService: TranslateService) {
     this.changeLanguageSubject = new Subject<any>();
-    this.changeLanguajeObservable = this.changeLanguageSubject.asObservable();
+    this.changeLanguage$ = this.changeLanguageSubject.asObservable();
   }
 
   setDefaultLanguage(): void {
-    this.currentLanguage = this.translateService.getBrowserLang();
     this.translateService.setDefaultLang('en');
-    this.translateService.use(this.currentLanguage);
+    this.switchLanguage(this.translateService.getBrowserLang());
   }
 
   switchLanguage(language: string): void {
@@ -29,7 +28,7 @@ export class LanguageService {
     this.changeLanguageSubject.next(language);
   }
 
-  getJsonValue(key: string): Observable<Array<any>> {
+  getValueFromTranslation(key: string): Observable<any> {
     return this.translateService.get(key);
   }
 }
