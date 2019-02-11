@@ -1,3 +1,21 @@
+// TODO: add weight and hegith according to the page
+nav, div {
+  background-color: white;
+  color: #5b5b5b;
+}
+
+a {
+  font-family: fantasy;
+  color: #5b5b5b;
+  // TODO: use %
+  font-size: 13pt
+}
+
+.selected a {
+  text-decoration: underline;
+  color: #ED4E78;
+}
+
 .links {
   margin-left: 150px;
 }

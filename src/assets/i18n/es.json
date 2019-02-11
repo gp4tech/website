@@ -7,7 +7,11 @@
     "spanish": "ES"
   },
   "links": {
-    "about": "Sobre Nosotras"
+    "about": "Sobre Nosotras",
+    "blog": "Blog",
+    "events": "Eventos",
+    "home": "Inicio",
+    "involved": "Involúcrate"
   },
   "activity-indicator": [
     {

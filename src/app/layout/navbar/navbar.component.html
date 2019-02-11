@@ -1,3 +1,4 @@
+<!-- TODO: centralize the buttons and the other elements -->
 <nav class="navbar-fixed">
   <div class="nav-wrapper">
     <div class="container">
@@ -6,8 +7,8 @@
         <i class="fa fa-bars"></i>
       </a>
       <ul class="left hide-on-med-and-down links">
-        <li>
-          <a>{{ 'links.about' | translate }}</a>
+        <li *ngFor="let view of views" [class.selected]="view === selectedView" (click)="onSelect(view)" >
+          <a routerLink={{view.path}}>{{ view.translated | translate | uppercase }}</a>
         </li>
       </ul>
       <div class="right">

@@ -1,4 +1,9 @@
+// inherit parent components styles
+a {
+  color: inherit;
+  font-family: fantasy;
+}
 .selected-language {
   text-decoration: underline;
-  color: blue;
+  color:#ED4E78;
 }
