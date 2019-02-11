@@ -8,5 +8,31 @@
   },
   "links": {
     "about": "About Us"
-  }
+  },
+  "activity-indicator": [
+    {
+      "title": "Trained Students",
+      "number": 400
+    },
+    {
+      "title": "Hours of training",
+      "number": 200
+    },
+    {
+      "title": "Hackaton",
+      "number": 1
+    },
+    {
+      "title": "Weekend Coding",
+      "number": 2
+    },
+    {
+      "title": "Supporters",
+      "number": 120
+    },
+    {
+      "title": "Members",
+      "number": 65
+    }
+  ]
 }

@@ -1,0 +1,10 @@
+<div class="container" id="indicators">
+  <div class="row activity-container">
+    <div class="col s6 col m6 col l4 xl3 indicator-image" *ngFor="let activity of activityIndicators$ | async">
+      <div class="center-align">
+        <h4 class="white-text"><strong>{{ activity.number }}</strong></h4>
+        <p>{{ activity.title }}</p>
+      </div>
+    </div>
+  </div>
+</div>

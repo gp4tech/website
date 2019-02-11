@@ -1,0 +1,50 @@
+.indicator-image {
+  background-image: url(/assets/images/activityIndicator3.gif);
+  height: 241px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  margin: 0 !important;
+}
+
+.activity-container {
+  justify-content: center !important;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+#indicators h4 {
+  font-size: 32px;
+  line-height: 110%;
+  margin: 25% 0 2% 0;
+}
+
+#indicators p {
+  font-size: 1.2rem;
+  line-height: 110%;
+  margin: 5px 41px 0 41px;
+  color: #245b5b;
+}
+
+@media only screen and (max-width: 800px) {
+  #indicators h4 {
+    margin: 18% 0 2% 0;
+  }
+
+  #indicators p {
+    margin: 5px 57px 0 57px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  #indicators h4 {
+    margin: 32% 0 2% 0;
+  }
+
+  #indicators p {
+    margin: 5px 9px 0 8px;
+  }
+}
