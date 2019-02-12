@@ -1,23 +1,33 @@
 import { Injectable } from '@angular/core';
 
 import { TranslateService } from '@ngx-translate/core';
+import { Observable, Subject } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
 export class LanguageService {
+  changeLanguage$: Observable<any>;
   currentLanguage: string;
+  private languageChanged: Subject<any>;
 
-  constructor(private translateService: TranslateService) {}
+  constructor(private translateService: TranslateService) {
+    this.languageChanged = new Subject<any>();
+    this.changeLanguage$ = this.languageChanged.asObservable();
+  }
 
   setDefaultLanguage(): void {
-    this.currentLanguage = this.translateService.getBrowserLang();
     this.translateService.setDefaultLang('en');
-    this.translateService.use(this.currentLanguage);
+    this.switchLanguage(this.translateService.getBrowserLang());
   }
 
   switchLanguage(language: string): void {
     this.currentLanguage = language;
     this.translateService.use(language);
+    this.languageChanged.next(language);
+  }
+
+  getValueFromTranslation(key: string): Observable<any> {
+    return this.translateService.get(key);
   }
 }

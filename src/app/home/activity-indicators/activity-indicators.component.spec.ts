@@ -6,16 +6,15 @@ import {
   TranslateFakeLoader
 } from '@ngx-translate/core';
 
-import { HomeComponent } from './home.component';
-import { ActivityIndicatorsComponent } from './activity-indicators/activity-indicators.component';
+import { ActivityIndicatorsComponent } from './activity-indicators.component';
 
-describe('HomeComponent', () => {
-  let component: HomeComponent;
-  let fixture: ComponentFixture<HomeComponent>;
+describe('ActivityIndicatorsComponent', () => {
+  let component: ActivityIndicatorsComponent;
+  let fixture: ComponentFixture<ActivityIndicatorsComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [HomeComponent, ActivityIndicatorsComponent],
+      declarations: [ActivityIndicatorsComponent],
       imports: [
         TranslateModule.forRoot({
           loader: { provide: TranslateLoader, useClass: TranslateFakeLoader }
@@ -25,7 +24,7 @@ describe('HomeComponent', () => {
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(HomeComponent);
+    fixture = TestBed.createComponent(ActivityIndicatorsComponent);
     component = fixture.componentInstance;
     fixture.whenStable().then(() => fixture.detectChanges());
   });
