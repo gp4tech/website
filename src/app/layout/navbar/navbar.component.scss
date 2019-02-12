@@ -1,27 +1,33 @@
+#app-menu {
+  color:#5F6060;
+  background-color: white;
+  height: 100px;
+}
+
 img {
   height: 100px; 
 }
 
 nav {
-  background-color: white;
-  color:#5F6060;
-  height: 100px;
+  background-color: inherit;
+  color:inherit;
+  height: 100%;
 }
 
 * > a {
   font-family: 'BebasNeue';
-  color: #5F6060;
+  color: inherit;
   font-size: 15pt;
 }
 
 .selected a {
   text-decoration: underline;
   color: #E7184F;
-  background-color: white;
+  background-color: inherit;
 }
 
 .links {
-  margin-left: 25%;
+  margin-left: 35%;
   margin-top: 15px
 }
 
