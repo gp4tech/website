@@ -1,5 +1,4 @@
-// TODO: add weight and hegith according to the page
-nav, div {
+nav {
   background-color: white;
   color: #5b5b5b;
 }
@@ -7,7 +6,6 @@ nav, div {
 a {
   font-family: fantasy;
   color: #5b5b5b;
-  // TODO: use %
   font-size: 13pt
 }
 
@@ -17,5 +15,5 @@ a {
 }
 
 .links {
-  margin-left: 150px;
+  margin-left: 25%;
 }
