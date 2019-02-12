@@ -1,51 +1,51 @@
-const PUPPETEER = require('puppeteer');
-const EXPRESS = require('express');
+const Puppeteer = require('puppeteer');
+const Express = require('express');
 const {
-  join: JOIN,
-  dirname: DIRNAME
+  join,
+  dirname
 } = require('path');
 const {
-  readFile: READ_FILE,
-  exists: EXISTS,
-  writeFile: WRITE_FILE,
-  mkdir: MKDIR
+  readFile,
+  exists,
+  writeFile,
+  mkdir
 } = require('mz/fs')
-const STATIC_PATHS = require('./static-paths');
 
 const PORT = 4000;
 const HOST = `http://localhost:${PORT}`;
 const ROOT_PATH = 'dist/website';
+const STATIC_PATHS = require('./static-paths');
 
 async function main() {
-  const APP = EXPRESS();
-  const INDEX = (await READ_FILE(JOIN(process.cwd(), ROOT_PATH, 'index.html'))).toString();
+  const app = Express();
+  const index = (await readFile(join(process.cwd(), ROOT_PATH, 'index.html'))).toString();
 
-  APP.get('*.*', EXPRESS.static(JOIN(process.cwd(), ROOT_PATH)));
-  APP.get('*', (req, res) => res.send(INDEX));
+  app.get('*.*', Express.static(join(process.cwd(), ROOT_PATH)));
+  app.get('*', (req, res) => res.send(index));
 
-  const SERVER = await (new Promise((resolve, reject) => {
-    const CREATED_SERVER = APP.listen(PORT, error => error ? reject(error) : resolve(CREATED_SERVER));
+  const server = await (new Promise((resolve, reject) => {
+    const createdServer = app.listen(PORT, error => error ? reject(error) : resolve(createdServer));
   }));
-  const BROWSER = await PUPPETEER.launch();
-  const PAGE = await BROWSER.newPage();
+  const browser = await Puppeteer.launch();
+  const page = await browser.newPage();
 
-  for (const CURRENT_PATH of STATIC_PATHS.PATHS) {
-    await PAGE.goto(`${HOST}/${CURRENT_PATH}`);
+  for (const currentPath of STATIC_PATHS.PATHS) {
+    await page.goto(`${HOST}/${currentPath}`);
 
-    const RESULT = await PAGE.evaluate(() => '<!doctype html>' + document.documentElement.outerHTML);
-    const FILE = JOIN(process.cwd(), ROOT_PATH, (CURRENT_PATH || 'index') + '.html');
-    const DIR = DIRNAME(FILE);
+    const result = await page.evaluate(() => '<!doctype html>' + document.documentElement.outerHTML);
+    const file = join(process.cwd(), ROOT_PATH, (currentPath || 'index') + '.html');
+    const dir = dirname(file);
 
-    if (!(await EXISTS(DIR))) {
-      await MKDIR(DIR);
+    if (!(await exists(dir))) {
+      await mkdir(dir);
     }
 
-    await WRITE_FILE(FILE, RESULT);
-    console.log('Written file:', FILE);
+    await writeFile(file, result);
+    console.log('Written file:', file);
   }
 
-  BROWSER.close();
-  SERVER.close();
+  browser.close();
+  server.close();
 }
 
 main()
