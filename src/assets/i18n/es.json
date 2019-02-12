@@ -10,5 +10,31 @@
     "about": "Sobre Nosotras",
     "who-did-this": "¿QUIÉN HIZO ESTO?",
     "contact-us": "CONTACTANOS"
-  }
+  },
+  "activity-indicator": [
+    {
+      "title": "Estudiantes Entrenados",
+      "number": 400
+    },
+    {
+      "title": "Horas Entrenamiento",
+      "number": 200
+    },
+    {
+      "title": "Hackaton",
+      "number": 1
+    },
+    {
+      "title": "Weekend Coding",
+      "number": 2
+    },
+    {
+      "title": "Seguidores",
+      "number": 120
+    },
+    {
+      "title": "Miembros",
+      "number": 65
+    }
+  ]
 }

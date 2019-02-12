@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 import { LanguageService } from './layout/navbar/language-button/language.service';
 
@@ -7,8 +7,10 @@ import { LanguageService } from './layout/navbar/language-button/language.servic
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent {
-  constructor(languageService: LanguageService) {
-    languageService.setDefaultLanguage();
+export class AppComponent implements OnInit {
+  constructor(private languageService: LanguageService) {}
+
+  ngOnInit() {
+    this.languageService.setDefaultLanguage();
   }
 }
