@@ -1,7 +1,7 @@
 <nav class="navbar-fixed">
   <div class="nav-wrapper">
     <div class="container">
-      <a href="#" class="brand-logo">GP4Tech</a>
+      <a href="#" class="brand-logo"><img src="assets/images/GP4Tech-logo.png"></a>
       <a href="#" data-target="mobile-menu" class="sidenav-trigger">
         <i class="fa fa-bars"></i>
       </a>
@@ -19,6 +19,6 @@
 
 <ul appSidenav class="sidenav" id="mobile-menu">
   <li *ngFor="let view of views" [class.selected]="view === selectedView" (click)="onSelect(view)" >
-    <a class="sidenav-close" routerLink="{{view.name}}">{{ view.i18n | translate | uppercase }}</a>
+    <a routerLink="{{view.name}}">{{ view.i18n | translate | uppercase }}</a>
   </li>
 </ul>

@@ -1,19 +1,31 @@
-nav {
-  background-color: white;
-  color: #5b5b5b;
+img {
+  height: 100px; 
 }
 
-a {
-  font-family: fantasy;
-  color: #5b5b5b;
-  font-size: 13pt
+nav {
+  background-color: white;
+  color:#5F6060;
+  height: 100px;
+}
+
+* > a {
+  font-family: 'BebasNeue';
+  color: #5F6060;
+  font-size: 15pt;
 }
 
 .selected a {
   text-decoration: underline;
-  color: #ED4E78;
+  color: #E7184F;
+  background-color: white;
 }
 
 .links {
   margin-left: 25%;
+  margin-top: 15px
 }
+
+.right {
+  margin-top: 15px
+}
+
