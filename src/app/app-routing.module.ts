@@ -3,7 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 
 import { HomeComponent } from './home/home.component';
 import { AboutUsComponent } from './about-us/about-us.component';
-import { AppBarViews } from './shared/utils';
+import { AppBarViews } from './layout/layout.model';
 import { EventsComponent } from './events/events.component';
 import { BlogComponent } from './blog/blog.component';
 import { GetInvolvedComponent } from './get-involved/get-involved.component';

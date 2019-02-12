@@ -1,15 +1,9 @@
-export enum AppBarViews {
-    home = "home",
-    about = "about-us",
-    events = "events",
-    blog = "blog",
-    involved = "get-involved",
-}
+import { AppBarViews, AppView } from '../layout/layout.model';
 
-export const VIEWS = [
-    { name: AppBarViews.home, translated: 'links.home' },
-    { name: AppBarViews.about, translated: 'links.about' },
-    { name: AppBarViews.events, translated: 'links.events' },
-    { name: AppBarViews.blog, translated: 'links.blog' },
-    { name: AppBarViews.involved, translated: 'links.involved' }
+export const VIEWS: AppView[] = [
+    { name: AppBarViews.home, i18n: 'links.home' },
+    { name: AppBarViews.about, i18n: 'links.about' },
+    { name: AppBarViews.events, i18n: 'links.events' },
+    { name: AppBarViews.blog, i18n: 'links.blog' },
+    { name: AppBarViews.involved, i18n: 'links.involved' }
 ]
