@@ -9,9 +9,11 @@
   "links": {
     "about": "About Us",
     "blog": "Blog",
+    "contact-us": "CONTACT US",
     "events": "Events",
     "home": "Home",
-    "involved": "Get Involved"
+    "involved": "Get Involved",
+    "who-did-this": "WHO DID THIS?"
   },
   "activity-indicator": [
     {
