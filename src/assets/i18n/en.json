@@ -7,7 +7,9 @@
     "spanish": "ES"
   },
   "links": {
-    "about": "About Us"
+    "about": "About Us",
+    "who-did-this": "WHO DID THIS?",
+    "contact-us": "CONTACT US"
   },
   "activity-indicator": [
     {
