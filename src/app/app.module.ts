@@ -10,9 +10,9 @@ import { AppRoutingModule } from './app-routing.module';
 import { HomeModule } from './home/home.module';
 import { LayoutModule } from './layout/layout.module';
 import { AboutUsModule } from './about-us/about-us.module';
-import { EventsComponent } from './events/events.component';
-import { BlogComponent } from './blog/blog.component';
-import { GetInvolvedComponent } from './get-involved/get-involved.component';
+import { EventsModule } from './events/events.module';
+import { BlogModule } from './blog/blog.module';
+import { GetInvolvedModule } from './get-involved/get-involved.module';
 
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http);
@@ -20,10 +20,7 @@ export function HttpLoaderFactory(http: HttpClient) {
 
 @NgModule({
   declarations: [
-    AppComponent,
-    EventsComponent,
-    BlogComponent,
-    GetInvolvedComponent,
+    AppComponent
   ],
   imports: [
     BrowserModule,
@@ -31,6 +28,9 @@ export function HttpLoaderFactory(http: HttpClient) {
     LayoutModule,
     HomeModule,
     AboutUsModule,
+    EventsModule,
+    BlogModule,
+    GetInvolvedModule,
     HttpClientModule,
     TranslateModule.forRoot({
       loader: {
