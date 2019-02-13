@@ -8,6 +8,7 @@ import {
 
 import { NavbarComponent } from './navbar.component';
 import { LanguageButtonComponent } from './language-button/language-button.component';
+import { RouterTestingModule } from '@angular/router/testing';
 
 describe('NavbarComponent', () => {
   let component: NavbarComponent;
@@ -19,7 +20,8 @@ describe('NavbarComponent', () => {
       imports: [
         TranslateModule.forRoot({
           loader: { provide: TranslateLoader, useClass: TranslateFakeLoader }
-        })
+        }),
+        RouterTestingModule
       ]
     }).compileComponents();
   }));
