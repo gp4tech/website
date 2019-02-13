@@ -7,12 +7,7 @@ import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
-import { HomeModule } from './home/home.module';
 import { LayoutModule } from './layout/layout.module';
-import { AboutUsModule } from './about-us/about-us.module';
-import { EventsModule } from './events/events.module';
-import { BlogModule } from './blog/blog.module';
-import { GetInvolvedModule } from './get-involved/get-involved.module';
 
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http);
@@ -26,11 +21,6 @@ export function HttpLoaderFactory(http: HttpClient) {
     BrowserModule,
     AppRoutingModule,
     LayoutModule,
-    HomeModule,
-    AboutUsModule,
-    EventsModule,
-    BlogModule,
-    GetInvolvedModule,
     HttpClientModule,
     TranslateModule.forRoot({
       loader: {

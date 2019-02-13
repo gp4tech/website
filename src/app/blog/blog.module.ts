@@ -3,17 +3,16 @@ import { CommonModule } from '@angular/common';
 
 import { BlogComponent } from './blog.component';
 import { SharedModule } from '../shared/shared.module';
+import { BlogRoutingModule } from './blog-routing.module';
 
 @NgModule({
   declarations: [
     BlogComponent
   ],
-  exports: [
-    BlogComponent
-  ],
   imports: [
     CommonModule,
-    SharedModule
+    SharedModule,
+    BlogRoutingModule
   ]
 })
 export class BlogModule { }

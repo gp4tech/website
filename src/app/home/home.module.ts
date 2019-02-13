@@ -11,13 +11,10 @@ import { HomeRoutingModule } from './home-routing.module';
     HomeComponent,
     ActivityIndicatorsComponent
   ],
-  exports: [
-    HomeComponent
-  ],
   imports: [
     CommonModule,
     SharedModule,
-    // HomeRoutingModule
+    HomeRoutingModule
   ]
 })
 export class HomeModule { }
