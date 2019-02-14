@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { VIEWS } from '../../shared/utils';
+import { VIEWS } from '../layout.model';
 
 @Component({
   selector: 'app-navbar',
@@ -7,10 +7,10 @@ import { VIEWS } from '../../shared/utils';
   styleUrls: ['./navbar.component.scss']
 })
 export class NavbarComponent {
-  views = VIEWS
+  views = VIEWS;
   selectedView: string;
 
   onSelect(view: string): void {
-    this.selectedView = view
+    this.selectedView = view;
   }
 }

@@ -8,9 +8,8 @@ describe('GetInvolvedComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ GetInvolvedComponent ]
-    })
-    .compileComponents();
+      declarations: [GetInvolvedComponent]
+    }).compileComponents();
   }));
 
   beforeEach(() => {

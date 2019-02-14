@@ -7,14 +7,7 @@ import { ActivityIndicatorsComponent } from './activity-indicators/activity-indi
 import { HomeRoutingModule } from './home-routing.module';
 
 @NgModule({
-  declarations: [
-    HomeComponent,
-    ActivityIndicatorsComponent
-  ],
-  imports: [
-    CommonModule,
-    SharedModule,
-    HomeRoutingModule
-  ]
+  declarations: [HomeComponent, ActivityIndicatorsComponent],
+  imports: [CommonModule, SharedModule, HomeRoutingModule]
 })
-export class HomeModule { }
+export class HomeModule {}
