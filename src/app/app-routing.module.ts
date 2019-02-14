@@ -1,22 +1,22 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
-import { AppBarViews } from './layout/layout.model';
+import { AppBarRoutes } from './shared/routes.model';
 import { HomeComponent } from './home/home.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
   {
-    path: AppBarViews.about,
+    path: AppBarRoutes.about,
     loadChildren: './about-us/about-us.module#AboutUsModule'
   },
   {
-    path: AppBarViews.events,
+    path: AppBarRoutes.events,
     loadChildren: './events/events.module#EventsModule'
   },
-  { path: AppBarViews.blog, loadChildren: './blog/blog.module#BlogModule' },
+  { path: AppBarRoutes.blog, loadChildren: './blog/blog.module#BlogModule' },
   {
-    path: AppBarViews.involved,
+    path: AppBarRoutes.involved,
     loadChildren: './get-involved/get-involved.module#GetInvolvedModule'
   }
 ];

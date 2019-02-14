@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { VIEWS } from '../layout.model';
+import { APP_ROUTES } from '../../shared/routes.model';
 
 @Component({
   selector: 'app-navbar',
@@ -7,10 +7,10 @@ import { VIEWS } from '../layout.model';
   styleUrls: ['./navbar.component.scss']
 })
 export class NavbarComponent {
-  views = VIEWS;
-  selectedView: string;
+  appRoutes = APP_ROUTES;
+  selectedRoute: string;
 
-  onSelect(view: string): void {
-    this.selectedView = view;
+  onSelect(appRoute: string): void {
+    this.selectedRoute = appRoute;
   }
 }
