@@ -1,7 +1,7 @@
-<div class="container" id="indicators">
+<div id="indicators">
   <div class="row activity-container">
-    <div class="col s6 col m6 col l4 xl3 indicator-image" *ngFor="let activity of activityIndicators$ | async">
-      <div class="center-align">
+    <div class="col s6 col m4 col l4 xl2 indicator-image" *ngFor="let activity of activityIndicators$ | async">
+      <div class="center-align center-content">
         <h4 class="white-text"><strong>{{ activity.number }}</strong></h4>
         <p>{{ activity.title }}</p>
       </div>
