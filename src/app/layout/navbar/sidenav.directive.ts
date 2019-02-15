@@ -5,8 +5,7 @@ import { Sidenav } from 'materialize-css';
   selector: '[appSidenav]'
 })
 export class SidenavDirective implements OnInit {
-
-  constructor(private elementRef: ElementRef) { }
+  constructor(private elementRef: ElementRef) {}
 
   ngOnInit(): void {
     Sidenav.init(this.elementRef.nativeElement);

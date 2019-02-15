@@ -8,8 +8,12 @@
   },
   "links": {
     "about": "About Us",
-    "who-did-this": "WHO DID THIS?",
-    "contact-us": "CONTACT US"
+    "blog": "Blog",
+    "contact-us": "CONTACT US",
+    "events": "Events",
+    "home": "Home",
+    "involved": "Get Involved",
+    "who-did-this": "WHO DID THIS?"
   },
   "activity-indicator": [
     {

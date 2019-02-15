@@ -8,8 +8,12 @@
   },
   "links": {
     "about": "Sobre Nosotras",
-    "who-did-this": "¿QUIÉN HIZO ESTO?",
-    "contact-us": "CONTÁCTANOS"
+    "blog": "Blog",
+    "contact-us": "CONTÁCTANOS",
+    "events": "Eventos",
+    "home": "Inicio",
+    "involved": "Involúcrate",
+    "who-did-this": "¿QUIÉN HIZO ESTO?"
   },
   "activity-indicator": [
     {

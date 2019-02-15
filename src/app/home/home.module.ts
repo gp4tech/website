@@ -6,16 +6,7 @@ import { HomeComponent } from './home.component';
 import { ActivityIndicatorsComponent } from './activity-indicators/activity-indicators.component';
 
 @NgModule({
-  declarations: [
-    HomeComponent,
-    ActivityIndicatorsComponent
-  ],
-  exports: [
-    HomeComponent
-  ],
-  imports: [
-    CommonModule,
-    SharedModule
-  ]
+  declarations: [HomeComponent, ActivityIndicatorsComponent],
+  imports: [CommonModule, SharedModule]
 })
-export class HomeModule { }
+export class HomeModule {}
