@@ -1,5 +1,12 @@
-footer{
-    position:fixed;
-    bottom:0px;
-    width:100%;
+footer {
+  position:fixed;
+  bottom:0px;
+  width:100%;
+}
+
+* > a {
+  font-family: 'BebasNeue';
+  color: inherit;
+  font-size: 0.9em;
+  line-height: 40px
 }
