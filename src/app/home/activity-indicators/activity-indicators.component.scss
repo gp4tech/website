@@ -1,11 +1,10 @@
 .indicator-image {
   background-image: url(/assets/images/activityIndicator3.gif);
-  height: 241px;
+  height: 250px;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
-  margin: 0 !important;
 }
 
 .activity-container {
@@ -18,33 +17,28 @@
 
 #indicators h4 {
   font-size: 32px;
-  line-height: 110%;
-  margin: 25% 0 2% 0;
+  margin: 0 0 4% 0;
 }
 
 #indicators p {
-  font-size: 1.2rem;
-  line-height: 110%;
-  margin: 5px 41px 0 41px;
-  color: #245b5b;
+  font-size: 16px;
+  margin: 0;
+  line-height: 1.1;
 }
 
-@media only screen and (max-width: 800px) {
-  #indicators h4 {
-    margin: 18% 0 2% 0;
-  }
-
-  #indicators p {
-    margin: 5px 57px 0 57px;
-  }
+.center-content {
+  width: 54%;
+  height: 37%;
+  margin: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 20%;
+  right: 0;
 }
 
 @media only screen and (max-width: 600px) {
-  #indicators h4 {
-    margin: 32% 0 2% 0;
-  }
-
-  #indicators p {
-    margin: 5px 9px 0 8px;
+  .center-content {
+    width: 65%;
   }
 }
