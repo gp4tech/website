@@ -14,14 +14,18 @@ export class GetInvolvedComponent implements OnInit {
       title: 'Get involved',
       type: 'GeoChart',
       data: [
-        ['Germany', 200],
-        ['United States', 300],
-        ['Brazil', 400],
-        ['Canada', 500],
-        ['France', 600],
-        ['RU', 700]
+        ['Germany', 1],
+        ['United States', 700],
+        ['Brazil', 50],
+        ['Canada', 100],
+        ['France', 0],
+        ['RU', 0],
+        ['Bolivia', 1000]
       ],
-      columnNames: ['Country', 'Popularity'],
+      columnNames: ['Country', 'Involved People'],
+      options: {
+        colorAxis: {colors: ['#fce4ec', '#e91e63']}
+      }
     };
   }
 }
