@@ -6,14 +6,19 @@ import { HomeComponent } from './home.component';
 import { BannerComponent } from './banner/banner.component';
 import { ActivityIndicatorsComponent } from './activity-indicators/activity-indicators.component';
 import { TestimonialsComponent } from './testimonials/testimonials.component';
+import { GetInvolvedModule } from '../get-involved/get-involved.module';
 
 @NgModule({
   declarations: [
     HomeComponent,
     BannerComponent,
     ActivityIndicatorsComponent,
-    TestimonialsComponent
+    TestimonialsComponent,
   ],
-  imports: [CommonModule, SharedModule]
+  imports: [
+    CommonModule,
+    SharedModule,
+    GetInvolvedModule,
+  ]
 })
 export class HomeModule {}
