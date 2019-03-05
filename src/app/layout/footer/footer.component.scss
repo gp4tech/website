@@ -1,3 +1,5 @@
+@import "../../../styles-mat-variables.scss";
+
 footer {
   height: 100%;
 
@@ -5,7 +7,21 @@ footer {
     margin-left: 10px;
   }
 
-  .col.s12 {
-    padding-bottom: 10px;
+  @media #{$small-and-down} {
+    .social-links, .info-links {
+      text-align: center;
+      padding-bottom: 10px;
+    }
+  }
+
+  @media #{$medium-and-up} {
+    .row {
+      display: flex;
+      align-items: center;
+    }
+
+    .social-links {
+      text-align: right;
+    }
   }
 }
