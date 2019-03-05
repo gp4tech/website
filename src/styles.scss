@@ -3,10 +3,21 @@
 @import '../node_modules/font-awesome/css/font-awesome.css';
 
 @font-face {
-    font-family: 'BebasNeue';
-    font-weight: 400;
-    font-style: normal;
-    src: url('assets/font/BebasNeue/BebasNeue-Regular.otf') format('opentype');
+  font-family: 'BebasNeue';
+  font-weight: 400;
+  font-style: normal;
+  src: url('assets/font/BebasNeue/BebasNeue-Regular.otf') format('opentype');
+}
+
+body, app-root {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  height: 100%;
+}
+
+main {
+  flex: 1 0 auto;
 }
 
 a {

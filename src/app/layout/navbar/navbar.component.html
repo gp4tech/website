@@ -1,25 +1,27 @@
-<nav class="navbar-fixed">
-  <div class="nav-wrapper">
-    <div class="container">
-      <a href="#"><img class="brand-logo" src="assets/images/GP4Tech-logo.png"></a>
-      <a href="#" data-target="mobile-menu" class="sidenav-trigger">
-        <i class="fa fa-bars"></i>
-      </a>
-      <ul class="hide-on-med-and-down links">
-        <li *ngFor="let route of appRoutes" [class.selected]="route === selectedRoute" (click)="onSelect(route)" >
-          <a [routerLink]="route.name">{{ route.i18n | translate | uppercase }}</a>
-        </li>
-      </ul>
-      <div class="right-align">
-        <app-language-button></app-language-button>
+<header class="navbar-fixed">
+  <nav>
+    <div class="nav-wrapper">
+      <div class="container">
+        <a href="#"><img class="brand-logo" src="assets/images/GP4Tech-logo.png"></a>
+        <a href="#" data-target="mobile-menu" class="sidenav-trigger">
+          <i class="fa fa-bars"></i>
+        </a>
+        <ul class="hide-on-med-and-down links">
+          <li *ngFor="let route of appRoutes" [class.selected]="route === selectedRoute" (click)="onSelect(route)" >
+            <a [routerLink]="route.name">{{ route.i18n | translate | uppercase }}</a>
+          </li>
+        </ul>
+        <div class="right-align">
+          <app-language-button></app-language-button>
+        </div>
       </div>
     </div>
-  </div>
-</nav>
+  </nav>
 
-<ul appSidenav class="sidenav" id="mobile-menu">
-  <li *ngFor="let route of appRoutes" [class.selected]="route === selectedRoute" (click)="onSelect(route)" >
-    <a [routerLink]="route.name">{{ route.i18n | translate | uppercase }}</a>
-  </li>
-</ul>
+  <ul appSidenav class="sidenav" id="mobile-menu">
+    <li *ngFor="let route of appRoutes" [class.selected]="route === selectedRoute" (click)="onSelect(route)" >
+      <a [routerLink]="route.name">{{ route.i18n | translate | uppercase }}</a>
+    </li>
+  </ul>
+</header>
 
