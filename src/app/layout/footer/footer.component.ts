@@ -9,17 +9,17 @@ export class FooterComponent {
   socialLinks = [
     {
       faIcon: 'fa-instagram',
-      label: '',
+      i18n: '',
       link: "https://www.instagram.com/gp4tech",
     },
     {
       faIcon: 'fa-facebook',
-      label: '',
+      i18n: '',
       link: "https://www.facebook.com/GP4TechJala",
     },
     {
       faIcon: 'fa-twitter',
-      label: '',
+      i18n: '',
       link: "https://twitter.com/GirlPowerJala",
     }
   ];
@@ -27,12 +27,12 @@ export class FooterComponent {
   infoLinks = [
     {
       faIcon: '',
-      label: 'links.who-did-this',
+      i18n: 'links.who-did-this',
       link: "#",
     },
     {
       faIcon: '',
-      label: 'links.contact-us',
+      i18n: 'links.contact-us',
       link: "#",
     },
   ]

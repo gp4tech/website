@@ -12,14 +12,14 @@
 
       <div class="col m6 hide-on-small-only" >
         <a href="{{ infoLink.link }}" *ngFor="let infoLink of infoLinks; let i = index">
-          {{ infoLink.label | translate }}
+          {{ infoLink.i18n | translate }}
           <span *ngIf="(i + 1) !== infoLinks.length"> | </span>
         </a>
       </div>
 
       <div class="col s12 center-align hide-on-med-and-up" >
         <a href="{{ infoLink.link }}" *ngFor="let infoLink of infoLinks; let i = index">
-          {{ infoLink.label | translate }}
+          {{ infoLink.i18n | translate }}
           <span *ngIf="(i + 1) !== infoLinks.length"> | </span>
         </a>
       </div>
