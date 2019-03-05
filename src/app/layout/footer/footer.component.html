@@ -18,7 +18,7 @@
       </div>
 
       <div class="col s12 center-align hide-on-med-and-up" >
-        <a href="{{ infoLink.link }}" *ngFor="let infoLink of infoLinks; let i = index">
+        <a routerLink="[infoLink.link]" *ngFor="let infoLink of infoLinks; let i = index">
           {{ infoLink.i18n | translate }}
           <span *ngIf="(i + 1) !== infoLinks.length"> | </span>
         </a>

@@ -28,12 +28,12 @@ export class FooterComponent {
     {
       faIcon: '',
       i18n: 'links.who-did-this',
-      link: "#",
+      link: "who-did-this",
     },
     {
       faIcon: '',
       i18n: 'links.contact-us',
-      link: "#",
+      link: "contact-us",
     },
   ]
 }
