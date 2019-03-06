@@ -1,12 +1,27 @@
-footer {
-  position:fixed;
-  bottom:0px;
-  width:100%;
-}
+@import "../../../styles-mat-variables.scss";
 
-* > a {
-  font-family: 'BebasNeue';
-  color: inherit;
-  font-size: 0.9em;
-  line-height: 40px
+footer {
+  height: 100%;
+
+  .btn-floating {
+    margin-left: 10px;
+  }
+
+  @media #{$small-and-down} {
+    .social-links, .info-links {
+      text-align: center;
+      padding-bottom: 10px;
+    }
+  }
+
+  @media #{$medium-and-up} {
+    .row {
+      display: flex;
+      align-items: center;
+    }
+
+    .social-links {
+      text-align: right;
+    }
+  }
 }

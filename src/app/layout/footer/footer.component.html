@@ -1,24 +1,18 @@
 <footer class="page-footer grey darken-3">
-  <div class="footer-copyright grey darken-3">
-    <div class="container">
-      <div class="row">
-        <div class="col s1.5" >
-          <a class="grey-text text-lighten-4 right" href="#!">{{ 'links.who-did-this' | translate }}</a>
-        </div>
-        <div class="col s1.5">
-          <a class="grey-text text-lighten-4 left">|</a>
-        </div>
-        <div class="col s1.5">
-          <a class="grey-text text-lighten-4 left" href="#!">{{ 'links.contact-us' | translate }}</a>
-        </div>
-        <a class="btn-floating right grey darken-2" href="#!">
-          <i class="fa fa-instagram"></i>
+  <div class="container">
+    <div class="row">
+      <div class="col s12 m6 info-links" >
+        <a routerLink="[infoLink.link]" *ngFor="let infoLink of infoLinks; let i = index">
+          {{ infoLink.i18n | translate }}
+          <span *ngIf="(i + 1) !== infoLinks.length"> | </span>
         </a>
-        <a class="btn-floating right grey darken-2" href="#!">
-          <i class="fa fa-facebook"></i>
-        </a>
-        <a class="btn-floating right grey darken-2" href="#!">
-          <i class="fa fa-twitter"></i>
+      </div>
+      <div class="col s12 m6 social-links">
+        <a *ngFor="let socialLink of socialLinks"
+          target="_blank"
+          class="btn-floating grey darken-2" 
+          href="{{ socialLink.link }}">
+          <i class="fa {{ socialLink.faIcon }}"></i>
         </a>
       </div>
     </div>
