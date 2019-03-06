@@ -1,7 +1,5 @@
 {
-  "home": {
-    "title": "Initial View"
-  },
+  "home": { },
   "language": {
     "english": "EN",
     "spanish": "ES"
@@ -46,5 +44,8 @@
   ],
   "testimonials": {
     "title": "Testimonials"
+  },
+  "get-involved": {
+    "title": "Get Involved"
   }
 }
