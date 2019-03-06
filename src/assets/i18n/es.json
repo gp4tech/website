@@ -2,6 +2,10 @@
   "home": {
     "title": "Vista Inicial"
   },
+  "about-us": {
+    "who": "¿Quienes somos?",
+    "members-title": "Miembros"
+  },
   "language": {
     "english": "EN",
     "spanish": "ES"

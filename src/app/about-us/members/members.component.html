@@ -1,0 +1,17 @@
+<div class="row">
+  <div class="col s12 m6 member-card" *ngFor="let member of members">
+    <img [src]="member.image" class="member-sub-card" />
+    <div class="member-sub-card member-info">
+      <p>{{ member.name }}</p>
+      <p>{{ member.career }}</p>
+      <p>{{ member.currentOcupation }}</p>
+      <p>{{ member.position }}</p>
+      <div class="icons">
+        <i
+          *ngFor="let socialLink of socialLinks"
+          class="fa fa-2x {{ socialLink.faIcon }}"
+        ></i>
+      </div>
+    </div>
+  </div>
+</div>
