@@ -8,6 +8,7 @@ import {
 
 import { HomeComponent } from './home.component';
 import { ActivityIndicatorsComponent } from './activity-indicators/activity-indicators.component';
+import { TestimonialsComponent } from './testimonials/testimonials.component';
 
 describe('HomeComponent', () => {
   let component: HomeComponent;
@@ -15,7 +16,11 @@ describe('HomeComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [HomeComponent, ActivityIndicatorsComponent],
+      declarations: [
+        HomeComponent,
+        ActivityIndicatorsComponent,
+        TestimonialsComponent
+      ],
       imports: [
         TranslateModule.forRoot({
           loader: { provide: TranslateLoader, useClass: TranslateFakeLoader }

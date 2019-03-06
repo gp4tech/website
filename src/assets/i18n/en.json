@@ -44,5 +44,8 @@
       "title": "Members",
       "number": 65
     }
-  ]
+  ],
+  "testimonials": {
+    "title": "Testimonials"
+  }
 }
