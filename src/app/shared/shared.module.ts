@@ -3,9 +3,11 @@ import { CommonModule } from '@angular/common';
 
 import { TranslateModule } from '@ngx-translate/core';
 
+import { ParallaxDirective } from './parallax/parallax.directive';
+
 @NgModule({
-  declarations: [],
+  declarations: [ParallaxDirective],
   imports: [CommonModule, TranslateModule],
-  exports: [TranslateModule]
+  exports: [TranslateModule, ParallaxDirective]
 })
 export class SharedModule {}

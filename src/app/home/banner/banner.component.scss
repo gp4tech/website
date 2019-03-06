@@ -1,0 +1,19 @@
+.parallax-container {
+  @media (max-width: 600px) {
+    height: calc(100vh - 56px);
+  }
+
+  .parallax img {
+    @media (max-width: 600px) {
+      left: 0px;
+    }
+  }
+}
+
+.banner-container {
+  height: 100%;
+
+  @media (max-width: 600px) {
+    text-align: center;
+  }
+}

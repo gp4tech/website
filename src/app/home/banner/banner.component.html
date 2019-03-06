@@ -1,15 +1,13 @@
 <div class="parallax-container">
-  <div class="valign-wrapper over-layer">
-    <div class="container valign">
+  <div class="banner-container valign-wrapper right-align">
+    <div class="container">
       <div class="row">
-        <div class="col s12">
-          <p id="slogan" class="white-text">Our awesome slogan</p>
-          <div id="action-button-container">
-            <a class="btn-large waves-effect">Do something awesome</a>
-          </div>
-        </div>
+        <h1 class="white-text">{{ 'banner.slogan' | translate }}</h1>
+        <a class="btn-large waves-effect">{{ 'banner.call-to-action' | translate }}</a>
       </div>
     </div>
   </div>
-  <div class="parallax"><img src="assets/images/parallax1.jpg" alt="GP4Tech"></div>
+  <div appParallax class="parallax">
+    <img src="assets/images/banner-unsplash.jpg" alt="GP4Tech">
+  </div>
 </div>

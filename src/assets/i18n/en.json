@@ -15,8 +15,11 @@
     "involved": "Get Involved",
     "who-did-this": "WHO DID THIS?"
   },
-  "activity-indicator": [
-    {
+  "banner": {
+    "slogan": "Learn, code, share",
+    "call-to-action": "Do something awesome"
+  },
+  "activity-indicator": [{
       "title": "Trained Students",
       "number": 400
     },

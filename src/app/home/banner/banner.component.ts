@@ -1,7 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 
-import { Parallax } from 'materialize-css';
-
 @Component({
   selector: 'app-banner',
   templateUrl: './banner.component.html',
@@ -10,8 +8,5 @@ import { Parallax } from 'materialize-css';
 export class BannerComponent implements OnInit {
   constructor() {}
 
-  ngOnInit() {
-    const elems = document.querySelectorAll('.parallax');
-    Parallax.init(elems);
-  }
+  ngOnInit() {}
 }

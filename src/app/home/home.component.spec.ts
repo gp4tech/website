@@ -7,6 +7,7 @@ import {
 } from '@ngx-translate/core';
 
 import { HomeComponent } from './home.component';
+import { BannerComponent } from './banner/banner.component';
 import { ActivityIndicatorsComponent } from './activity-indicators/activity-indicators.component';
 import { TestimonialsComponent } from './testimonials/testimonials.component';
 
@@ -18,6 +19,7 @@ describe('HomeComponent', () => {
     TestBed.configureTestingModule({
       declarations: [
         HomeComponent,
+        BannerComponent,
         ActivityIndicatorsComponent,
         TestimonialsComponent
       ],
