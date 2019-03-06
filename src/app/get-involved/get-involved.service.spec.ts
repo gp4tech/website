@@ -6,7 +6,7 @@ describe('GetInvolvedService', () => {
   beforeEach(() => TestBed.configureTestingModule({}));
 
   it('should be created', () => {
-    const service: GetInvolvedService = TestBed.get(GetInvolvedService);
+    const service: GetInvolvedService = new GetInvolvedService();
     expect(service).toBeTruthy();
   });
 });

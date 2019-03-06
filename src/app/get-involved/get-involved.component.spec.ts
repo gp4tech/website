@@ -1,6 +1,15 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
+import { TranslateModule } from '@ngx-translate/core';
+
 import { GetInvolvedComponent } from './get-involved.component';
+import { GoogleChartsModule } from 'angular-google-charts';
+import { GetInvolvedService } from './get-involved.service';
+import { of } from 'rxjs';
+
+const getInvolvedServiceMock = {
+  getInvolvedPeopleByCountry: () => of([])
+}
 
 describe('GetInvolvedComponent', () => {
   let component: GetInvolvedComponent;
@@ -8,7 +17,9 @@ describe('GetInvolvedComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [GetInvolvedComponent]
+      imports: [TranslateModule.forRoot(), GoogleChartsModule],
+      declarations: [GetInvolvedComponent],
+      providers: [{ provide: GetInvolvedService, useValue: getInvolvedServiceMock}]
     }).compileComponents();
   }));
 

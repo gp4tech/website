@@ -10,6 +10,7 @@ import { HomeComponent } from './home.component';
 import { BannerComponent } from './banner/banner.component';
 import { ActivityIndicatorsComponent } from './activity-indicators/activity-indicators.component';
 import { TestimonialsComponent } from './testimonials/testimonials.component';
+import { GetInvolvedModule } from '../get-involved/get-involved.module';
 
 describe('HomeComponent', () => {
   let component: HomeComponent;
@@ -24,6 +25,7 @@ describe('HomeComponent', () => {
         TestimonialsComponent
       ],
       imports: [
+        GetInvolvedModule,
         TranslateModule.forRoot({
           loader: { provide: TranslateLoader, useClass: TranslateFakeLoader }
         })
