@@ -1,11 +1,11 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { TranslateModule } from '@ngx-translate/core';
+import { of } from 'rxjs';
 
 import { GetInvolvedComponent } from './get-involved.component';
 import { GoogleChartsModule } from 'angular-google-charts';
 import { GetInvolvedService } from './get-involved.service';
-import { of } from 'rxjs';
 
 const getInvolvedServiceMock = {
   getInvolvedPeopleByCountry: () => of([])
