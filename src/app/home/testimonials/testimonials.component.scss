@@ -1,28 +1,24 @@
+@import '../../../styles-mat-variables.scss';
+
 .student-picture {
   text-align: center;
   min-height: 40vh;
   display: flex;
   align-items: center;
 
-  @media screen and (max-width: 993px) {
+  @media #{$medium-and-down} {
     min-height: auto;
     display: inherit;
   }
 
   img {
-    width: 65%;
-    @media screen and (max-width: 993px) {
-      width: 200px;
-    }
-    @media screen and (max-width: 601px) {
-      width: 50%;
-    }
+    max-width: 80%;
   }
 }
 
 .testimonial-description {
   min-height: 40vh;
-  @media screen and (max-width: 993px) {
+  @media #{$medium-and-down} {
     min-height: auto;
   }
 }
