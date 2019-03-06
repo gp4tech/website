@@ -1,11 +1,3 @@
-.section-title {
-  font-family: 'BebasNeue';
-  text-align: center;
-  font-size: 25pt;
-  color: #e7184f;
-  font-weight: bold;
-}
-
 .student-picture {
   text-align: center;
   min-height: 40vh;
@@ -29,20 +21,8 @@
 }
 
 .testimonial-description {
-  font-family: 'inherit';
   min-height: 40vh;
   @media screen and (max-width: 993px) {
     min-height: auto;
-  }
-
-  .student-name {
-    font-size: 17px;
-    margin-bottom: 0px;
-    color: #e7184f;
-    font-style: inherit;
-  }
-
-  p {
-    font-style: oblique;
   }
 }
