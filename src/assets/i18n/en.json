@@ -42,6 +42,9 @@
       "number": 65
     }
   ],
+  "activity-indicator-section": {
+    "title": "Indicators"
+  },
   "testimonials": {
     "title": "Testimonials"
   },
