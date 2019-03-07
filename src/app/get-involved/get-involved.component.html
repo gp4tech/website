@@ -1,3 +1,14 @@
-<p>
-  get-involved works!
-</p>
+<div class="center-align">
+  <h4>・{{ 'get-involved.title' | translate }}・</h4>
+  <div class="row">
+    <div class="col s12">
+      <google-chart [dynamicResize]="true"
+        [title]="chart.title"
+        [type]="chart.type"
+        [data]="chart.data"
+        [columnNames]="chart.columnNames"
+        [options]="chart.options">
+      </google-chart>
+    </div>
+  </div>
+</div>
