@@ -9,7 +9,7 @@ import { GetInvolvedService } from './get-involved.service';
 
 const getInvolvedServiceMock = {
   getInvolvedPeopleByCountry: () => of([])
-}
+};
 
 describe('GetInvolvedComponent', () => {
   let component: GetInvolvedComponent;
