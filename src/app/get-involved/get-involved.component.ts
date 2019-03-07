@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 import { GetInvolvedService } from './get-involved.service';
-import { GEOCHART_CONFIG } from './chart-configuration.constant';
+import { GEOCHART_CONFIG } from './chart-configuration.model';
 
 @Component({
   selector: 'app-get-involved',
