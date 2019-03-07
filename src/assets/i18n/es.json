@@ -15,8 +15,11 @@
     "involved": "Involúcrate",
     "who-did-this": "¿QUIÉN HIZO ESTO?"
   },
-  "activity-indicator": [
-    {
+  "banner": {
+    "slogan": "Aprende, codifica, comparte",
+    "call-to-action": "Haz algo increíble"
+  },
+  "activity-indicator": [{
       "title": "Estudiantes Entrenados",
       "number": 400
     },
