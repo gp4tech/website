@@ -23,3 +23,14 @@ main {
 a {
   cursor: pointer;
 }
+
+/* Google chart visualization override */
+div.google-visualization-tooltip { 
+  background-color: #424242;
+  border-radius: 30px;
+  border: 4px dashed #d87093;
+  box-shadow: none;
+  color: #ffffff;
+  padding-left: 10px;
+  pointer-events: none;
+}

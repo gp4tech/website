@@ -1,11 +1,5 @@
 {
-  "home": {
-    "title": "Vista Inicial"
-  },
-  "about-us": {
-    "who": "¿Quienes somos?",
-    "members-title": "Miembros"
-  },
+  "home": {},
   "language": {
     "english": "EN",
     "spanish": "ES"
@@ -18,6 +12,10 @@
     "home": "Inicio",
     "involved": "Involúcrate",
     "who-did-this": "¿QUIÉN HIZO ESTO?"
+  },
+  "banner": {
+    "slogan": "Aprende, codifica, comparte",
+    "call-to-action": "Haz algo increíble"
   },
   "activity-indicator": [
     {
@@ -45,7 +43,16 @@
       "number": 65
     }
   ],
+  "activity-indicator-section": {
+    "title": "Indicadores"
+  },
   "testimonials": {
     "title": "Testimonios"
+  },
+  "get-involved": {
+    "title": "Involúcrate"
+  },
+  "about-us": {
+    "main-title": "¿Quiénes somos?"
   }
 }

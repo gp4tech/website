@@ -1,11 +1,5 @@
 {
-  "home": {
-    "title": "Initial View"
-  },
-  "about-us": {
-    "who": "Who are we?",
-    "members-title": "Members"
-  },
+  "home": {},
   "language": {
     "english": "EN",
     "spanish": "ES"
@@ -18,6 +12,10 @@
     "home": "Home",
     "involved": "Get Involved",
     "who-did-this": "WHO DID THIS?"
+  },
+  "banner": {
+    "slogan": "Learn, code, share",
+    "call-to-action": "Do something awesome"
   },
   "activity-indicator": [
     {
@@ -45,7 +43,16 @@
       "number": 65
     }
   ],
+  "activity-indicator-section": {
+    "title": "Indicators"
+  },
   "testimonials": {
     "title": "Testimonials"
+  },
+  "get-involved": {
+    "title": "Get Involved"
+  },
+  "about-us": {
+    "main-title": "Who are we?"
   }
 }

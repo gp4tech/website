@@ -1,0 +1,21 @@
+@import "../../../styles-mat-variables.scss";
+
+.parallax-container {
+  @media #{$small-and-down} {
+    height: calc(100vh - 56px);
+  }
+
+  .parallax img {
+    @media #{$small-and-down} {
+      left: 0px;
+    }
+  }
+}
+
+.banner-container {
+  height: 100%;
+
+  @media #{$small-and-down} {
+    text-align: center;
+  }
+}

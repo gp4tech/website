@@ -7,8 +7,10 @@ import {
 } from '@ngx-translate/core';
 
 import { HomeComponent } from './home.component';
+import { BannerComponent } from './banner/banner.component';
 import { ActivityIndicatorsComponent } from './activity-indicators/activity-indicators.component';
 import { TestimonialsComponent } from './testimonials/testimonials.component';
+import { GetInvolvedModule } from '../get-involved/get-involved.module';
 
 describe('HomeComponent', () => {
   let component: HomeComponent;
@@ -18,10 +20,12 @@ describe('HomeComponent', () => {
     TestBed.configureTestingModule({
       declarations: [
         HomeComponent,
+        BannerComponent,
         ActivityIndicatorsComponent,
         TestimonialsComponent
       ],
       imports: [
+        GetInvolvedModule,
         TranslateModule.forRoot({
           loader: { provide: TranslateLoader, useClass: TranslateFakeLoader }
         })
