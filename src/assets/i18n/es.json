@@ -53,6 +53,22 @@
     "title": "Involúcrate"
   },
   "about-us": {
-    "main-title": "¿Quiénes somos?"
+    "who": {
+      "title": "¿Quienes somos?"
+    },
+    "members": {
+      "title": "Miembros",
+      "career": {
+        "informatics": "Ciencias de la Computación",
+        "electronics": "Ingeniería Electrónica"
+      },
+      "ocupation": {
+        "dev": "Desarrolladora de Software",
+        "qa": "Control de Calidad"
+      },
+      "position": {
+        "web": "Web Team de GP4Tech"
+      }
+    }
   }
 }

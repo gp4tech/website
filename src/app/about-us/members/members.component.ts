@@ -9,42 +9,31 @@ export class MembersComponent implements OnInit {
   members = [
     {
       name: 'Claudia Martinez',
-      career: 'Electronics Engineer',
-      currentOcupation: 'Software Developer',
-      position: 'Web team de GP4Tech',
+      mainCareer: 'about-us.members.career.informatics',
+      currentOcupation: 'about-us.members.ocupation.dev',
+      positionGP4: 'about-us.members.position.web',
       image: '../../assets/images/GP4Tech-logo.png'
     },
     {
       name: 'Claudia Martinez',
-      career: 'Electronics Engineer',
-      currentOcupation: 'Software Developer',
-      position: 'Web team de GP4Tech',
+      mainCareer: 'about-us.members.career.electronics',
+      currentOcupation: 'about-us.members.ocupation.dev',
+      positionGP4: 'about-us.members.position.web',
       image: '../../assets/images/GP4Tech-logo.png'
     },
     {
       name: 'Claudia Martinez',
-      career: 'Electronics Engineer',
-      currentOcupation: 'Software Developer',
-      position: 'Web team de GP4Tech',
+      mainCareer: 'about-us.members.career.informatics',
+      currentOcupation: 'about-us.members.ocupation.qa',
+      positionGP4: 'about-us.members.position.web',
       image: '../../assets/images/GP4Tech-logo.png'
     },
     {
       name: 'Claudia Martinez',
-      career: 'Electronics Engineer',
-      currentOcupation: 'Software Developer',
-      position: 'Web team de GP4Tech',
+      mainCareer: 'about-us.members.career.electronics',
+      currentOcupation: 'about-us.members.ocupation.qa',
+      positionGP4: 'about-us.members.position.web',
       image: '../../assets/images/GP4Tech-logo.png'
-    }
-  ];
-  socialLinks = [
-    {
-      faIcon: 'fa-linkedin'
-    },
-    {
-      faIcon: 'fa-twitter'
-    },
-    {
-      faIcon: 'fa-facebook'
     }
   ];
   constructor() {}
