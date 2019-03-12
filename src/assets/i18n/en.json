@@ -17,33 +17,16 @@
     "slogan": "Learn, code, share",
     "call-to-action": "Do something awesome"
   },
-  "activity-indicator": [{
-      "title": "Trained Students",
-      "number": 400
-    },
-    {
-      "title": "Hours of training",
-      "number": 200
-    },
-    {
-      "title": "Hackaton",
-      "number": 1
-    },
-    {
-      "title": "Weekend Coding",
-      "number": 2
-    },
-    {
-      "title": "Supporters",
-      "number": 120
-    },
-    {
-      "title": "Members",
-      "number": 65
-    }
-  ],
   "activity-indicator-section": {
-    "title": "Indicators"
+    "title": "Indicators",
+    "labels": {
+      "trained-students": "Trained Students",
+      "hours-of-training": "Hours of Training",
+      "hackaton": "Hackaton",
+      "weekend-coding": "Weekend Coding",
+      "supporters": "Supporters",
+      "members": "Members"
+    }
   },
   "testimonials": {
     "title": "Testimonials"

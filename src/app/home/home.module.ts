@@ -7,6 +7,7 @@ import { BannerComponent } from './banner/banner.component';
 import { ActivityIndicatorsComponent } from './activity-indicators/activity-indicators.component';
 import { TestimonialsComponent } from './testimonials/testimonials.component';
 import { GetInvolvedModule } from '../get-involved/get-involved.module';
+import { ActivityIndicatorsService } from './activity-indicators/activity-indicators.service';
 
 @NgModule({
   declarations: [
@@ -19,6 +20,9 @@ import { GetInvolvedModule } from '../get-involved/get-involved.module';
     CommonModule,
     SharedModule,
     GetInvolvedModule,
+  ],
+  providers: [
+    ActivityIndicatorsService
   ]
 })
 export class HomeModule {}

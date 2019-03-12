@@ -17,33 +17,16 @@
     "slogan": "Aprende, codifica, comparte",
     "call-to-action": "Haz algo increíble"
   },
-  "activity-indicator": [{
-      "title": "Estudiantes Entrenados",
-      "number": 400
-    },
-    {
-      "title": "Horas Entrenamiento",
-      "number": 200
-    },
-    {
-      "title": "Hackaton",
-      "number": 1
-    },
-    {
-      "title": "Weekend Coding",
-      "number": 2
-    },
-    {
-      "title": "Seguidores",
-      "number": 120
-    },
-    {
-      "title": "Miembros",
-      "number": 65
-    }
-  ],
   "activity-indicator-section": {
-    "title": "Indicadores"
+    "title": "Indicadores",
+    "labels": {
+      "trained-students": "Estudiantes Entrenados",
+      "hours-of-training": "Horas Entrenamiento",
+      "hackaton": "Hackaton",
+      "weekend-coding": "Weekend Coding",
+      "supporters": "Seguidores",
+      "members": "Miembros"
+    }
   },
   "testimonials": {
     "title": "Testimonios"
