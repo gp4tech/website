@@ -1,19 +1,16 @@
 import { Injectable } from '@angular/core';
+import { AngularFirestore } from '@angular/fire/firestore';
 
-import { of, Observable } from 'rxjs';
+import { Observable } from 'rxjs';
+import { map } from 'rxjs/operators';
 
 @Injectable()
 export class GetInvolvedService {
-  getInvolvedPeopleByCountry(): Observable<any[]> {
-    // TODO: Hardcoded data that will be removed when firebase datastorage gets configured.
-    return of([
-      ['Germany', 1],
-      ['United States', 700],
-      ['Brazil', 50],
-      ['Canada', 100],
-      ['France', 0],
-      ['RU', 0],
-      ['Bolivia', 1000]
-    ]);
+  constructor(private db: AngularFirestore) {}
+
+  getInvolvedPeopleByCountry(): Observable<any> {
+    return this.db.collection('supporters-count').get()
+      .pipe(map((supportersCount) => supportersCount.docs
+        .map(document => [ document.data().country, document.data().count ])));
   }
 }

@@ -10,6 +10,7 @@ import { GEOCHART_CONFIG } from './chart-configuration.model';
 })
 export class GetInvolvedComponent implements OnInit {
 
+  isLoading = true;
   data;
   chart;
 
@@ -18,8 +19,13 @@ export class GetInvolvedComponent implements OnInit {
   ngOnInit() {
     this.getInvolvedService.getInvolvedPeopleByCountry()
       .subscribe((involvedPeopleByCountry) => {
+        this.isLoading = false;
         this.data = involvedPeopleByCountry
-          .map(([countryName, countryCount]) => [countryName, countryCount, this.generateHtmlTooltip(countryName, countryCount)]);
+          .map(([countryName, countryCount]) => [
+            countryName,
+            countryCount,
+            this.generateHtmlTooltip(countryName, countryCount)
+          ]);
         this.chart = Object.assign({ data: this.data }, GEOCHART_CONFIG);
       });
   }
