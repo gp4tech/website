@@ -1,0 +1,21 @@
+.member-card {
+  margin-top: 5%;
+  margin-bottom: 5%;
+
+  .member-sub-card {
+    width: 50%;
+    float: left;
+  }
+
+  .member-info {
+    p {
+      margin: 0;
+    }
+    .icons {
+      margin-top: 5%;
+      i {
+        padding: 3%;
+      }
+    }
+  }
+}

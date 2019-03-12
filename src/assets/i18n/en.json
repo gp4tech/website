@@ -1,5 +1,5 @@
 {
-  "home": { },
+  "home": {},
   "language": {
     "english": "EN",
     "spanish": "ES"
@@ -17,7 +17,8 @@
     "slogan": "Learn, code, share",
     "call-to-action": "Do something awesome"
   },
-  "activity-indicator": [{
+  "activity-indicator": [
+    {
       "title": "Trained Students",
       "number": 400
     },
@@ -52,6 +53,22 @@
     "title": "Get Involved"
   },
   "about-us": {
-    "main-title": "Who are we?"
+    "who": {
+      "title": "Who are we?"
+    },
+    "members": {
+      "title": "Members",
+      "career": {
+        "informatics": "Computer Science",
+        "electronics": "Electronics Engineering"
+      },
+      "ocupation": {
+        "dev": "Software Developer",
+        "qa": "Quality Assurance"
+      },
+      "position": {
+        "web": "Web Team of GP4Tech"
+      }
+    }
   }
 }

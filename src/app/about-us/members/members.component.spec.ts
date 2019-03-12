@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+
 import {
   TranslateModule,
   TranslateLoader,
   TranslateFakeLoader
 } from '@ngx-translate/core';
 
-import { AboutUsComponent } from './about-us.component';
-import { MembersComponent } from './members/members.component';
+import { MembersComponent } from './members.component';
 
-describe('AboutUsComponent', () => {
-  let component: AboutUsComponent;
-  let fixture: ComponentFixture<AboutUsComponent>;
+describe('MembersComponent', () => {
+  let component: MembersComponent;
+  let fixture: ComponentFixture<MembersComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [AboutUsComponent, MembersComponent],
+      declarations: [MembersComponent],
       imports: [
         TranslateModule.forRoot({
           loader: { provide: TranslateLoader, useClass: TranslateFakeLoader }
@@ -24,7 +24,7 @@ describe('AboutUsComponent', () => {
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(AboutUsComponent);
+    fixture = TestBed.createComponent(MembersComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

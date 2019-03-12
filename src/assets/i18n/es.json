@@ -1,5 +1,5 @@
 {
-  "home": { },
+  "home": {},
   "language": {
     "english": "EN",
     "spanish": "ES"
@@ -17,7 +17,8 @@
     "slogan": "Aprende, codifica, comparte",
     "call-to-action": "Haz algo increíble"
   },
-  "activity-indicator": [{
+  "activity-indicator": [
+    {
       "title": "Estudiantes Entrenados",
       "number": 400
     },
@@ -52,6 +53,22 @@
     "title": "Involúcrate"
   },
   "about-us": {
-    "main-title": "¿Quiénes somos?"
+    "who": {
+      "title": "¿Quienes somos?"
+    },
+    "members": {
+      "title": "Miembros",
+      "career": {
+        "informatics": "Ciencias de la Computación",
+        "electronics": "Ingeniería Electrónica"
+      },
+      "ocupation": {
+        "dev": "Desarrolladora de Software",
+        "qa": "Control de Calidad"
+      },
+      "position": {
+        "web": "Web Team de GP4Tech"
+      }
+    }
   }
 }

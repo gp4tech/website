@@ -1,0 +1,19 @@
+<h4 class="center-align">
+  ・{{ 'about-us.members.title' | translate | uppercase }}・
+</h4>
+<div class="row">
+  <div class="col s12 m6 member-card valign-wrapper" *ngFor="let member of members">
+    <img [src]="member.image" class="member-sub-card" />
+    <div class="member-sub-card member-info">
+      <p>{{ member.name }}</p>
+      <p>{{ 'about-us.members.career.' + member.mainCareer | translate }}</p>
+      <p>{{ 'about-us.members.ocupation.' + member.currentOcupation | translate }}</p>
+      <p>{{ 'about-us.members.position.' + member.positionGP4 | translate }}</p>
+      <div class="icons">
+        <i class="fa fa-2x fa-linkedin"></i>
+        <i class="fa fa-2x fa-twitter"></i>
+        <i class="fa fa-2x fa-facebook"></i>
+      </div>
+    </div>
+  </div>
+</div>
