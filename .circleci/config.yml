@@ -18,6 +18,9 @@ jobs:
       - run:
           name: Install dependencies
           command: npm install
+      - run:
+          name: Install node-sass
+          command: npm install node-sass
       - save_cache:
           key: v1-dependencies-{{ checksum "package.json" }}
           paths:
