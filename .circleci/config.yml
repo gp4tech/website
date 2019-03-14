@@ -3,7 +3,7 @@ jobs:
   build:
     working_directory: ~/project
     docker:
-      - image: circleci/node:chakracore-8.11-browsers-legacy
+      - image: circleci/node:chakracore-8.11.1-browsers
     steps:
       - checkout
       - run:
@@ -18,9 +18,6 @@ jobs:
       - run:
           name: Install dependencies
           command: npm install
-      - run:
-          name: Install node-sass
-          command: npm install --save-dev node-sass
       - save_cache:
           key: v1-dependencies-{{ checksum "package.json" }}
           paths:
@@ -43,7 +40,7 @@ jobs:
             - .firebaserc
   deploy:
     docker:
-      - image: circleci/node:chakracore-8.11-browsers-legacy
+      - image: circleci/node:chakracore-8.11.1-browsers
     working_directory: ~/project
     steps:
       - run:
