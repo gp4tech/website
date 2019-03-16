@@ -1,6 +1,8 @@
 import { Injectable } from '@angular/core';
 import { AngularFirestore } from '@angular/fire/firestore';
 import { DataService } from 'src/app/shared/data.service';
+import { Observable } from 'rxjs';
+import { map } from 'rxjs/operators';
 
 export interface Indicator {
   id: string;

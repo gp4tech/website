@@ -1,8 +1,7 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 
-import { Subscription, Observable } from 'rxjs';
+import { Observable } from 'rxjs';
 
-import { LanguageService } from 'src/app/layout/navbar/language-button/language.service';
 import { ActivityIndicatorsService, Indicator } from './activity-indicators.service';
 
 @Component({
