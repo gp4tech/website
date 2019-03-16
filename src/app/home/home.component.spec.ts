@@ -12,6 +12,7 @@ import { ActivityIndicatorsComponent } from './activity-indicators/activity-indi
 import { TestimonialsComponent } from './testimonials/testimonials.component';
 import { GetInvolvedModule } from '../get-involved/get-involved.module';
 import { ActivityIndicatorsService } from './activity-indicators/activity-indicators.service';
+import { CountrySupportersService } from '../get-involved/country-supporters.service';
 
 describe('HomeComponent', () => {
   let component: HomeComponent;
@@ -32,7 +33,8 @@ describe('HomeComponent', () => {
         })
       ],
       providers: [
-        { provide: ActivityIndicatorsService, useValue: {} }
+        { provide: ActivityIndicatorsService, useValue: {} },
+        { provide: CountrySupportersService, useValue: {} }
       ]
     }).compileComponents();
   }));
