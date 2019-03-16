@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 
 import { GetInvolvedService } from './get-involved.service';
 import { GEOCHART_CONFIG } from './chart-configuration.model';
+import { map } from 'rxjs/operators';
 
 @Component({
   selector: 'app-get-involved',
@@ -17,15 +18,14 @@ export class GetInvolvedComponent implements OnInit {
   constructor(private getInvolvedService: GetInvolvedService) { }
 
   ngOnInit() {
-    this.getInvolvedService.getInvolvedPeopleByCountry()
-      .subscribe((involvedPeopleByCountry) => {
+    this.getInvolvedService.getAll()
+      .pipe(
+        map((countrySupporters) => 
+          countrySupporters.map(({count, country}) => [country, count, this.generateHtmlTooltip(country, count)])
+      ))
+      .subscribe((supporters) => {
         this.isLoading = false;
-        this.data = involvedPeopleByCountry
-          .map(([countryName, countryCount]) => [
-            countryName,
-            countryCount,
-            this.generateHtmlTooltip(countryName, countryCount)
-          ]);
+        this.data = supporters;
         this.chart = Object.assign({ data: this.data }, GEOCHART_CONFIG);
       });
   }
