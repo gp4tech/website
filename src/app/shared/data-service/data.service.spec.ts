@@ -2,12 +2,13 @@ import { TestBed } from '@angular/core/testing';
 
 import { DataService } from './data.service';
 
+interface TestDataType {}
+
 describe('DataService', () => {
   beforeEach(() => TestBed.configureTestingModule({}));
 
   it('should be created', () => {
-    // TODO: fix testså
-    /*const service: DataService<T> = null;
-    expect(service).toBeTruthy();*/
+    const service: DataService<TestDataType> = null;
+    expect(service).toBeTruthy();
   });
 });

@@ -5,7 +5,7 @@ import { of } from 'rxjs';
 
 import { GetInvolvedComponent } from './get-involved.component';
 import { GoogleChartsModule } from 'angular-google-charts';
-import { GetInvolvedService } from './get-involved.service';
+import { GetInvolvedService } from './country-supporters.service';
 
 const getInvolvedServiceMock = {
   getInvolvedPeopleByCountry: () => of([])

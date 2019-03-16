@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { AngularFirestore } from '@angular/fire/firestore';
 
-import { DataService } from '../shared/data.service';
+import { DataService } from '../shared/data-service/data.service';
 
 interface CountrySupporters {
   id: string;
@@ -10,7 +10,7 @@ interface CountrySupporters {
 }
 
 @Injectable()
-export class GetInvolvedService extends DataService<CountrySupporters> {
+export class CountrySupportersService extends DataService<CountrySupporters> {
   constructor(private db: AngularFirestore) {
     super(db, 'country-supporters');
   }

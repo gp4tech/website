@@ -1,11 +1,8 @@
 import { AngularFirestore, AngularFirestoreCollection } from '@angular/fire/firestore';
+
 import { Observable } from 'rxjs';
 
-export abstract class DataType {
-  id: string;
-}
-
-export abstract class DataService<T extends DataType> {
+export abstract class DataService<T> {
   dataCollection: AngularFirestoreCollection<T>;
   
   constructor(private angularFirestoreService: AngularFirestore, collectionName: string) {

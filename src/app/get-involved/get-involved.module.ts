@@ -8,7 +8,7 @@ import { GoogleChartsModule } from 'angular-google-charts';
 import { GetInvolvedComponent } from './get-involved.component';
 import { SharedModule } from '../shared/shared.module';
 import { GetInvolvedRoutingModule } from './get-involved-routing.module';
-import { GetInvolvedService } from './get-involved.service';
+import { CountrySupportersService } from './country-supporters.service';
 import { environment } from 'src/environments/environment';
 
 @NgModule({
@@ -22,6 +22,6 @@ import { environment } from 'src/environments/environment';
     AngularFirestoreModule
   ],
   exports: [GetInvolvedComponent],
-  providers: [GetInvolvedService]
+  providers: [CountrySupportersService]
 })
 export class GetInvolvedModule {}

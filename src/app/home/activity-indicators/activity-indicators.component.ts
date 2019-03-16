@@ -2,7 +2,8 @@ import { Component, OnInit, OnDestroy } from '@angular/core';
 
 import { Observable } from 'rxjs';
 
-import { ActivityIndicatorsService, Indicator } from './activity-indicators.service';
+import { ActivityIndicatorsService } from './activity-indicators.service';
+import { ActivityIndicator } from "./activity-indicator";
 
 @Component({
   selector: 'app-activity-indicators',
@@ -10,7 +11,7 @@ import { ActivityIndicatorsService, Indicator } from './activity-indicators.serv
   styleUrls: ['./activity-indicators.component.scss']
 })
 export class ActivityIndicatorsComponent implements OnInit {
-  activityIndicators$: Observable<Indicator[]>;
+  activityIndicators$: Observable<ActivityIndicator[]>;
 
   constructor(private activityIndicatorsService: ActivityIndicatorsService) {}
 

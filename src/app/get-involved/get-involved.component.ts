@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
-import { GetInvolvedService } from './get-involved.service';
+import { CountrySupportersService } from './country-supporters.service';
 import { GEOCHART_CONFIG } from './chart-configuration.model';
 import { map } from 'rxjs/operators';
 
@@ -15,7 +15,7 @@ export class GetInvolvedComponent implements OnInit {
   data;
   chart;
 
-  constructor(private getInvolvedService: GetInvolvedService) { }
+  constructor(private getInvolvedService: CountrySupportersService) { }
 
   ngOnInit() {
     this.getInvolvedService.getAll()

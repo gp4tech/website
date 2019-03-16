@@ -1,17 +1,14 @@
 import { Injectable } from '@angular/core';
 import { AngularFirestore } from '@angular/fire/firestore';
 
-import { DataService } from 'src/app/shared/data.service';
+import { ActivityIndicator } from './activity-indicator';
+import { DataService } from '../../shared/data-service/data.service';
+import { FIREBASE_COLLECTIONS } from '../../shared/data-service/collections';
 
-export interface Indicator {
-  id: string;
-  label: string;
-  count: number;
-}
 @Injectable()
-export class ActivityIndicatorsService extends DataService<Indicator> {
+export class ActivityIndicatorsService extends DataService<ActivityIndicator> {
 
   constructor(private db: AngularFirestore) { 
-    super(db, 'activity-indicators');
+    super(db, FIREBASE_COLLECTIONS.activityIndicators);
   }
 }
