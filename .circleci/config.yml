@@ -29,6 +29,9 @@ jobs:
           name: Testing
           command: npm run test:client
       - run:
+          name: Inject Firebase DB keys
+          command: npm run firebase-db:override-keys
+      - run:
           name: Building
           command: npm run build:client
       - save_cache:
