@@ -3,7 +3,6 @@
     <div class="row">
       <div class="col s12 m6 info-links" >
         <a [routerLink]="[infoLink.link]" *ngFor="let infoLink of infoLinks; let i = index">
-          {{infoLink.link}}
           {{ infoLink.i18n | translate }}
           <span *ngIf="(i + 1) !== infoLinks.length"> | </span>
         </a>
