@@ -16,10 +16,10 @@ export class GetInvolvedComponent implements OnInit {
   data;
   chart;
 
-  constructor(private getInvolvedService: CountrySupportersService) { }
+  constructor(private countrySupportersService: CountrySupportersService) { }
 
   ngOnInit() {
-    this.getInvolvedService.getAll()
+    this.countrySupportersService.getAll()
       .pipe(
         map((countrySupporters) =>
           countrySupporters.map(({count, country}) => [country, count, this.generateHtmlTooltip(country, count)])

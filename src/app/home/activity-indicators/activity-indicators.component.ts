@@ -15,7 +15,7 @@ export class ActivityIndicatorsComponent implements OnInit {
 
   constructor(private activityIndicatorsService: ActivityIndicatorsService) {}
 
-  ngOnInit(): void {
+  ngOnInit() {
     this.activityIndicators$ = this.activityIndicatorsService.getAll();
   }
 }

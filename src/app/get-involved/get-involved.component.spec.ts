@@ -24,7 +24,9 @@ describe('GetInvolvedComponent', () => {
         SharedModule
       ],
       declarations: [GetInvolvedComponent],
-      providers: [{ provide: CountrySupportersService, useValue: countrySupportersServiceMock}]
+      providers: [
+        { provide: CountrySupportersService, useValue: countrySupportersServiceMock }
+      ]
     }).compileComponents();
   }));
 
