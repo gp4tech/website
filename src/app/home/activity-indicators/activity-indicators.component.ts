@@ -3,7 +3,7 @@ import { Component, OnInit, OnDestroy } from '@angular/core';
 import { Subscription, Observable } from 'rxjs';
 
 import { LanguageService } from 'src/app/layout/navbar/language-button/language.service';
-import { ActivityIndicatorsService } from './activity-indicators.service';
+import { ActivityIndicatorsService, Indicator } from './activity-indicators.service';
 
 @Component({
   selector: 'app-activity-indicators',
@@ -11,7 +11,7 @@ import { ActivityIndicatorsService } from './activity-indicators.service';
   styleUrls: ['./activity-indicators.component.scss']
 })
 export class ActivityIndicatorsComponent implements OnInit {
-  activityIndicators$: Observable<any[]>;
+  activityIndicators$: Observable<Indicator[]>;
 
   constructor(private activityIndicatorsService: ActivityIndicatorsService) {}
 

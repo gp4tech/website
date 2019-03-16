@@ -1,16 +1,16 @@
 import { Injectable } from '@angular/core';
 import { AngularFirestore } from '@angular/fire/firestore';
+import { DataService } from 'src/app/shared/data.service';
 
-import { Observable } from 'rxjs';
-import { map } from 'rxjs/operators';
-
+export interface Indicator {
+  id: string;
+  label: string;
+  count: number;
+}
 @Injectable()
-export class ActivityIndicatorsService {
+export class ActivityIndicatorsService extends DataService<Indicator> {
 
-  constructor(private db: AngularFirestore) { }
-
-  getAll(): Observable<any> {
-    return this.db.collection('activity-indicators').get()
-      .pipe(map((indicators) => indicators.docs.map(document => document.data())));
+  constructor(private db: AngularFirestore) { 
+    super(db, 'activity-indicators');
   }
 }
