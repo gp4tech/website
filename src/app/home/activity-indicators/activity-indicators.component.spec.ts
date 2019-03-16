@@ -7,6 +7,7 @@ import {
 } from '@ngx-translate/core';
 
 import { ActivityIndicatorsComponent } from './activity-indicators.component';
+import { ActivityIndicatorsService } from './activity-indicators.service';
 
 describe('ActivityIndicatorsComponent', () => {
   let component: ActivityIndicatorsComponent;
@@ -19,6 +20,9 @@ describe('ActivityIndicatorsComponent', () => {
         TranslateModule.forRoot({
           loader: { provide: TranslateLoader, useClass: TranslateFakeLoader }
         })
+      ],
+      providers: [
+        { provide: ActivityIndicatorsService, useValue: {} }
       ]
     }).compileComponents();
   }));

@@ -8,7 +8,7 @@ import { FIREBASE_COLLECTIONS } from '../../shared/data-service/collections';
 @Injectable()
 export class ActivityIndicatorsService extends DataService<ActivityIndicator> {
 
-  constructor(private db: AngularFirestore) { 
+  constructor(private db: AngularFirestore) {
     super(db, FIREBASE_COLLECTIONS.activityIndicators);
   }
 }

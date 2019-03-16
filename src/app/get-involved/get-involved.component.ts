@@ -1,8 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 
+import { map } from 'rxjs/operators';
+
 import { CountrySupportersService } from './country-supporters.service';
 import { GEOCHART_CONFIG } from './chart-configuration.model';
-import { map } from 'rxjs/operators';
 
 @Component({
   selector: 'app-get-involved',
@@ -20,7 +21,7 @@ export class GetInvolvedComponent implements OnInit {
   ngOnInit() {
     this.getInvolvedService.getAll()
       .pipe(
-        map((countrySupporters) => 
+        map((countrySupporters) =>
           countrySupporters.map(({count, country}) => [country, count, this.generateHtmlTooltip(country, count)])
       ))
       .subscribe((supporters) => {
