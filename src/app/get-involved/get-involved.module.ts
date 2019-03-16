@@ -1,7 +1,5 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { AngularFirestoreModule } from '@angular/fire/firestore';
-import { AngularFireModule } from '@angular/fire';
 
 import { GoogleChartsModule } from 'angular-google-charts';
 
@@ -9,7 +7,6 @@ import { GetInvolvedComponent } from './get-involved.component';
 import { SharedModule } from '../shared/shared.module';
 import { GetInvolvedRoutingModule } from './get-involved-routing.module';
 import { CountrySupportersService } from './country-supporters.service';
-import { environment } from 'src/environments/environment';
 
 @NgModule({
   declarations: [GetInvolvedComponent],
@@ -17,9 +14,7 @@ import { environment } from 'src/environments/environment';
     CommonModule,
     SharedModule,
     GetInvolvedRoutingModule,
-    GoogleChartsModule.forRoot(),
-    AngularFireModule.initializeApp(environment.firebase),
-    AngularFirestoreModule
+    GoogleChartsModule.forRoot()
   ],
   exports: [GetInvolvedComponent],
   providers: [CountrySupportersService]
