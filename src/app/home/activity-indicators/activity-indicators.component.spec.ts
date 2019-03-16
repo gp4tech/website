@@ -12,7 +12,7 @@ import { ActivityIndicatorsService } from './activity-indicators.service';
 
 const activityIndicatorsServiceMock = {
   getAll: () => of([])
-}
+};
 
 describe('ActivityIndicatorsComponent', () => {
   let component: ActivityIndicatorsComponent;

@@ -17,7 +17,7 @@ import { CountrySupportersService } from '../get-involved/country-supporters.ser
 
 const activityIndicatorsServiceMock = {
   getAll: () => of([])
-}
+};
 
 const countrySupportersServiceMock = {
   getAll: () => of([])
