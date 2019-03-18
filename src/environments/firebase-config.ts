@@ -2,7 +2,7 @@
  * Firebase configuration, configure it before starting the project
  * https://firebase.google.com/docs/web/setup
  */
-export const FIREBASE_CONFIG = {
+export const FirebaseConfig = {
     apiKey: '',
     authDomain: '',
     databaseURL: '',
