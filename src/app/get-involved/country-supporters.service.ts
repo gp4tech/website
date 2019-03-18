@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { AngularFirestore } from '@angular/fire/firestore';
 
 import { DataService } from '../shared/data-service/data.service';
-import { CountrySupporters } from './country-supporters';
+import { CountrySupporters } from '../shared/models/country-supporters.model';
 
 @Injectable()
 export class CountrySupportersService extends DataService<CountrySupporters> {

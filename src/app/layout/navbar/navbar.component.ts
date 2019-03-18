@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { APP_ROUTES } from '../../shared/routes.model';
+import { APP_ROUTES } from '../../shared/models/routes.model';
 
 @Component({
   selector: 'app-navbar',

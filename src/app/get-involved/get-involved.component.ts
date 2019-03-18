@@ -3,7 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { map } from 'rxjs/operators';
 
 import { CountrySupportersService } from './country-supporters.service';
-import { GEOCHART_CONFIG } from './chart-configuration.model';
+import { GeoChartConfig } from './chart-configuration';
 
 @Component({
   selector: 'app-get-involved',
@@ -27,7 +27,7 @@ export class GetInvolvedComponent implements OnInit {
       .subscribe((supporters) => {
         this.isLoading = false;
         this.data = supporters;
-        this.chart = Object.assign({ data: this.data }, GEOCHART_CONFIG);
+        this.chart = Object.assign({ data: this.data }, GeoChartConfig);
       });
   }
 

@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { AngularFirestore } from '@angular/fire/firestore';
 
-import { ActivityIndicator } from './activity-indicator';
+import { ActivityIndicator } from '../../shared/models/activity-indicator.model';
 import { DataService } from '../../shared/data-service/data.service';
 import { FIREBASE_COLLECTIONS } from '../../shared/data-service/collections';
 

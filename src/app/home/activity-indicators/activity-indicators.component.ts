@@ -3,7 +3,7 @@ import { Component, OnInit, OnDestroy } from '@angular/core';
 import { Observable } from 'rxjs';
 
 import { ActivityIndicatorsService } from './activity-indicators.service';
-import { ActivityIndicator } from './activity-indicator';
+import { ActivityIndicator } from '../../shared/models/activity-indicator.model';
 
 @Component({
   selector: 'app-activity-indicators',
