@@ -6,12 +6,17 @@ import { GoogleChartsModule } from 'angular-google-charts';
 import { GetInvolvedComponent } from './get-involved.component';
 import { SharedModule } from '../shared/shared.module';
 import { GetInvolvedRoutingModule } from './get-involved-routing.module';
-import { GetInvolvedService } from './get-involved.service';
+import { CountrySupportersService } from './country-supporters.service';
 
 @NgModule({
   declarations: [GetInvolvedComponent],
-  imports: [CommonModule, SharedModule, GetInvolvedRoutingModule, GoogleChartsModule.forRoot()],
+  imports: [
+    CommonModule,
+    SharedModule,
+    GetInvolvedRoutingModule,
+    GoogleChartsModule.forRoot()
+  ],
   exports: [GetInvolvedComponent],
-  providers: [GetInvolvedService]
+  providers: [CountrySupportersService]
 })
 export class GetInvolvedModule {}

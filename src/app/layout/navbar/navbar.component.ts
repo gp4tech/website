@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-import { APP_ROUTES } from '../../shared/routes.model';
+
+import { AppRoutes } from '../../shared/models/routes.model';
 
 @Component({
   selector: 'app-navbar',
@@ -7,7 +8,7 @@ import { APP_ROUTES } from '../../shared/routes.model';
   styleUrls: ['./navbar.component.scss']
 })
 export class NavbarComponent {
-  appRoutes = APP_ROUTES;
+  appRoutes = AppRoutes;
   selectedRoute: string;
 
   onSelect(appRoute: string): void {

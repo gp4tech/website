@@ -1,8 +1,9 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 
-import { Subscription, Observable } from 'rxjs';
+import { Observable, Subscription } from 'rxjs';
 
-import { LanguageService } from 'src/app/layout/navbar/language-button/language.service';
+import { ActivityIndicatorsService } from './activity-indicators.service';
+import { ActivityIndicator } from '../../shared/models/activity-indicator.model';
 
 @Component({
   selector: 'app-activity-indicators',
@@ -10,23 +11,18 @@ import { LanguageService } from 'src/app/layout/navbar/language-button/language.
   styleUrls: ['./activity-indicators.component.scss']
 })
 export class ActivityIndicatorsComponent implements OnInit, OnDestroy {
-  activityIndicators$: Observable<any>;
-  activityIndicatorSubscription: Subscription;
+  subscription: Subscription;
+  activityIndicators$: Observable<ActivityIndicator[]>;
 
-  constructor(private languageService: LanguageService) {}
+  constructor(private activityIndicatorsService: ActivityIndicatorsService) {}
 
-  ngOnInit(): void {
-    this.activityIndicators$ = this.getActivityIndicators();
-    this.activityIndicatorSubscription = this.languageService.changeLanguage$.subscribe(
-      () => (this.activityIndicators$ = this.getActivityIndicators())
-    );
+  ngOnInit() {
+    this.activityIndicators$ = this.activityIndicatorsService.getAll();
   }
 
   ngOnDestroy(): void {
-    this.activityIndicatorSubscription.unsubscribe();
-  }
-
-  private getActivityIndicators(): Observable<any> {
-    return this.languageService.getValueFromTranslation('activity-indicator');
+    if (this.subscription) {
+      this.subscription.unsubscribe();
+    }
   }
 }

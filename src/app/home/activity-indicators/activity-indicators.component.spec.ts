@@ -5,8 +5,14 @@ import {
   TranslateLoader,
   TranslateFakeLoader
 } from '@ngx-translate/core';
+import { of } from 'rxjs';
 
 import { ActivityIndicatorsComponent } from './activity-indicators.component';
+import { ActivityIndicatorsService } from './activity-indicators.service';
+
+const activityIndicatorsServiceMock = {
+  getAll: () => of([])
+};
 
 describe('ActivityIndicatorsComponent', () => {
   let component: ActivityIndicatorsComponent;
@@ -19,6 +25,9 @@ describe('ActivityIndicatorsComponent', () => {
         TranslateModule.forRoot({
           loader: { provide: TranslateLoader, useClass: TranslateFakeLoader }
         })
+      ],
+      providers: [
+        { provide: ActivityIndicatorsService, useValue: activityIndicatorsServiceMock }
       ]
     }).compileComponents();
   }));

@@ -2,7 +2,10 @@
   <h4>・{{ 'get-involved.title' | translate }}・</h4>
   <div class="row">
     <div class="col s12">
-      <google-chart [dynamicResize]="true"
+      <div class="valign-wrapper default-height" *ngIf="isLoading" >
+        <app-waiting-spinner></app-waiting-spinner>
+      </div>
+      <google-chart *ngIf="!isLoading" [dynamicResize]="true"
         [title]="chart.title"
         [type]="chart.type"
         [data]="chart.data"

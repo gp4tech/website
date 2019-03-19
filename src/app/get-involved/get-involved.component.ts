@@ -1,27 +1,42 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 
-import { GetInvolvedService } from './get-involved.service';
-import { GEOCHART_CONFIG } from './chart-configuration.model';
+import { map } from 'rxjs/operators';
+import { Subscription } from 'rxjs';
+
+import { CountrySupportersService } from './country-supporters.service';
+import { GeoChartConfig } from './chart-configuration';
 
 @Component({
   selector: 'app-get-involved',
   templateUrl: './get-involved.component.html',
   styleUrls: ['./get-involved.component.scss']
 })
-export class GetInvolvedComponent implements OnInit {
+export class GetInvolvedComponent implements OnInit, OnDestroy {
 
+  subscription: Subscription;
+  isLoading = true;
   data;
   chart;
 
-  constructor(private getInvolvedService: GetInvolvedService) { }
+  constructor(private countrySupportersService: CountrySupportersService) { }
 
   ngOnInit() {
-    this.getInvolvedService.getInvolvedPeopleByCountry()
-      .subscribe((involvedPeopleByCountry) => {
-        this.data = involvedPeopleByCountry
-          .map(([countryName, countryCount]) => [countryName, countryCount, this.generateHtmlTooltip(countryName, countryCount)]);
-        this.chart = Object.assign({ data: this.data }, GEOCHART_CONFIG);
+    this.subscription = this.countrySupportersService.getAll()
+    .pipe(
+      map((countrySupporters) =>
+      countrySupporters.map(({count, country}) => [country, count, this.generateHtmlTooltip(country, count)])
+      ))
+      .subscribe((supporters) => {
+        this.isLoading = false;
+        this.data = supporters;
+        this.chart = Object.assign({ data: this.data }, GeoChartConfig);
       });
+  }
+
+  ngOnDestroy(): void {
+    if (this.subscription) {
+      this.subscription.unsubscribe();
+    }
   }
 
   generateHtmlTooltip(countryName, countryCount) {

@@ -11,7 +11,7 @@ export enum AppBarRoutes {
   involved = 'get-involved'
 }
 
-export const APP_ROUTES: AppRoute[] = [
+export const AppRoutes: AppRoute[] = [
   { name: '', i18n: 'links.home' },
   { name: AppBarRoutes.about, i18n: 'links.about' },
   { name: AppBarRoutes.events, i18n: 'links.events' },

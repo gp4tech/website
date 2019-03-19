@@ -1,4 +1,4 @@
-export const GEOCHART_CONFIG = {
+export const GeoChartConfig = {
   type: 'GeoChart',
   columnNames: ['Country', 'Involved People', {'type': 'string', role: 'tooltip', p: {html: true}}],
   options: {

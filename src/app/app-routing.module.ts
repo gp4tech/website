@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
-import { AppBarRoutes } from './shared/routes.model';
+import { AppBarRoutes } from './shared/models/routes.model';
 import { HomeComponent } from './home/home.component';
 
 const routes: Routes = [

@@ -1,14 +1,15 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
+import { GoogleChartsModule } from 'angular-google-charts';
 import { TranslateModule } from '@ngx-translate/core';
 import { of } from 'rxjs';
 
 import { GetInvolvedComponent } from './get-involved.component';
-import { GoogleChartsModule } from 'angular-google-charts';
-import { GetInvolvedService } from './get-involved.service';
+import { CountrySupportersService } from './country-supporters.service';
+import { SharedModule } from '../shared/shared.module';
 
-const getInvolvedServiceMock = {
-  getInvolvedPeopleByCountry: () => of([])
+const countrySupportersServiceMock = {
+  getAll: () => of([])
 };
 
 describe('GetInvolvedComponent', () => {
@@ -17,9 +18,15 @@ describe('GetInvolvedComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      imports: [TranslateModule.forRoot(), GoogleChartsModule],
+      imports: [
+        TranslateModule.forRoot(),
+        GoogleChartsModule,
+        SharedModule
+      ],
       declarations: [GetInvolvedComponent],
-      providers: [{ provide: GetInvolvedService, useValue: getInvolvedServiceMock}]
+      providers: [
+        { provide: CountrySupportersService, useValue: countrySupportersServiceMock }
+      ]
     }).compileComponents();
   }));
 
