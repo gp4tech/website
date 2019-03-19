@@ -13,14 +13,14 @@
             </li>
           </ul>
           <div class="right-align">
-            <app-language-button></app-language-button>
+            <gp-language-button></gp-language-button>
           </div>
         </div>
       </div>
     </nav>
   </div>
 
-  <ul appSidenav class="sidenav" id="mobile-menu">
+  <ul gpSidenav class="sidenav" id="mobile-menu">
     <li *ngFor="let route of appRoutes" [class.selected]="route === selectedRoute" (click)="onSelect(route)">
       <a [routerLink]="route.name" class="sidenav-close">{{ route.i18n | translate | uppercase }}</a>
     </li>

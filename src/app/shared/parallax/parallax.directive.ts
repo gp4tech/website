@@ -3,7 +3,7 @@ import { Directive, ElementRef, OnInit } from '@angular/core';
 import { Parallax } from 'materialize-css';
 
 @Directive({
-  selector: '[appParallax]'
+  selector: '[gpParallax]'
 })
 export class ParallaxDirective implements OnInit {
   constructor(private elementRef: ElementRef) {}

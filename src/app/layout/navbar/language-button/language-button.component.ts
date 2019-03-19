@@ -3,7 +3,7 @@ import { Component } from '@angular/core';
 import { LanguageService } from './language.service';
 
 @Component({
-  selector: 'app-language-button',
+  selector: 'gp-language-button',
   templateUrl: './language-button.component.html',
   styleUrls: ['./language-button.component.scss']
 })
