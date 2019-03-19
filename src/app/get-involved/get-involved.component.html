@@ -2,8 +2,8 @@
   <h4>・{{ 'get-involved.title' | translate }}・</h4>
   <div class="row">
     <div class="col s12">
-      <div class="valign-wrapper default-height" *ngIf="isLoading" >
-        <app-waiting-spinner></app-waiting-spinner>
+      <div class="valign-wrapper default-height" *ngIf="isLoading">
+        <gp-waiting-spinner></gp-waiting-spinner>
       </div>
       <google-chart *ngIf="!isLoading" [dynamicResize]="true"
         [title]="chart.title"

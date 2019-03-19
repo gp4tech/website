@@ -6,7 +6,7 @@ import { ActivityIndicatorsService } from './activity-indicators.service';
 import { ActivityIndicator } from '../../shared/models/activity-indicator.model';
 
 @Component({
-  selector: 'app-activity-indicators',
+  selector: 'gp-activity-indicators',
   templateUrl: './activity-indicators.component.html',
   styleUrls: ['./activity-indicators.component.scss']
 })

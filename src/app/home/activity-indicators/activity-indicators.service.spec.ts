@@ -1,5 +1,4 @@
 import { TestBed } from '@angular/core/testing';
-
 import { AngularFirestore } from '@angular/fire/firestore';
 
 import { ActivityIndicatorsService } from './activity-indicators.service';

@@ -3,7 +3,7 @@ import { Component } from '@angular/core';
 import { AppRoutes } from '../../shared/models/routes.model';
 
 @Component({
-  selector: 'app-navbar',
+  selector: 'gp-navbar',
   templateUrl: './navbar.component.html',
   styleUrls: ['./navbar.component.scss']
 })

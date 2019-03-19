@@ -7,7 +7,7 @@ import { CountrySupportersService } from './country-supporters.service';
 import { GeoChartConfig } from './chart-configuration';
 
 @Component({
-  selector: 'app-get-involved',
+  selector: 'gp-get-involved',
   templateUrl: './get-involved.component.html',
   styleUrls: ['./get-involved.component.scss']
 })
