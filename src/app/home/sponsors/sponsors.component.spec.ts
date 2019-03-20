@@ -1,5 +1,11 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
+import {
+  TranslateModule,
+  TranslateLoader,
+  TranslateFakeLoader
+} from '@ngx-translate/core';
+
 import { SponsorsComponent } from './sponsors.component';
 
 describe('SponsorsComponent', () => {
@@ -8,9 +14,13 @@ describe('SponsorsComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ SponsorsComponent ]
-    })
-    .compileComponents();
+      declarations: [SponsorsComponent],
+      imports: [
+        TranslateModule.forRoot({
+          loader: { provide: TranslateLoader, useClass: TranslateFakeLoader }
+        })
+      ]
+    }).compileComponents();
   }));
 
   beforeEach(() => {
