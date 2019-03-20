@@ -8,6 +8,7 @@ import { ActivityIndicatorsComponent } from './activity-indicators/activity-indi
 import { TestimonialsComponent } from './testimonials/testimonials.component';
 import { GetInvolvedModule } from '../get-involved/get-involved.module';
 import { ActivityIndicatorsService } from './activity-indicators/activity-indicators.service';
+import { SponsorsComponent } from './sponsors/sponsors.component';
 
 @NgModule({
   declarations: [
@@ -15,6 +16,7 @@ import { ActivityIndicatorsService } from './activity-indicators/activity-indica
     BannerComponent,
     ActivityIndicatorsComponent,
     TestimonialsComponent,
+    SponsorsComponent,
   ],
   imports: [
     CommonModule,

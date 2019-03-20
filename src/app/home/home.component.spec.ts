@@ -14,6 +14,7 @@ import { TestimonialsComponent } from './testimonials/testimonials.component';
 import { GetInvolvedModule } from '../get-involved/get-involved.module';
 import { ActivityIndicatorsService } from './activity-indicators/activity-indicators.service';
 import { CountrySupportersService } from '../get-involved/country-supporters.service';
+import { SponsorsComponent } from './sponsors/sponsors.component';
 
 const activityIndicatorsServiceMock = {
   getAll: () => of([])
@@ -33,7 +34,8 @@ describe('HomeComponent', () => {
         HomeComponent,
         BannerComponent,
         ActivityIndicatorsComponent,
-        TestimonialsComponent
+        TestimonialsComponent,
+        SponsorsComponent
       ],
       imports: [
         GetInvolvedModule,
@@ -42,8 +44,14 @@ describe('HomeComponent', () => {
         })
       ],
       providers: [
-        { provide: ActivityIndicatorsService, useValue: activityIndicatorsServiceMock },
-        { provide: CountrySupportersService, useValue: countrySupportersServiceMock }
+        {
+          provide: ActivityIndicatorsService,
+          useValue: activityIndicatorsServiceMock
+        },
+        {
+          provide: CountrySupportersService,
+          useValue: countrySupportersServiceMock
+        }
       ]
     }).compileComponents();
   }));
