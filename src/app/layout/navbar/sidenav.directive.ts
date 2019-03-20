@@ -2,7 +2,7 @@ import { Directive, OnInit, ElementRef } from '@angular/core';
 import { Sidenav } from 'materialize-css';
 
 @Directive({
-  selector: '[appSidenav]'
+  selector: '[gpSidenav]'
 })
 export class SidenavDirective implements OnInit {
   constructor(private elementRef: ElementRef) {}

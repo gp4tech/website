@@ -3,7 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { LanguageService } from './layout/navbar/language-button/language.service';
 
 @Component({
-  selector: 'app-root',
+  selector: 'gp-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
