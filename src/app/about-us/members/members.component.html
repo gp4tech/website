@@ -3,7 +3,7 @@
 </h4>
 <div class="row">
   <div class="col s12 m6 member-card valign-wrapper" *ngFor="let member of members">
-    <img [src]="member.image" class="member-sub-card" />
+    <img [src]="member.image" class="member-sub-card">
     <div class="member-sub-card member-info">
       <p>{{ member.name }}</p>
       <p>{{ 'about-us.members.career.' + member.mainCareer | translate }}</p>
