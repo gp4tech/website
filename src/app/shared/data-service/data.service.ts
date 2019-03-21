@@ -7,7 +7,7 @@ import { DataType } from '../models/data-type.model';
 export abstract class DataService<T extends DataType> {
   dataCollection: AngularFirestoreCollection<T>;
 
-  constructor(private angularFirestoreService: AngularFirestore, collectionName: string) {
+  constructor(angularFirestoreService: AngularFirestore, collectionName: string) {
     this.dataCollection = angularFirestoreService.collection<T>(collectionName);
   }
 

@@ -1,3 +1,18 @@
-<p>
-  blog works!
-</p>
+<div class="container">
+  <div class="row center-align">
+    <div class="col s12 m4" *ngFor="let blog of blogs$ | async">
+      <div class="card">
+        <div class="card-image">
+          <img [src]="blog.image? blog.image : 'assets/images/GP4Tech-logo.png'" [alt]="blog.title">
+          <span class="card-title">{{blog.title}}</span>
+        </div>
+        <div class="card-content">
+          <p>{{blog.description}}</p>
+        </div>
+        <div class="card-action">
+          <a [href]="blog.url" target="_blank" rel="noopener noreferrer">Leer Más</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
