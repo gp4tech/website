@@ -3,6 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import { AngularFirestore } from '@angular/fire/firestore';
 
 import { Observable } from 'rxjs';
+import { map } from 'rxjs/operators';
 
 import { Blog } from '../models/blog.model';
 import { DataService } from '../data-service/data.service';
@@ -15,10 +16,27 @@ export class BlogsService extends DataService<Blog> {
     super(db, FirebaseCollections.blogs);
   }
 
+  getBlogsWithMetadata(): Observable<Blog[]> {
+    return this.getAll().pipe(
+      map(blogs => {
+        blogs.forEach(blog => {
+          if (this.isBlogIncomplete(blog)) {
+            this.updateBlogMetadata(blog).subscribe();
+          }
+        });
+        return blogs;
+      })
+    );
+  }
+
   updateBlogMetadata(blog: Blog): Observable<any> {
     return this.http.post(
       `${environment.functionsUrl}/updateBlogMetadata`,
       blog
     );
+  }
+
+  private isBlogIncomplete(blog: Blog): boolean {
+    return !blog.title || !blog.description || !blog.image;
   }
 }

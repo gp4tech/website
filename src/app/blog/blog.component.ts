@@ -17,19 +17,6 @@ export class BlogComponent implements OnInit {
   constructor(private blogsService: BlogsService) {}
 
   ngOnInit(): void {
-    this.blogs$ = this.blogsService.getAll().pipe(
-      map(blogs => {
-        blogs.forEach(blog => {
-          if (this.isBlogIncomplete(blog)) {
-            this.blogsService.updateBlogMetadata(blog).subscribe();
-          }
-        });
-        return blogs;
-      })
-    );
-  }
-
-  private isBlogIncomplete(blog: Blog): boolean {
-    return !blog.title || !blog.description || !blog.image;
+    this.blogs$ = this.blogsService.getBlogsWithMetadata();
   }
 }

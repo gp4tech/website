@@ -11,10 +11,15 @@ admin.initializeApp(functions.config().firebase);
 const db = admin.firestore();
 
 const BLOGS_COLLECTION = 'blogs';
+const ALLOWED_ORIGINS = [
+  'http://localhost:4200',
+  'http://localhost:8080',
+  'https://us-central1-gp4techsite.cloudfunctions.net'
+]
 
 exports.updateBlogMetadata = functions.https.onRequest((request, response) => {
   cors(request, response, () => {
-    response.set('Access-Control-Allow-Origin', '*');
+    verifyOrigin(request, response);
     const blog = request.body;
 
     urlMetadata(blog.url)
@@ -30,3 +35,11 @@ exports.updateBlogMetadata = functions.https.onRequest((request, response) => {
       .catch(error => response.status(500).send(error));
   });
 });
+
+function verifyOrigin(request, response) {
+  const origin = request.headers.origin;
+
+  if (ALLOWED_ORIGINS.indexOf(origin) > -1) {
+    response.set('Access-Control-Allow-Origin', origin);
+  }
+}
