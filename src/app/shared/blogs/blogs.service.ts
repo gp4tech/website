@@ -51,7 +51,7 @@ export class BlogsService extends DataService<Blog> {
   private verifyBlogsAndUpdateMetadata(blogs: Blog[]): void {
     blogs.forEach(blog => {
       if (this.isBlogIncomplete(blog)) {
-        this.updateOnCloudFunction(
+        this.updateUsingCloudFunction(
           blog.id,
           CloudFunctions.updateBlogMetadata
         ).subscribe();

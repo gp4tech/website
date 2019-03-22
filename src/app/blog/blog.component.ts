@@ -24,7 +24,7 @@ export class BlogComponent implements OnInit {
 
   updateBlogViews(blog: Blog): void {
     this.blogsService
-      .updateOnCloudFunction(blog.id, CloudFunctions.updateBlogViews)
+      .updateUsingCloudFunction(blog.id, CloudFunctions.updateBlogViews)
       .subscribe();
   }
 }

@@ -24,7 +24,7 @@ export abstract class DataService<T extends DataType> {
     return this.dataCollection.valueChanges();
   }
 
-  updateOnCloudFunction(id: string, functionName: string): Observable<T> {
+  updateUsingCloudFunction(id: string, functionName: string): Observable<T> {
     const url = `${environment.functionsUrl}/${functionName}`;
     const data: DataType = { id };
 
