@@ -23,7 +23,7 @@ export class BlogsService extends DataService<Blog> {
     super(db, FirebaseCollections.blogs);
   }
 
-  getTopBlogs() {
+  getTopBlogs(): Observable<Blog[]> {
     return this.db
       .collection<Blog>(this.collectionName, ref =>
         ref.orderBy('views', 'desc').limit(MAX_TOP_BLOGS_LENGTH)
@@ -68,7 +68,7 @@ export class BlogsService extends DataService<Blog> {
     return !blog.title || !blog.description || !blog.image;
   }
 
-  private verifyBlogsAndUpdateMetadata(blogs: Blog[]) {
+  private verifyBlogsAndUpdateMetadata(blogs: Blog[]): void {
     blogs.forEach(blog => {
       if (this.isBlogIncomplete(blog)) {
         this.updateBlogOnServer(

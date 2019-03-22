@@ -22,7 +22,7 @@ export class TopBlogsComponent implements OnInit {
     this.defaultImage = this.blogsService.defaultBlogImage;
   }
 
-  updateBlogViews(blog: Blog) {
+  updateBlogViews(blog: Blog): void {
     this.blogsService
       .updateBlogOnServer(blog, CloudFunctions.updateBlogViews)
       .subscribe();
