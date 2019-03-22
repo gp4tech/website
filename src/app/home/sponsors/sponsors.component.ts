@@ -1,4 +1,9 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
+
+import { Observable, Subscription } from 'rxjs';
+
+import { Sponsor } from 'src/app/shared/models/sponsor.model';
+import { SponsorsService } from './sponsors.service';
 import { environment } from '../../../environments/environment';
 
 @Component({
@@ -6,24 +11,20 @@ import { environment } from '../../../environments/environment';
   templateUrl: './sponsors.component.html',
   styleUrls: ['./sponsors.component.scss']
 })
-export class SponsorsComponent implements OnInit {
+export class SponsorsComponent implements OnInit, OnDestroy {
+  subscription: Subscription;
+  sponsors$: Observable<Sponsor[]>;
   baseUrl = environment.firebaseStorageUrl;
-  sponsors = [
-    {
-      label: 'Fundacion Jala',
-      imgPath:
-        'images%2Fsponsors%2Ffundacion-jala-logo.png?alt=media&token=95701108-86b9-46d3-84f8-a1a01d951fb3',
-      link: 'http://fundacion-jala.org'
-    },
-    {
-      label: 'Jalasoft',
-      imgPath:
-        'images%2Fsponsors%2Fjalasoft-logo.png?alt=media&token=5801be77-50ab-4834-beba-aad687c52311',
-      link: 'http://www.jalasoft.com/'
+
+  constructor(private sponsorsService: SponsorsService) {}
+
+  ngOnInit() {
+    this.sponsors$ = this.sponsorsService.getAll();
+  }
+
+  ngOnDestroy(): void {
+    if (this.subscription) {
+      this.subscription.unsubscribe();
     }
-  ];
-
-  constructor() {}
-
-  ngOnInit() {}
+  }
 }
