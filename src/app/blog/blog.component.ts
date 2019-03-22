@@ -4,8 +4,7 @@ import { Observable } from 'rxjs';
 
 import { Blog } from '../shared/models/blog.model';
 import { BlogsService } from '../shared/blogs/blogs.service';
-
-const DEFAULT_IMAGE = 'assets/images/GP4Tech-logo.png';
+import { CloudFunctions } from '../shared/data-service/cloud-functions';
 
 @Component({
   selector: 'gp-blog',
@@ -14,11 +13,18 @@ const DEFAULT_IMAGE = 'assets/images/GP4Tech-logo.png';
 })
 export class BlogComponent implements OnInit {
   blogs$: Observable<Blog[]>;
-  defaultImage = DEFAULT_IMAGE;
+  defaultImage: string;
 
-  constructor(public blogsService: BlogsService) {}
+  constructor(private blogsService: BlogsService) {}
 
   ngOnInit(): void {
     this.blogs$ = this.blogsService.getBlogsWithMetadata();
+    this.defaultImage = this.blogsService.defaultBlogImage;
+  }
+
+  updateBlogViews(blog: Blog) {
+    this.blogsService
+      .updateBlogOnServer(blog, CloudFunctions.updateBlogViews)
+      .subscribe();
   }
 }

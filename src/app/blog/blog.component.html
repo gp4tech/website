@@ -10,7 +10,7 @@
           <p>{{ blog.description }}</p>
         </div>
         <div class="card-action">
-          <a (click)="blogsService.updateBlogViews(blog).subscribe()" [href]="blog.url" target="_blank"
+          <a (click)="updateBlogViews(blog)" [href]="blog.url" target="_blank"
             rel="noopener noreferrer">{{ 'blog.read-more' | translate }}</a>
         </div>
       </div>

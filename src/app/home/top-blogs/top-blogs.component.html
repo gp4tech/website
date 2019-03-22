@@ -12,7 +12,7 @@
         <span class="card-title activator grey-text text-darken-4">
           {{ blog.title }}
         </span>
-        <p><a (click)="blogsService.updateBlogViews(blog).subscribe()" [href]="blog.url" target="_blank"
+        <p><a (click)="updateBlogViews(blog)" [href]="blog.url" target="_blank"
             rel="noopener noreferrer">{{ 'blog.read-more' | translate }}</a></p>
       </div>
       <div class="card-reveal">

@@ -1,3 +1,5 @@
+'use strict';
+
 const functions = require('firebase-functions');
 const admin = require('firebase-admin');
 const firebaseHelper = require('firebase-functions-helper');
@@ -14,9 +16,8 @@ const ALLOWED_ORIGINS = [
   'http://127.0.0.1:4200',
   'http://127.0.0.1:8080',
   'https://us-central1-gp4techsite.cloudfunctions.net'
-]
+];
 const BLOGS_COLLECTION = 'blogs';
-const DEFAULT_ERROR_MESSAGE = 'Internal Server Error.';
 
 function verifyOrigin(request, response) {
   const origin = request.headers.origin;
@@ -26,46 +27,53 @@ function verifyOrigin(request, response) {
   }
 }
 
-function updateBlog(blog) {
-  if (blog.id) {
-    firebaseHelper.firestore.updateDocument(db, BLOGS_COLLECTION, blog.id, blog);
-    return true;
-  }
-  return false;
+function updateDocument(collectionName, document) {
+  return firebaseHelper.firestore.updateDocument(db, collectionName, document.id, document);
 }
 
-exports.updateBlog = functions.https.onRequest((request, response) => {
-  cors(request, response, () => {
-    verifyOrigin(request, response);
-
-    let blog = request.body;
-    const blogUpdated = updateBlog(blog);
-
-    if (blogUpdated) {
-      return response.status(200).send(blog);
-    }
-    return response.status(500).send(DEFAULT_ERROR_MESSAGE);
-  });
-});
+function getDocument(collectionName, documentId) {
+  return firebaseHelper.firestore.getDocument(db, collectionName, documentId);
+}
 
 exports.updateBlogMetadata = functions.https.onRequest((request, response) => {
   cors(request, response, () => {
     verifyOrigin(request, response);
 
-    let blog = request.body;
+    const blogId = request.body.id;
 
-    urlMetadata(blog.url)
-      .then(metadata => {
+    getDocument(BLOGS_COLLECTION, blogId)
+      .then(blog => Promise.all([blog, urlMetadata(blog.url)]))
+      .then(results => {
+        let blog = results[0];
+        const metadata = results[1];
+
         blog.title = metadata.title;
         blog.description = metadata.description;
         blog.image = metadata.image;
 
-        const blogUpdated = updateBlog(blog);
+        updateDocument(BLOGS_COLLECTION, blog);
 
-        if (blogUpdated) {
-          return response.status(200).send(blog);
-        }
-        return response.status(500).send(DEFAULT_ERROR_MESSAGE);
+        return response.status(200).send(blog);
+      })
+      .catch(error => response.status(500).send(error));
+  });
+
+});
+
+exports.updateBlogViews = functions.https.onRequest((request, response) => {
+  cors(request, response, () => {
+    verifyOrigin(request, response);
+
+    const blogId = request.body.id;
+
+    getDocument(BLOGS_COLLECTION, blogId)
+      .then(blog => {
+        const views = blog.views;
+        blog.views = views ? views + 1 : 1;
+
+        updateDocument(BLOGS_COLLECTION, blog);
+
+        return response.status(200).send(blog);
       })
       .catch(error => response.status(500).send(error));
   });

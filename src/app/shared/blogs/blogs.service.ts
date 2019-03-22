@@ -8,14 +8,16 @@ import { map } from 'rxjs/operators';
 import { Blog } from '../models/blog.model';
 import { DataService } from '../data-service/data.service';
 import { FirebaseCollections } from '../data-service/collections';
+import { CloudFunctions } from '../data-service/cloud-functions';
 import { environment } from 'src/environments/environment';
 
 const MAX_TOP_BLOGS_LENGTH = 3;
-const NEW_VIEW_COUNT = 1;
+const DEFAULT_IMAGE = 'assets/images/GP4Tech-logo.png';
 
 @Injectable()
 export class BlogsService extends DataService<Blog> {
   collectionName = FirebaseCollections.blogs;
+  defaultBlogImage = DEFAULT_IMAGE;
 
   constructor(private db: AngularFirestore, private http: HttpClient) {
     super(db, FirebaseCollections.blogs);
@@ -44,17 +46,22 @@ export class BlogsService extends DataService<Blog> {
     );
   }
 
+  updateBlogOnServer(blog: Blog, functionName: string): Observable<any> {
+    return this.http.post(`${environment.functionsUrl}/${functionName}`, blog);
+  }
+
   updateBlogMetadata(blog: Blog): Observable<any> {
     return this.http.post(
-      `${environment.functionsUrl}/updateBlogMetadata`,
+      `${environment.functionsUrl}/${CloudFunctions.updateBlogMetadata}`,
       blog
     );
   }
 
   updateBlogViews(blog: Blog): Observable<any> {
-    const views = blog.views;
-    blog.views = views ? views + NEW_VIEW_COUNT : NEW_VIEW_COUNT;
-    return this.http.post(`${environment.functionsUrl}/updateBlog`, blog);
+    return this.http.post(
+      `${environment.functionsUrl}/${CloudFunctions.updateBlogViews}`,
+      blog
+    );
   }
 
   private isBlogIncomplete(blog: Blog): boolean {
@@ -64,7 +71,10 @@ export class BlogsService extends DataService<Blog> {
   private verifyBlogsAndUpdateMetadata(blogs: Blog[]) {
     blogs.forEach(blog => {
       if (this.isBlogIncomplete(blog)) {
-        this.updateBlogMetadata(blog).subscribe();
+        this.updateBlogOnServer(
+          blog,
+          CloudFunctions.updateBlogMetadata
+        ).subscribe();
       }
     });
   }
