@@ -1,9 +1,10 @@
 <h4 class="center-align">・{{ 'sponsors.title' | translate }}・</h4>
 <div class="row">
-  <a class="col s12 m6 valign-wrapper gp4-supporters-logo" href="http://fundacion-jala.org" target="_blank" rel="noopener noreferrer">
-    <img src="https://bit.ly/2UTZvJi" alt="Fundacion Jala">
-  </a>
-  <a class="col s12 m6 valign-wrapper gp4-supporters-logo" href="http://www.jalasoft.com/" target="_blank" rel="noopener noreferrer">
-    <img src="https://bit.ly/2Fn2Dqt" alt="Jalasoft">
+  <a *ngFor="let sponsor of sponsors"
+    class="col s12 m6 valign-wrapper gp4-supporters-logo"
+    [href]=sponsor.link
+    target="_blank"
+    rel="noopener noreferrer">
+    <img [src]="baseUrl + sponsor.imgPath" [alt]=sponsor.label>
   </a>
 </div>
