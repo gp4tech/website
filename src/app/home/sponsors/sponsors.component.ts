@@ -12,13 +12,13 @@ export class SponsorsComponent implements OnInit {
     {
       label: 'Fundacion Jala',
       imgPath:
-        'images%2Fsponsors%2Ffundacion-jala-logo.png?alt=media&token=94209f1b-a11d-44b6-8a83-7592f08bc738',
+        'images%2Fsponsors%2Ffundacion-jala-logo.png?alt=media&token=95701108-86b9-46d3-84f8-a1a01d951fb3 ',
       link: 'http://fundacion-jala.org'
     },
     {
       label: 'Jalasoft',
       imgPath:
-        'images%2Fsponsors%2Fjala-logo.png?alt=media&token=9e02c4c4-b63d-4257-baf3-df76adc9b3a1',
+        'images%2Fsponsors%2Fjalasoft-logo.png?alt=media&token=5801be77-50ab-4834-beba-aad687c52311',
       link: 'http://www.jalasoft.com/'
     }
   ];
