@@ -39,7 +39,7 @@
   },
   "about-us": {
     "who": {
-      "title": "¿Quienes somos?"
+      "title": "¿Quiénes somos?"
     },
     "members": {
       "title": "Miembros",
@@ -55,5 +55,10 @@
         "web": "Web Team de GP4Tech"
       }
     }
+  },
+  "blog": {
+    "title": "Blogs",
+    "read-more": "Leer Más",
+    "see-more": "Ver Más"
   }
 }

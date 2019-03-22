@@ -7,7 +7,7 @@ import { FirebaseCollections } from '../shared/data-service/collections';
 
 @Injectable()
 export class CountrySupportersService extends DataService<CountrySupporters> {
-  constructor(db: AngularFirestore) {
+  constructor(private db: AngularFirestore) {
     super(db, FirebaseCollections.countrySupporters);
   }
 }

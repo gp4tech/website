@@ -1,10 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 
 import { Observable } from 'rxjs';
-import { map } from 'rxjs/operators';
 
 import { Blog } from '../shared/models/blog.model';
 import { BlogsService } from '../shared/blogs/blogs.service';
+
+const DEFAULT_IMAGE = 'assets/images/GP4Tech-logo.png';
 
 @Component({
   selector: 'gp-blog',
@@ -13,8 +14,9 @@ import { BlogsService } from '../shared/blogs/blogs.service';
 })
 export class BlogComponent implements OnInit {
   blogs$: Observable<Blog[]>;
+  defaultImage = DEFAULT_IMAGE;
 
-  constructor(private blogsService: BlogsService) {}
+  constructor(public blogsService: BlogsService) {}
 
   ngOnInit(): void {
     this.blogs$ = this.blogsService.getBlogsWithMetadata();

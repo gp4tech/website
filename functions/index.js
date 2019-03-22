@@ -10,31 +10,13 @@ admin.initializeApp(functions.config().firebase);
 
 const db = admin.firestore();
 
-const BLOGS_COLLECTION = 'blogs';
 const ALLOWED_ORIGINS = [
   'http://localhost:4200',
   'http://localhost:8080',
   'https://us-central1-gp4techsite.cloudfunctions.net'
 ]
-
-exports.updateBlogMetadata = functions.https.onRequest((request, response) => {
-  cors(request, response, () => {
-    verifyOrigin(request, response);
-    const blog = request.body;
-
-    urlMetadata(blog.url)
-      .then(metadata => {
-        blog.title = metadata.title;
-        blog.description = metadata.description;
-        blog.image = metadata.image;
-
-        firebaseHelper.firestore.updateDocument(db, BLOGS_COLLECTION, blog.id, blog);
-
-        return response.status(200).send(metadata);
-      })
-      .catch(error => response.status(500).send(error));
-  });
-});
+const BLOGS_COLLECTION = 'blogs';
+const DEFAULT_ERROR_MESSAGE = 'Internal Server Error.';
 
 function verifyOrigin(request, response) {
   const origin = request.headers.origin;
@@ -43,3 +25,48 @@ function verifyOrigin(request, response) {
     response.set('Access-Control-Allow-Origin', origin);
   }
 }
+
+function updateBlog(blog) {
+  if (blog.id) {
+    firebaseHelper.firestore.updateDocument(db, BLOGS_COLLECTION, blog.id, blog);
+    return true;
+  }
+  return false;
+}
+
+exports.updateBlog = functions.https.onRequest((request, response) => {
+  cors(request, response, () => {
+    verifyOrigin(request, response);
+
+    const blog = request.body;
+    const blogUpdated = updateBlog(blog);
+
+    if (blogUpdated) {
+      return response.status(200).send(blog);
+    }
+    return response.status(500).send(DEFAULT_ERROR_MESSAGE);
+  });
+});
+
+exports.updateBlogMetadata = functions.https.onRequest((request, response) => {
+  cors(request, response, () => {
+    verifyOrigin(request, response);
+
+    const blog = request.body;
+
+    urlMetadata(blog.url)
+      .then(metadata => {
+        blog.title = metadata.title;
+        blog.description = metadata.description;
+        blog.image = metadata.image;
+
+        const blogUpdated = updateBlog(blog);
+
+        if (blogUpdated) {
+          return response.status(200).send(blog);
+        }
+        return response.status(500).send(DEFAULT_ERROR_MESSAGE);
+      })
+      .catch(error => response.status(500).send(error));
+  });
+});

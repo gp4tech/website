@@ -1,16 +1,17 @@
 <div class="container">
   <div class="row center-align">
-    <div class="col s12 m4" *ngFor="let blog of blogs$ | async">
-      <div class="card">
+    <div *ngFor="let blog of blogs$ | async" class="col s12 m4">
+      <div class="card left-align">
         <div class="card-image">
-          <img [src]="blog.image? blog.image : 'assets/images/GP4Tech-logo.png'" [alt]="blog.title">
-          <span class="card-title">{{blog.title}}</span>
+          <img [src]="blog.image? blog.image : defaultImage" [alt]="blog.title">
+          <span class="card-title">{{ blog.title }}</span>
         </div>
         <div class="card-content">
-          <p>{{blog.description}}</p>
+          <p>{{ blog.description }}</p>
         </div>
         <div class="card-action">
-          <a [href]="blog.url" target="_blank" rel="noopener noreferrer">Leer Más</a>
+          <a (click)="blogsService.updateBlogViews(blog).subscribe()" [href]="blog.url" target="_blank"
+            rel="noopener noreferrer">{{ 'blog.read-more' | translate }}</a>
         </div>
       </div>
     </div>

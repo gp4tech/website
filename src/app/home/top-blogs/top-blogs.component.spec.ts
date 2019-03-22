@@ -7,33 +7,31 @@ import {
 } from '@ngx-translate/core';
 import { of } from 'rxjs';
 
-import { BlogComponent } from './blog.component';
-import { BlogsService } from '../shared/blogs/blogs.service';
+import { TopBlogsComponent } from './top-blogs.component';
+import { BlogsService } from 'src/app/shared/blogs/blogs.service';
 
 const blogsServiceMock = {
-  getBlogsWithMetadata: () => of([])
+  getTopBlogs: () => of([])
 };
 
-describe('BlogComponent', () => {
-  let component: BlogComponent;
-  let fixture: ComponentFixture<BlogComponent>;
+describe('TopBlogsComponent', () => {
+  let component: TopBlogsComponent;
+  let fixture: ComponentFixture<TopBlogsComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [BlogComponent],
+      declarations: [TopBlogsComponent],
       imports: [
         TranslateModule.forRoot({
           loader: { provide: TranslateLoader, useClass: TranslateFakeLoader }
         })
       ],
-      providers: [
-        { provide: BlogsService, useValue: blogsServiceMock }
-      ]
+      providers: [{ provide: BlogsService, useValue: blogsServiceMock }]
     }).compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(BlogComponent);
+    fixture = TestBed.createComponent(TopBlogsComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

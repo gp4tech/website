@@ -3,5 +3,5 @@ import { FirebaseConfig } from './firebase-config';
 export const environment = {
   production: true,
   firebase: FirebaseConfig,
-  functionsUrl: 'http://localhost:5000/gp4techsite/us-central1'
+  functionsUrl: 'https://us-central1-gp4techsite.cloudfunctions.net'
 };
