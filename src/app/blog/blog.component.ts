@@ -18,13 +18,13 @@ export class BlogComponent implements OnInit {
   constructor(private blogsService: BlogsService) {}
 
   ngOnInit(): void {
-    this.blogs$ = this.blogsService.getBlogsWithMetadata();
+    this.blogs$ = this.blogsService.getAllBlogs();
     this.defaultImage = this.blogsService.defaultBlogImage;
   }
 
   updateBlogViews(blog: Blog): void {
     this.blogsService
-      .updateBlogOnServer(blog, CloudFunctions.updateBlogViews)
+      .updateOnCloudFunction(blog.id, CloudFunctions.updateBlogViews)
       .subscribe();
   }
 }

@@ -11,7 +11,7 @@ import { BlogComponent } from './blog.component';
 import { BlogsService } from '../shared/blogs/blogs.service';
 
 const blogsServiceMock = {
-  getBlogsWithMetadata: () => of([])
+  getAllBlogs: () => of([])
 };
 
 describe('BlogComponent', () => {
@@ -26,9 +26,7 @@ describe('BlogComponent', () => {
           loader: { provide: TranslateLoader, useClass: TranslateFakeLoader }
         })
       ],
-      providers: [
-        { provide: BlogsService, useValue: blogsServiceMock }
-      ]
+      providers: [{ provide: BlogsService, useValue: blogsServiceMock }]
     }).compileComponents();
   }));
 

@@ -9,22 +9,29 @@ import { Blog } from '../models/blog.model';
 import { DataService } from '../data-service/data.service';
 import { FirebaseCollections } from '../data-service/collections';
 import { CloudFunctions } from '../data-service/cloud-functions';
-import { environment } from 'src/environments/environment';
 
 const MAX_TOP_BLOGS_LENGTH = 3;
 const DEFAULT_IMAGE = 'assets/images/GP4Tech-logo.png';
 
 @Injectable()
 export class BlogsService extends DataService<Blog> {
-  collectionName = FirebaseCollections.blogs;
   defaultBlogImage = DEFAULT_IMAGE;
 
-  constructor(private db: AngularFirestore, private http: HttpClient) {
-    super(db, FirebaseCollections.blogs);
+  constructor(http: HttpClient, db: AngularFirestore) {
+    super(http, db, FirebaseCollections.blogs);
+  }
+
+  getAllBlogs(): Observable<Blog[]> {
+    return this.getAll().pipe(
+      map(blogs => {
+        this.verifyBlogsAndUpdateMetadata(blogs);
+        return blogs;
+      })
+    );
   }
 
   getTopBlogs(): Observable<Blog[]> {
-    return this.db
+    return this.angularFirestoreService
       .collection<Blog>(this.collectionName, ref =>
         ref.orderBy('views', 'desc').limit(MAX_TOP_BLOGS_LENGTH)
       )
@@ -37,33 +44,6 @@ export class BlogsService extends DataService<Blog> {
       );
   }
 
-  getBlogsWithMetadata(): Observable<Blog[]> {
-    return this.getAll().pipe(
-      map(blogs => {
-        this.verifyBlogsAndUpdateMetadata(blogs);
-        return blogs;
-      })
-    );
-  }
-
-  updateBlogOnServer(blog: Blog, functionName: string): Observable<any> {
-    return this.http.post(`${environment.functionsUrl}/${functionName}`, blog);
-  }
-
-  updateBlogMetadata(blog: Blog): Observable<any> {
-    return this.http.post(
-      `${environment.functionsUrl}/${CloudFunctions.updateBlogMetadata}`,
-      blog
-    );
-  }
-
-  updateBlogViews(blog: Blog): Observable<any> {
-    return this.http.post(
-      `${environment.functionsUrl}/${CloudFunctions.updateBlogViews}`,
-      blog
-    );
-  }
-
   private isBlogIncomplete(blog: Blog): boolean {
     return !blog.title || !blog.description || !blog.image;
   }
@@ -71,8 +51,8 @@ export class BlogsService extends DataService<Blog> {
   private verifyBlogsAndUpdateMetadata(blogs: Blog[]): void {
     blogs.forEach(blog => {
       if (this.isBlogIncomplete(blog)) {
-        this.updateBlogOnServer(
-          blog,
+        this.updateOnCloudFunction(
+          blog.id,
           CloudFunctions.updateBlogMetadata
         ).subscribe();
       }
