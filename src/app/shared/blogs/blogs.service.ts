@@ -10,6 +10,9 @@ import { DataService } from '../data-service/data.service';
 import { FirebaseCollections } from '../data-service/collections';
 import { environment } from 'src/environments/environment';
 
+const MAX_TOP_BLOGS_LENGTH = 3;
+const NEW_VIEW_COUNT = 1;
+
 @Injectable()
 export class BlogsService extends DataService<Blog> {
   collectionName = FirebaseCollections.blogs;
@@ -21,14 +24,11 @@ export class BlogsService extends DataService<Blog> {
   getTopBlogs() {
     return this.db
       .collection<Blog>(this.collectionName, ref =>
-        ref.orderBy('views', 'desc')
+        ref.orderBy('views', 'desc').limit(MAX_TOP_BLOGS_LENGTH)
       )
       .valueChanges()
       .pipe(
         map(blogs => {
-          if (blogs.length > 3) {
-            blogs.length = 3;
-          }
           this.verifyBlogsAndUpdateMetadata(blogs);
           return blogs;
         })
@@ -53,7 +53,7 @@ export class BlogsService extends DataService<Blog> {
 
   updateBlogViews(blog: Blog): Observable<any> {
     const views = blog.views;
-    blog.views = views ? views + 1 : 1;
+    blog.views = views ? views + NEW_VIEW_COUNT : NEW_VIEW_COUNT;
     return this.http.post(`${environment.functionsUrl}/updateBlog`, blog);
   }
 

@@ -11,8 +11,8 @@ admin.initializeApp(functions.config().firebase);
 const db = admin.firestore();
 
 const ALLOWED_ORIGINS = [
-  'http://localhost:4200',
-  'http://localhost:8080',
+  'http://127.0.0.1:4200',
+  'http://127.0.0.1:8080',
   'https://us-central1-gp4techsite.cloudfunctions.net'
 ]
 const BLOGS_COLLECTION = 'blogs';
@@ -38,7 +38,7 @@ exports.updateBlog = functions.https.onRequest((request, response) => {
   cors(request, response, () => {
     verifyOrigin(request, response);
 
-    const blog = request.body;
+    let blog = request.body;
     const blogUpdated = updateBlog(blog);
 
     if (blogUpdated) {
@@ -52,7 +52,7 @@ exports.updateBlogMetadata = functions.https.onRequest((request, response) => {
   cors(request, response, () => {
     verifyOrigin(request, response);
 
-    const blog = request.body;
+    let blog = request.body;
 
     urlMetadata(blog.url)
       .then(metadata => {
