@@ -15,7 +15,7 @@ export class TopBlogsComponent implements OnInit {
   blogs$: Observable<Blog[]>;
   defaultImage: string;
 
-  constructor(public blogsService: BlogsService) {}
+  constructor(private blogsService: BlogsService) {}
 
   ngOnInit(): void {
     this.blogs$ = this.blogsService.getTopBlogs();
