@@ -1,6 +1,6 @@
-import { Component, OnInit, OnDestroy } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
-import { Observable, Subscription } from 'rxjs';
+import { Observable } from 'rxjs';
 
 import { Sponsor } from 'src/app/shared/models/sponsor.model';
 import { SponsorsService } from './sponsors.service';
@@ -11,8 +11,7 @@ import { environment } from '../../../environments/environment';
   templateUrl: './sponsors.component.html',
   styleUrls: ['./sponsors.component.scss']
 })
-export class SponsorsComponent implements OnInit, OnDestroy {
-  subscription: Subscription;
+export class SponsorsComponent implements OnInit {
   sponsors$: Observable<Sponsor[]>;
   baseUrl = environment.firebaseStorageUrl;
 
@@ -20,11 +19,5 @@ export class SponsorsComponent implements OnInit, OnDestroy {
 
   ngOnInit() {
     this.sponsors$ = this.sponsorsService.getAll();
-  }
-
-  ngOnDestroy(): void {
-    if (this.subscription) {
-      this.subscription.unsubscribe();
-    }
   }
 }
