@@ -12,6 +12,7 @@ import { GetInvolvedModule } from '../get-involved/get-involved.module';
 import { ActivityIndicatorsService } from './activity-indicators/activity-indicators.service';
 import { SponsorsComponent } from './sponsors/sponsors.component';
 import { TopBlogsComponent } from './top-blogs/top-blogs.component';
+import { SponsorsService } from './sponsors/sponsors.service';
 
 @NgModule({
   declarations: [
@@ -20,17 +21,9 @@ import { TopBlogsComponent } from './top-blogs/top-blogs.component';
     ActivityIndicatorsComponent,
     TestimonialsComponent,
     SponsorsComponent,
-    TopBlogsComponent,
+    TopBlogsComponent
   ],
-  imports: [
-    CommonModule,
-    RouterModule,
-    SharedModule,
-    GetInvolvedModule
-  ],
-  providers: [
-    ActivityIndicatorsService,
-    BlogsService
-  ]
+  imports: [CommonModule, RouterModule, SharedModule, GetInvolvedModule],
+  providers: [ActivityIndicatorsService, BlogsService, SponsorsService]
 })
 export class HomeModule {}

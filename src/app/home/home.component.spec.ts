@@ -17,6 +17,7 @@ import { CountrySupportersService } from '../get-involved/country-supporters.ser
 import { SponsorsComponent } from './sponsors/sponsors.component';
 import { TopBlogsComponent } from './top-blogs/top-blogs.component';
 import { BlogsService } from '../shared/blogs/blogs.service';
+import { SponsorsService } from './sponsors/sponsors.service';
 
 const activityIndicatorsServiceMock = {
   getAll: () => of([])
@@ -28,6 +29,10 @@ const countrySupportersServiceMock = {
 
 const blogsServiceMock = {
   getTopBlogs: () => of([])
+};
+
+const sponsorsServiceMock = {
+  getAll: () => of([])
 };
 
 describe('HomeComponent', () => {
@@ -59,7 +64,11 @@ describe('HomeComponent', () => {
           provide: CountrySupportersService,
           useValue: countrySupportersServiceMock
         },
-        { provide: BlogsService, useValue: blogsServiceMock }
+        { provide: BlogsService, useValue: blogsServiceMock },
+        {
+          provide: SponsorsService,
+          useValue: sponsorsServiceMock
+        }
       ]
     }).compileComponents();
   }));
