@@ -1,3 +1,19 @@
-<p>
-  blog works!
-</p>
+<div class="container">
+  <div class="row center-align">
+    <div *ngFor="let blog of blogs$ | async" class="col s12 m4">
+      <div class="card left-align">
+        <div class="card-image">
+          <img [src]="blog.image? blog.image : defaultImage" [alt]="blog.title">
+          <span class="card-title">{{ blog.title }}</span>
+        </div>
+        <div class="card-content">
+          <p>{{ blog.description }}</p>
+        </div>
+        <div class="card-action">
+          <a (click)="updateBlogViews(blog)" [href]="blog.url" target="_blank"
+            rel="noopener noreferrer">{{ 'blog.read-more' | translate }}</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

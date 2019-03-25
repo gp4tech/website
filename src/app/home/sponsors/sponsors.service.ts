@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
 import { AngularFirestore } from '@angular/fire/firestore';
 
 import { Sponsor } from '../../shared/models/sponsor.model';
@@ -7,7 +8,7 @@ import { FirebaseCollections } from '../../shared/data-service/collections';
 
 @Injectable()
 export class SponsorsService extends DataService<Sponsor> {
-  constructor(private db: AngularFirestore) {
-    super(db, FirebaseCollections.sponsors);
+  constructor(http: HttpClient, db: AngularFirestore) {
+    super(http, db, FirebaseCollections.sponsors);
   }
 }

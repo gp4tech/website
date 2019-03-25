@@ -55,5 +55,10 @@
         "web": "Web Team of GP4Tech"
       }
     }
+  },
+  "blog": {
+    "title": "Blogs",
+    "read-more": "Read More",
+    "see-more": "See More"
   }
 }

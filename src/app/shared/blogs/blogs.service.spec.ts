@@ -1,26 +1,26 @@
 import { TestBed } from '@angular/core/testing';
-import { HttpClientModule } from '@angular/common/http';
 import { AngularFirestore } from '@angular/fire/firestore';
+import { HttpClientModule } from '@angular/common/http';
 
-import { SponsorsService } from './sponsors.service';
+import { BlogsService } from './blogs.service';
 
 const angularFirestoreMock = {
   collection: () => {}
 };
 
-describe('SponsorsService', () => {
+describe('BlogsService', () => {
   beforeEach(() =>
     TestBed.configureTestingModule({
       imports: [HttpClientModule],
       providers: [
-        SponsorsService,
+        BlogsService,
         { provide: AngularFirestore, useValue: angularFirestoreMock }
       ]
     })
   );
 
   it('should be created', () => {
-    const service: SponsorsService = TestBed.get(SponsorsService);
+    const service: BlogsService = TestBed.get(BlogsService);
     expect(service).toBeTruthy();
   });
 });
