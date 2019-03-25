@@ -1,6 +1,6 @@
-import { Component, OnInit, OnDestroy } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
-import { Observable, Subscription } from 'rxjs';
+import { Observable } from 'rxjs';
 
 import { ActivityIndicatorsService } from './activity-indicators.service';
 import { ActivityIndicator } from '../../shared/models/activity-indicator.model';
@@ -10,19 +10,12 @@ import { ActivityIndicator } from '../../shared/models/activity-indicator.model'
   templateUrl: './activity-indicators.component.html',
   styleUrls: ['./activity-indicators.component.scss']
 })
-export class ActivityIndicatorsComponent implements OnInit, OnDestroy {
-  subscription: Subscription;
+export class ActivityIndicatorsComponent implements OnInit {
   activityIndicators$: Observable<ActivityIndicator[]>;
 
   constructor(private activityIndicatorsService: ActivityIndicatorsService) {}
 
   ngOnInit() {
     this.activityIndicators$ = this.activityIndicatorsService.getAll();
-  }
-
-  ngOnDestroy(): void {
-    if (this.subscription) {
-      this.subscription.unsubscribe();
-    }
   }
 }

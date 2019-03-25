@@ -15,12 +15,17 @@ import { GetInvolvedModule } from '../get-involved/get-involved.module';
 import { ActivityIndicatorsService } from './activity-indicators/activity-indicators.service';
 import { CountrySupportersService } from '../get-involved/country-supporters.service';
 import { SponsorsComponent } from './sponsors/sponsors.component';
+import { SponsorsService } from './sponsors/sponsors.service';
 
 const activityIndicatorsServiceMock = {
   getAll: () => of([])
 };
 
 const countrySupportersServiceMock = {
+  getAll: () => of([])
+};
+
+const sponsorsServiceMock = {
   getAll: () => of([])
 };
 
@@ -51,6 +56,10 @@ describe('HomeComponent', () => {
         {
           provide: CountrySupportersService,
           useValue: countrySupportersServiceMock
+        },
+        {
+          provide: SponsorsService,
+          useValue: sponsorsServiceMock
         }
       ]
     }).compileComponents();

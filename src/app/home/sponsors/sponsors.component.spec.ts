@@ -5,8 +5,14 @@ import {
   TranslateLoader,
   TranslateFakeLoader
 } from '@ngx-translate/core';
+import { of } from 'rxjs';
 
 import { SponsorsComponent } from './sponsors.component';
+import { SponsorsService } from './sponsors.service';
+
+const sponsorsServiceMock = {
+  getAll: () => of([])
+};
 
 describe('SponsorsComponent', () => {
   let component: SponsorsComponent;
@@ -19,7 +25,8 @@ describe('SponsorsComponent', () => {
         TranslateModule.forRoot({
           loader: { provide: TranslateLoader, useClass: TranslateFakeLoader }
         })
-      ]
+      ],
+      providers: [{ provide: SponsorsService, useValue: sponsorsServiceMock }]
     }).compileComponents();
   }));
 
