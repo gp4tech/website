@@ -11,7 +11,7 @@ import { TopBlogsComponent } from './top-blogs.component';
 import { BlogsService } from 'src/app/shared/blogs/blogs.service';
 
 const blogsServiceMock = {
-  getTopBlogs: () => of([])
+  getAllSorted: () => of([])
 };
 
 describe('TopBlogsComponent', () => {
