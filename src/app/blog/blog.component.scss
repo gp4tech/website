@@ -1,0 +1,13 @@
+.card-image {
+  height: 200px;
+  overflow: hidden;
+
+  img {
+    width: 100%;
+  }
+
+  .card-title {
+    font-size: 1.3em;
+    text-shadow: 2px 2px black;
+  }
+}

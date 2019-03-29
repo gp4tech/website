@@ -12,8 +12,8 @@
           target="_blank"
           rel="noopener noreferrer"
           class="btn-floating grey darken-2" 
-          href="{{ socialLink.link }}">
-          <i class="fa {{ socialLink.faIcon }}"></i>
+          [href]="socialLink.link">
+          <i [class]="'fa ' + socialLink.faIcon"></i>
         </a>
       </div>
     </div>

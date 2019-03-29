@@ -59,5 +59,10 @@
   "who-did-this": {
     "title": "Meet the Team",
     "description": "This is a short description about the team."
+  },
+  "blog": {
+    "title": "Blogs",
+    "read-more": "Read More",
+    "see-more": "See More"
   }
 }

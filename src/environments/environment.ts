@@ -6,7 +6,10 @@ import { FirebaseConfig } from './firebase-config';
 
 export const environment = {
   production: false,
-  firebase: FirebaseConfig
+  firebase: FirebaseConfig,
+  functionsUrl: 'http://localhost:5000/gp4techsite/us-central1',
+  firebaseStorageUrl:
+    'https://firebasestorage.googleapis.com/v0/b/gp4techsite.appspot.com/o/'
 };
 
 /*

@@ -17,11 +17,12 @@ jobs:
             - v1-dependencies-{{ checksum "package.json" }}
       - run:
           name: Install dependencies
-          command: npm install
+          command: npm install && npm --prefix ./functions/ install
       - save_cache:
           key: v1-dependencies-{{ checksum "package.json" }}
           paths:
             - node_modules
+            - functions/node_modules
       - run:
           name: Linting
           command: npm run lint
@@ -38,6 +39,7 @@ jobs:
           key: v1-dist-{{ .Environment.CIRCLE_BRANCH }}-{{ .Environment.CIRCLE_SHA1 }}
           paths:
             - dist
+            - functions
             - package.json
             - firebase.json
             - .firebaserc
