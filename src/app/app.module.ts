@@ -13,6 +13,7 @@ import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { HomeModule } from './home/home.module';
+import { WhoDidThisModule } from './who-did-this/who-did-this.module';
 import { LayoutModule } from './layout/layout.module';
 import { environment } from 'src/environments/environment';
 
@@ -27,6 +28,7 @@ export function HttpLoaderFactory(http: HttpClient) {
     AppRoutingModule,
     HomeModule,
     LayoutModule,
+    WhoDidThisModule,
     HttpClientModule,
     TranslateModule.forRoot({
       loader: {
