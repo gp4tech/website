@@ -1,0 +1,35 @@
+.team-container {
+    padding-bottom: 2rem;
+    .header {
+        color: #ee6e73;
+        font-weight: 300;
+    }
+    .center {
+        text-align: center;
+        vertical-align: middle;
+    }
+    .circular {
+        border-radius: 50%;
+    }
+    .responsive-team {
+        width: 100%;
+        height: auto;
+    }
+    .image-container-members {
+        margin-top: 15px;
+    }
+    @media (max-width: 575.98px) {
+        .all {
+            text-align: center; 
+        }
+        .responsive-member {
+            width: 50%;
+            height: auto;
+        }
+    }
+    @media (max-width: 768px) {
+        .padding-bio {
+            padding-left: 40px;
+        }
+    }
+}

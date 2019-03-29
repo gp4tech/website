@@ -1,0 +1,33 @@
+<div class="team-container">
+  <div class="container all">
+    <h2 class="header">
+      {{ 'who-did-this.title' | translate }}
+    </h2>
+    <p class="caption">
+      {{ 'who-did-this.description' | translate }}
+    </p>
+    <div class="center">
+      <img src="../../assets/images/web-team.jpeg"
+           alt="Web Team"
+           class="responsive-team">
+    </div>
+    <br>
+    <div class="row" *ngFor="let who of whoDidThis$ | async">
+      <div class="col s12 m3 center-on-small-only">
+        <div class="image-container-members center">
+          <img [src]="who.pic"
+               [alt]="who.name"
+               class="circular responsive-member">
+        </div>
+      </div>
+      <div class="col s12 m9 padding-bio">
+        <h4>
+          {{ who.name }}
+        </h4>
+        <p>
+          {{ who.bio }}
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
