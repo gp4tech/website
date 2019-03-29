@@ -55,5 +55,9 @@
         "web": "Web Team of GP4Tech"
       }
     }
+  },
+  "who-did-this": {
+    "title": "Meet the Team",
+    "description": "This is a short description about the team."
   }
 }

@@ -55,5 +55,9 @@
         "web": "Web Team de GP4Tech"
       }
     }
+  },
+  "who-did-this": {
+    "title": "Conoce al Equipo",
+    "description": "Esta es una descripcion corta del equipo."
   }
 }
