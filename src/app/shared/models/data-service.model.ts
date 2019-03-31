@@ -6,8 +6,8 @@ import {
 
 import { Observable } from 'rxjs';
 
-import { DataType, DataOrder } from '../../models/data-type.model';
-import { environment } from '../../../../environments/environment';
+import { DataType, DataOrder } from './data-type.model';
+import { environment } from '../../../environments/environment';
 
 export abstract class DataService<T extends DataType> {
   dataCollection: AngularFirestoreCollection<T>;

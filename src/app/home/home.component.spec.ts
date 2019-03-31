@@ -15,8 +15,8 @@ import { GetInvolvedModule } from '../get-involved/get-involved.module';
 import { ActivityIndicatorsService } from './activity-indicators/activity-indicators.service';
 import { CountrySupportersService } from '../get-involved/country-supporters.service';
 import { SponsorsComponent } from './sponsors/sponsors.component';
-import { TopBlogsComponent } from './top-blogs/top-blogs.component';
-import { BlogsService } from '../shared/services/blogs/blogs.service';
+import { TopBlogsComponent } from '../blog/top-blogs/top-blogs.component';
+import { BlogsService } from '../blog/blogs.service';
 import { SponsorsService } from './sponsors/sponsors.service';
 
 const activityIndicatorsServiceMock = {

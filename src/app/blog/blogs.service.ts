@@ -5,10 +5,10 @@ import { AngularFirestore } from '@angular/fire/firestore';
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
 
-import { Blog } from '../../models/blog.model';
-import { DataService } from '../data/data.service';
-import { FirebaseCollections } from '../data/collections';
-import { CloudFunctions } from '../data/cloud-functions';
+import { Blog } from '../shared/models/blog.model';
+import { DataService } from '../shared/models/data-service.model';
+import { FirebaseCollections } from '../shared/models/collections.constant';
+import { CloudFunctions } from '../shared/models/cloud-functions.constant';
 
 const DEFAULT_IMAGE = 'assets/images/GP4Tech-logo.png';
 
