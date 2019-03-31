@@ -2,10 +2,10 @@ import { Component, OnInit } from '@angular/core';
 
 import { Observable } from 'rxjs';
 
-import { Blog } from 'src/app/shared/models/blog.model';
-import { BlogsService } from 'src/app/shared/services/blogs/blogs.service';
-import { CloudFunctions } from 'src/app/shared/services/data/cloud-functions';
-import { DataOrder } from 'src/app/shared/models/data-type.model';
+import { Blog } from '../../shared/models/blog.model';
+import { BlogsService } from '../../shared/services/blogs/blogs.service';
+import { CloudFunctions } from '../../shared/services/data/cloud-functions';
+import { DataOrder } from '../../shared/models/data-type.model';
 
 const MAX_TOP_BLOGS_LENGTH = 3;
 
