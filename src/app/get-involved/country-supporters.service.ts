@@ -9,7 +9,6 @@ import { FirebaseCollections } from '../shared/models/collections.constant';
 @Injectable()
 export class CountrySupportersService extends DataService<CountrySupporters> {
   constructor(http: HttpClient, db: AngularFirestore) {
-    console.log('country')
     super(http, db, FirebaseCollections.countrySupporters);
   }
 }
