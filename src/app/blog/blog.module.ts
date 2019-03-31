@@ -4,7 +4,7 @@ import { CommonModule } from '@angular/common';
 import { BlogComponent } from './blog.component';
 import { SharedModule } from '../shared/shared.module';
 import { BlogRoutingModule } from './blog-routing.module';
-import { BlogsService } from '../shared/blogs/blogs.service';
+import { BlogsService } from '../shared/services/blogs/blogs.service';
 
 @NgModule({
   declarations: [BlogComponent],

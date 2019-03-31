@@ -16,7 +16,7 @@ import { ActivityIndicatorsService } from './activity-indicators/activity-indica
 import { CountrySupportersService } from '../get-involved/country-supporters.service';
 import { SponsorsComponent } from './sponsors/sponsors.component';
 import { TopBlogsComponent } from './top-blogs/top-blogs.component';
-import { BlogsService } from '../shared/blogs/blogs.service';
+import { BlogsService } from '../shared/services/blogs/blogs.service';
 import { SponsorsService } from './sponsors/sponsors.service';
 
 const activityIndicatorsServiceMock = {

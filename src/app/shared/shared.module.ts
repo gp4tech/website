@@ -3,8 +3,8 @@ import { CommonModule } from '@angular/common';
 
 import { TranslateModule } from '@ngx-translate/core';
 
-import { ParallaxDirective } from './parallax/parallax.directive';
-import { WaitingSpinnerComponent } from './waiting-spinner/waiting-spinner.component';
+import { ParallaxDirective } from './directives/parallax/parallax.directive';
+import { WaitingSpinnerComponent } from './components/waiting-spinner/waiting-spinner.component';
 
 @NgModule({
   declarations: [ParallaxDirective, WaitingSpinnerComponent],

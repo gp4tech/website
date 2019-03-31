@@ -3,8 +3,8 @@ import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
 
 import { Blog } from '../shared/models/blog.model';
-import { BlogsService } from '../shared/blogs/blogs.service';
-import { CloudFunctions } from '../shared/data-service/cloud-functions';
+import { BlogsService } from '../shared/services/blogs/blogs.service';
+import { CloudFunctions } from '../shared/services/data/cloud-functions';
 
 @Component({
   selector: 'gp-blog',
