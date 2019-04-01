@@ -1,6 +1,6 @@
 export interface WhoDidThis {
-    id: string;
-    name: string;
-    bio: string;
-    pic: string;
-  }
+  id: string;
+  name: string;
+  bio: string;
+  pic: string;
+}

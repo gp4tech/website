@@ -1,6 +1,6 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 
-import { Observable, Subscription } from 'rxjs';
+import { Observable } from 'rxjs';
 
 import { WhoDidThisService } from './who-did-this.service';
 import { WhoDidThis } from '../shared/models/who-did-this.model';
@@ -10,19 +10,12 @@ import { WhoDidThis } from '../shared/models/who-did-this.model';
   templateUrl: './who-did-this.component.html',
   styleUrls: ['./who-did-this.component.scss']
 })
-export class WhoDidThisComponent implements OnInit, OnDestroy {
-  subscription: Subscription;
+export class WhoDidThisComponent implements OnInit {
   whoDidThis$: Observable<WhoDidThis[]>;
 
   constructor(private whoDidThisService: WhoDidThisService) {}
 
   ngOnInit() {
     this.whoDidThis$ = this.whoDidThisService.getAll();
-  }
-
-  ngOnDestroy(): void {
-    if (this.subscription) {
-      this.subscription.unsubscribe();
-    }
   }
 }
