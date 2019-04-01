@@ -5,6 +5,9 @@ import { Observable } from 'rxjs';
 import { Blog } from 'src/app/shared/models/blog.model';
 import { BlogsService } from 'src/app/shared/blogs/blogs.service';
 import { CloudFunctions } from 'src/app/shared/data-service/cloud-functions';
+import { DataOrder } from 'src/app/shared/models/data-type.model';
+
+const MAX_TOP_BLOGS_LENGTH = 3;
 
 @Component({
   selector: 'gp-top-blogs',
@@ -18,7 +21,11 @@ export class TopBlogsComponent implements OnInit {
   constructor(private blogsService: BlogsService) {}
 
   ngOnInit(): void {
-    this.blogs$ = this.blogsService.getTopBlogs();
+    this.blogs$ = this.blogsService.getAllSorted(
+      'views',
+      DataOrder.desc,
+      MAX_TOP_BLOGS_LENGTH
+    );
     this.defaultImage = this.blogsService.defaultBlogImage;
   }
 

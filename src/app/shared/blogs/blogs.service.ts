@@ -10,7 +10,6 @@ import { DataService } from '../data-service/data.service';
 import { FirebaseCollections } from '../data-service/collections';
 import { CloudFunctions } from '../data-service/cloud-functions';
 
-const MAX_TOP_BLOGS_LENGTH = 3;
 const DEFAULT_IMAGE = 'assets/images/GP4Tech-logo.png';
 
 @Injectable()
@@ -28,20 +27,6 @@ export class BlogsService extends DataService<Blog> {
         return blogs;
       })
     );
-  }
-
-  getTopBlogs(): Observable<Blog[]> {
-    return this.angularFirestoreService
-      .collection<Blog>(this.collectionName, ref =>
-        ref.orderBy('views', 'desc').limit(MAX_TOP_BLOGS_LENGTH)
-      )
-      .valueChanges()
-      .pipe(
-        map(blogs => {
-          this.verifyBlogsAndUpdateMetadata(blogs);
-          return blogs;
-        })
-      );
   }
 
   private isBlogIncomplete(blog: Blog): boolean {
