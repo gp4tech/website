@@ -17,6 +17,5 @@ export const AppRoutes: AppRoute[] = [
   { name: AppBarRoutes.about, i18n: 'links.about' },
   { name: AppBarRoutes.events, i18n: 'links.events' },
   { name: AppBarRoutes.blog, i18n: 'links.blog' },
-  { name: AppBarRoutes.involved, i18n: 'links.involved' },
-  { name: AppBarRoutes.who, i18n: 'links.who' }
+  { name: AppBarRoutes.involved, i18n: 'links.involved' }
 ];
