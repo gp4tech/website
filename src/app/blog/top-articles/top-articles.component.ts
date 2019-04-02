@@ -7,7 +7,7 @@ import { ArticlesService } from '../articles.service';
 import { CloudFunctions } from '../../shared/models/cloud-functions.constant';
 import { DataOrder } from '../../shared/models/data-type.model';
 
-const MAX_TOP_BLOGS_LENGTH = 3;
+const MAX_TOP_ARTICLES_LENGTH = 3;
 
 @Component({
   selector: 'gp-top-articles',
@@ -15,23 +15,23 @@ const MAX_TOP_BLOGS_LENGTH = 3;
   styleUrls: ['./top-articles.component.scss']
 })
 export class TopArticlesComponent implements OnInit {
-  blogs$: Observable<Article[]>;
+  articles$: Observable<Article[]>;
   defaultImage: string;
 
-  constructor(private blogsService: ArticlesService) {}
+  constructor(private articlesService: ArticlesService) {}
 
   ngOnInit(): void {
-    this.blogs$ = this.blogsService.getAllSorted(
+    this.articles$ = this.articlesService.getAllSorted(
       'views',
       DataOrder.desc,
-      MAX_TOP_BLOGS_LENGTH
+      MAX_TOP_ARTICLES_LENGTH
     );
-    this.defaultImage = this.blogsService.defaultBlogImage;
+    this.defaultImage = this.articlesService.defaultArticleImage;
   }
 
-  updateBlogViews(blog: Article): void {
-    this.blogsService
-      .updateUsingCloudFunction(blog.id, CloudFunctions.updateBlogViews)
+  updateArticleViews(article: Article): void {
+    this.articlesService
+      .updateUsingCloudFunction(article.id, CloudFunctions.updateArticleViews)
       .subscribe();
   }
 }

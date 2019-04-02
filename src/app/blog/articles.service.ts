@@ -14,31 +14,31 @@ const DEFAULT_IMAGE = 'assets/images/GP4Tech-logo.png';
 
 @Injectable()
 export class ArticlesService extends DataService<Article> {
-  defaultBlogImage = DEFAULT_IMAGE;
+  defaultArticleImage = DEFAULT_IMAGE;
 
   constructor(http: HttpClient, db: AngularFirestore) {
     super(http, db, FirebaseCollections.articles);
   }
 
-  getAllBlogs(): Observable<Article[]> {
+  getAllArticles(): Observable<Article[]> {
     return this.getAll().pipe(
-      map(blogs => {
-        this.verifyBlogsAndUpdateMetadata(blogs);
-        return blogs;
+      map(articles => {
+        this.verifyArticlesAndUpdateMetadata(articles);
+        return articles;
       })
     );
   }
 
-  private isBlogIncomplete(blog: Article): boolean {
-    return !blog.title || !blog.description || !blog.image;
+  private isArticleIncomplete(article: Article): boolean {
+    return !article.title || !article.description || !article.image;
   }
 
-  private verifyBlogsAndUpdateMetadata(blogs: Article[]): void {
-    blogs.forEach(blog => {
-      if (this.isBlogIncomplete(blog)) {
+  private verifyArticlesAndUpdateMetadata(articles: Article[]): void {
+    articles.forEach(article => {
+      if (this.isArticleIncomplete(article)) {
         this.updateUsingCloudFunction(
-          blog.id,
-          CloudFunctions.updateBlogMetadata
+          article.id,
+          CloudFunctions.updateArticleMetadata
         ).subscribe();
       }
     });

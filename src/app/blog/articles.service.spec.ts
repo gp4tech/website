@@ -8,7 +8,7 @@ const angularFirestoreMock = {
   collection: () => {}
 };
 
-describe('BlogsService', () => {
+describe('ArticlesService', () => {
   beforeEach(() =>
     TestBed.configureTestingModule({
       imports: [HttpClientModule],

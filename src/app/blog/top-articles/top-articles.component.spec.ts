@@ -8,9 +8,9 @@ import {
 import { of } from 'rxjs';
 
 import { TopArticlesComponent } from './top-articles.component';
-import { ArticlesService } from 'src/app/blog/articles.service';
+import { ArticlesService } from '../articles.service';
 
-const blogsServiceMock = {
+const articlesServiceMock = {
   getAllSorted: () => of([])
 };
 
@@ -26,7 +26,7 @@ describe('TopArticlesComponent', () => {
           loader: { provide: TranslateLoader, useClass: TranslateFakeLoader }
         })
       ],
-      providers: [{ provide: ArticlesService, useValue: blogsServiceMock }]
+      providers: [{ provide: ArticlesService, useValue: articlesServiceMock }]
     }).compileComponents();
   }));
 

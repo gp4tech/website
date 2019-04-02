@@ -12,19 +12,19 @@ import { CloudFunctions } from '../shared/models/cloud-functions.constant';
   styleUrls: ['./blog.component.scss']
 })
 export class BlogComponent implements OnInit {
-  blogs$: Observable<Article[]>;
+  articles$: Observable<Article[]>;
   defaultImage: string;
 
-  constructor(private blogsService: ArticlesService) {}
+  constructor(private articlesService: ArticlesService) {}
 
   ngOnInit(): void {
-    this.blogs$ = this.blogsService.getAllBlogs();
-    this.defaultImage = this.blogsService.defaultBlogImage;
+    this.articles$ = this.articlesService.getAllArticles();
+    this.defaultImage = this.articlesService.defaultArticleImage;
   }
 
-  updateBlogViews(blog: Article): void {
-    this.blogsService
-      .updateUsingCloudFunction(blog.id, CloudFunctions.updateBlogViews)
+  updateArticleViews(article: Article): void {
+    this.articlesService
+      .updateUsingCloudFunction(article.id, CloudFunctions.updateArticleViews)
       .subscribe();
   }
 }

@@ -1,17 +1,17 @@
 <div class="container">
   <div class="row center-align">
-    <div *ngFor="let blog of blogs$ | async" class="col s12 m4">
+    <div *ngFor="let article of articles$ | async" class="col s12 m4">
       <div class="card left-align">
         <div class="card-image">
-          <img [src]="blog.image? blog.image : defaultImage" [alt]="blog.title">
-          <span class="card-title">{{ blog.title }}</span>
+          <img [src]="article.image? article.image : defaultImage" [alt]="article.title">
+          <span class="card-title">{{ article.title }}</span>
         </div>
         <div class="card-content">
-          <p>{{ blog.description }}</p>
+          <p>{{ article.description }}</p>
         </div>
         <div class="card-action">
-          <a (click)="updateBlogViews(blog)" [href]="blog.url" target="_blank"
-            rel="noopener noreferrer">{{ 'blog.read-more' | translate }}</a>
+          <a (click)="updateArticleViews(article)" [href]="article.url" target="_blank"
+            rel="noopener noreferrer">{{ 'blog.articles.read-more' | translate }}</a>
         </div>
       </div>
     </div>

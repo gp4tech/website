@@ -58,7 +58,9 @@
   },
   "blog": {
     "title": "Blogs",
-    "read-more": "Read More",
-    "see-more": "See More"
+    "see-more": "See More",
+    "articles": {
+      "read-more": "Read More"
+    }
   }
 }

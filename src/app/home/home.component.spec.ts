@@ -27,7 +27,7 @@ const countrySupportersServiceMock = {
   getAll: () => of([])
 };
 
-const blogsServiceMock = {
+const articlesServiceMock = {
   getAllSorted: () => of([])
 };
 
@@ -64,7 +64,7 @@ describe('HomeComponent', () => {
           provide: CountrySupportersService,
           useValue: countrySupportersServiceMock
         },
-        { provide: ArticlesService, useValue: blogsServiceMock },
+        { provide: ArticlesService, useValue: articlesServiceMock },
         {
           provide: SponsorsService,
           useValue: sponsorsServiceMock
