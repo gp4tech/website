@@ -110,9 +110,9 @@ exports.httpEmail = functions.https.onRequest((req, res) => {
       .then((response) => {
         if (response.body) {
           return res.status(200).send(response.body);
-        } else {
-          return res.end();
         }
+
+        return res.end();
       })
       .catch((error) => {
         console.error(error);
