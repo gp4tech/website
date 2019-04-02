@@ -2,8 +2,8 @@ import { Component, OnInit } from '@angular/core';
 
 import { Observable } from 'rxjs';
 
-import { Blog } from '../shared/models/blog.model';
-import { BlogsService } from './blogs.service';
+import { Article } from '../shared/models/article.model';
+import { ArticlesService } from './articles.service';
 import { CloudFunctions } from '../shared/models/cloud-functions.constant';
 
 @Component({
@@ -12,17 +12,17 @@ import { CloudFunctions } from '../shared/models/cloud-functions.constant';
   styleUrls: ['./blog.component.scss']
 })
 export class BlogComponent implements OnInit {
-  blogs$: Observable<Blog[]>;
+  blogs$: Observable<Article[]>;
   defaultImage: string;
 
-  constructor(private blogsService: BlogsService) {}
+  constructor(private blogsService: ArticlesService) {}
 
   ngOnInit(): void {
     this.blogs$ = this.blogsService.getAllBlogs();
     this.defaultImage = this.blogsService.defaultBlogImage;
   }
 
-  updateBlogViews(blog: Blog): void {
+  updateBlogViews(blog: Article): void {
     this.blogsService
       .updateUsingCloudFunction(blog.id, CloudFunctions.updateBlogViews)
       .subscribe();

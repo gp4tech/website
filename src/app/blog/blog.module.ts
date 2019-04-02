@@ -4,13 +4,13 @@ import { CommonModule } from '@angular/common';
 import { BlogComponent } from './blog.component';
 import { SharedModule } from '../shared/shared.module';
 import { BlogRoutingModule } from './blog-routing.module';
-import { BlogsService } from './blogs.service';
-import { TopBlogsComponent } from './top-blogs/top-blogs.component';
+import { ArticlesService } from './articles.service';
+import { TopArticlesComponent } from './top-articles/top-articles.component';
 
 @NgModule({
-  declarations: [BlogComponent, TopBlogsComponent],
+  declarations: [BlogComponent, TopArticlesComponent],
   imports: [CommonModule, SharedModule, BlogRoutingModule],
-  exports: [TopBlogsComponent],
-  providers: [BlogsService]
+  exports: [TopArticlesComponent],
+  providers: [ArticlesService]
 })
 export class BlogModule {}

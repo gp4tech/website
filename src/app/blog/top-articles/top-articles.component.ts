@@ -2,23 +2,23 @@ import { Component, OnInit } from '@angular/core';
 
 import { Observable } from 'rxjs';
 
-import { Blog } from '../../shared/models/blog.model';
-import { BlogsService } from '../blogs.service';
+import { Article } from '../../shared/models/article.model';
+import { ArticlesService } from '../articles.service';
 import { CloudFunctions } from '../../shared/models/cloud-functions.constant';
 import { DataOrder } from '../../shared/models/data-type.model';
 
 const MAX_TOP_BLOGS_LENGTH = 3;
 
 @Component({
-  selector: 'gp-top-blogs',
-  templateUrl: './top-blogs.component.html',
-  styleUrls: ['./top-blogs.component.scss']
+  selector: 'gp-top-articles',
+  templateUrl: './top-articles.component.html',
+  styleUrls: ['./top-articles.component.scss']
 })
-export class TopBlogsComponent implements OnInit {
-  blogs$: Observable<Blog[]>;
+export class TopArticlesComponent implements OnInit {
+  blogs$: Observable<Article[]>;
   defaultImage: string;
 
-  constructor(private blogsService: BlogsService) {}
+  constructor(private blogsService: ArticlesService) {}
 
   ngOnInit(): void {
     this.blogs$ = this.blogsService.getAllSorted(
@@ -29,7 +29,7 @@ export class TopBlogsComponent implements OnInit {
     this.defaultImage = this.blogsService.defaultBlogImage;
   }
 
-  updateBlogViews(blog: Blog): void {
+  updateBlogViews(blog: Article): void {
     this.blogsService
       .updateUsingCloudFunction(blog.id, CloudFunctions.updateBlogViews)
       .subscribe();

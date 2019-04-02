@@ -5,7 +5,7 @@ import { AngularFirestore } from '@angular/fire/firestore';
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
 
-import { Blog } from '../shared/models/blog.model';
+import { Article } from '../shared/models/article.model';
 import { DataService } from '../shared/models/data-service.model';
 import { FirebaseCollections } from '../shared/models/collections.constant';
 import { CloudFunctions } from '../shared/models/cloud-functions.constant';
@@ -13,14 +13,14 @@ import { CloudFunctions } from '../shared/models/cloud-functions.constant';
 const DEFAULT_IMAGE = 'assets/images/GP4Tech-logo.png';
 
 @Injectable()
-export class BlogsService extends DataService<Blog> {
+export class ArticlesService extends DataService<Article> {
   defaultBlogImage = DEFAULT_IMAGE;
 
   constructor(http: HttpClient, db: AngularFirestore) {
-    super(http, db, FirebaseCollections.blogs);
+    super(http, db, FirebaseCollections.articles);
   }
 
-  getAllBlogs(): Observable<Blog[]> {
+  getAllBlogs(): Observable<Article[]> {
     return this.getAll().pipe(
       map(blogs => {
         this.verifyBlogsAndUpdateMetadata(blogs);
@@ -29,11 +29,11 @@ export class BlogsService extends DataService<Blog> {
     );
   }
 
-  private isBlogIncomplete(blog: Blog): boolean {
+  private isBlogIncomplete(blog: Article): boolean {
     return !blog.title || !blog.description || !blog.image;
   }
 
-  private verifyBlogsAndUpdateMetadata(blogs: Blog[]): void {
+  private verifyBlogsAndUpdateMetadata(blogs: Article[]): void {
     blogs.forEach(blog => {
       if (this.isBlogIncomplete(blog)) {
         this.updateUsingCloudFunction(

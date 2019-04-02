@@ -2,7 +2,7 @@ import { TestBed } from '@angular/core/testing';
 import { AngularFirestore } from '@angular/fire/firestore';
 import { HttpClientModule } from '@angular/common/http';
 
-import { BlogsService } from './blogs.service';
+import { ArticlesService } from './articles.service';
 
 const angularFirestoreMock = {
   collection: () => {}
@@ -13,14 +13,14 @@ describe('BlogsService', () => {
     TestBed.configureTestingModule({
       imports: [HttpClientModule],
       providers: [
-        BlogsService,
+        ArticlesService,
         { provide: AngularFirestore, useValue: angularFirestoreMock }
       ]
     })
   );
 
   it('should be created', () => {
-    const service: BlogsService = TestBed.get(BlogsService);
+    const service: ArticlesService = TestBed.get(ArticlesService);
     expect(service).toBeTruthy();
   });
 });

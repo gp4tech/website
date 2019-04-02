@@ -1,6 +1,6 @@
 export const FirebaseCollections = {
   activityIndicators: 'activity-indicators',
-  blogs: 'blogs',
+  articles: 'blogs',
   countrySupporters: 'country-supporters',
   sponsors: 'sponsors'
 };
