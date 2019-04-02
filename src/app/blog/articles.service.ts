@@ -5,7 +5,7 @@ import { AngularFirestore } from '@angular/fire/firestore';
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
 
-import { Blog } from '../shared/models/blog.model';
+import { Article } from '../shared/models/article.model';
 import { DataService } from '../shared/models/data-service.model';
 import { FirebaseCollections } from '../shared/models/collections.constant';
 import { CloudFunctions } from '../shared/models/cloud-functions.constant';
@@ -13,32 +13,32 @@ import { CloudFunctions } from '../shared/models/cloud-functions.constant';
 const DEFAULT_IMAGE = 'assets/images/GP4Tech-logo.png';
 
 @Injectable()
-export class BlogsService extends DataService<Blog> {
-  defaultBlogImage = DEFAULT_IMAGE;
+export class ArticlesService extends DataService<Article> {
+  defaultArticleImage = DEFAULT_IMAGE;
 
   constructor(http: HttpClient, db: AngularFirestore) {
-    super(http, db, FirebaseCollections.blogs);
+    super(http, db, FirebaseCollections.articles);
   }
 
-  getAllBlogs(): Observable<Blog[]> {
+  getAllArticles(): Observable<Article[]> {
     return this.getAll().pipe(
-      map(blogs => {
-        this.verifyBlogsAndUpdateMetadata(blogs);
-        return blogs;
+      map(articles => {
+        this.verifyArticlesAndUpdateMetadata(articles);
+        return articles;
       })
     );
   }
 
-  private isBlogIncomplete(blog: Blog): boolean {
-    return !blog.title || !blog.description || !blog.image;
+  private isArticleIncomplete(article: Article): boolean {
+    return !article.title || !article.description || !article.image;
   }
 
-  private verifyBlogsAndUpdateMetadata(blogs: Blog[]): void {
-    blogs.forEach(blog => {
-      if (this.isBlogIncomplete(blog)) {
+  private verifyArticlesAndUpdateMetadata(articles: Article[]): void {
+    articles.forEach(article => {
+      if (this.isArticleIncomplete(article)) {
         this.updateUsingCloudFunction(
-          blog.id,
-          CloudFunctions.updateBlogMetadata
+          article.id,
+          CloudFunctions.updateArticleMetadata
         ).subscribe();
       }
     });

@@ -1,28 +1,28 @@
 <h4 class="center-align">・{{ 'blog.title' | translate }}・</h4>
 <div class="row center-align">
-  <div *ngFor="let blog of blogs$ | async" class="col s12 m4">
+  <div *ngFor="let article of articles$ | async" class="col s12 m4">
     <div class="card left-align">
       <div class="card-image waves-effect waves-block waves-light">
-        <img class="activator" [src]="blog.image? blog.image : defaultImage" [alt]="blog.title">
+        <img class="activator" [src]="article.image? article.image : defaultImage" [alt]="article.title">
       </div>
       <div class="card-content">
         <span class="activator">
           <i class="fa fa-angle-down right"></i>
         </span>
         <span class="card-title activator grey-text text-darken-4">
-          {{ blog.title }}
+          {{ article.title }}
         </span>
-        <p><a (click)="updateBlogViews(blog)" [href]="blog.url" target="_blank"
-            rel="noopener noreferrer">{{ 'blog.read-more' | translate }}</a></p>
+        <p><a (click)="updateArticleViews(article)" [href]="article.url" target="_blank"
+            rel="noopener noreferrer">{{ 'blog.articles.read-more' | translate }}</a></p>
       </div>
       <div class="card-reveal">
         <span class="card-title">
           <i class="fa fa-times right"></i>
         </span>
         <span class="card-title grey-text text-darken-4">
-          {{ blog.title }}
+          {{ article.title }}
         </span>
-        <p>{{ blog.description }}</p>
+        <p>{{ article.description }}</p>
       </div>
     </div>
   </div>

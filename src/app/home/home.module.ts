@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 
-import { BlogsService } from '../blog/blogs.service';
+import { ArticlesService } from '../blog/articles.service';
 import { SharedModule } from '../shared/shared.module';
 import { BlogModule } from '../blog/blog.module';
 import { GetInvolvedModule } from '../get-involved/get-involved.module';
@@ -29,6 +29,6 @@ import { SponsorsService } from './sponsors/sponsors.service';
     GetInvolvedModule,
     BlogModule
   ],
-  providers: [ActivityIndicatorsService, BlogsService, SponsorsService]
+  providers: [ActivityIndicatorsService, ArticlesService, SponsorsService]
 })
 export class HomeModule {}
