@@ -1,4 +1,4 @@
-import { Component, OnInit, OnDestroy } from '@angular/core';
+import { Component, OnInit, OnDestroy, Input } from '@angular/core';
 
 import { map } from 'rxjs/operators';
 import { Subscription } from 'rxjs';
@@ -13,6 +13,7 @@ import { GeoChartConfig } from './chart-configuration';
 })
 export class GetInvolvedComponent implements OnInit, OnDestroy {
 
+  @Input() enableMapContainer = true;
   subscription: Subscription;
   isLoading = true;
   data;

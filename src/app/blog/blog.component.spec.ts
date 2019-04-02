@@ -8,7 +8,7 @@ import {
 import { of } from 'rxjs';
 
 import { BlogComponent } from './blog.component';
-import { BlogsService } from '../shared/blogs/blogs.service';
+import { BlogsService } from './blogs.service';
 
 const blogsServiceMock = {
   getAllBlogs: () => of([])
