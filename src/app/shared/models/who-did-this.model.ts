@@ -3,4 +3,6 @@ export interface WhoDidThis {
   name: string;
   bio: string;
   pic: string;
+  twitter: string;
+  linkedin: string;
 }

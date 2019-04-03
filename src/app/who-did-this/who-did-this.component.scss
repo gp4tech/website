@@ -6,9 +6,8 @@
     font-weight: 300;
   }
 
-  .center {
-    text-align: center;
-    vertical-align: middle;
+  .web-team-box {
+    margin-bottom: 10px;
   }
 
   .circular {
@@ -26,7 +25,7 @@
 
   @media (max-width: 575.98px) {
     .all {
-      text-align: center; 
+      text-align: center;
     }
   
     .responsive-member {
