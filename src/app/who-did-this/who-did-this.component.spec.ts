@@ -1,9 +1,9 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { WhoDidThisComponent } from './who-did-this.component';
 import { TranslateModule } from '@ngx-translate/core';
 import { of } from 'rxjs';
 
+import { WhoDidThisComponent } from './who-did-this.component';
 import { WhoDidThisService } from './who-did-this.service';
 
 const WhoDidThisServiceMock = {
