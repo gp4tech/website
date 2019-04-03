@@ -2,9 +2,9 @@ import { Component, OnInit } from '@angular/core';
 
 import { Observable } from 'rxjs';
 
-import { Blog } from '../shared/models/blog.model';
-import { BlogsService } from '../shared/blogs/blogs.service';
-import { CloudFunctions } from '../shared/data-service/cloud-functions';
+import { Article } from '../shared/models/article.model';
+import { ArticlesService } from './articles.service';
+import { CloudFunctions } from '../shared/models/cloud-functions.constant';
 
 @Component({
   selector: 'gp-blog',
@@ -12,19 +12,19 @@ import { CloudFunctions } from '../shared/data-service/cloud-functions';
   styleUrls: ['./blog.component.scss']
 })
 export class BlogComponent implements OnInit {
-  blogs$: Observable<Blog[]>;
+  articles$: Observable<Article[]>;
   defaultImage: string;
 
-  constructor(private blogsService: BlogsService) {}
+  constructor(private articlesService: ArticlesService) {}
 
   ngOnInit(): void {
-    this.blogs$ = this.blogsService.getAllBlogs();
-    this.defaultImage = this.blogsService.defaultBlogImage;
+    this.articles$ = this.articlesService.getAllArticles();
+    this.defaultImage = this.articlesService.defaultArticleImage;
   }
 
-  updateBlogViews(blog: Blog): void {
-    this.blogsService
-      .updateUsingCloudFunction(blog.id, CloudFunctions.updateBlogViews)
+  updateArticleViews(article: Article): void {
+    this.articlesService
+      .updateUsingCloudFunction(article.id, CloudFunctions.updateArticleViews)
       .subscribe();
   }
 }

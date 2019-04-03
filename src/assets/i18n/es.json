@@ -62,7 +62,9 @@
   },
   "blog": {
     "title": "Blogs",
-    "read-more": "Leer Más",
-    "see-more": "Ver Más"
+    "see-more": "Ver Más",
+    "articles": {
+      "read-more": "Leer Más"
+    }
   }
 }

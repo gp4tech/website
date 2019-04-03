@@ -15,8 +15,8 @@ import { GetInvolvedModule } from '../get-involved/get-involved.module';
 import { ActivityIndicatorsService } from './activity-indicators/activity-indicators.service';
 import { CountrySupportersService } from '../get-involved/country-supporters.service';
 import { SponsorsComponent } from './sponsors/sponsors.component';
-import { TopBlogsComponent } from './top-blogs/top-blogs.component';
-import { BlogsService } from '../shared/blogs/blogs.service';
+import { TopArticlesComponent } from '../blog/top-articles/top-articles.component';
+import { ArticlesService } from '../blog/articles.service';
 import { SponsorsService } from './sponsors/sponsors.service';
 
 const activityIndicatorsServiceMock = {
@@ -27,8 +27,8 @@ const countrySupportersServiceMock = {
   getAll: () => of([])
 };
 
-const blogsServiceMock = {
-  getTopBlogs: () => of([])
+const articlesServiceMock = {
+  getAllSorted: () => of([])
 };
 
 const sponsorsServiceMock = {
@@ -47,7 +47,7 @@ describe('HomeComponent', () => {
         ActivityIndicatorsComponent,
         TestimonialsComponent,
         SponsorsComponent,
-        TopBlogsComponent
+        TopArticlesComponent
       ],
       imports: [
         GetInvolvedModule,
@@ -64,7 +64,7 @@ describe('HomeComponent', () => {
           provide: CountrySupportersService,
           useValue: countrySupportersServiceMock
         },
-        { provide: BlogsService, useValue: blogsServiceMock },
+        { provide: ArticlesService, useValue: articlesServiceMock },
         {
           provide: SponsorsService,
           useValue: sponsorsServiceMock
