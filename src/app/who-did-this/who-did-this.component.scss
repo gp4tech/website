@@ -1,3 +1,5 @@
+@import '../../styles-mat-variables.scss';
+
 .team-container {
   padding-bottom: 2rem;
 
@@ -23,7 +25,7 @@
     margin-top: 15px;
   }
 
-  @media (max-width: 575.98px) {
+  @media #{$small-and-down} {
     .all {
       text-align: center;
     }
@@ -31,10 +33,10 @@
     .responsive-member {
       width: 50%;
       height: auto;
-    }
+    }    
   }
 
-  @media (max-width: 768px) {
+  @media #{$medium-small-and-down} {
     .padding-bio {
       padding-left: 40px;
     }
