@@ -31,6 +31,34 @@ In order to deploy follow these steps:
 - Login to your firebase account the first time: `firebase login`
 - Deploy the site after building it for production: `firebase deploy`
 
+### Cloud Functions
+
+#### Environment Variables Configuration
+
+##### Local
+
+To run locally these cloud functions you need to add missing environment variables in the *.runtimeconfig.json*.
+
+To only run the functions execute:
+
+```
+firebase serve --only functions
+```
+
+##### On Firebase
+
+On firebase the environment variables for the cloud functions are set up via a command:
+
+```
+firebase functions:config:set sendgrid.apikey="API_KEY"
+```
+
+To review which environment variables already are configured on firebase project:
+
+```
+firebase functions:config:get
+```
+
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
