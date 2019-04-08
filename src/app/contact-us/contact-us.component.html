@@ -23,51 +23,51 @@
       <p>{{ 'contact-us.location.country' | translate }}</p>
       <br>
       <h5><i class="fa fa-phone" aria-hidden="true"></i> {{ 'contact-us.phone.title' | translate }}</h5>
-      <a href="tel:+59175997855">({{ 'contact-us.phone.code' | translate }}){{ 'contact-us.phone.number' | translate }}</a>
+      <a href="tel:({{ 'contact-us.phone.code' | translate }}){{ 'contact-us.phone.number' | translate }}">
+        ({{ 'contact-us.phone.code' | translate }}){{ 'contact-us.phone.number' | translate }}
+      </a>
+      <br><br>
+      <h5><i class="fa fa-envelope-o" aria-hidden="true"></i> {{ 'contact-us.email' | translate }}</h5>
+      <a href="mailto:{{'contact-us.gpEmail' | translate}}">{{ 'contact-us.gpEmail' | translate }}</a>
     </div>
   </div>
 
-  <ul class="collapsible popout" #collapsible>
+  <ul gpCollapsible class="collapsible popout">
     <li>
       <div class="collapsible-header">
-        <h6><i class="fa fa-bus" aria-hidden="true"></i>How to find Jalasoft</h6>
+        <h6><i class="fa fa-bus" aria-hidden="true"></i>{{ 'contact-us.find-title' | translate }}</h6>
       </div>
       <div class="collapsible-body">
         <p>
-          <strong>Driving:</strong> Refer to directions provided by
-          <a
-            href="http://www.google.com/maps/place/{{ latitude }},{{ longitude }}"
-            target="_blank"
-            rel="noopener noreferrer"
-            >Google Maps.</a
-          >
+          <strong>{{ 'contact-us.driving.title' | translate }}:</strong> {{ 'contact-us.driving.description' | translate }}
+          <a href="http://www.google.com/maps/place/{{ latitude }},{{ longitude }}" target="_blank" rel="noopener noreferrer">Google Maps.</a>
         </p>
-        <p><strong> Public Transportation:</strong> Micros que pasan cerca de Jalasoft son: 212, 260, 120, A, Z12.</p>
+        <p><strong> {{ 'contact-us.transportation.title' | translate }}:</strong> {{ 'contact-us.transportation.description' | translate }}</p>
       </div>
     </li>
   </ul>
   <br>
   <div class="row">
-    <h4 class="center-align">. EMAIL US .</h4>
+    <h4 class="center-align">. {{ 'contact-us.email-title' | translate | uppercase }} .</h4>
     <div class="card-panel">
       <div class="row">
         <div class="input-field col m6 s12">
-          <input id="gp-email" type="email" class="validate" value="GP4Tech@jalasoft.com" disabled />
-          <label class="active" for="gp-email">To</label>
+          <input id="subject" type="text" class="validate" />
+          <label class="active" for="subject">{{ 'contact-us.subject' | translate }}</label>
         </div>
         <div class="input-field col m6 s12">
           <input id="user-email" type="email" class="validate" />
-          <label class="active" for="user-email">From</label>
+          <label class="active" for="user-email">{{ 'contact-us.From' | translate }}</label>
         </div>
       </div>
       <div class="row">
         <div class="input-field col s12">
           <textarea id="message" class="materialize-textarea"></textarea>
-          <label class="active" for="message">Message</label>
+          <label class="active" for="message">{{ 'contact-us.Message' | translate }}</label>
         </div>
       </div>
       <div class="right-align">
-        <a class="btn-large waves-effect">Send</a>
+        <a class="btn-large waves-effect">{{ 'contact-us.btn-send' | translate }}</a>
       </div>
     </div>
   </div>

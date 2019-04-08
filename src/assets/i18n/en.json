@@ -69,7 +69,7 @@
     "email-title": "Email us",
     "company-name": "Jalasoft",
     "location": {
-      "address": "Av. Melchor Pérez de Olguín 2643",
+      "address": "Av. Melchor Pérez de Olguín #2643",
       "city": "Cochabamba",
       "country": "Bolivia"
     },
@@ -84,8 +84,13 @@
       "description": "Refer to directions provided by"
     },
     "transportation": {
-      "title": "The following public transportation lines can leave you near Jalasoft's facilities: 120, 230, A, Z12, 101"
+      "title": "Transportation",
+      "description": "The following public transportation lines can leave you near Jalasoft's facilities: 120, 230, A, Z12, 101"
     },
-    "btn-send": "Enviar"
+    "email": "Email",
+    "subject": "Subject",
+    "From": "From",
+    "Message": "Message",
+    "btn-send": "Send"
   }
 }

@@ -1,6 +1,4 @@
-import { Component, OnInit, ElementRef, ViewChild } from '@angular/core';
-
-import { Collapsible } from 'materialize-css';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'gp-contact-us',
@@ -12,12 +10,7 @@ export class ContactUsComponent implements OnInit {
   longitude = -66.175482;
   zoom = 18;
 
-  @ViewChild('collapsible')
-  collapsible: ElementRef;
-
   constructor() {}
 
-  ngOnInit() {
-    Collapsible.init(this.collapsible.nativeElement);
-  }
+  ngOnInit() {}
 }
