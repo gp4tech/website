@@ -8,15 +8,7 @@ export const environment = {
   production: false,
   functionsUrl: 'http://localhost:5000/gp4techsite/us-central1',
   firebaseStorageUrl:
-    'https://firebasestorage.googleapis.com/v0/b/gp4techsite.appspot.com/o/',
-  firebase: {
-    apiKey: 'AIzaSyCo7Sd8MSlfc9G5ScyG7_XOzxp9uEZWzAg',
-    authDomain: 'gp4techsite.firebaseapp.com',
-    databaseURL: 'https://gp4techsite.firebaseio.com',
-    projectId: 'gp4techsite',
-    storageBucket: 'gp4techsite.appspot.com',
-    messagingSenderId: '495759529553'
-  }
+    'https://firebasestorage.googleapis.com/v0/b/gp4techsite.appspot.com/o/'
 };
 
 /*
