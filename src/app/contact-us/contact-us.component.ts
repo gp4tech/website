@@ -1,24 +1,23 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ElementRef, ViewChild } from '@angular/core';
+
+import { Collapsible } from 'materialize-css';
 
 @Component({
   selector: 'gp-contact-us',
   templateUrl: './contact-us.component.html',
-  styleUrls: ['./contact-us.component.scss']
+  styleUrls: ['./contact-us.component.scss'],
 })
 export class ContactUsComponent implements OnInit {
+  latitude = -17.365927;
+  longitude = -66.175482;
+  zoom = 18;
 
-  title: string = 'My first AGM project';
-  latitude = -17.365937266267544;
-  longitude = -66.1754822731018;
-  zoom= 18;
+  @ViewChild('collapsible')
+  collapsible: ElementRef;
 
-  constructor() { }
+  constructor() {}
 
   ngOnInit() {
+    Collapsible.init(this.collapsible.nativeElement);
   }
-
-  mapClicked($event: MouseEvent) {
-    console.log($event)
-  }
-
 }
