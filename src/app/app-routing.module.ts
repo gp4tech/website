@@ -18,6 +18,10 @@ const routes: Routes = [
   {
     path: AppBarRoutes.involved,
     loadChildren: './get-involved/get-involved.module#GetInvolvedModule'
+  },
+  {
+    path: AppBarRoutes.contact,
+    loadChildren: './contact-us/contact-us.module#ContactUsModule'
   }
 ];
 
