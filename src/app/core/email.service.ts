@@ -8,15 +8,15 @@ import { environment } from '../../environments/environment';
 export class EmailService {
 
   emailEndpoint = `${environment.functionsUrl}/httpEmail`;
-  defaultHeaders = new HttpHeaders({ 
+  defaultHeaders = new HttpHeaders({
     'Content-Type': 'application/json',
-    'Access-Control-Allow-Origin': '*' 
+    'Access-Control-Allow-Origin': '*'
   });
-  
+
   constructor(private http: HttpClient) { }
 
   sendEmail(email: Email) {
     return this.http
-      .post(this.emailEndpoint, email, { headers: this.defaultHeaders })
+      .post(this.emailEndpoint, email, { headers: this.defaultHeaders });
   }
 }
