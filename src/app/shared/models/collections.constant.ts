@@ -3,5 +3,5 @@ export const FirebaseCollections = {
   articles: 'blogs',
   countrySupporters: 'country-supporters',
   sponsors: 'sponsors',
-  whoDidThis: 'web-team-members'
+  webTeamMembers: 'web-team-members'
 };

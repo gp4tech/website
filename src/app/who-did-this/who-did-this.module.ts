@@ -4,7 +4,7 @@ import { CommonModule } from '@angular/common';
 import { SharedModule } from '../shared/shared.module';
 import { WhoDidThisRoutingModule } from './who-did-this-routing.module';
 import { WhoDidThisComponent } from './who-did-this.component';
-import { WhoDidThisService } from './who-did-this.service';
+import { WebTeamMembersService } from './web-team-members.service';
 
 @NgModule({
   declarations: [
@@ -16,7 +16,7 @@ import { WhoDidThisService } from './who-did-this.service';
     SharedModule
   ],
   providers: [
-    WhoDidThisService
+    WebTeamMembersService
   ]
 })
 export class WhoDidThisModule { }

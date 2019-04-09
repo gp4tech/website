@@ -4,9 +4,9 @@ import { TranslateModule } from '@ngx-translate/core';
 import { of } from 'rxjs';
 
 import { WhoDidThisComponent } from './who-did-this.component';
-import { WhoDidThisService } from './who-did-this.service';
+import { WebTeamMembersService } from './web-team-members.service';
 
-const WhoDidThisServiceMock = {
+const WebTeamMembersServiceMock = {
   getAll: () => of([])
 };
 
@@ -21,7 +21,7 @@ describe('WhoDidThisComponent', () => {
       ],
       declarations: [ WhoDidThisComponent ],
       providers: [
-        { provide: WhoDidThisService, useValue: WhoDidThisServiceMock }
+        { provide: WebTeamMembersService, useValue: WebTeamMembersServiceMock }
       ]
     })
     .compileComponents();

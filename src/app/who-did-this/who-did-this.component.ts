@@ -1,9 +1,9 @@
-import { Component, OnInit, OnDestroy } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 import { Observable } from 'rxjs';
 
-import { WhoDidThisService } from './who-did-this.service';
-import { WhoDidThis } from '../shared/models/who-did-this.model';
+import { WebTeamMembersService } from './web-team-members.service';
+import { WebTeamMembers } from '../shared/models/web-team-members.model';
 
 @Component({
   selector: 'gp-who-did-this',
@@ -11,11 +11,12 @@ import { WhoDidThis } from '../shared/models/who-did-this.model';
   styleUrls: ['./who-did-this.component.scss']
 })
 export class WhoDidThisComponent implements OnInit {
-  whoDidThis$: Observable<WhoDidThis[]>;
+  webTeamMembers$: Observable<WebTeamMembers[]>;
+  teams: string[] = ['dev', 'qa', 'po', 'designers'];
 
-  constructor(private whoDidThisService: WhoDidThisService) {}
+  constructor(private webTeamMembersService: WebTeamMembersService) {}
 
   ngOnInit() {
-    this.whoDidThis$ = this.whoDidThisService.getAll();
+    this.webTeamMembers$ = this.webTeamMembersService.getAll();
   }
 }
