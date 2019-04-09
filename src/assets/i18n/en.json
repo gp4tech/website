@@ -57,8 +57,13 @@
     }
   },
   "who-did-this": {
-    "title": "Meet the Team",
-    "description": "This is a short description about the team."
+    "title": "Who did this?",
+    "teams": {
+      "dev": "Dev Team",
+      "qa": "QA Team",
+      "po": "PO Team",
+      "designers": "Designers"
+    }
   },
   "blog": {
     "title": "Blogs",

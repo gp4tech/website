@@ -57,8 +57,13 @@
     }
   },
   "who-did-this": {
-    "title": "Conoce al Equipo",
-    "description": "Esta es una descripcion corta del equipo."
+    "title": "¿Quién hizo esto?",
+    "teams": {
+      "dev": "Equipo de Desarrolladores",
+      "qa": "Equipo de Control de Calidad",
+      "po": "Dueños del Producto",
+      "designers": "Diseñadores"
+    }
   },
   "blog": {
     "title": "Blogs",
