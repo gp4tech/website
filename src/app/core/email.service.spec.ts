@@ -1,7 +1,6 @@
 import { TestBed } from '@angular/core/testing';
 import { HttpClientTestingModule } from '@angular/common/http/testing';
 
-
 import { EmailService } from './email.service';
 
 describe('EmailService', () => {
