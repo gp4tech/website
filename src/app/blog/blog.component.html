@@ -1,19 +1,52 @@
 <div class="container">
-  <div class="row center-align">
-    <div *ngFor="let article of articles$ | async" class="col s12 m4">
-      <div class="card left-align">
-        <div class="card-image">
-          <img [src]="article.image? article.image : defaultImage" [alt]="article.title">
-          <span class="card-title">{{ article.title }}</span>
+  <div class="row">
+    <h4 class="center-align">
+      ・{{ 'blog.title' | translate | uppercase }}・
+    </h4>
+
+    <ng-container *ngIf="(topArticles$ | async) as topArticles">
+      <ng-container *ngIf="topArticles.length > 0">
+        <div class="col s12 hide-on-med-and-up">
+          <h5>{{ 'blog.articles.top' | translate }}</h5>
+          <div *ngFor="let article of topArticles">
+            <gp-top-article [article]="article"></gp-top-article>
+          </div>
         </div>
-        <div class="card-content">
-          <p>{{ article.description }}</p>
-        </div>
-        <div class="card-action">
-          <a (click)="updateArticleViews(article)" [href]="article.url" target="_blank"
-            rel="noopener noreferrer">{{ 'blog.articles.read-more' | translate }}</a>
+      </ng-container>
+
+      <div class="col s12 m8">
+        <h5 class="hide-on-med-and-up">{{ 'blog.articles.all' | translate }}</h5>
+        <div *ngFor="let article of articles$ | async">
+          <div class="card horizontal">
+            <div class="card-image">
+              <img [src]="article.image? article.image : defaultImage" [alt]="article.title">
+            </div>
+            <div class="card-stacked">
+              <div class="card-content">
+                <h4>{{ article.title ? article.title : defaultText }}</h4>
+                <p class="card-author-and-date">
+                  {{ article.author ? article.author : defaultText }}・{{ (article.date ? article.date.toDate() : onInitDate) | date }}
+                </p>
+                <p>{{ article.description ? article.description : defaultText }}</p>
+              </div>
+              <div class="card-action">
+                <a (click)="updateArticleViews(article)" [href]="article.url" target="_blank" rel="noopener noreferrer">
+                  {{ 'blog.articles.read-more' | translate }}
+                </a>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
-    </div>
+
+      <ng-container *ngIf="topArticles.length > 0">
+        <div class="col m4 hide-on-small-only">
+          <h5>{{ 'blog.articles.top' | translate }}</h5>
+          <div *ngFor="let article of topArticles">
+            <gp-top-article [article]="article"></gp-top-article>
+          </div>
+        </div>
+      </ng-container>
+    </ng-container>
   </div>
 </div>

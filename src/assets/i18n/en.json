@@ -57,9 +57,11 @@
     }
   },
   "blog": {
-    "title": "Blogs",
+    "title": "Blog",
     "see-more": "See More",
     "articles": {
+      "top": "Top Articles",
+      "all": "All Articles",
       "read-more": "Read More"
     }
   }

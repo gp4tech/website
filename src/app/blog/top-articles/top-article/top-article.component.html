@@ -1,0 +1,28 @@
+<div class="card left-align">
+  <div class="card-image waves-effect waves-block waves-light">
+    <img class="activator" [src]="article.image? article.image : defaultImage" [alt]="article.title">
+  </div>
+  <div class="card-content">
+    <span class="activator">
+      <i class="fa fa-angle-down right"></i>
+    </span>
+    <span class="card-title activator grey-text text-darken-4">
+      {{ article.title ? article.title : defaultText }}
+    </span>
+    <p class="card-author-and-date">
+      {{ article.author ? article.author : defaultText }}・{{ (article.date ? article.date.toDate() : onInitDate) | date }}
+    </p>
+    <a (click)="updateArticleViews(article)" [href]="article.url" target="_blank" rel="noopener noreferrer">
+      {{ 'blog.articles.read-more' | translate }}
+    </a>
+  </div>
+  <div class="card-reveal">
+    <span class="card-title">
+      <i class="fa fa-times right"></i>
+    </span>
+    <span class="card-title grey-text text-darken-4">
+      {{ article.title ? article.title : defaultText }}
+    </span>
+    <p>{{ article.description ? article.description : defaultText }}</p>
+  </div>
+</div>
