@@ -8,25 +8,29 @@ const routes: Routes = [
   { path: '', component: HomeComponent },
   {
     path: AppBarRoutes.about,
-    loadChildren: './about-us/about-us.module#AboutUsModule'
+    loadChildren: './about-us/about-us.module#AboutUsModule',
   },
   {
     path: AppBarRoutes.events,
-    loadChildren: './events/events.module#EventsModule'
+    loadChildren: './events/events.module#EventsModule',
   },
   { path: AppBarRoutes.blog, loadChildren: './blog/blog.module#BlogModule' },
   {
     path: AppBarRoutes.involved,
-    loadChildren: './get-involved/get-involved.module#GetInvolvedModule'
+    loadChildren: './get-involved/get-involved.module#GetInvolvedModule',
+  },
+  {
+    path: AppBarRoutes.who,
+    loadChildren: './who-did-this/who-did-this.module#WhoDidThisModule',
   },
   {
     path: AppBarRoutes.contact,
-    loadChildren: './contact-us/contact-us.module#ContactUsModule'
-  }
+    loadChildren: './contact-us/contact-us.module#ContactUsModule',
+  },
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
 export class AppRoutingModule {}

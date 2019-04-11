@@ -9,6 +9,7 @@ export enum AppBarRoutes {
   events = 'events',
   blog = 'blog',
   involved = 'get-involved',
+  who = 'who-did-this',
   contact = 'contact-us'
 }
 
