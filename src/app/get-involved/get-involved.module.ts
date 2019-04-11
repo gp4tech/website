@@ -7,9 +7,10 @@ import { GetInvolvedComponent } from './get-involved.component';
 import { SharedModule } from '../shared/shared.module';
 import { GetInvolvedRoutingModule } from './get-involved-routing.module';
 import { CountrySupportersService } from './country-supporters.service';
+import { SubscribeFormComponent } from './subscribe-form/subscribe-form.component';
 
 @NgModule({
-  declarations: [GetInvolvedComponent],
+  declarations: [GetInvolvedComponent, SubscribeFormComponent],
   imports: [
     CommonModule,
     SharedModule,

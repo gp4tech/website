@@ -15,5 +15,8 @@
         </google-chart>
       </div>
     </div>
+    <div class="row" *ngIf="!isLoading">
+      <a class="waves-effect btn-large get-involved" [routerLink]="[ '/subscribe' ]">Get Involved</a>
+    </div>
   </div>
 </div>
