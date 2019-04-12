@@ -1,4 +1,4 @@
-@import '../../styles-mat-variables.scss';
+@import '../../styles-mat-variables';
 
 .team-container {
   padding-bottom: 2rem;
@@ -44,7 +44,7 @@
     }    
   }
 
-  @media #{$medium-small-and-down} {
+  @media #{$medium-and-down} {
     .padding-bio {
       padding-left: 40px;
     }
