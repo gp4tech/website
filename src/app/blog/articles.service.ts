@@ -32,7 +32,7 @@ export class ArticlesService extends DataService<Article> {
     );
   }
 
-  getTopArticles(quantity: number) {
+  getTopArticles(quantity: number): Observable<Article[]> {
     return this.getAllSorted('views', DataOrder.desc, quantity).pipe(
       map(articles => {
         this.verifyArticlesAndUpdateMetadata(articles);
