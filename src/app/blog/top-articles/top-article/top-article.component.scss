@@ -1,4 +1,4 @@
-@import "../../../../styles-mat-variables";
+@import '../../../../styles-mat-variables';
 
 .card-image {
   height: 110px;
@@ -31,6 +31,12 @@
   text-overflow: ellipsis;
   white-space: nowrap;
   margin-bottom: 5px !important;
+}
+
+.card-reveal p {
+  overflow: hidden;
+  line-height: 1.5em;
+  max-height: 10.5em;
 }
 
 .activator {

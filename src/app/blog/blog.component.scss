@@ -46,7 +46,7 @@
       line-height: 1.2em;
       max-height: 6em;
 
-      @media #{$small-and-down} {
+      @media #{$medium-and-down} {
         max-height: 3.6em;
       }
     }
