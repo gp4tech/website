@@ -7,6 +7,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { HomeModule } from './home/home.module';
 import { LayoutModule } from './layout/layout.module';
 import { CoreModule } from './core/core.module';
+import { WhoDidThisModule } from './who-did-this/who-did-this.module';
 
 @NgModule({
   declarations: [AppComponent],
@@ -15,6 +16,7 @@ import { CoreModule } from './core/core.module';
     AppRoutingModule,
     HomeModule,
     LayoutModule,
+    WhoDidThisModule
   ],
   bootstrap: [AppComponent]
 })

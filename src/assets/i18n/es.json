@@ -56,6 +56,15 @@
       }
     }
   },
+  "who-did-this": {
+    "title": "¿Quién hizo esto?",
+    "teams": {
+      "dev": "Equipo de Desarrolladores",
+      "qa": "Equipo de Control de Calidad",
+      "po": "Dueños del Producto",
+      "designers": "Diseñadores"
+    }
+  },
   "blog": {
     "title": "Blog",
     "see-more": "Ver Más",

@@ -56,6 +56,15 @@
       }
     }
   },
+  "who-did-this": {
+    "title": "Who did this?",
+    "teams": {
+      "dev": "Dev Team",
+      "qa": "QA Team",
+      "po": "PO Team",
+      "designers": "Designers"
+    }
+  },
   "blog": {
     "title": "Blog",
     "see-more": "See More",

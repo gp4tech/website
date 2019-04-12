@@ -8,7 +8,8 @@ export enum AppBarRoutes {
   about = 'about-us',
   events = 'events',
   blog = 'blog',
-  involved = 'get-involved'
+  involved = 'get-involved',
+  who = 'who-did-this'
 }
 
 export const AppRoutes: AppRoute[] = [
