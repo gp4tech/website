@@ -1,0 +1,44 @@
+@import '../../../../styles-mat-variables';
+
+.card-image {
+  height: 110px;
+  overflow: hidden;
+
+  @media #{$large-and-up} {
+    height: 150px;
+  }
+
+  @media #{$extra-large-and-up} {
+    height: 200px;
+  }
+
+  img {
+    width: 100%;
+  }
+}
+
+.card-title {
+  font-size: 1em;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  margin-bottom: 0px !important;
+}
+
+.card-author-and-date {
+  font-size: 0.8em;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  margin-bottom: 5px !important;
+}
+
+.card-reveal p {
+  overflow: hidden;
+  line-height: 1.5em;
+  max-height: 10.5em;
+}
+
+.activator {
+  cursor: pointer;
+}

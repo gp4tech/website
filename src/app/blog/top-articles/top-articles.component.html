@@ -1,32 +1,13 @@
-<h4 class="center-align">・{{ 'blog.title' | translate }}・</h4>
-<div class="row center-align">
-  <div *ngFor="let article of articles$ | async" class="col s12 m4">
-    <div class="card left-align">
-      <div class="card-image waves-effect waves-block waves-light">
-        <img class="activator" [src]="article.image? article.image : defaultImage" [alt]="article.title">
+<ng-container *ngIf="(articles$ | async) as articles">
+  <ng-container *ngIf="articles.length > 0">
+    <h4 class="center-align">・{{ 'blog.title' | translate }}・</h4>
+    <div class="row center-align">
+      <div *ngFor="let article of articles" class="col s12 m4">
+        <gp-top-article [article]="article"></gp-top-article>
       </div>
-      <div class="card-content">
-        <span class="activator">
-          <i class="fa fa-angle-down right"></i>
-        </span>
-        <span class="card-title activator grey-text text-darken-4">
-          {{ article.title }}
-        </span>
-        <p><a (click)="updateArticleViews(article)" [href]="article.url" target="_blank"
-            rel="noopener noreferrer">{{ 'blog.articles.read-more' | translate }}</a></p>
-      </div>
-      <div class="card-reveal">
-        <span class="card-title">
-          <i class="fa fa-times right"></i>
-        </span>
-        <span class="card-title grey-text text-darken-4">
-          {{ article.title }}
-        </span>
-        <p>{{ article.description }}</p>
+      <div class="col s12">
+        <a class="btn-large waves-effect see-more" routerLink="/blog">{{ 'blog.see-more' | translate }}</a>
       </div>
     </div>
-  </div>
-  <div class="col s12">
-    <a class="btn-large waves-effect see-more" routerLink="/blog">{{ 'blog.see-more' | translate }}</a>
-  </div>
-</div>
+  </ng-container>
+</ng-container>
