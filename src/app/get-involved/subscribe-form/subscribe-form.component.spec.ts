@@ -1,5 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
+import { TranslateModule } from '@ngx-translate/core';
+
 import { SubscribeFormComponent } from './subscribe-form.component';
 
 describe('SubscribeFormComponent', () => {
@@ -8,6 +10,7 @@ describe('SubscribeFormComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
+      imports: [TranslateModule.forRoot()],
       declarations: [ SubscribeFormComponent ]
     })
     .compileComponents();

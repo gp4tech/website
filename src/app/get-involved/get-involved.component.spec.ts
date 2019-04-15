@@ -2,6 +2,8 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { GoogleChartsModule } from 'angular-google-charts';
 import { TranslateModule } from '@ngx-translate/core';
+import { RouterTestingModule } from '@angular/router/testing';
+
 import { of } from 'rxjs';
 
 import { GetInvolvedComponent } from './get-involved.component';
@@ -21,7 +23,8 @@ describe('GetInvolvedComponent', () => {
       imports: [
         TranslateModule.forRoot(),
         GoogleChartsModule,
-        SharedModule
+        SharedModule,
+        RouterTestingModule
       ],
       declarations: [GetInvolvedComponent],
       providers: [
