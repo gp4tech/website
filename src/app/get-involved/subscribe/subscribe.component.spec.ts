@@ -12,7 +12,7 @@ describe('SubscribeComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       imports: [TranslateModule.forRoot()],
-      declarations: [ 
+      declarations: [
         SubscribeComponent,
         SubscribeFormComponent
       ]
