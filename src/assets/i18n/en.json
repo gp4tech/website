@@ -35,7 +35,24 @@
     "title": "Testimonials"
   },
   "get-involved": {
-    "title": "Get Involved"
+    "title": "Get Involved",
+    "subscription": {
+      "title": "Subscribe",
+      "intro": "I want to get involved because... Aliquam ac viverra sem. Nunc dictum diam arcu. Mauris a bibendum turpis, a fermentum ligula. Morbi eu dolor ac elit accumsan consequat. Sed feugiat dapibus blandit. Nunc posuere tempus neque, et pulvinar nunc fermentum vitae. Etiam at ex rutrum, interdum metus eu, venenatis purus. Sed viverra sed nibh eget pharetra.",
+      "twitter": "Subscribe with Twitter",
+      "facebook": "Subscribe with Facebook",
+      "google": "Subscribe with Google",
+      "or": "OR",
+      "form": {
+        "firstname": "First Name",
+        "lastname": "Last Name",
+        "email": "Email",
+        "choose-country": "Choose your country",
+        "country": "Country",
+        "subscription-agreement": "I agree to receive news, stories and ideas for action from GP4Tech.",
+        "subscribe": "Subscribe"
+      }
+    }
   },
   "about-us": {
     "who": {

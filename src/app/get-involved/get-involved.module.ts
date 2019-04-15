@@ -8,9 +8,10 @@ import { SharedModule } from '../shared/shared.module';
 import { GetInvolvedRoutingModule } from './get-involved-routing.module';
 import { CountrySupportersService } from './country-supporters.service';
 import { SubscribeFormComponent } from './subscribe-form/subscribe-form.component';
+import { SubscribeComponent } from './subscribe/subscribe.component';
 
 @NgModule({
-  declarations: [GetInvolvedComponent, SubscribeFormComponent],
+  declarations: [GetInvolvedComponent, SubscribeFormComponent, SubscribeComponent],
   imports: [
     CommonModule,
     SharedModule,
