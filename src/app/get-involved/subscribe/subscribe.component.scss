@@ -1,0 +1,31 @@
+@import "../../../styles-mat-variables.scss";
+
+@media #{$small-and-down} {
+  .subscribe-buttons button {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+}
+
+@media #{$medium-and-up} {
+  .subscribe-buttons button {
+    height: auto;
+    line-height: 20px;
+    min-height: 20px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+  }
+}
+
+.divider {
+  overflow: visible !important;
+  position: relative;
+
+  span {
+    background: #ffffff;
+    padding: 10px;
+    position: absolute;
+    top: -22px;
+    transform: translateX(-50%);
+  }
+}
