@@ -3,5 +3,6 @@ export const FirebaseCollections = {
   articles: 'blogs',
   countrySupporters: 'country-supporters',
   sponsors: 'sponsors',
-  webTeamMembers: 'web-team-members'
+  webTeamMembers: 'web-team-members',
+  testimonials: 'testimonials'
 };

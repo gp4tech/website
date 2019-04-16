@@ -1,4 +1,9 @@
 import { Component, OnInit } from '@angular/core';
+import { Testimonials } from '../../shared/models/testimonials.model';
+import { TestimonialsService } from './testimonials.service';
+import { environment } from '../../../environments/environment';
+import { Observable } from 'rxjs';
+
 
 @Component({
   selector: 'gp-testimonials',
@@ -6,10 +11,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./testimonials.component.scss']
 })
 export class TestimonialsComponent implements OnInit {
-
-  constructor() { }
+  testimonials$: Observable<Testimonials[]>;
+  baseUrl = environment.firebaseStorageUrl;
+  constructor( private testimonialService: TestimonialsService) { }
 
   ngOnInit() {
+    this.testimonials$ = this.testimonialService.getAll();
   }
 
 }
