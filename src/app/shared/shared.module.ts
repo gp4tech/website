@@ -5,11 +5,12 @@ import { TranslateModule } from '@ngx-translate/core';
 
 import { ParallaxDirective } from './directives/parallax/parallax.directive';
 import { WaitingSpinnerComponent } from './components/waiting-spinner/waiting-spinner.component';
+import { SelectDirective } from './directives/select/select.directive';
 import { CollapsibleDirective } from './directives/collapsible/collapsible.directive';
 
 @NgModule({
-  declarations: [ParallaxDirective, WaitingSpinnerComponent, CollapsibleDirective],
+  declarations: [ParallaxDirective, WaitingSpinnerComponent, SelectDirective, CollapsibleDirective],
   imports: [CommonModule, TranslateModule],
-  exports: [TranslateModule, ParallaxDirective, WaitingSpinnerComponent, CollapsibleDirective],
+  exports: [TranslateModule, ParallaxDirective, WaitingSpinnerComponent, SelectDirective, CollapsibleDirective]
 })
 export class SharedModule {}

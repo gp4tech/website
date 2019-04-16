@@ -19,7 +19,7 @@ const ALLOWED_ORIGINS = [
   'http://127.0.0.1:8080',
   'https://gp4techsite.firebaseapp.com'
 ];
-const BLOGS_COLLECTION = 'blogs';
+const ARTICLES_COLLECTION = 'articles';
 
 function verifyOrigin(request, response) {
   const origin = request.headers.origin;
@@ -51,21 +51,24 @@ exports.updateBlogMetadata = functions.https.onRequest((request, response) => {
   cors(request, response, () => {
     verifyOrigin(request, response);
 
-    const blogId = request.body.id;
+    const articleId = request.body.id;
 
-    getDocument(BLOGS_COLLECTION, blogId)
-      .then(blog => Promise.all([blog, urlMetadata(blog.url)]))
+    getDocument(ARTICLES_COLLECTION, articleId)
+      .then(article => Promise.all([article, urlMetadata(article.url)]))
       .then(results => {
-        let blog = results[0];
+        let article = results[0];
         const metadata = results[1];
+        console.log(metadata);
 
-        blog.title = metadata.title;
-        blog.description = metadata.description;
-        blog.image = metadata.image;
+        article.title = metadata.title;
+        article.description = metadata.description;
+        article.author = metadata.author;
+        article.image = metadata.image;
+        article.date = admin.firestore.Timestamp.now();
 
-        updateDocument(BLOGS_COLLECTION, blog);
+        updateDocument(ARTICLES_COLLECTION, article);
 
-        return response.status(200).send(blog);
+        return response.status(200).send(article);
       })
       .catch(error => response.status(500).send(error));
   });
@@ -76,16 +79,16 @@ exports.updateBlogViews = functions.https.onRequest((request, response) => {
   cors(request, response, () => {
     verifyOrigin(request, response);
 
-    const blogId = request.body.id;
+    const articleId = request.body.id;
 
-    getDocument(BLOGS_COLLECTION, blogId)
-      .then(blog => {
-        const views = blog.views;
-        blog.views = views ? views + 1 : 1;
+    getDocument(ARTICLES_COLLECTION, articleId)
+      .then(article => {
+        const views = article.views;
+        article.views = views ? views + 1 : 1;
 
-        updateDocument(BLOGS_COLLECTION, blog);
+        updateDocument(ARTICLES_COLLECTION, article);
 
-        return response.status(200).send(blog);
+        return response.status(200).send(article);
       })
       .catch(error => response.status(500).send(error));
   });

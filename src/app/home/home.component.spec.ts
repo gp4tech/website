@@ -18,6 +18,7 @@ import { SponsorsComponent } from './sponsors/sponsors.component';
 import { TopArticlesComponent } from '../blog/top-articles/top-articles.component';
 import { ArticlesService } from '../blog/articles.service';
 import { SponsorsService } from './sponsors/sponsors.service';
+import { TopArticleComponent } from '../blog/top-articles/top-article/top-article.component';
 
 const activityIndicatorsServiceMock = {
   getAll: () => of([])
@@ -28,7 +29,8 @@ const countrySupportersServiceMock = {
 };
 
 const articlesServiceMock = {
-  getAllSorted: () => of([])
+  getAllArticles: () => of([]),
+  getTopArticles: () => of([])
 };
 
 const sponsorsServiceMock = {
@@ -47,7 +49,8 @@ describe('HomeComponent', () => {
         ActivityIndicatorsComponent,
         TestimonialsComponent,
         SponsorsComponent,
-        TopArticlesComponent
+        TopArticlesComponent,
+        TopArticleComponent
       ],
       imports: [
         GetInvolvedModule,

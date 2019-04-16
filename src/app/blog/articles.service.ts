@@ -9,12 +9,15 @@ import { Article } from '../shared/models/article.model';
 import { DataService } from '../shared/models/data-service.model';
 import { FirebaseCollections } from '../shared/models/collections.constant';
 import { CloudFunctions } from '../shared/models/cloud-functions.constant';
+import { DataOrder } from '../shared/models/data-type.model';
 
+const DEFAULT_TEXT = 'GP4Tech';
 const DEFAULT_IMAGE = 'assets/images/GP4Tech-logo.png';
 
 @Injectable()
 export class ArticlesService extends DataService<Article> {
-  defaultArticleImage = DEFAULT_IMAGE;
+  defaultText = DEFAULT_TEXT;
+  defaultImage = DEFAULT_IMAGE;
 
   constructor(http: HttpClient, db: AngularFirestore) {
     super(http, db, FirebaseCollections.articles);
@@ -22,6 +25,15 @@ export class ArticlesService extends DataService<Article> {
 
   getAllArticles(): Observable<Article[]> {
     return this.getAll().pipe(
+      map(articles => {
+        this.verifyArticlesAndUpdateMetadata(articles);
+        return articles;
+      })
+    );
+  }
+
+  getTopArticles(quantity: number): Observable<Article[]> {
+    return this.getAllSorted('views', DataOrder.desc, quantity).pipe(
       map(articles => {
         this.verifyArticlesAndUpdateMetadata(articles);
         return articles;

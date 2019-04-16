@@ -9,9 +9,11 @@ import { of } from 'rxjs';
 
 import { BlogComponent } from './blog.component';
 import { ArticlesService } from './articles.service';
+import { TopArticleComponent } from './top-articles/top-article/top-article.component';
 
 const articlesServiceMock = {
-  getAllArticles: () => of([])
+  getAllArticles: () => of([]),
+  getTopArticles: () => of([])
 };
 
 describe('BlogComponent', () => {
@@ -20,7 +22,7 @@ describe('BlogComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [BlogComponent],
+      declarations: [BlogComponent, TopArticleComponent],
       imports: [
         TranslateModule.forRoot({
           loader: { provide: TranslateLoader, useClass: TranslateFakeLoader }
