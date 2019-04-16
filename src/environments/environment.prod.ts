@@ -5,5 +5,8 @@ export const environment = {
   firebase: FirebaseConfig,
   functionsUrl: 'https://us-central1-gp4techsite.cloudfunctions.net',
   firebaseStorageUrl:
-    'https://firebasestorage.googleapis.com/v0/b/gp4techsite.appspot.com/o/'
+    'https://firebasestorage.googleapis.com/v0/b/gp4techsite.appspot.com/o/',
+  googleMaps: {
+    apiKey: 'YOUR-KEY'
+  }
 };

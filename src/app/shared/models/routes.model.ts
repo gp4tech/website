@@ -9,7 +9,8 @@ export enum AppBarRoutes {
   events = 'events',
   blog = 'blog',
   involved = 'get-involved',
-  who = 'who-did-this'
+  who = 'who-did-this',
+  contact = 'contact-us'
 }
 
 export const AppRoutes: AppRoute[] = [
@@ -17,5 +18,6 @@ export const AppRoutes: AppRoute[] = [
   { name: AppBarRoutes.about, i18n: 'links.about' },
   { name: AppBarRoutes.events, i18n: 'links.events' },
   { name: AppBarRoutes.blog, i18n: 'links.blog' },
-  { name: AppBarRoutes.involved, i18n: 'links.involved' }
+  { name: AppBarRoutes.involved, i18n: 'links.involved' },
+  { name: AppBarRoutes.contact, i18n: 'links.contact-us' }
 ];

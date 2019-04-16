@@ -22,7 +22,11 @@ const routes: Routes = [
   {
     path: AppBarRoutes.who,
     loadChildren: './who-did-this/who-did-this.module#WhoDidThisModule'
-  }
+  },
+  {
+    path: AppBarRoutes.contact,
+    loadChildren: './contact-us/contact-us.module#ContactUsModule'
+  },
 ];
 
 @NgModule({

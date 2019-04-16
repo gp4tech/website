@@ -90,5 +90,35 @@
       "all": "All Articles",
       "read-more": "Read More"
     }
+  },
+  "contact-us": {
+    "title": "Contact us",
+    "gpEmail": "GP4Tech@jalasoft.com",
+    "email-title": "Email us",
+    "company-name": "Jalasoft",
+    "location": {
+      "address": "Av. Melchor Pérez de Olguín #2643",
+      "city": "Cochabamba",
+      "country": "Bolivia"
+    },
+    "phone": {
+      "title": "Phone",
+      "code": "+591",
+      "number": "78945612"
+    },
+    "find-title": "How to find Jalasoft",
+    "driving": {
+      "title": "Driving",
+      "description": "Refer to directions provided by"
+    },
+    "transportation": {
+      "title": "Transportation",
+      "description": "The following public transportation lines can leave you near Jalasoft's facilities: 120, 230, A, Z12, 101"
+    },
+    "email": "Email",
+    "subject": "Subject",
+    "From": "From",
+    "Message": "Message",
+    "btn-send": "Send"
   }
 }
