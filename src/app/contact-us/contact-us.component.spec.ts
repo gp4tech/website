@@ -1,5 +1,6 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
 
 import {
   TranslateModule,
@@ -7,7 +8,6 @@ import {
   TranslateFakeLoader
 } from '@ngx-translate/core';
 import { AgmCoreModule } from '@agm/core';
-import { FormsModule } from '@angular/forms';
 
 import { ContactUsComponent } from './contact-us.component';
 import { EmailService } from '../core/email.service';
