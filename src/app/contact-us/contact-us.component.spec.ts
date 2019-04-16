@@ -1,5 +1,5 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-
+import { HttpClientModule } from '@angular/common/http';
 
 import {
   TranslateModule,
@@ -7,8 +7,10 @@ import {
   TranslateFakeLoader
 } from '@ngx-translate/core';
 import { AgmCoreModule } from '@agm/core';
+import { FormsModule } from '@angular/forms';
 
 import { ContactUsComponent } from './contact-us.component';
+import { EmailService } from '../core/email.service';
 
 describe('ContactUsComponent', () => {
   let component: ContactUsComponent;
@@ -18,13 +20,16 @@ describe('ContactUsComponent', () => {
     TestBed.configureTestingModule({
       declarations: [ContactUsComponent],
       imports: [
+        FormsModule,
+        HttpClientModule,
         TranslateModule.forRoot({
-          loader: { provide: TranslateLoader, useClass: TranslateFakeLoader },
+          loader: { provide: TranslateLoader, useClass: TranslateFakeLoader }
         }),
         AgmCoreModule.forRoot({
-          apiKey: '',
-        }),
+          apiKey: ''
+        })
       ],
+      providers: [EmailService]
     }).compileComponents();
   }));
 

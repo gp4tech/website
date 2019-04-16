@@ -39,10 +39,13 @@
       </div>
       <div class="collapsible-body">
         <p>
-          <strong>{{ 'contact-us.driving.title' | translate }}:</strong> {{ 'contact-us.driving.description' | translate }}
-          <a href="http://www.google.com/maps/place/{{ latitude }},{{ longitude }}" target="_blank" rel="noopener noreferrer">Google Maps.</a>
+          <strong>{{ 'contact-us.driving.title' | translate }}:</strong>
+          {{ 'contact-us.driving.description' | translate }}
+          <a href="http://www.google.com/maps/place/{{ latitude }},{{ longitude }}" target="_blank"
+            rel="noopener noreferrer">Google Maps.</a>
         </p>
-        <p><strong> {{ 'contact-us.transportation.title' | translate }}:</strong> {{ 'contact-us.transportation.description' | translate }}</p>
+        <p><strong> {{ 'contact-us.transportation.title' | translate }}:</strong>
+          {{ 'contact-us.transportation.description' | translate }}</p>
       </div>
     </li>
   </ul>
@@ -52,22 +55,22 @@
     <div class="card-panel">
       <div class="row">
         <div class="input-field col m6 s12">
-          <input id="subject" type="text" class="validate" />
+          <input id="subject" type="text" class="validate" [(ngModel)]="email.subject" />
           <label class="active" for="subject">{{ 'contact-us.subject' | translate }}</label>
         </div>
         <div class="input-field col m6 s12">
-          <input id="user-email" type="email" class="validate" />
+          <input id="user-email" type="email" class="validate" [(ngModel)]="email.from" />
           <label class="active" for="user-email">{{ 'contact-us.From' | translate }}</label>
         </div>
       </div>
       <div class="row">
         <div class="input-field col s12">
-          <textarea id="message" class="materialize-textarea"></textarea>
+          <textarea id="message" class="materialize-textarea" [(ngModel)]="email.content"></textarea>
           <label class="active" for="message">{{ 'contact-us.Message' | translate }}</label>
         </div>
       </div>
       <div class="right-align">
-        <a class="btn-large waves-effect">{{ 'contact-us.btn-send' | translate }}</a>
+        <a class="btn-large waves-effect" (click)="sendEmail()">{{ 'contact-us.btn-send' | translate }}</a>
       </div>
     </div>
   </div>
