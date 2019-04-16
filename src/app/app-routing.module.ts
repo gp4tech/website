@@ -12,7 +12,7 @@ const routes: Routes = [
   },
   {
     path: AppBarRoutes.events,
-    loadChildren: './events/events.module#EventsModule',
+    loadChildren: './events/events.module#EventsModule'
   },
   { path: AppBarRoutes.blog, loadChildren: './blog/blog.module#BlogModule' },
   {
