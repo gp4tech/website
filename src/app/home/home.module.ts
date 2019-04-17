@@ -9,8 +9,9 @@ import { GetInvolvedModule } from '../get-involved/get-involved.module';
 import { HomeComponent } from './home.component';
 import { BannerComponent } from './banner/banner.component';
 import { ActivityIndicatorsComponent } from './activity-indicators/activity-indicators.component';
-import { TestimonialsComponent } from './testimonials/testimonials.component';
 import { ActivityIndicatorsService } from './activity-indicators/activity-indicators.service';
+import { TestimonialsComponent } from './testimonials/testimonials.component';
+import { TestimonialsService } from './testimonials/testimonials.service';
 import { SponsorsComponent } from './sponsors/sponsors.component';
 import { SponsorsService } from './sponsors/sponsors.service';
 
@@ -29,6 +30,6 @@ import { SponsorsService } from './sponsors/sponsors.service';
     GetInvolvedModule,
     BlogModule
   ],
-  providers: [ActivityIndicatorsService, ArticlesService, SponsorsService]
+  providers: [ActivityIndicatorsService, ArticlesService, SponsorsService, TestimonialsService]
 })
 export class HomeModule {}

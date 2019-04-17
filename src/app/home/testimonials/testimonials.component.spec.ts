@@ -4,9 +4,13 @@ import {
   TranslateLoader,
   TranslateFakeLoader
 } from '@ngx-translate/core';
+import { of } from 'rxjs';
 
 import { TestimonialsComponent } from './testimonials.component';
-
+import { TestimonialsService } from './testimonials.service';
+const testimonialsServiceMock = {
+  getAll: () => of([])
+};
 describe('TestimonialsComponent', () => {
   let component: TestimonialsComponent;
   let fixture: ComponentFixture<TestimonialsComponent>;
@@ -18,7 +22,8 @@ describe('TestimonialsComponent', () => {
         TranslateModule.forRoot({
           loader: { provide: TranslateLoader, useClass: TranslateFakeLoader }
         })
-      ]
+      ],
+      providers: [{ provide: TestimonialsService, useValue: testimonialsServiceMock }]
     }).compileComponents();
   }));
 

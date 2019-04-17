@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Testimonials } from '../../shared/models/testimonials.model';
 import { TestimonialsService } from './testimonials.service';
-import { environment } from '../../../environments/environment';
 import { Observable } from 'rxjs';
 
 
@@ -12,11 +11,9 @@ import { Observable } from 'rxjs';
 })
 export class TestimonialsComponent implements OnInit {
   testimonials$: Observable<Testimonials[]>;
-  baseUrl = environment.firebaseStorageUrl;
   constructor( private testimonialService: TestimonialsService) { }
 
   ngOnInit() {
     this.testimonials$ = this.testimonialService.getAll();
   }
-
 }
