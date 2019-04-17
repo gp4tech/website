@@ -1,8 +1,10 @@
 export interface WebTeamMembers {
   id: string;
   name: string;
-  bio: string;
+  bioEn: string;
+  bioSp: string;
   pic: string;
-  twitter: string;
+  github: string;
   linkedin: string;
+  twitter: string;
 }
