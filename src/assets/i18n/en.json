@@ -35,12 +35,13 @@
   },
   "get-involved": {
     "title": "Get Involved",
+    "support-this": "I support this",
     "subscription": {
-      "title": "Subscribe",
-      "intro": "I want to get involved because... Aliquam ac viverra sem. Nunc dictum diam arcu. Mauris a bibendum turpis, a fermentum ligula. Morbi eu dolor ac elit accumsan consequat. Sed feugiat dapibus blandit. Nunc posuere tempus neque, et pulvinar nunc fermentum vitae. Etiam at ex rutrum, interdum metus eu, venenatis purus. Sed viverra sed nibh eget pharetra.",
-      "twitter": "Subscribe with Twitter",
-      "facebook": "Subscribe with Facebook",
-      "google": "Subscribe with Google",
+      "title": "Support this",
+      "intro": "Because... Aliquam ac viverra sem. Nunc dictum diam arcu. Mauris a bibendum turpis, a fermentum ligula. Morbi eu dolor ac elit accumsan consequat. Sed feugiat dapibus blandit. Nunc posuere tempus neque, et pulvinar nunc fermentum vitae. Etiam at ex rutrum, interdum metus eu, venenatis purus. Sed viverra sed nibh eget pharetra.",
+      "twitter": "Support via Twitter",
+      "facebook": "Support via Facebook",
+      "google": "Support via Google",
       "or": "OR",
       "form": {
         "firstname": "First Name",

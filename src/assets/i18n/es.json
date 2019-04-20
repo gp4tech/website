@@ -35,12 +35,13 @@
   },
   "get-involved": {
     "title": "Involúcrate",
+    "support-this": "Yo apoyo esto",
     "subscription": {
-      "title": "Subscribirme",
-      "intro": "Quiero subscribirme porque... Aliquam ac viverra sem. Nunc dictum diam arcu. Mauris a bibendum turpis, a fermentum ligula. Morbi eu dolor ac elit accumsan consequat. Sed feugiat dapibus blandit. Nunc posuere tempus neque, et pulvinar nunc fermentum vitae. Etiam at ex rutrum, interdum metus eu, venenatis purus. Sed viverra sed nibh eget pharetra.",
-      "twitter": "Subscribirme con Twitter",
-      "facebook": "Subscribirme con Facebook",
-      "google": "Subscribirme con Google",
+      "title": "Apoyar esto",
+      "intro": "Porque... Aliquam ac viverra sem. Nunc dictum diam arcu. Mauris a bibendum turpis, a fermentum ligula. Morbi eu dolor ac elit accumsan consequat. Sed feugiat dapibus blandit. Nunc posuere tempus neque, et pulvinar nunc fermentum vitae. Etiam at ex rutrum, interdum metus eu, venenatis purus. Sed viverra sed nibh eget pharetra.",
+      "twitter": "Apoyar via Twitter",
+      "facebook": "Apoyar via Facebook",
+      "google": "Apoyar via Google",
       "or": "O",
       "form": {
         "firstname": "Nombre",
