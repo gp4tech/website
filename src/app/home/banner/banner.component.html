@@ -3,7 +3,9 @@
     <div class="container">
       <div class="row">
         <h1 class="white-text">{{ 'banner.slogan' | translate }}</h1>
-        <a class="btn-large waves-effect">{{ 'banner.call-to-action' | translate }}</a>
+        <a class="btn-large waves-effect" [routerLink]="[ '/subscribe' ]">
+          {{ 'banner.call-to-action' | translate }}
+        </a>
       </div>
     </div>
   </div>
