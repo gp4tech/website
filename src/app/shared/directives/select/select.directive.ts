@@ -1,15 +1,17 @@
-import { Directive, OnInit, ElementRef } from '@angular/core';
+import { Directive, ElementRef, AfterViewInit, Input } from '@angular/core';
 
 import { FormSelect } from 'materialize-css';
 
 @Directive({
   selector: '[gpSelect]'
 })
-export class SelectDirective implements OnInit {
-
+export class SelectDirective implements AfterViewInit {
   constructor(private elementRef: ElementRef) { }
 
-  ngOnInit(): void {
-    FormSelect.init(this.elementRef.nativeElement);
+  ngAfterViewInit(): void {
+    const options = {
+      dropdownOptions: this.elementRef.nativeElement.children
+    };
+    FormSelect.init(this.elementRef.nativeElement, options);
   }
 }

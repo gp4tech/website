@@ -1,4 +1,8 @@
 {
+  "form-errors": {
+    "required": "Required",
+    "email": "Invalid email"
+  },
   "home": {},
   "language": {
     "english": "EN",
@@ -50,7 +54,13 @@
         "choose-country": "Choose your country",
         "country": "Country",
         "subscription-agreement": "I agree to receive news, stories and ideas for action from GP4Tech.",
-        "subscribe": "Subscribe"
+        "support-this": "Support this",
+        "gender": "Gender",
+        "gender-options": {
+          "male": "Male",
+          "female": "Female",
+          "other": "Other"
+        }
       }
     }
   },
