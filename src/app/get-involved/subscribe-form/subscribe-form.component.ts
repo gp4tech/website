@@ -27,7 +27,7 @@ export class SubscribeFormComponent implements OnInit {
       country: ['Bolivia'],
       gender: ['female'],
       agreement: [true]
-    })
+    });
   }
 
   ngOnInit() {
