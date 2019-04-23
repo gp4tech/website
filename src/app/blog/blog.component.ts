@@ -2,10 +2,10 @@ import { Component, OnInit } from '@angular/core';
 
 import { Observable } from 'rxjs';
 
-import { Article } from '../shared/models/article.model';
+import { LanguageService } from '../layout/navbar/language-button/language.service';
 import { ArticlesService } from './articles.service';
+import { Article } from '../shared/models/article.model';
 import { CloudFunctions } from '../shared/models/cloud-functions.constant';
-import { DataOrder } from '../shared/models/data-type.model';
 
 const MAX_TOP_ARTICLES_LENGTH = 3;
 
@@ -21,7 +21,10 @@ export class BlogComponent implements OnInit {
   defaultImage: string;
   onInitDate: Date;
 
-  constructor(private articlesService: ArticlesService) {}
+  constructor(
+    public languageService: LanguageService,
+    private articlesService: ArticlesService
+  ) {}
 
   ngOnInit(): void {
     this.articles$ = this.articlesService.getAllArticles();

@@ -9,8 +9,11 @@
     <span class="card-title activator grey-text text-darken-4">
       {{ article.title ? article.title : defaultText }}
     </span>
-    <p class="card-author-and-date">
+    <p *ngIf="languageService.currentLanguage === 'en'" class="card-author-and-date">
       {{ article.author ? article.author : defaultText }}・{{ (article.date ? article.date.toDate() : onInitDate) | date }}
+    </p>
+    <p *ngIf="languageService.currentLanguage === 'es'" class="card-author-and-date">
+      {{ article.author ? article.author : defaultText }}・{{ (article.date ? article.date.toDate() : onInitDate) | date : 'mediumDate' : undefined : 'es' }}
     </p>
     <a (click)="updateArticleViews(article)" [href]="article.url" target="_blank" rel="noopener noreferrer">
       {{ 'blog.articles.read-more' | translate }}
