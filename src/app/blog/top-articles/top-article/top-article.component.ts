@@ -1,6 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 
 import { ArticlesService } from '../../articles.service';
+import { LanguageService } from '../../../layout/navbar/language-button/language.service';
 import { Article } from '../../../shared/models/article.model';
 import { CloudFunctions } from '../../../shared/models/cloud-functions.constant';
 
@@ -15,7 +16,10 @@ export class TopArticleComponent implements OnInit {
   defaultImage: string;
   onInitDate: Date;
 
-  constructor(private articlesService: ArticlesService) {}
+  constructor(
+    public languageService: LanguageService,
+    private articlesService: ArticlesService
+  ) {}
 
   ngOnInit(): void {
     this.defaultText = this.articlesService.defaultText;
