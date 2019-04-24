@@ -10,3 +10,7 @@ export const FirebaseConfig = {
   storageBucket: '',
   messagingSenderId: ''
 };
+
+export const GoogleMapsKey = {
+  apiKey: ''
+};

@@ -1,4 +1,4 @@
-import { FirebaseConfig } from './firebase-config';
+import { FirebaseConfig, GoogleMapsKey } from './firebase-config';
 
 export const environment = {
   production: true,
@@ -6,7 +6,5 @@ export const environment = {
   functionsUrl: 'https://us-central1-gp4techsite.cloudfunctions.net',
   firebaseStorageUrl:
     'https://firebasestorage.googleapis.com/v0/b/gp4techsite.appspot.com/o/',
-  googleMaps: {
-    apiKey: 'YOUR-KEY'
-  }
+  googleMaps: GoogleMapsKey
 };
