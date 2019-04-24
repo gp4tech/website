@@ -24,11 +24,8 @@
             <div class="card-stacked">
               <div class="card-content">
                 <h4>{{ article.title ? article.title : defaultText }}</h4>
-                <p *ngIf="languageService.currentLanguage === 'en'" class="card-author-and-date">
-                  {{ article.author ? article.author : defaultText }}・{{ (article.date ? article.date.toDate() : onInitDate) | date }}
-                </p>
-                <p *ngIf="languageService.currentLanguage === 'es'" class="card-author-and-date">
-                  {{ article.author ? article.author : defaultText }}・{{ (article.date ? article.date.toDate() : onInitDate) | date : 'mediumDate' : undefined : 'es' }}
+                <p class="card-author-and-date">
+                  {{ article.author ? article.author : defaultText }}・{{ (article.date ? article.date.toDate() : onInitDate) | date : 'mediumDate' : undefined : languageService.currentLanguage }}
                 </p>
                 <p>{{ article.description ? article.description : defaultText }}</p>
               </div>
