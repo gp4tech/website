@@ -31,7 +31,7 @@ jobs:
           command: npm run test:client
       - run:
           name: Inject Firebase DB and Google Maps keys
-          command: npm run firebase-db:override-keys
+          command: npm run env-keys-config:override-keys
       - run:
           name: Inject SendGrid Key
           command: npm run sendgrid:override-keys
