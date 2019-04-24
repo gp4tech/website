@@ -46,6 +46,7 @@ export class SubscribeFormComponent implements OnInit {
     }
 
     const subscribtionInfo = this.form.value;
+    // TODO: Save this to new collection and trigger emails.
     console.log(subscribtionInfo);
   }
 
