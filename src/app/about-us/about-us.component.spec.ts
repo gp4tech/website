@@ -4,9 +4,15 @@ import {
   TranslateLoader,
   TranslateFakeLoader
 } from '@ngx-translate/core';
+import { of } from 'rxjs';
 
 import { AboutUsComponent } from './about-us.component';
 import { MembersComponent } from './members/members.component';
+import { MembersService } from './members/members.service';
+
+const membersServiceMock = {
+  getAll: () => of([])
+};
 
 describe('AboutUsComponent', () => {
   let component: AboutUsComponent;
@@ -14,11 +20,20 @@ describe('AboutUsComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [AboutUsComponent, MembersComponent],
+      declarations: [
+        AboutUsComponent,
+        MembersComponent
+      ],
       imports: [
         TranslateModule.forRoot({
           loader: { provide: TranslateLoader, useClass: TranslateFakeLoader }
         })
+      ],
+      providers:[
+        {
+          provide: MembersService,
+          useValue: membersServiceMock
+        }
       ]
     }).compileComponents();
   }));
