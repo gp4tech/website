@@ -1,4 +1,8 @@
 {
+  "form-errors": {
+    "required": "Required",
+    "email": "Invalid email"
+  },
   "home": {},
   "language": {
     "english": "EN",
@@ -10,12 +14,11 @@
     "contact-us": "CONTACT US",
     "events": "Events",
     "home": "Home",
-    "involved": "Get Involved",
     "who-did-this": "WHO DID THIS?"
   },
   "banner": {
     "slogan": "Learn, code, share",
-    "call-to-action": "Do something awesome"
+    "call-to-action": "I support this"
   },
   "activity-indicator-section": {
     "title": "Indicators",
@@ -36,13 +39,14 @@
   },
   "get-involved": {
     "title": "Get Involved",
+    "support-this": "I support this",
     "people-involved": "People Involved",
     "subscription": {
-      "title": "Subscribe",
-      "intro": "I want to get involved because... Aliquam ac viverra sem. Nunc dictum diam arcu. Mauris a bibendum turpis, a fermentum ligula. Morbi eu dolor ac elit accumsan consequat. Sed feugiat dapibus blandit. Nunc posuere tempus neque, et pulvinar nunc fermentum vitae. Etiam at ex rutrum, interdum metus eu, venenatis purus. Sed viverra sed nibh eget pharetra.",
-      "twitter": "Subscribe with Twitter",
-      "facebook": "Subscribe with Facebook",
-      "google": "Subscribe with Google",
+      "title": "Support this",
+      "intro": "Because... Aliquam ac viverra sem. Nunc dictum diam arcu. Mauris a bibendum turpis, a fermentum ligula. Morbi eu dolor ac elit accumsan consequat. Sed feugiat dapibus blandit. Nunc posuere tempus neque, et pulvinar nunc fermentum vitae. Etiam at ex rutrum, interdum metus eu, venenatis purus. Sed viverra sed nibh eget pharetra.",
+      "twitter": "Support via Twitter",
+      "facebook": "Support via Facebook",
+      "google": "Support via Google",
       "or": "OR",
       "form": {
         "firstname": "First Name",
@@ -51,7 +55,13 @@
         "choose-country": "Choose your country",
         "country": "Country",
         "subscription-agreement": "I agree to receive news, stories and ideas for action from GP4Tech.",
-        "subscribe": "Subscribe"
+        "support-this": "Support this",
+        "gender": "Gender",
+        "gender-options": {
+          "male": "Male",
+          "female": "Female",
+          "other": "Other"
+        }
       }
     }
   },

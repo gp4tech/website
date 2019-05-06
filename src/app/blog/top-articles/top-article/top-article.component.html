@@ -10,7 +10,7 @@
       {{ article.title ? article.title : defaultText }}
     </span>
     <p class="card-author-and-date">
-      {{ article.author ? article.author : defaultText }}・{{ (article.date ? article.date.toDate() : onInitDate) | date }}
+      {{ article.author ? article.author : defaultText }}・{{ (article.date ? article.date.toDate() : onInitDate) | date : 'mediumDate' : undefined : languageService.currentLanguage }}
     </p>
     <a (click)="updateArticleViews(article)" [href]="article.url" target="_blank" rel="noopener noreferrer">
       {{ 'blog.articles.read-more' | translate }}

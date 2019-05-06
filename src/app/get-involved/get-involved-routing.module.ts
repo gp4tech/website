@@ -6,11 +6,7 @@ import { SubscribeComponent } from './subscribe/subscribe.component';
 
 const routes: Routes = [
   {
-    path: '',
-    component: GetInvolvedComponent
-  },
-  {
-    path: 'subscribe',
+    path: 'support-this',
     component: SubscribeComponent
   }
 ];

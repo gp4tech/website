@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { ReactiveFormsModule } from '@angular/forms';
 
 import { GoogleChartsModule } from 'angular-google-charts';
 
@@ -14,6 +15,7 @@ import { SubscribeComponent } from './subscribe/subscribe.component';
   declarations: [GetInvolvedComponent, SubscribeFormComponent, SubscribeComponent],
   imports: [
     CommonModule,
+    ReactiveFormsModule,
     SharedModule,
     GetInvolvedRoutingModule,
     GoogleChartsModule.forRoot()
