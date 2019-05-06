@@ -33,9 +33,6 @@ jobs:
           name: Inject Firebase DB and Google Maps keys
           command: npm run env-keys-config:override-keys
       - run:
-          name: Inject SendGrid Key
-          command: npm run sendgrid:override-keys
-      - run:
           name: Building
           command: npm run build:client
       - save_cache:
