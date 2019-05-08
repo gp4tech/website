@@ -10,12 +10,12 @@
   <br><br>
   <div *ngFor="let event of events$ | async" class="row">
     <ng-container *ngIf="event.positionPic == position.RIGHT">
-      <div class="col s6">
+      <div class="col m6">
         <img [src]="event.pic"
              [alt]="event.nameEn"
-             class="responsive-img">
+             class="responsive-img separator">
       </div>
-      <div class="col s6">
+      <div class="col m6">
         <div class="row center-align">
           <h2 *ngIf="language.currentLanguage === languages.EN" class="type">
             {{ event.nameEn }}
@@ -35,7 +35,7 @@
       </div>
     </ng-container>
     <ng-container *ngIf="event.positionPic == position.LEFT">
-      <div class="col s6">
+      <div class="col m6">
         <div class="row center-align">
           <h2 *ngIf="language.currentLanguage === languages.EN" class="type">
             {{ event.nameEn }}
@@ -53,10 +53,10 @@
           </p>
         </div>
       </div>
-      <div class="col s6">
+      <div class="col m6">
         <img [src]="event.pic"
              [alt]="event.nameEn"
-             class="responsive-img">
+             class="responsive-img separator">
       </div>
     </ng-container>
   </div>
