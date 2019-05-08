@@ -1,3 +1,63 @@
-<p>
-  events works!
-</p>
+<div class="container">
+  <div class="row">
+    <h4 class="center-align">
+      ・{{ 'events.title' | translate | uppercase }}・
+    </h4>
+  </div>
+  <p class="text-justify">
+    {{ 'events.description' | translate }}
+  </p>
+  <br><br>
+  <div *ngFor="let event of events$ | async" class="row">
+    <ng-container *ngIf="event.positionPic == position.RIGHT">
+      <div class="col s6">
+        <img [src]="event.pic"
+             [alt]="event.nameEn"
+             class="responsive-img">
+      </div>
+      <div class="col s6">
+        <div class="row center-align">
+          <h2 *ngIf="language.currentLanguage === languages.EN" class="type">
+            {{ event.nameEn }}
+          </h2>
+          <h2 *ngIf="language.currentLanguage === languages.ES" class="type">
+            {{ event.nameSp }}
+          </h2>
+        </div>
+        <div class="row">
+          <p *ngIf="language.currentLanguage === languages.EN" class="text-justify separator">
+            {{ event.descriptionEn }}
+          </p>
+          <p *ngIf="language.currentLanguage === languages.ES" class="text-justify separator">
+            {{ event.descriptionSp }}
+          </p>
+        </div>
+      </div>
+    </ng-container>
+    <ng-container *ngIf="event.positionPic == position.LEFT">
+      <div class="col s6">
+        <div class="row center-align">
+          <h2 *ngIf="language.currentLanguage === languages.EN" class="type">
+            {{ event.nameEn }}
+          </h2>
+          <h2 *ngIf="language.currentLanguage === languages.ES" class="type">
+            {{ event.nameSp }}
+          </h2>
+        </div>
+        <div class="row">
+          <p *ngIf="language.currentLanguage === languages.EN" class="text-justify separator">
+            {{ event.descriptionEn }}
+          </p>
+          <p *ngIf="language.currentLanguage === languages.ES" class="text-justify separator">
+            {{ event.descriptionSp }}
+          </p>
+        </div>
+      </div>
+      <div class="col s6">
+        <img [src]="event.pic"
+             [alt]="event.nameEn"
+             class="responsive-img">
+      </div>
+    </ng-container>
+  </div>
+</div>
