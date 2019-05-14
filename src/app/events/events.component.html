@@ -9,7 +9,7 @@
   </p>
   <br><br>
   <div *ngFor="let event of events$ | async" class="row">
-    <ng-container *ngIf="event.positionPic == position.RIGHT">
+    <ng-container *ngIf="event.positionPic === position.RIGHT">
       <div class="col m6">
         <img [src]="event.pic"
              [alt]="event.nameEn"
@@ -17,19 +17,13 @@
       </div>
       <div class="col m6">
         <div class="row center-align">
-          <h2 *ngIf="language.currentLanguage === languages.EN" class="type">
-            {{ event.nameEn }}
-          </h2>
-          <h2 *ngIf="language.currentLanguage === languages.ES" class="type">
-            {{ event.nameSp }}
+          <h2 class="type">
+            {{ language.currentLanguage === languages.EN ? event.nameEn : event.nameSp }}
           </h2>
         </div>
         <div class="row">
-          <p *ngIf="language.currentLanguage === languages.EN" class="text-justify separator">
-            {{ event.descriptionEn }}
-          </p>
-          <p *ngIf="language.currentLanguage === languages.ES" class="text-justify separator">
-            {{ event.descriptionSp }}
+          <p class="text-justify separator">
+            {{ language.currentLanguage === languages.EN ? event.descriptionEn : event.descriptionSp }}
           </p>
         </div>
       </div>
@@ -37,19 +31,13 @@
     <ng-container *ngIf="event.positionPic == position.LEFT">
       <div class="col m6">
         <div class="row center-align">
-          <h2 *ngIf="language.currentLanguage === languages.EN" class="type">
-            {{ event.nameEn }}
-          </h2>
-          <h2 *ngIf="language.currentLanguage === languages.ES" class="type">
-            {{ event.nameSp }}
+          <h2 class="type">
+            {{ language.currentLanguage === languages.EN ? event.nameEn : event.nameSp }}
           </h2>
         </div>
         <div class="row">
-          <p *ngIf="language.currentLanguage === languages.EN" class="text-justify separator">
-            {{ event.descriptionEn }}
-          </p>
-          <p *ngIf="language.currentLanguage === languages.ES" class="text-justify separator">
-            {{ event.descriptionSp }}
+          <p class="text-justify separator">
+            {{ language.currentLanguage === languages.EN ? event.descriptionEn : event.descriptionSp }}
           </p>
         </div>
       </div>
