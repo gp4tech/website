@@ -1,6 +1,14 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
+import { TranslateModule } from '@ngx-translate/core';
+import { of } from 'rxjs';
+
 import { EventsComponent } from './events.component';
+import { EventsService } from './events.service';
+
+const EventsServiceMock = {
+  getAll: () => of([])
+};
 
 describe('EventsComponent', () => {
   let component: EventsComponent;
@@ -8,7 +16,13 @@ describe('EventsComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [EventsComponent]
+      imports: [
+        TranslateModule.forRoot()
+      ],
+      declarations: [EventsComponent],
+      providers: [
+        { provide: EventsService, useValue: EventsServiceMock }
+      ]
     }).compileComponents();
   }));
 
