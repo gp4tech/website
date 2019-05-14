@@ -134,12 +134,6 @@
   },
   "events": {
     "title": "Eventos y Actividades",
-    "description": ["Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque a felis tortor. Etiam laoreet felis mi,",
-      "et sagittis lectus venenatis quis. Aliquam sit amet nisl molestie, varius mi ac, accumsan tortor. Mauris iaculis viverra",
-      "dapibus. In hac habitasse platea dictumst. Nullam dolor justo, porta at egestas sollicitudin, dignissim eget erat.",
-      "In efficitur est sit amet porta consectetur. Sed venenatis finibus hendrerit. In semper nunc et urna pharetra interdum.",
-      "Proin vestibulum iaculis nulla nec vehicula. Aenean consectetur dapibus tellus, id tristique massa porta sed. Sed sed",
-      "tortor id arcu ornare semper eget vitae dolor. Morbi aliquam congue ex in rhoncus. Aenean malesuada lobortis tortor,",
-      "vitae iaculis neque suscipit in. Nulla malesuada blandit urna eget bibendum."]
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque a felis tortor. Etiam laoreet felis mi, et sagittis lectus venenatis quis. Aliquam sit amet nisl molestie, varius mi ac, accumsan tortor. Mauris iaculis viverra dapibus. In hac habitasse platea dictumst. Nullam dolor justo, porta at egestas sollicitudin, dignissim eget erat. In efficitur est sit amet porta consectetur. Sed venenatis finibus hendrerit. In semper nunc et urna pharetra interdum. Proin vestibulum iaculis nulla nec vehicula. Aenean consectetur dapibus tellus, id tristique massa porta sed. Sed sed tortor id arcu ornare semper eget vitae dolor. Morbi aliquam congue ex in rhoncus. Aenean malesuada lobortis tortor, vitae iaculis neque suscipit in. Nulla malesuada blandit urna eget bibendum."
   }
 }
