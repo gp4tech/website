@@ -18,7 +18,9 @@ export class MembersService extends DataService<Member> {
 
   getAllMembers(): Observable<Member[]> {
     return this.angularFirestoreService
-      .collection<Member>('members', ref => ref.orderBy('displayName', 'asc'))
+      .collection<Member>(this.collectionName, ref =>
+        ref.orderBy('displayName', 'asc')
+      )
       .snapshotChanges()
       .pipe(
         map(actions =>
@@ -26,7 +28,7 @@ export class MembersService extends DataService<Member> {
             const md5 = new Md5();
             const data = a.payload.doc.data() as Member;
             md5.appendStr(data.email);
-            data.picture = `https://www.gravatar.com/avatar/${md5.end()}?s=200&d=mp`;
+            data.picture = `https://www.gravatar.com/avatar/${md5.end()}?s=300&d=mp`;
             return data;
           })
         )
