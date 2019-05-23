@@ -9,9 +9,11 @@ import { of } from 'rxjs';
 
 import { TestimonialsComponent } from './testimonials.component';
 import { TestimonialsService } from './testimonials.service';
+
 const testimonialsServiceMock = {
   getAll: () => of([])
 };
+
 describe('TestimonialsComponent', () => {
   let component: TestimonialsComponent;
   let fixture: ComponentFixture<TestimonialsComponent>;
