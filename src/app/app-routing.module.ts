@@ -16,13 +16,13 @@ const routes: Routes = [
   },
   { path: AppBarRoutes.blog, loadChildren: './blog/blog.module#BlogModule' },
   {
-    path: AppBarRoutes.involved,
-    loadChildren: './get-involved/get-involved.module#GetInvolvedModule'
-  },
-  {
     path: AppBarRoutes.who,
     loadChildren: './who-did-this/who-did-this.module#WhoDidThisModule'
-  }
+  },
+  {
+    path: AppBarRoutes.contact,
+    loadChildren: './contact-us/contact-us.module#ContactUsModule'
+  },
 ];
 
 @NgModule({

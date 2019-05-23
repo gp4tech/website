@@ -1,4 +1,5 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { RouterTestingModule } from '@angular/router/testing';
 
 import {
   TranslateModule,
@@ -18,6 +19,7 @@ import { SponsorsComponent } from './sponsors/sponsors.component';
 import { TopArticlesComponent } from '../blog/top-articles/top-articles.component';
 import { ArticlesService } from '../blog/articles.service';
 import { SponsorsService } from './sponsors/sponsors.service';
+import { TopArticleComponent } from '../blog/top-articles/top-article/top-article.component';
 
 const activityIndicatorsServiceMock = {
   getAll: () => of([])
@@ -28,7 +30,8 @@ const countrySupportersServiceMock = {
 };
 
 const articlesServiceMock = {
-  getAllSorted: () => of([])
+  getAllArticles: () => of([]),
+  getTopArticles: () => of([])
 };
 
 const sponsorsServiceMock = {
@@ -47,9 +50,11 @@ describe('HomeComponent', () => {
         ActivityIndicatorsComponent,
         TestimonialsComponent,
         SponsorsComponent,
-        TopArticlesComponent
+        TopArticlesComponent,
+        TopArticleComponent
       ],
       imports: [
+        RouterTestingModule,
         GetInvolvedModule,
         TranslateModule.forRoot({
           loader: { provide: TranslateLoader, useClass: TranslateFakeLoader }

@@ -3,6 +3,7 @@ import { Injectable } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
 import { Observable, Subject } from 'rxjs';
 
+// TODO move LanguageService to CoreModule
 @Injectable({
   providedIn: 'root'
 })

@@ -1,13 +1,13 @@
 <div class="team-container">
-  <div class="container all">
-    <h4 class="center-align">
-      ・{{ 'who-did-this.title' | translate | uppercase }}・
-    </h4>
-    <div class="web-team-box">
-      <img src="../../assets/images/web-team.jpeg"
-           alt="Web Team"
-           class="responsive-team hoverable">
+  <h4 class="center-align">
+    ・{{ 'who-did-this.title' | translate | uppercase }}・
+  </h4>
+  <div class="parallax-container">
+    <div gpParallax class="parallax">
+      <img src="assets/images/GP4Tech-Team.jpg">
     </div>
+  </div>
+  <div class="container all">
     <br>
     <div *ngFor="let team of teams">
       <div class="row">
@@ -31,24 +31,35 @@
             <h4>
               {{ who.name }}
             </h4>
-            <p>
-              {{ who.bio }}
+            <p *ngIf="language.currentLanguage === 'en'">
+              {{ who.bioEn }}
+            </p>
+            <p *ngIf="language.currentLanguage === 'es'">
+              {{ who.bioSp }}
             </p>
             <div>
               <span>
                 <a target="_blank"
-                    rel="noopener noreferrer"
-                    class="btn-floating grey darken-2" 
-                    [href]="who.twitter">
-                  <i class="fa fa-twitter"></i>
+                   rel="noopener noreferrer"
+                   class="btn-floating grey darken-2" 
+                   [href]="who.github">
+                  <i class="fa fa-github"></i>
+                </a>
+              </span>
+              <span class="margin-left-social-button">
+                <a target="_blank"
+                   rel="noopener noreferrer"
+                   class="btn-floating grey darken-2" 
+                   [href]="who.linkedin">
+                  <i class="fa fa-linkedin"></i>
                 </a>
               </span>
               <span class="margin-left-social-button">
                 <a target="_blank"
                     rel="noopener noreferrer"
                     class="btn-floating grey darken-2" 
-                    [href]="who.linkedin">
-                  <i class="fa fa-linkedin"></i>
+                    [href]="who.twitter">
+                  <i class="fa fa-twitter"></i>
                 </a>
               </span>
             </div>

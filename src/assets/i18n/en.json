@@ -1,4 +1,8 @@
 {
+  "form-errors": {
+    "required": "Required",
+    "email": "Invalid email"
+  },
   "home": {},
   "language": {
     "english": "EN",
@@ -10,12 +14,11 @@
     "contact-us": "CONTACT US",
     "events": "Events",
     "home": "Home",
-    "involved": "Get Involved",
     "who-did-this": "WHO DID THIS?"
   },
   "banner": {
     "slogan": "Learn, code, share",
-    "call-to-action": "Do something awesome"
+    "call-to-action": "I support this"
   },
   "activity-indicator-section": {
     "title": "Indicators",
@@ -35,7 +38,32 @@
     "title": "Testimonials"
   },
   "get-involved": {
-    "title": "Get Involved"
+    "title": "Get Involved",
+    "support-this": "I support this",
+    "people-involved": "People Involved",
+    "subscription": {
+      "title": "Support this",
+      "intro": "Because... Aliquam ac viverra sem. Nunc dictum diam arcu. Mauris a bibendum turpis, a fermentum ligula. Morbi eu dolor ac elit accumsan consequat. Sed feugiat dapibus blandit. Nunc posuere tempus neque, et pulvinar nunc fermentum vitae. Etiam at ex rutrum, interdum metus eu, venenatis purus. Sed viverra sed nibh eget pharetra.",
+      "twitter": "Support via Twitter",
+      "facebook": "Support via Facebook",
+      "google": "Support via Google",
+      "or": "OR",
+      "form": {
+        "firstname": "First Name",
+        "lastname": "Last Name",
+        "email": "Email",
+        "choose-country": "Choose your country",
+        "country": "Country",
+        "subscription-agreement": "I agree to receive news, stories and ideas for action from GP4Tech.",
+        "support-this": "Support this",
+        "gender": "Gender",
+        "gender-options": {
+          "male": "Male",
+          "female": "Female",
+          "other": "Other"
+        }
+      }
+    }
   },
   "about-us": {
     "who": {
@@ -66,10 +94,46 @@
     }
   },
   "blog": {
-    "title": "Blogs",
+    "title": "Blog",
     "see-more": "See More",
     "articles": {
+      "top": "Top Articles",
+      "all": "All Articles",
       "read-more": "Read More"
     }
+  },
+  "contact-us": {
+    "title": "Contact us",
+    "gpEmail": "GP4Tech@jalasoft.com",
+    "email-title": "Email us",
+    "company-name": "Jalasoft",
+    "location": {
+      "address": "Av. Melchor Pérez de Olguín #2643",
+      "city": "Cochabamba",
+      "country": "Bolivia"
+    },
+    "phone": {
+      "title": "Phone",
+      "code": "+591",
+      "number": "78945612"
+    },
+    "find-title": "How to find Jalasoft",
+    "driving": {
+      "title": "Driving",
+      "description": "Refer to directions provided by"
+    },
+    "transportation": {
+      "title": "Transportation",
+      "description": "The following public transportation lines can leave you near Jalasoft's facilities: 120, 230, A, Z12, 101"
+    },
+    "email": "Email",
+    "subject": "Subject",
+    "From": "From",
+    "Message": "Message",
+    "btn-send": "Send"
+  },
+  "events": {
+    "title": "Events and Activities",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque a felis tortor. Etiam laoreet felis mi, et sagittis lectus venenatis quis. Aliquam sit amet nisl molestie, varius mi ac, accumsan tortor. Mauris iaculis viverra dapibus. In hac habitasse platea dictumst. Nullam dolor justo, porta at egestas sollicitudin, dignissim eget erat. In efficitur est sit amet porta consectetur. Sed venenatis finibus hendrerit. In semper nunc et urna pharetra interdum. Proin vestibulum iaculis nulla nec vehicula. Aenean consectetur dapibus tellus, id tristique massa porta sed. Sed sed tortor id arcu ornare semper eget vitae dolor. Morbi aliquam congue ex in rhoncus. Aenean malesuada lobortis tortor, vitae iaculis neque suscipit in. Nulla malesuada blandit urna eget bibendum."
   }
 }

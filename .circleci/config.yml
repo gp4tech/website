@@ -30,8 +30,8 @@ jobs:
           name: Testing
           command: npm run test:client
       - run:
-          name: Inject Firebase DB keys
-          command: npm run firebase-db:override-keys
+          name: Inject Firebase DB and Google Maps keys
+          command: npm run env-keys-config:override-keys
       - run:
           name: Building
           command: npm run build:client
