@@ -7,6 +7,16 @@
     float: left;
   }
 
+  .member-picture {
+    padding: 10px;
+
+    img {
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+    }
+  }
+
   .member-info {
     p {
       margin: 0;
