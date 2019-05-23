@@ -20,6 +20,7 @@ import { TopArticlesComponent } from '../blog/top-articles/top-articles.componen
 import { ArticlesService } from '../blog/articles.service';
 import { SponsorsService } from './sponsors/sponsors.service';
 import { TopArticleComponent } from '../blog/top-articles/top-article/top-article.component';
+import { TestimonialsService } from './testimonials/testimonials.service';
 
 const activityIndicatorsServiceMock = {
   getAll: () => of([])
@@ -35,6 +36,10 @@ const articlesServiceMock = {
 };
 
 const sponsorsServiceMock = {
+  getAll: () => of([])
+};
+
+const testimonialsServiceMock = {
   getAll: () => of([])
 };
 
@@ -73,6 +78,10 @@ describe('HomeComponent', () => {
         {
           provide: SponsorsService,
           useValue: sponsorsServiceMock
+        },
+        {
+          provide: TestimonialsService,
+          useValue: testimonialsServiceMock
         }
       ]
     }).compileComponents();

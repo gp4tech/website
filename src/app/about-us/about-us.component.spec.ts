@@ -1,4 +1,5 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+
 import {
   TranslateModule,
   TranslateLoader,
@@ -20,16 +21,13 @@ describe('AboutUsComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [
-        AboutUsComponent,
-        MembersComponent
-      ],
+      declarations: [AboutUsComponent, MembersComponent],
       imports: [
         TranslateModule.forRoot({
           loader: { provide: TranslateLoader, useClass: TranslateFakeLoader }
         })
       ],
-      providers:[
+      providers: [
         {
           provide: MembersService,
           useValue: membersServiceMock
