@@ -5,8 +5,14 @@ import {
   TranslateLoader,
   TranslateFakeLoader
 } from '@ngx-translate/core';
+import { of } from 'rxjs';
 
 import { MembersComponent } from './members.component';
+import { MembersService } from './members.service';
+
+const membersServiceMock = {
+  getAll: () => of([])
+};
 
 describe('MembersComponent', () => {
   let component: MembersComponent;
@@ -19,6 +25,12 @@ describe('MembersComponent', () => {
         TranslateModule.forRoot({
           loader: { provide: TranslateLoader, useClass: TranslateFakeLoader }
         })
+      ],
+      providers: [
+        {
+          provide: MembersService,
+          useValue: membersServiceMock
+        }
       ]
     }).compileComponents();
   }));

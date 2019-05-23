@@ -13,27 +13,32 @@ import { TranslateService } from '@ngx-translate/core';
   styleUrls: ['./get-involved.component.scss']
 })
 export class GetInvolvedComponent implements OnInit, OnDestroy {
-
   @Input() enableMapContainer = true;
   subscription: Subscription;
   isLoading = true;
-  data;
-  chart;
+  data: any;
+  chart: any;
 
-  constructor(private countrySupportersService: CountrySupportersService,
-    private translateService: TranslateService) { }
+  constructor(
+    private countrySupportersService: CountrySupportersService,
+    private translateService: TranslateService
+  ) {}
 
   ngOnInit() {
-    this.subscription = combineLatest(
+    this.subscription = combineLatest([
       this.countrySupportersService.getAll(),
       this.translateService.get('get-involved.people-involved')
-    )
-    .pipe(
-      map(([countrySupporters, peopleInvolvedTranslation]) =>
-        countrySupporters.map(({count, country}) =>
-          [country, count, this.generateHtmlTooltip(country, count, peopleInvolvedTranslation)])
-      ))
-      .subscribe((supporters) => {
+    ])
+      .pipe(
+        map(([countrySupporters, peopleInvolvedTranslation]) =>
+          countrySupporters.map(({ count, country }) => [
+            country,
+            count,
+            this.generateHtmlTooltip(country, count, peopleInvolvedTranslation)
+          ])
+        )
+      )
+      .subscribe(supporters => {
         this.isLoading = false;
         this.data = supporters;
         this.chart = Object.assign({ data: this.data }, GeoChartConfig);
@@ -46,7 +51,11 @@ export class GetInvolvedComponent implements OnInit, OnDestroy {
     }
   }
 
-  generateHtmlTooltip(countryName: string, countryCount: number, peopleInvolvedTranslation: string) {
+  generateHtmlTooltip(
+    countryName: string,
+    countryCount: number,
+    peopleInvolvedTranslation: string
+  ) {
     return `<div>
       <p style="font-size: 15px;"><b>${countryName}</b></p>
       <p>${peopleInvolvedTranslation}<br/> ${countryCount}</p>
