@@ -9,6 +9,7 @@ import { Md5 } from 'ts-md5';
 import { Member } from '../../shared/models/member.model';
 import { DataService } from '../../shared/models/data-service.model';
 import { FirebaseCollections } from '../../shared/models/collections.constant';
+import { DataOrder } from '../../shared/models/data-type.model';
 
 @Injectable()
 export class MembersService extends DataService<Member> {
@@ -19,7 +20,7 @@ export class MembersService extends DataService<Member> {
   getAllMembers(): Observable<Member[]> {
     return this.angularFirestoreService
       .collection<Member>(this.collectionName, ref =>
-        ref.orderBy('displayName', 'asc')
+        ref.orderBy('displayName', DataOrder.asc)
       )
       .snapshotChanges()
       .pipe(
