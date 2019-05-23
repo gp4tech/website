@@ -1,16 +1,25 @@
 <h4 class="center-align">・{{ 'testimonials.title' | translate }}・</h4>
 <div class="row">
-  <a *ngFor="let testimonial of testimonials$ | async">
-    
   <div class="col s12 m12 l4 student-picture">
-    <img [src]="testimonial.picture">
+    <img src="/assets/images/photo_test.png">
   </div>
   <div class="col m12 l8 testimonial-description valign-wrapper">
     <div>
-      <p>{{ testimonial.name }}</p>
-      <p>{{ testimonial.school }}</p>
-      <p>{{ testimonial.testimonial }}</p>
+      <p>Claudia Martinez</p>
+      <p>Don Bosco, 5to de Secundaria B</p>
+      <p>
+        "Lorem ipsum dolor sit amet consectetur adipiscing elit gravida
+        penatibus feugiat, condimentum pellentesque vulputate ante commodo eros
+        dictum consequat facilisis mauris sociosqu, suscipit orci morbi iaculis
+        sodales aptent aenean non ullamcorper. Aenean feugiat leo integer
+        dapibus mattis, consequat fringilla tortor mi aliquet taciti, urna proin
+        euismod praesent. Tempus curae platea fusce augue scelerisque sodales
+        libero, quis viverra hendrerit pulvinar conubia sociis in luctus, dis
+        malesuada felis dictumst cursus ultricies.Feugiat phasellus eu proin
+        sapien nec hac mollis aliquam, augue praesent conubia nibh ultrices
+        vitae tortor rutrum sodales, malesuada vestibulum a nostra et pharetra
+        velit".
+      </p>
     </div>
   </div>
-  </a>
 </div>

@@ -1,8 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import { Testimonials } from '../../shared/models/testimonials.model';
-import { TestimonialsService } from './testimonials.service';
+
 import { Observable } from 'rxjs';
 
+import { Testimonial } from '../../shared/models/testimonial.model';
+import { TestimonialsService } from './testimonials.service';
 
 @Component({
   selector: 'gp-testimonials',
@@ -10,8 +11,9 @@ import { Observable } from 'rxjs';
   styleUrls: ['./testimonials.component.scss']
 })
 export class TestimonialsComponent implements OnInit {
-  testimonials$: Observable<Testimonials[]>;
-  constructor( private testimonialService: TestimonialsService) { }
+  testimonials$: Observable<Testimonial[]>;
+
+  constructor(private testimonialService: TestimonialsService) {}
 
   ngOnInit() {
     this.testimonials$ = this.testimonialService.getAll();

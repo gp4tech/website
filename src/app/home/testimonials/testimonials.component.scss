@@ -18,6 +18,7 @@
 
 .testimonial-description {
   min-height: 40vh;
+
   @media #{$medium-and-down} {
     min-height: auto;
   }

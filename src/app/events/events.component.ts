@@ -4,7 +4,7 @@ import { Observable } from 'rxjs';
 
 import { LanguageService } from '../layout/navbar/language-button/language.service';
 import { EventsService } from './events.service';
-import { Events } from '../shared/models/events.model';
+import { Event } from '../shared/models/event.model';
 
 @Component({
   selector: 'gp-events',
@@ -12,7 +12,7 @@ import { Events } from '../shared/models/events.model';
   styleUrls: ['./events.component.scss']
 })
 export class EventsComponent implements OnInit {
-  events$: Observable<Events[]>;
+  events$: Observable<Event[]>;
   languages = { ES: 'es', EN: 'en' };
   position = { RIGHT: 'right', LEFT: 'left' };
 

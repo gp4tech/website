@@ -9,17 +9,18 @@ const angularFirestoreMock = {
 };
 
 describe('MembersService', () => {
-  beforeEach(() => 
+  beforeEach(() =>
     TestBed.configureTestingModule({
-      imports:[HttpClientModule],
-      providers:[
+      imports: [HttpClientModule],
+      providers: [
         MembersService,
-        { 
+        {
           provide: AngularFirestore,
-          useValue: angularFirestoreMock 
+          useValue: angularFirestoreMock
         }
       ]
-    }));
+    })
+  );
 
   it('should be created', () => {
     const service: MembersService = TestBed.get(MembersService);

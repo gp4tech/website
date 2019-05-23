@@ -3,7 +3,6 @@ import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 
 import { ArticlesService } from '../blog/articles.service';
-import { SharedModule } from '../shared/shared.module';
 import { BlogModule } from '../blog/blog.module';
 import { GetInvolvedModule } from '../get-involved/get-involved.module';
 import { HomeComponent } from './home.component';
@@ -14,6 +13,7 @@ import { TestimonialsComponent } from './testimonials/testimonials.component';
 import { TestimonialsService } from './testimonials/testimonials.service';
 import { SponsorsComponent } from './sponsors/sponsors.component';
 import { SponsorsService } from './sponsors/sponsors.service';
+import { SharedModule } from '../shared/shared.module';
 
 @NgModule({
   declarations: [
@@ -21,7 +21,7 @@ import { SponsorsService } from './sponsors/sponsors.service';
     BannerComponent,
     ActivityIndicatorsComponent,
     TestimonialsComponent,
-    SponsorsComponent,
+    SponsorsComponent
   ],
   imports: [
     CommonModule,
@@ -30,6 +30,11 @@ import { SponsorsService } from './sponsors/sponsors.service';
     GetInvolvedModule,
     BlogModule
   ],
-  providers: [ActivityIndicatorsService, ArticlesService, SponsorsService, TestimonialsService]
+  providers: [
+    ActivityIndicatorsService,
+    ArticlesService,
+    SponsorsService,
+    TestimonialsService
+  ]
 })
 export class HomeModule {}

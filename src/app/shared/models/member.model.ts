@@ -1,4 +1,4 @@
-export interface Members {
+export interface Member {
   id: string;
   careerEn: string;
   careerSp: string;

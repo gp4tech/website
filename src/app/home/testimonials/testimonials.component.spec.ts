@@ -1,4 +1,5 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+
 import {
   TranslateModule,
   TranslateLoader,
@@ -23,7 +24,9 @@ describe('TestimonialsComponent', () => {
           loader: { provide: TranslateLoader, useClass: TranslateFakeLoader }
         })
       ],
-      providers: [{ provide: TestimonialsService, useValue: testimonialsServiceMock }]
+      providers: [
+        { provide: TestimonialsService, useValue: testimonialsServiceMock }
+      ]
     }).compileComponents();
   }));
 

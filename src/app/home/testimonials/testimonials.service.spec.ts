@@ -3,12 +3,13 @@ import { HttpClientModule } from '@angular/common/http';
 import { AngularFirestore } from '@angular/fire/firestore';
 
 import { TestimonialsService } from './testimonials.service';
+
 const angularFirestoreMock = {
   collection: () => {}
 };
 
 describe('TestimonialsService', () => {
-  beforeEach(() => 
+  beforeEach(() =>
     TestBed.configureTestingModule({
       imports: [HttpClientModule],
       providers: [

@@ -5,7 +5,7 @@
   <div class="col s12 m6 member-card valign-wrapper" *ngFor="let member of members">
     <img [src]="member.image" class="member-sub-card">
     <div class="member-sub-card member-info">
-      <p>{{ member.fullname }}</p>
+      <p>{{ member.name }}</p>
       <p>{{ 'about-us.members.career.' + member.mainCareer | translate }}</p>
       <p>{{ 'about-us.members.ocupation.' + member.currentOcupation | translate }}</p>
       <p>{{ 'about-us.members.position.' + member.positionGP4 | translate }}</p>
