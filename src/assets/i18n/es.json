@@ -70,18 +70,7 @@
       "title": "¿Quiénes somos?"
     },
     "members": {
-      "title": "Miembros",
-      "career": {
-        "informatics": "Ciencias de la Computación",
-        "electronics": "Ingeniería Electrónica"
-      },
-      "ocupation": {
-        "dev": "Desarrolladora de Software",
-        "qa": "Control de Calidad"
-      },
-      "position": {
-        "web": "Web Team de GP4Tech"
-      }
+      "title": "Miembros"
     }
   },
   "who-did-this": {
