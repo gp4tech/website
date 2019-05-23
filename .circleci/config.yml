@@ -3,7 +3,7 @@ jobs:
   build:
     working_directory: ~/project
     docker:
-      - image: circleci/node:chakracore-10.13.0-browsers
+      - image: circleci/node:10.15.3-browsers
     steps:
       - checkout
       - run:
@@ -45,7 +45,7 @@ jobs:
             - .firebaserc
   deploy:
     docker:
-      - image: circleci/node:chakracore-10.13.0-browsers
+      - image: circleci/node:10.15.3-browsers
     working_directory: ~/project
     steps:
       - run:
