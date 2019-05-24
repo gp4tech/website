@@ -2,8 +2,9 @@ import { Component, OnInit } from '@angular/core';
 
 import { Observable } from 'rxjs';
 
-import { Member } from '../../shared/models/member.model';
 import { MembersService } from './members.service';
+import { Member } from '../../shared/models/member.model';
+import { LanguageService } from '../../layout/navbar/language-button/language.service';
 
 @Component({
   selector: 'gp-members',
@@ -12,40 +13,13 @@ import { MembersService } from './members.service';
 })
 export class MembersComponent implements OnInit {
   members$: Observable<Member[]>;
-  members = [
-    {
-      name: 'Claudia Martinez',
-      mainCareer: 'informatics',
-      currentOcupation: 'dev',
-      positionGP4: 'web',
-      image: '../../assets/images/GP4Tech-logo.png'
-    },
-    {
-      name: 'Claudia Martinez',
-      mainCareer: 'electronics',
-      currentOcupation: 'dev',
-      positionGP4: 'web',
-      image: '../../assets/images/GP4Tech-logo.png'
-    },
-    {
-      name: 'Claudia Martinez',
-      mainCareer: 'informatics',
-      currentOcupation: 'qa',
-      positionGP4: 'web',
-      image: '../../assets/images/GP4Tech-logo.png'
-    },
-    {
-      name: 'Claudia Martinez',
-      mainCareer: 'electronics',
-      currentOcupation: 'qa',
-      positionGP4: 'web',
-      image: '../../assets/images/GP4Tech-logo.png'
-    }
-  ];
 
-  constructor(private membersService: MembersService) {}
+  constructor(
+    public language: LanguageService,
+    private membersService: MembersService
+  ) {}
 
   ngOnInit() {
-    this.members$ = this.membersService.getAll();
+    this.members$ = this.membersService.getAllMembers();
   }
 }

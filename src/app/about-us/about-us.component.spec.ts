@@ -12,7 +12,8 @@ import { MembersComponent } from './members/members.component';
 import { MembersService } from './members/members.service';
 
 const membersServiceMock = {
-  getAll: () => of([])
+  getAll: () => of([]),
+  getAllMembers: () => of([])
 };
 
 describe('AboutUsComponent', () => {

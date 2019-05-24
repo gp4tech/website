@@ -36,6 +36,7 @@
     "font-awesome": "^4.7.0",
     "materialize-css": "~1.0.0",
     "rxjs": "~6.5.2",
+    "ts-md5": "^1.2.4",
     "tslib": "^1.9.0",
     "zone.js": "~0.8.26"
   },

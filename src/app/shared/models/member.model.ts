@@ -10,4 +10,5 @@ export interface Member {
   linkedin: string;
   mainTeam: string;
   twiter: string;
+  picture?: string;
 }
