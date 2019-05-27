@@ -46,4 +46,10 @@ export abstract class DataService<T extends DataType> {
 
     return this.http.put<T>(url, data);
   }
+
+  createUsingCloudFunction(data: T, functionName: string): Observable<T> {
+    const url = `${environment.functionsUrl}/${functionName}`;
+
+    return this.http.post<T>(url, data);
+  }
 }

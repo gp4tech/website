@@ -1,10 +1,11 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 import { TranslateService } from '@ngx-translate/core';
 
 import { Countries } from '../../shared/models/countries.constant';
 import { FormHelper } from '../../shared/models/form-helper';
+import { Supporter } from '../../shared/models/supporter';
 
 @Component({
   selector: 'gp-subscribe-form',
@@ -13,6 +14,8 @@ import { FormHelper } from '../../shared/models/form-helper';
 })
 export class SubscribeFormComponent implements OnInit {
 
+  @Output() subscriptionSubmitted = new EventEmitter<Supporter>();
+
   form: FormGroup;
   countries = Countries;
   isLoading = true;
@@ -20,7 +23,7 @@ export class SubscribeFormComponent implements OnInit {
   formHelper = FormHelper;
 
   constructor(private translateService: TranslateService, private formBuilder: FormBuilder) {
-    this.form = formBuilder.group({
+    this.form = this.formBuilder.group({
       firstname: ['', Validators.required],
       lastname: ['', Validators.required],
       email: ['', [Validators.email, Validators.required]],
@@ -45,9 +48,6 @@ export class SubscribeFormComponent implements OnInit {
       return;
     }
 
-    const subscribtionInfo = this.form.value;
-    // TODO: Save this to new collection and trigger emails.
-    console.log(subscribtionInfo);
+    this.subscriptionSubmitted.emit(this.form.value);
   }
-
 }
