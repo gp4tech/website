@@ -1,10 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 
 import { TranslateService } from '@ngx-translate/core';
 
 import { Countries } from '../../shared/models/countries.constant';
 import { FormHelper } from '../../shared/models/form-helper';
+import { SupporterService } from '../supporter.service';
 
 @Component({
   selector: 'gp-subscribe-form',
@@ -19,8 +21,9 @@ export class SubscribeFormComponent implements OnInit {
   genderOptions: {value: string, label: string}[];
   formHelper = FormHelper;
 
-  constructor(private translateService: TranslateService, private formBuilder: FormBuilder) {
-    this.form = formBuilder.group({
+  constructor(private translateService: TranslateService, private formBuilder: FormBuilder,
+    private supportersService: SupporterService, private router: Router) {
+    this.form = this.formBuilder.group({
       firstname: ['', Validators.required],
       lastname: ['', Validators.required],
       email: ['', [Validators.email, Validators.required]],
@@ -45,9 +48,13 @@ export class SubscribeFormComponent implements OnInit {
       return;
     }
 
-    const subscribtionInfo = this.form.value;
-    // TODO: Save this to new collection and trigger emails.
-    console.log(subscribtionInfo);
+    const subscriptionInfo = this.form.value;
+    this.supportersService.createSupporter(subscriptionInfo)
+      .subscribe(_ => this.router.navigate(['/']), error => {
+        if (error === 'EXISTANT_SUPPORTER') {
+          console.error('existant supporter');
+        }
+      });
   }
 
 }

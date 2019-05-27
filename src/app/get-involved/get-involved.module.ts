@@ -10,6 +10,7 @@ import { GetInvolvedRoutingModule } from './get-involved-routing.module';
 import { CountrySupportersService } from './country-supporters.service';
 import { SubscribeFormComponent } from './subscribe-form/subscribe-form.component';
 import { SubscribeComponent } from './subscribe/subscribe.component';
+import { SupporterService } from './supporter.service';
 
 @NgModule({
   declarations: [GetInvolvedComponent, SubscribeFormComponent, SubscribeComponent],
@@ -21,6 +22,9 @@ import { SubscribeComponent } from './subscribe/subscribe.component';
     GoogleChartsModule.forRoot()
   ],
   exports: [GetInvolvedComponent],
-  providers: [CountrySupportersService]
+  providers: [
+    CountrySupportersService,
+    SupporterService
+  ]
 })
 export class GetInvolvedModule {}

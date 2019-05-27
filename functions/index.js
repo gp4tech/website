@@ -20,6 +20,8 @@ const ALLOWED_ORIGINS = [
   'https://gp4techsite.firebaseapp.com'
 ];
 const ARTICLES_COLLECTION = 'articles';
+const SUPPORTERS_COLLECTION = 'supporters';
+const COUNTRY_SUPPORTERS_COLLECTION = 'country-supporters';
 
 function verifyOrigin(request, response) {
   const origin = request.headers.origin;
@@ -29,12 +31,25 @@ function verifyOrigin(request, response) {
   }
 }
 
+function createDocument(collectionName, data) {
+  return firebaseHelper.firestore.createNewDocument(db, collectionName, data)
+    .then(documentRef => {
+      data.id = documentRef.id;
+      updateDocument(collectionName, data);
+      return documentRef;
+    })
+}
+
 function updateDocument(collectionName, document) {
   return firebaseHelper.firestore.updateDocument(db, collectionName, document.id, document);
 }
 
 function getDocument(collectionName, documentId) {
   return firebaseHelper.firestore.getDocument(db, collectionName, documentId);
+}
+
+function searchDocument(collectionName, query) {
+  return firebaseHelper.firestore.queryData(db, collectionName, query);
 }
 
 function configureEmailBody(body) {
@@ -121,5 +136,52 @@ exports.httpEmail = functions.https.onRequest((req, res) => {
         console.error(error);
         res.status(500).send(error);
       });
-  })
-})
+  });
+});
+
+exports.createSupporter = functions.https.onRequest((req, res) => {
+  cors(req, res, () => {
+    verifyOrigin(req, res);
+    
+    if (req.method !== 'POST') {
+      const error = new Error('Only POST requests are accepted');
+      res.status(405).send(error)
+    }
+    
+    const supporter = req.body;
+    let error = 'UNKNOWN_ERROR';
+
+    Promise.all([
+      searchDocument(COUNTRY_SUPPORTERS_COLLECTION, [['country', '==', supporter.country]]),
+      searchDocument(SUPPORTERS_COLLECTION, [['email', '==', supporter.email]])])
+      .then(([countrySupportersFound, existantSupporter]) => {
+        if (typeof existantSupporter === 'object') {
+          error = 'EXISTANT_SUPPORTER';
+          throw Error(error);
+        }
+
+        if (typeof countrySupportersFound === 'string') {
+          return createDocument(COUNTRY_SUPPORTERS_COLLECTION, {
+            id: null,
+            count: 1,
+            country: supporter.country 
+          });
+        }
+
+        const countrySupporters = Object.values(countrySupportersFound)[0];
+        countrySupporters.count++;
+
+        return updateDocument(COUNTRY_SUPPORTERS_COLLECTION, countrySupporters);
+      })
+      .then(_ => {
+        return createDocument(SUPPORTERS_COLLECTION, supporter);        
+      })
+      .then(supporterRef => {
+        return res.status(200).send({id: supporterRef.id})
+      })
+      .catch(processError => {
+        console.error(processError);
+        return res.status(500).send({ error })
+      })
+  });
+});
