@@ -1,11 +1,13 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { ReactiveFormsModule } from '@angular/forms';
+import { RouterTestingModule } from '@angular/router/testing';
 
 import { TranslateModule } from '@ngx-translate/core';
 
 import { SubscribeComponent } from './subscribe.component';
 import { SubscribeFormComponent } from '../subscribe-form/subscribe-form.component';
 import { SharedModule } from '../../shared/shared.module';
+import { SupporterService } from '../supporter.service';
 
 describe('SubscribeComponent', () => {
   let component: SubscribeComponent;
@@ -16,11 +18,17 @@ describe('SubscribeComponent', () => {
       imports: [
         ReactiveFormsModule,
         SharedModule,
-        TranslateModule.forRoot()
+        TranslateModule.forRoot(),
+        RouterTestingModule
       ],
       declarations: [
         SubscribeComponent,
         SubscribeFormComponent
+      ],
+      providers: [
+        {
+          provide: SupporterService, useValue: {}
+        }
       ]
     })
     .compileComponents();

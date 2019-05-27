@@ -1,12 +1,11 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { Router } from '@angular/router';
 
 import { TranslateService } from '@ngx-translate/core';
 
 import { Countries } from '../../shared/models/countries.constant';
 import { FormHelper } from '../../shared/models/form-helper';
-import { SupporterService } from '../supporter.service';
+import { Supporter } from '../../shared/models/supporter';
 
 @Component({
   selector: 'gp-subscribe-form',
@@ -15,14 +14,15 @@ import { SupporterService } from '../supporter.service';
 })
 export class SubscribeFormComponent implements OnInit {
 
+  @Output() subscriptionSubmitted = new EventEmitter<Supporter>();
+
   form: FormGroup;
   countries = Countries;
   isLoading = true;
   genderOptions: {value: string, label: string}[];
   formHelper = FormHelper;
 
-  constructor(private translateService: TranslateService, private formBuilder: FormBuilder,
-    private supportersService: SupporterService, private router: Router) {
+  constructor(private translateService: TranslateService, private formBuilder: FormBuilder) {
     this.form = this.formBuilder.group({
       firstname: ['', Validators.required],
       lastname: ['', Validators.required],
@@ -48,13 +48,6 @@ export class SubscribeFormComponent implements OnInit {
       return;
     }
 
-    const subscriptionInfo = this.form.value;
-    this.supportersService.createSupporter(subscriptionInfo)
-      .subscribe(_ => this.router.navigate(['/']), error => {
-        if (error === 'EXISTANT_SUPPORTER') {
-          console.error('existant supporter');
-        }
-      });
+    this.subscriptionSubmitted.emit(this.form.value);
   }
-
 }
