@@ -182,6 +182,7 @@ function sendEmail(body) {
     sendgridClient.API(request)
     .then(_ => {
       resolve();
+      return;
     })
     .catch((error) => {
       reject(error)
