@@ -9,7 +9,7 @@ import { CloudFunctions } from '../shared/models/cloud-functions.constant';
 import { Observable } from 'rxjs';
 
 @Injectable()
-export class SupporterService extends DataService<Supporter>{
+export class SupporterService extends DataService<Supporter> {
   constructor(http: HttpClient, db: AngularFirestore) {
     super(http, db, FirebaseCollections.countrySupporters);
   }
