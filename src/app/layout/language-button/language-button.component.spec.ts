@@ -7,7 +7,7 @@ import {
 } from '@ngx-translate/core';
 
 import { LanguageButtonComponent } from './language-button.component';
-import { LanguageService } from 'src/app/core/language.service';
+import { LanguageService } from '../../core/language.service';
 
 describe('LanguageButtonComponent', () => {
   let component: LanguageButtonComponent;

@@ -9,7 +9,7 @@ import {
 
 import { FooterComponent } from './footer.component';
 import { LanguageButtonComponent } from '../language-button/language-button.component';
-import { LanguageService } from 'src/app/core/language.service';
+import { LanguageService } from '../../core/language.service';
 
 describe('FooterComponent', () => {
   let component: FooterComponent;

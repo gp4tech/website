@@ -9,7 +9,7 @@ import { of } from 'rxjs';
 
 import { MembersComponent } from './members.component';
 import { MembersService } from './members.service';
-import { LanguageService } from 'src/app/core/language.service';
+import { LanguageService } from '../../core/language.service';
 
 const membersServiceMock = {
   getAll: () => of([]),
