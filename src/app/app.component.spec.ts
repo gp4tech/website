@@ -10,6 +10,7 @@ import {
 import { AppComponent } from './app.component';
 import { LayoutModule } from './layout/layout.module';
 import { HomeModule } from './home/home.module';
+import { LanguageService } from './core/language.service';
 
 describe('AppComponent', () => {
   beforeEach(async(() => {
@@ -22,7 +23,8 @@ describe('AppComponent', () => {
           loader: { provide: TranslateLoader, useClass: TranslateFakeLoader }
         })
       ],
-      declarations: [AppComponent]
+      declarations: [AppComponent],
+      providers: [LanguageService]
     }).compileComponents();
   }));
 

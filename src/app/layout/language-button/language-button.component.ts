@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 
-import { LanguageService } from './language.service';
+import { LanguageService } from '../../core/language.service';
 
 @Component({
   selector: 'gp-language-button',

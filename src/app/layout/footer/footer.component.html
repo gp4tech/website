@@ -1,20 +1,20 @@
 <footer class="page-footer grey darken-3">
   <div class="container">
     <div class="row">
-      <div class="col s12 m6 info-links" >
+      <div class="col s12 m4 info-links">
         <a [routerLink]="[infoLink.link]" *ngFor="let infoLink of infoLinks; let i = index">
           {{ infoLink.i18n | translate }}
           <span *ngIf="(i + 1) !== infoLinks.length"> | </span>
         </a>
       </div>
-      <div class="col s12 m6 social-links">
-        <a *ngFor="let socialLink of socialLinks"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="btn-floating grey darken-2" 
-          [href]="socialLink.link">
+      <div class="col s12 m4 social-links">
+        <a *ngFor="let socialLink of socialLinks" target="_blank" rel="noopener noreferrer"
+          class="btn-floating grey darken-2" [href]="socialLink.link">
           <i [class]="'fa ' + socialLink.faIcon"></i>
         </a>
+      </div>
+      <div class="col s12 m4 right-align language-section">
+        <gp-language-button></gp-language-button>
       </div>
     </div>
   </div>

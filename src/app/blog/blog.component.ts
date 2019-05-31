@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 
 import { Observable } from 'rxjs';
 
-import { LanguageService } from '../layout/navbar/language-button/language.service';
+import { LanguageService } from '../core/language.service';
 import { ArticlesService } from './articles.service';
 import { Article } from '../shared/models/article.model';
 import { CloudFunctions } from '../shared/models/cloud-functions.constant';

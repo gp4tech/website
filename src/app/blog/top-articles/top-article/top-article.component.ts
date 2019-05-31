@@ -1,7 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 
 import { ArticlesService } from '../../articles.service';
-import { LanguageService } from '../../../layout/navbar/language-button/language.service';
+import { LanguageService } from '../../../core/language.service';
 import { Article } from '../../../shared/models/article.model';
 import { CloudFunctions } from '../../../shared/models/cloud-functions.constant';
 

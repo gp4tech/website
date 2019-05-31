@@ -4,7 +4,7 @@ import { RouterModule } from '@angular/router';
 
 import { NavbarComponent } from './navbar/navbar.component';
 import { FooterComponent } from './footer/footer.component';
-import { LanguageButtonComponent } from './navbar/language-button/language-button.component';
+import { LanguageButtonComponent } from './language-button/language-button.component';
 import { SidenavDirective } from './navbar/sidenav.directive';
 import { SharedModule } from '../shared/shared.module';
 

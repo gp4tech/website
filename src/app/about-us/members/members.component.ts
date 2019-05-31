@@ -4,7 +4,7 @@ import { Observable } from 'rxjs';
 
 import { MembersService } from './members.service';
 import { Member } from '../../shared/models/member.model';
-import { LanguageService } from '../../layout/navbar/language-button/language.service';
+import { LanguageService } from '../../core/language.service';
 
 @Component({
   selector: 'gp-members',

@@ -10,6 +10,7 @@ import { of } from 'rxjs';
 import { BlogComponent } from './blog.component';
 import { ArticlesService } from './articles.service';
 import { TopArticleComponent } from './top-articles/top-article/top-article.component';
+import { LanguageService } from '../core/language.service';
 
 const articlesServiceMock = {
   getAllArticles: () => of([]),
@@ -28,7 +29,10 @@ describe('BlogComponent', () => {
           loader: { provide: TranslateLoader, useClass: TranslateFakeLoader }
         })
       ],
-      providers: [{ provide: ArticlesService, useValue: articlesServiceMock }]
+      providers: [
+        { provide: ArticlesService, useValue: articlesServiceMock },
+        LanguageService
+      ]
     }).compileComponents();
   }));
 

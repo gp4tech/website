@@ -15,7 +15,8 @@ describe('LanguageService', () => {
         TranslateModule.forRoot({
           loader: { provide: TranslateLoader, useClass: TranslateFakeLoader }
         })
-      ]
+      ],
+      providers: [LanguageService]
     })
   );
 
