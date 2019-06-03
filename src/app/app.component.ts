@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
-import { LanguageService } from './layout/navbar/language-button/language.service';
+import { LanguageService } from './core/language.service';
 
 @Component({
   selector: 'gp-root',

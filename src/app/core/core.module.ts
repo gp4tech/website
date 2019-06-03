@@ -9,6 +9,7 @@ import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 
 import { EmailService } from './email.service';
+import { LanguageService } from './language.service';
 import { environment } from '../../environments/environment';
 
 export function HttpLoaderFactory(http: HttpClient) {
@@ -33,7 +34,8 @@ export function HttpLoaderFactory(http: HttpClient) {
   ],
   providers: [
     { provide: FirestoreSettingsToken, useValue: {} },
-    EmailService
+    EmailService,
+    LanguageService
   ]
 })
 export class CoreModule { }

@@ -9,6 +9,7 @@ import { of } from 'rxjs';
 
 import { MembersComponent } from './members.component';
 import { MembersService } from './members.service';
+import { LanguageService } from '../../core/language.service';
 
 const membersServiceMock = {
   getAll: () => of([]),
@@ -31,7 +32,8 @@ describe('MembersComponent', () => {
         {
           provide: MembersService,
           useValue: membersServiceMock
-        }
+        },
+        LanguageService
       ]
     }).compileComponents();
   }));

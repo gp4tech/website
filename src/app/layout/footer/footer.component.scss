@@ -1,4 +1,4 @@
-@import "../../../styles-mat-variables.scss";
+@import '../../../styles-mat-variables';
 
 footer {
   height: 100%;
@@ -8,7 +8,9 @@ footer {
   }
 
   @media #{$small-and-down} {
-    .social-links, .info-links {
+    .social-links,
+    .info-links,
+    .language-section {
       text-align: center;
       padding-bottom: 10px;
     }

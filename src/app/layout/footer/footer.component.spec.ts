@@ -8,6 +8,8 @@ import {
 } from '@ngx-translate/core';
 
 import { FooterComponent } from './footer.component';
+import { LanguageButtonComponent } from '../language-button/language-button.component';
+import { LanguageService } from '../../core/language.service';
 
 describe('FooterComponent', () => {
   let component: FooterComponent;
@@ -15,13 +17,14 @@ describe('FooterComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [FooterComponent],
+      declarations: [FooterComponent, LanguageButtonComponent],
       imports: [
         RouterTestingModule,
         TranslateModule.forRoot({
           loader: { provide: TranslateLoader, useClass: TranslateFakeLoader }
         })
-      ]
+      ],
+      providers: [LanguageService]
     }).compileComponents();
   }));
 

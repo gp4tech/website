@@ -7,6 +7,7 @@ import {
 } from '@ngx-translate/core';
 
 import { LanguageButtonComponent } from './language-button.component';
+import { LanguageService } from '../../core/language.service';
 
 describe('LanguageButtonComponent', () => {
   let component: LanguageButtonComponent;
@@ -19,7 +20,8 @@ describe('LanguageButtonComponent', () => {
         TranslateModule.forRoot({
           loader: { provide: TranslateLoader, useClass: TranslateFakeLoader }
         })
-      ]
+      ],
+      providers: [LanguageService]
     }).compileComponents();
   }));
 

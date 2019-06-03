@@ -12,6 +12,7 @@ import {
 import { TopArticleComponent } from './top-article.component';
 import { ArticlesService } from '../../articles.service';
 import { Article } from '../../../shared/models/article.model';
+import { LanguageService } from '../../../core/language.service';
 
 const angularFirestoreMock = {
   collection: () => {}
@@ -43,6 +44,7 @@ describe('TopArticleComponent', () => {
       ],
       providers: [
         ArticlesService,
+        LanguageService,
         { provide: AngularFirestore, useValue: angularFirestoreMock }
       ]
     }).compileComponents();

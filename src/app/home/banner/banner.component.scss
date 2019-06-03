@@ -1,9 +1,8 @@
-@import "../../../styles-mat-variables.scss";
+@import '../../../styles-mat-variables';
 
 .parallax-container {
-  @media #{$small-and-down} {
-    height: calc(100vh - 56px);
-  }
+  height: 100vh;
+  min-height: $small-screen;
 
   .parallax img {
     @media #{$small-and-down} {
@@ -13,9 +12,10 @@
 }
 
 .banner-container {
-  height: 100%;
+  height: 50%;
 
   @media #{$small-and-down} {
+    height: 100%;
     text-align: center;
   }
 }
