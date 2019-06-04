@@ -1,0 +1,25 @@
+@import '../../../styles-mat-variables.scss';
+
+.student-picture {
+  text-align: center;
+  min-height: 40vh;
+  display: flex;
+  align-items: center;
+
+  @media #{$medium-and-down} {
+    min-height: auto;
+    display: inherit;
+  }
+
+  img {
+    max-width: 80%;
+  }
+}
+
+.testimonial-description {
+  min-height: 40vh;
+
+  @media #{$medium-and-down} {
+    min-height: auto;
+  }
+}

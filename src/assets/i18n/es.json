@@ -1,0 +1,128 @@
+{
+  "form-errors": {
+    "required": "Requerido",
+    "email": "Email invalido"
+  },
+  "home": {},
+  "language": {
+    "english": "EN",
+    "spanish": "ES"
+  },
+  "links": {
+    "about": "Sobre Nosotras",
+    "blog": "Blog",
+    "contact-us": "CONTÁCTANOS",
+    "events": "Eventos",
+    "home": "Inicio",
+    "who-did-this": "¿QUIÉN HIZO ESTO?"
+  },
+  "banner": {
+    "slogan": "Aprende, codifica, comparte",
+    "call-to-action": "Apoyo esto"
+  },
+  "activity-indicator-section": {
+    "title": "Indicadores",
+    "labels": {
+      "trained-students": "Estudiantes Entrenados",
+      "hours-of-training": "Horas Entrenamiento",
+      "hackaton": "Hackaton",
+      "weekend-coding": "Weekend Coding",
+      "supporters": "Seguidores",
+      "members": "Miembros"
+    }
+  },
+  "sponsors": {
+    "title": "Patrocinadores"
+  },
+  "testimonials": {
+    "title": "Testimonios"
+  },
+  "get-involved": {
+    "title": "Involúcrate",
+    "support-this": "Yo apoyo esto",
+    "people-involved": "Personas Involucradas",
+    "subscription": {
+      "title": "Apoyar esto",
+      "intro": "Porque... Aliquam ac viverra sem. Nunc dictum diam arcu. Mauris a bibendum turpis, a fermentum ligula. Morbi eu dolor ac elit accumsan consequat. Sed feugiat dapibus blandit. Nunc posuere tempus neque, et pulvinar nunc fermentum vitae. Etiam at ex rutrum, interdum metus eu, venenatis purus. Sed viverra sed nibh eget pharetra.",
+      "twitter": "Apoyar via Twitter",
+      "facebook": "Apoyar via Facebook",
+      "google": "Apoyar via Google",
+      "or": "O",
+      "form": {
+        "firstname": "Nombre",
+        "lastname": "Apellido",
+        "email": "Correo Electronico",
+        "choose-country": "Elije tu País",
+        "country": "País",
+        "subscription-agreement": "Estoy de acuerdo en recibir noticias e historias de GP4Tech.",
+        "support-this": "Apoyar esto",
+        "gender": "Genero",
+        "gender-options": {
+          "male": "Masculino",
+          "female": "Femenino",
+          "other": "Otro"
+        }
+      }
+    }
+  },
+  "about-us": {
+    "who": {
+      "title": "¿Quiénes somos?"
+    },
+    "members": {
+      "title": "Miembros"
+    }
+  },
+  "who-did-this": {
+    "title": "¿Quién hizo esto?",
+    "teams": {
+      "dev": "Equipo de Desarrolladores",
+      "qa": "Equipo de Control de Calidad",
+      "po": "Dueños del Producto",
+      "designers": "Diseñadores"
+    }
+  },
+  "blog": {
+    "title": "Blog",
+    "see-more": "Ver Más",
+    "articles": {
+      "top": "Lo más visto",
+      "all": "Todos los artículos",
+      "read-more": "Leer Más"
+    }
+  },
+  "contact-us": {
+    "title": "Contáctanos",
+    "gpEmail": "GP4Tech@jalasoft.com",
+    "email-title": "Envíanos un correo",
+    "company-name": "Jalasoft",
+    "location": {
+      "address": "Av. Melchor Pérez de Olguín #2643",
+      "city": "Cochabamba",
+      "country": "Bolivia"
+    },
+    "phone": {
+      "title": "Teléfono",
+      "code": "+591",
+      "number": "78945612"
+    },
+    "find-title": "Cómo encontrar Jalasoft",
+    "driving": {
+      "title": "Conduciéndo",
+      "description": "Consulte las instrucciones proporcionadas por"
+    },
+    "transportation": {
+      "title": "Transporte",
+      "description": "Las siguientes líneas de transporte público pueden dejarte cerca a las instalaciones de Jalasoft: 120, 230, A, Z12, 101"
+    },
+    "email": "Correo",
+    "subject": "Tema",
+    "From": "De",
+    "Message": "Mensaje",
+    "btn-send": "Enviar"
+  },
+  "events": {
+    "title": "Eventos y Actividades",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque a felis tortor. Etiam laoreet felis mi, et sagittis lectus venenatis quis. Aliquam sit amet nisl molestie, varius mi ac, accumsan tortor. Mauris iaculis viverra dapibus. In hac habitasse platea dictumst. Nullam dolor justo, porta at egestas sollicitudin, dignissim eget erat. In efficitur est sit amet porta consectetur. Sed venenatis finibus hendrerit. In semper nunc et urna pharetra interdum. Proin vestibulum iaculis nulla nec vehicula. Aenean consectetur dapibus tellus, id tristique massa porta sed. Sed sed tortor id arcu ornare semper eget vitae dolor. Morbi aliquam congue ex in rhoncus. Aenean malesuada lobortis tortor, vitae iaculis neque suscipit in. Nulla malesuada blandit urna eget bibendum."
+  }
+}

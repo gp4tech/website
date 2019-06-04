@@ -1,0 +1,52 @@
+@import '../../styles-mat-variables';
+
+.team-container {
+  padding-bottom: 2rem;
+
+  .header {
+    color: #ee6e73;
+    font-weight: 300;
+  }
+
+  .web-team-box {
+    margin-bottom: 10px;
+  }
+
+  .circular {
+    border-radius: 50%;
+  }
+
+  .responsive-team {
+    width: 100%;
+    height: auto;
+  }
+
+  .image-container-members {
+    margin-top: 15px;
+  }
+
+  .padding-left-team-row {
+    padding-left: 30px;
+  }
+
+  .margin-left-social-button {
+    margin-left: 10px;
+  }
+
+  @media #{$small-and-down} {
+    .all {
+      text-align: center;
+    }
+  
+    .responsive-member {
+      width: 50%;
+      height: auto;
+    }    
+  }
+
+  @media #{$medium-and-down} {
+    .padding-bio {
+      padding-left: 40px;
+    }
+  }
+}

@@ -1,0 +1,5 @@
+{
+  "sendgrid": {
+    "apikey": "GET A API KEY FROM THE SENDGRID ACCOUNT"
+  }
+}

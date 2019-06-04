@@ -1,0 +1,68 @@
+@import '../../styles-mat-variables';
+
+.card {
+  height: 300px;
+
+  @media #{$medium-and-down} {
+    height: 200px;
+  }
+}
+
+.card-image {
+  min-width: 50%;
+  overflow: hidden;
+
+  img {
+    min-width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.card-stacked {
+  max-width: 50%;
+
+  .card-content {
+    @media #{$medium-and-down} {
+      padding: 10px;
+    }
+
+    h4 {
+      overflow: hidden;
+      font-weight: bold;
+      font-size: 1.3em;
+      line-height: 1.3em;
+      max-height: 3.9em;
+      margin-block-start: 0px;
+      margin-block-end: 5px;
+
+      @media #{$medium-and-down} {
+        font-size: 1em;
+      }
+    }
+
+    p {
+      overflow: hidden;
+      line-height: 1.2em;
+      max-height: 6em;
+
+      @media #{$medium-and-down} {
+        max-height: 3.6em;
+      }
+    }
+
+    .card-author-and-date {
+      font-size: 0.8em;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      margin-bottom: 10px !important;
+    }
+  }
+}
+
+.card-action {
+  @media #{$medium-and-down} {
+    padding: 10px;
+  }
+}

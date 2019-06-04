@@ -1,0 +1,50 @@
+<gp-waiting-spinner *ngIf="isLoading"></gp-waiting-spinner>
+<form [formGroup]="form">
+  <div class="row" *ngIf="!isLoading">
+    <div class="input-field col s12 m6">
+      <input type="text" id="firstname" formControlName="firstname" 
+        [ngClass]="formHelper.getValidationClasses(form, 'firstname')">
+      <label for="firstname">{{ 'get-involved.subscription.form.firstname' | translate }}</label>
+      <span class="helper-text" attr.data-error="{{ 'form-errors.required' | translate }}" data-success=""></span>
+    </div>
+    <div class="input-field col s12 m6">
+      <input type="text" id="lastname" formControlName="lastname" 
+        [ngClass]="formHelper.getValidationClasses(form, 'lastname')">
+      <label for="lastname">{{ 'get-involved.subscription.form.lastname' | translate }}</label>
+      <span class="helper-text" attr.data-error="{{ 'form-errors.required' | translate }}"  data-success=""></span>
+    </div>
+    <div class="input-field col s12 m4">
+      <input type="text" id="email" formControlName="email" 
+        [ngClass]="formHelper.getValidationClasses(form, 'email')">
+      <label for="email">{{ 'get-involved.subscription.form.email' | translate }}</label>
+      <span class="helper-text" attr.data-error="{{ 'form-errors.email' | translate }}"  data-success=""></span>
+    </div>  
+    <div class="input-field col s12 m4">
+      <select gpSelect formControlName="country">
+        <option *ngFor="let country of countries" [ngValue]="country.name">
+          {{ country.name }}
+        </option>
+      </select>
+      <label>{{ 'get-involved.subscription.form.country' | translate }}</label>
+    </div>
+    <div class="input-field col s12 m4">
+      <select gpSelect formControlName="gender">
+        <option *ngFor="let gender of genderOptions" [ngValue]="gender.value">
+          {{gender.label}}
+        </option>
+      </select>
+      <label>{{ 'get-involved.subscription.form.gender' | translate }}</label>
+    </div>
+    <p class="col s12 center">
+      <label>
+        <input type="checkbox" formControlName="agreement" class="filled-in"/>
+        <span>{{ 'get-involved.subscription.form.subscription-agreement' | translate }}</span>
+      </label>
+    </p>
+    <div class="col s12 center">
+      <button class="btn" (click)="onSubscribe()">
+        {{ 'get-involved.subscription.form.support-this' | translate }}
+      </button>
+    </div>
+  </div>
+</form>

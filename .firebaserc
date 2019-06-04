@@ -1,0 +1,6 @@
+{
+  "projects": {
+    "develop": "gp4techsite",
+    "production": "gp4tech"
+  }
+}

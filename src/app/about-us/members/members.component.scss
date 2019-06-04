@@ -1,0 +1,31 @@
+.member-card {
+  margin-top: 5%;
+  margin-bottom: 5%;
+
+  .member-sub-card {
+    width: 50%;
+    float: left;
+  }
+
+  .member-picture {
+    padding: 10px;
+
+    img {
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+    }
+  }
+
+  .member-info {
+    p {
+      margin: 0;
+    }
+    .icons {
+      margin-top: 5%;
+      i {
+        padding: 3%;
+      }
+    }
+  }
+}

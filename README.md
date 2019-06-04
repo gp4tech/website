@@ -22,6 +22,43 @@ Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.
 
 Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
 
+## Firebase Hosting
+
+Access [here](https://gp4techsite.firebaseapp.com/) for current develop site.
+
+In order to deploy follow these steps:
+- Install firebase tools globally if you don't have it: `npm install -g firebase-tools`
+- Login to your firebase account the first time: `firebase login`
+- Deploy the site after building it for production: `firebase deploy`
+
+### Cloud Functions
+
+#### Environment Variables Configuration
+
+##### Local
+
+To run locally these cloud functions you need to add missing environment variables in the *.runtimeconfig.json*.
+
+To only run the functions execute:
+
+```
+firebase serve --only functions
+```
+
+##### On Firebase
+
+On firebase the environment variables for the cloud functions are set up via a command:
+
+```
+firebase functions:config:set sendgrid.apikey="API_KEY"
+```
+
+To review which environment variables already are configured on firebase project:
+
+```
+firebase functions:config:get
+```
+
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).

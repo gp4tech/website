@@ -1,0 +1,13 @@
+<ng-container *ngIf="(articles$ | async) as articles">
+  <ng-container *ngIf="articles.length > 0">
+    <h4 class="center-align">・{{ 'blog.title' | translate }}・</h4>
+    <div class="row center-align">
+      <div *ngFor="let article of articles" class="col s12 m4">
+        <gp-top-article [article]="article"></gp-top-article>
+      </div>
+      <div class="col s12">
+        <a class="btn-large waves-effect see-more" routerLink="/blog">{{ 'blog.see-more' | translate }}</a>
+      </div>
+    </div>
+  </ng-container>
+</ng-container>

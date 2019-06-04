@@ -1,0 +1,99 @@
+/* You can add global styles to this file, and also import other style files */
+@import './styles-colors';
+@import '../node_modules/materialize-css/sass/materialize';
+@import '../node_modules/font-awesome/css/font-awesome.css';
+
+@font-face {
+  font-family: 'BebasNeue';
+  font-weight: 400;
+  font-style: normal;
+  src: url('assets/font/BebasNeue/BebasNeue-Regular.otf') format('opentype');
+}
+
+body,
+gp-root {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  height: 100%;
+}
+
+main {
+  flex: 1 0 auto;
+}
+
+a {
+  cursor: pointer;
+}
+
+.top-section {
+  position: relative;
+  z-index: 997;
+}
+
+/* Google chart visualization override */
+div.google-visualization-tooltip {
+  background-color: #424242;
+  border-radius: 30px;
+  border: 4px dashed #d87093;
+  box-shadow: none;
+  color: #ffffff;
+  padding-left: 10px;
+  pointer-events: none;
+}
+
+#call-to-action {
+  position: relative;
+  padding-top: 1rem;
+  padding-bottom: 1.3rem;
+  padding-left: 1.7rem;
+  padding-right: 1.7rem;
+  z-index: 0;
+  font-size: $h5-fontsize;
+
+  .gradient-border {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+
+    &-primary {
+      stop-color: $primary-color;
+    }
+
+    &-secondary {
+      stop-color: $secondary-color;
+    }
+
+    path {
+      transition: opacity 0.4s ease;
+
+      &:first-of-type {
+        fill: transparent;
+        stroke: url(#gradient);
+        stroke-width: 7;
+        opacity: 1;
+      }
+
+      &.icon--plain {
+        opacity: 0;
+        stroke: none;
+        stroke-width: 0;
+      }
+    }
+  }
+
+  &:hover {
+    path {
+      &:first-of-type {
+        opacity: 0;
+      }
+
+      &.icon--plain {
+        opacity: 1;
+      }
+    }
+  }
+}

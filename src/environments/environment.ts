@@ -1,9 +1,16 @@
+import { FirebaseConfig, GoogleMapsKey } from './keys-config';
+
 // This file can be replaced during build by using the `fileReplacements` array.
 // `ng build --prod` replaces `environment.ts` with `environment.prod.ts`.
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  firebase: FirebaseConfig,
+  functionsUrl: 'http://localhost:5000/gp4techsite/us-central1',
+  firebaseStorageUrl:
+    'https://firebasestorage.googleapis.com/v0/b/gp4techsite.appspot.com/o/',
+  googleMaps: GoogleMapsKey
 };
 
 /*

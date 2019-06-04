@@ -1,10 +1,16 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+
+import { LanguageService } from './core/language.service';
 
 @Component({
-  selector: 'app-root',
+  selector: 'gp-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.less']
+  styleUrls: ['./app.component.scss']
 })
-export class AppComponent {
-  title = 'website';
+export class AppComponent implements OnInit {
+  constructor(private languageService: LanguageService) {}
+
+  ngOnInit() {
+    this.languageService.setDefaultLanguage();
+  }
 }

@@ -1,0 +1,29 @@
+@import '../../../styles-mat-variables';
+
+footer {
+  height: 100%;
+
+  .btn-floating {
+    margin-left: 10px;
+  }
+
+  @media #{$small-and-down} {
+    .social-links,
+    .info-links,
+    .language-section {
+      text-align: center;
+      padding-bottom: 10px;
+    }
+  }
+
+  @media #{$medium-and-up} {
+    .row {
+      display: flex;
+      align-items: center;
+    }
+
+    .social-links {
+      text-align: right;
+    }
+  }
+}
