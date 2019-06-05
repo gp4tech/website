@@ -1,0 +1,48 @@
+<a class="waves-effect waves-light btn space modal-trigger" href="#donate">
+  {{ 'donate.title' | translate }}
+</a>
+<div id="donate" class="left-align modal modal-fixed-footer" gpModal>
+  <div class="modal-content">
+    <!-- <h4 class="title">{{ 'donate.header' | translate }}</h4>
+    <div class="row center-align">
+      <span class="col-s1 space">
+        <label>
+          <input class="with-gap" name="currency" type="radio" (click)="onOptionChange('option1')" checked />
+          <span>{{ 'donate.dollars-usa' | translate }}</span>
+        </label>
+      </span>
+      <span class="col-s1 space">
+        <label>
+          <input class="with-gap" name="currency" type="radio" (click)="onOptionChange('option2')" />
+          <span>{{ 'donate.dollars-germany' | translate }}</span>
+        </label>
+      </span>
+      <span class="col-s1">
+        <label>
+          <input class="with-gap" name="currency" type="radio" (click)="onOptionChange('option3')" />
+          <span>{{ 'donate.euros' | translate }}</span>
+        </label>
+      </span>
+    </div> -->
+    
+
+    <!-- <div class="center-align row">
+      <div class="col s4 center-align" *ngFor="let info of donate$ | async">
+        <div class="card teal lighten-2" *ngIf="(info.currency === currency && info.from === from)">
+          <div class="card-content white-text">
+            <span class="card-title">{{ info.bank }}</span>
+            <div>
+              {{ info.swiftCode }}<br>
+              {{ info.aba }}<br>
+              {{ info.accountNumber }}<br>
+              {{ info.city }}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div> -->
+  </div>
+  <div class="modal-footer">
+    <a href="#!" class="modal-close waves-effect waves-green btn-flat">{{ 'donate.close' | translate }}</a>
+  </div>
+</div>

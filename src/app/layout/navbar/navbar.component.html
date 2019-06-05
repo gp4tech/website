@@ -11,6 +11,13 @@
             <a [routerLink]="route.name">{{ route.i18n | translate | uppercase }}</a>
           </li>
         </ul>
+          <div class="right-align">
+            <!-- <gp-donate-modal></gp-donate-modal> -->
+            <a class="waves-effect waves-light btn space modal-trigger" href="#donate">
+                {{ 'donate.title' | translate }}
+              </a>
+            <gp-language-button></gp-language-button>
+          </div>
       </div>
     </div>
   </nav>
@@ -22,4 +29,49 @@
   </ul>
 
   <div id="navbar-background"></div>
+    <div id="donate" class="left-align modal modal-fixed-footer" gpModal>
+      <div class="modal-content">
+        <h4 class="title">{{ 'donate.header' | translate }}</h4>
+        <div class="row center-align">
+          <span class="col-s1 space">
+            <label>
+              <input class="with-gap" name="currency" type="radio" (click)="onOptionChange('option1')" checked />
+              <span>{{ 'donate.dollars-usa' | translate }}</span>
+            </label>
+          </span>
+          <span class="col-s1 space">
+            <label>
+              <input class="with-gap" name="currency" type="radio" (click)="onOptionChange('option2')" />
+              <span>{{ 'donate.dollars-germany' | translate }}</span>
+            </label>
+          </span>
+          <span class="col-s1">
+            <label>
+              <input class="with-gap" name="currency" type="radio" (click)="onOptionChange('option3')" />
+              <span>{{ 'donate.euros' | translate }}</span>
+            </label>
+          </span>
+        </div>
+        
+    
+        <div class="center-align row">
+          <div class="col s4 center-align">
+            <div class="card teal lighten-2">
+              <div class="card-content white-text">
+                <span class="card-title">Bank</span>
+                <div>
+                  344324234324<br>
+                  xxxxxxxxxx<br>
+                  bbbbbbbbbbbbb<br>
+                  yyyyyyyyyyyyyy
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <a href="#!" class="modal-close waves-effect waves-green btn-flat">{{ 'donate.close' | translate }}</a>
+      </div>
+    </div>
 </header>
