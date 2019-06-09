@@ -1,14 +1,14 @@
-import { Directive, OnInit, ElementRef } from '@angular/core';
+import { Directive, ElementRef, AfterViewInit } from '@angular/core';
 
 import { Carousel } from 'materialize-css';
 
 @Directive({
   selector: '[gpCarousel]'
 })
-export class CarouselDirective implements OnInit {
+export class CarouselDirective implements AfterViewInit {
   constructor(private elementRef: ElementRef) {}
 
-  ngOnInit(): void {
+  ngAfterViewInit(): void {
     Carousel.init(this.elementRef.nativeElement, {
       fullWidth: true,
       indicators: true
