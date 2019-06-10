@@ -16,6 +16,7 @@ export const AppRoutes: AppRoute[] = [
   { name: '', i18n: 'links.home' },
   { name: AppBarRoutes.about, i18n: 'links.about' },
   { name: AppBarRoutes.events, i18n: 'links.events' },
-  { name: AppBarRoutes.blog, i18n: 'links.blog' },
+  // TODO 06092019: Hidden for initial release
+  // { name: AppBarRoutes.blog, i18n: 'links.blog' },
   { name: AppBarRoutes.contact, i18n: 'links.contact-us' }
 ];
