@@ -10,14 +10,14 @@ export class FooterComponent {
 
   sponsors = [
     {
-      logoUrl: environment.firebaseStorageUrl + 
-        'images%2Fsponsors%2Ffundacion-jala-logo.png?alt=media&token=95701108-86b9-46d3-84f8-a1a01d951fb3',
+      logoUrl: environment.firebaseStorageUrl +
+        'images%2Fsponsors%2Ffundacion-jala-logo-white.png?alt=media&token=5bc5b4d9-6815-4e75-ba2f-812dd381d2f3',
       i18n: 'jala-foundation',
       link: 'http://fundacion-jala.org/#/es/home',
     },
     {
       logoUrl: environment.firebaseStorageUrl +
-        'images%2Fsponsors%2Fjalasoft-logo.png?alt=media&token=5801be77-50ab-4834-beba-aad687c52311',
+        'images%2Fsponsors%2Fjalasoft-logo-white.png?alt=media&token=bfec86ce-0652-4e0d-b47e-a294bec731f8',
       i18n: 'jala',
       link: 'http://www.jalasoft.com/',
     }
