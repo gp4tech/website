@@ -23,7 +23,7 @@ export class TestimonialsComponent implements OnInit, OnDestroy {
     this.testimonialsSub = this.testimonialService
       .getAll()
       .subscribe((testimonials: Testimonial[]) => {
-        this.testimonials = testimonials
+        this.testimonials = testimonials;
         this.isLoading = false;
       });
   }
