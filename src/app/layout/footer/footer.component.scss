@@ -3,27 +3,24 @@
 footer {
   height: 100%;
 
-  .btn-floating {
-    margin-left: 10px;
-  }
+  .sponsors-links {
+    @media #{$medium-and-up} {
+      img {
+        width: 80px;
+      }
 
-  @media #{$small-and-down} {
-    .social-links,
-    .info-links,
-    .language-section {
-      text-align: center;
-      padding-bottom: 10px;
+      .left-separator {
+        border-left: 1px solid;
+      }
+  
+      .right-separator {
+        border-right: 1px solid;
+      }
     }
   }
 
-  @media #{$medium-and-up} {
-    .row {
-      display: flex;
-      align-items: center;
-    }
-
-    .social-links {
-      text-align: right;
-    }
+  .social-links a {
+    margin-left: 5px;
+    margin-right: 5px;
   }
 }

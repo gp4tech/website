@@ -5,8 +5,13 @@
   },
   "home": {},
   "language": {
+    "title": "Languages",
     "english": "EN",
     "spanish": "ES"
+  },
+  "footer": {
+    "social-networks": "Social Networks",
+    "donations": "Donations"
   },
   "links": {
     "about": "About Us",
@@ -32,7 +37,7 @@
     }
   },
   "sponsors": {
-    "title": "Sponsors"
+    "title": "Powered By"
   },
   "testimonials": {
     "title": "Testimonials"

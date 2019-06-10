@@ -1,20 +1,42 @@
 <footer class="page-footer grey darken-3">
   <div class="container">
     <div class="row">
-      <div class="col s12 m4 info-links">
-        <a [routerLink]="[infoLink.link]" *ngFor="let infoLink of infoLinks; let i = index">
-          {{ infoLink.i18n | translate }}
-          <span *ngIf="(i + 1) !== infoLinks.length"> | </span>
-        </a>
+      <div class="col s12 m3 sponsors-links center-align">
+        <p>{{ 'sponsors.title' | translate }}</p>
+        <div class="row">
+          <div class="col s6" [ngClass]="{ 'right-separator': i % 2 === 0, 'left-separator': i%2 !== 0 }" 
+            *ngFor="let sponsor of sponsors; let i = index;">
+            <a [href]="[sponsor.link]" target="_blank"  rel="noopener noreferrer">
+              <img class="responsive-img" [src]="sponsor.logoUrl" [alt]="sponsor.i18n | translate">
+            </a>
+          </div>
+        </div>
       </div>
-      <div class="col s12 m4 social-links">
-        <a *ngFor="let socialLink of socialLinks" target="_blank" rel="noopener noreferrer"
-          class="btn-floating grey darken-2" [href]="socialLink.link">
-          <i [class]="'fa ' + socialLink.faIcon"></i>
-        </a>
+      <div class="col s12 m4 social-links center-align">
+        <p>{{ 'footer.social-networks' | translate}}</p>
+        <div class="row">
+          <a *ngFor="let socialLink of socialLinks" target="_blank" rel="noopener noreferrer"
+            class="btn-floating grey darken-2" [href]="socialLink.link">
+            <i [class]="'fab ' + socialLink.faIcon"></i>
+          </a>
+        </div>
       </div>
-      <div class="col s12 m4 right-align language-section">
-        <gp-language-button></gp-language-button>
+      <div class="col s12 m3 donations-links center-align">
+        <p> {{ 'footer.donations' | translate }} </p>
+        <div class="row">
+          <a [routerLink]="[donation.link]"
+            class="btn-floating grey darken-2" [href]="donation.link">
+            <i [class]="'fas ' + donation.faIcon"></i>
+          </a>
+        </div>
+      </div>
+      <div class="col s12 m2 donations-links center-align">
+        <p>{{ 'language.title' | translate }} </p>
+        <div class="row">
+          <div class="language-section">
+            <gp-language-button></gp-language-button>
+          </div>
+        </div>
       </div>
     </div>
   </div>
