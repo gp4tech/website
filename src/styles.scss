@@ -3,6 +3,7 @@
 @import '../node_modules/materialize-css/sass/materialize';
 @import '../node_modules/@fortawesome/fontawesome-free/css/all.css';
 
+/* Layout and fonts */
 @font-face {
   font-family: 'BebasNeue';
   font-weight: 400;
@@ -31,6 +32,7 @@ a {
   z-index: 997;
 }
 
+/* Custom hacks for third party libs */
 /* Google chart visualization override */
 div.google-visualization-tooltip {
   background-color: #424242;
@@ -42,6 +44,7 @@ div.google-visualization-tooltip {
   pointer-events: none;
 }
 
+/* Common classes and global customizations */ 
 #call-to-action {
   position: relative;
   padding-top: 1rem;
@@ -108,4 +111,8 @@ div.google-visualization-tooltip {
       background-color: $primary-color-light;
     }
   }
+}
+
+.section-title {
+  color: $primary-color;
 }
