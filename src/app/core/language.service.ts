@@ -20,7 +20,7 @@ export class LanguageService {
     const browserLanguage = this.translateService.getBrowserLang();
     const isValidLanguage = DEFAULT_LANGUAGES.find(defaultLanguage => defaultLanguage === browserLanguage);
     this.translateService.setDefaultLang(this.currentLanguage);
-  
+
     if (isValidLanguage) {
       this.switchLanguage(browserLanguage);
     }
