@@ -8,6 +8,7 @@ import { WaitingSpinnerComponent } from './components/waiting-spinner/waiting-sp
 import { SelectDirective } from './directives/select/select.directive';
 import { CollapsibleDirective } from './directives/collapsible/collapsible.directive';
 import { TransparentSectionDirective } from './directives/transparent-section/transparent-section.directive';
+import { CarouselDirective } from './directives/carousel/carousel.directive';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { TransparentSectionDirective } from './directives/transparent-section/tr
     WaitingSpinnerComponent,
     SelectDirective,
     CollapsibleDirective,
-    TransparentSectionDirective
+    TransparentSectionDirective,
+    CarouselDirective,
   ],
   imports: [CommonModule, TranslateModule],
   exports: [
@@ -24,7 +26,8 @@ import { TransparentSectionDirective } from './directives/transparent-section/tr
     WaitingSpinnerComponent,
     SelectDirective,
     CollapsibleDirective,
-    TransparentSectionDirective
+    TransparentSectionDirective,
+    CarouselDirective,
   ]
 })
 export class SharedModule {}

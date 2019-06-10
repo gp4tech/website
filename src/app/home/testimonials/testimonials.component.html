@@ -1,25 +1,21 @@
-<h4 class="center-align">・{{ 'testimonials.title' | translate }}・</h4>
-<div class="row">
-  <div class="col s12 m12 l4 student-picture">
-    <img src="/assets/images/photo_test.png">
-  </div>
-  <div class="col m12 l8 testimonial-description valign-wrapper">
-    <div>
-      <p>Claudia Martinez</p>
-      <p>Don Bosco, 5to de Secundaria B</p>
-      <p>
-        "Lorem ipsum dolor sit amet consectetur adipiscing elit gravida
-        penatibus feugiat, condimentum pellentesque vulputate ante commodo eros
-        dictum consequat facilisis mauris sociosqu, suscipit orci morbi iaculis
-        sodales aptent aenean non ullamcorper. Aenean feugiat leo integer
-        dapibus mattis, consequat fringilla tortor mi aliquet taciti, urna proin
-        euismod praesent. Tempus curae platea fusce augue scelerisque sodales
-        libero, quis viverra hendrerit pulvinar conubia sociis in luctus, dis
-        malesuada felis dictumst cursus ultricies.Feugiat phasellus eu proin
-        sapien nec hac mollis aliquam, augue praesent conubia nibh ultrices
-        vitae tortor rutrum sodales, malesuada vestibulum a nostra et pharetra
-        velit".
-      </p>
+<div *ngIf="!isLoading">
+  <div class="carousel carousel-slider grey lighten-4" gpCarousel>
+    <div class="carousel-item" *ngFor="let  testimonial of testimonials">
+      <div class="row testimonial-container">
+        <div class="col s12 m12 l6 student-picture hide-on-med-and-down">
+          <img class="responsive-img" [src]="baseUrl + testimonial.storagePath" [alt]="testimonial.name">
+        </div>
+        <div class="col m12 l6">
+          <h4 class="pink-text text-lighten-1">Testimonials</h4>
+          <h5>{{testimonial.name}}</h5>
+          <p>{{testimonial.school}}, {{testimonial.class}}</p>
+          <div class="testimonial-description-container testimonial-description">
+            <p class="">
+              {{testimonial.description}}
+            </p>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </div>

@@ -1,25 +1,19 @@
 @import '../../../styles-mat-variables.scss';
 
-.student-picture {
-  text-align: center;
-  min-height: 40vh;
-  display: flex;
-  align-items: center;
-
-  @media #{$medium-and-down} {
-    min-height: auto;
-    display: inherit;
-  }
-
-  img {
-    max-width: 80%;
-  }
+.testimonial-container {
+  margin-bottom: 0px;
 }
 
-.testimonial-description {
-  min-height: 40vh;
+.student-picture {
+  padding: 0px 0px;
+}
 
-  @media #{$medium-and-down} {
-    min-height: auto;
+.carousel {
+  @media #{$large-and-up} {
+    height: 340px !important;
+  }
+
+  @media #{$medium-only} {
+    height: 350px !important;
   }
 }

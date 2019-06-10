@@ -97,3 +97,15 @@ div.google-visualization-tooltip {
     }
   }
 }
+
+.carousel.carousel-slider {
+  .indicators {
+    li.active {
+      background-color: $primary-color;
+    }
+
+    li {
+      background-color: $primary-color-light;
+    }
+  }
+}

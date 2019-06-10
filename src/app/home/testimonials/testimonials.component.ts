@@ -1,7 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 
-import { Observable } from 'rxjs';
+import { Subscription } from 'rxjs';
 
+import { environment } from '../../../environments/environment';
 import { Testimonial } from '../../shared/models/testimonial.model';
 import { TestimonialsService } from './testimonials.service';
 
@@ -10,12 +11,24 @@ import { TestimonialsService } from './testimonials.service';
   templateUrl: './testimonials.component.html',
   styleUrls: ['./testimonials.component.scss']
 })
-export class TestimonialsComponent implements OnInit {
-  testimonials$: Observable<Testimonial[]>;
+export class TestimonialsComponent implements OnInit, OnDestroy {
+  testimonialsSub: Subscription;
+  testimonials: Testimonial[];
+  baseUrl = environment.firebaseStorageUrl;
+  isLoading = true;
 
   constructor(private testimonialService: TestimonialsService) {}
 
   ngOnInit() {
-    this.testimonials$ = this.testimonialService.getAll();
+    this.testimonialsSub = this.testimonialService
+      .getAll()
+      .subscribe((testimonials: Testimonial[]) => {
+        this.testimonials = testimonials;
+        this.isLoading = false;
+      });
+  }
+
+  ngOnDestroy() {
+    this.testimonialsSub.unsubscribe();
   }
 }
