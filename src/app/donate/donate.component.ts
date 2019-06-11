@@ -13,8 +13,8 @@ import { LanguageService } from '../core/language.service';
 })
 export class DonateComponent implements OnInit {
   donate$: Observable<Donate[]>;
-  currency: string = 'dollar';
-  from: string = 'usa';
+  currency = 'dollar';
+  from = 'usa';
 
   constructor(private donateService: DonateService,
               public language: LanguageService ) { }
