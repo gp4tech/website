@@ -7,45 +7,33 @@
   <p class="text-justify">
     {{ 'events.description' | translate }}
   </p>
-  <br><br>
-  <div *ngFor="let event of events$ | async" class="row">
-    <ng-container *ngIf="event.positionPic === position.RIGHT">
-      <div class="col m6">
-        <img [src]="event.pic"
-             [alt]="event.nameEn"
-             class="responsive-img separator">
-      </div>
-      <div class="col m6">
-        <div class="row center-align">
-          <h2 class="type">
-            {{ language.currentLanguage === languages.EN ? event.nameEn : event.nameSp }}
-          </h2>
+  <br>
+  <div class="row">
+    <div *ngFor="let event of events$ | async" class="col m6 separator">
+      <div class="card">
+        <div class="card-image opacity-effect column">
+          <figure>
+            <img [src]="event.pic"
+                 [alt]="event.nameEn"
+                 class="activator">
+          </figure>
         </div>
-        <div class="row">
-          <p class="text-justify separator">
+        <div class="card-content">
+          <span class="card-title activator grey-text text-darken-4">
+            {{ language.currentLanguage === languages.EN ? event.nameEn : event.nameSp }}
+            <i class="opacity-icon right fas fa-ellipsis-v"></i>
+          </span>
+        </div>
+        <div class="card-reveal">
+          <span class="card-title grey-text text-darken-4">
+            {{ language.currentLanguage === languages.EN ? event.nameEn : event.nameSp }}
+            <i class="opacity-icon right fas fa-times"></i>
+          </span>
+          <p>
             {{ language.currentLanguage === languages.EN ? event.descriptionEn : event.descriptionSp }}
           </p>
         </div>
       </div>
-    </ng-container>
-    <ng-container *ngIf="event.positionPic === position.LEFT">
-      <div class="col m6">
-        <div class="row center-align">
-          <h2 class="type">
-            {{ language.currentLanguage === languages.EN ? event.nameEn : event.nameSp }}
-          </h2>
-        </div>
-        <div class="row">
-          <p class="text-justify separator">
-            {{ language.currentLanguage === languages.EN ? event.descriptionEn : event.descriptionSp }}
-          </p>
-        </div>
-      </div>
-      <div class="col m6">
-        <img [src]="event.pic"
-             [alt]="event.nameEn"
-             class="responsive-img separator">
-      </div>
-    </ng-container>
+    </div>
   </div>
 </div>

@@ -14,12 +14,11 @@ import { Event } from '../shared/models/event.model';
 export class EventsComponent implements OnInit {
   events$: Observable<Event[]>;
   languages = { ES: 'es', EN: 'en' };
-  position = { RIGHT: 'right', LEFT: 'left' };
 
   constructor(private eventsService: EventsService,
               public language: LanguageService) {}
 
   ngOnInit() {
-    this.events$ = this.eventsService.getAll();
+    this.events$ = this.eventsService.getActivities();
   }
 }

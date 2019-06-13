@@ -8,7 +8,7 @@ import { EventsService } from './events.service';
 import { LanguageService } from '../core/language.service';
 
 const EventsServiceMock = {
-  getAll: () => of([])
+  getActivities: () => of([])
 };
 
 describe('EventsComponent', () => {
