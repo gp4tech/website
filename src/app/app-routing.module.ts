@@ -23,6 +23,10 @@ const routes: Routes = [
     path: AppBarRoutes.contact,
     loadChildren: './contact-us/contact-us.module#ContactUsModule'
   },
+  {
+    path: AppBarRoutes.donate,
+    loadChildren: './donate/donate.module#DonateModule'
+  },
 ];
 
 @NgModule({

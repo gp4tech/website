@@ -6,6 +6,7 @@ export interface AppRoute {
 export enum AppBarRoutes {
   home = 'home',
   about = 'about-us',
+  donate = 'donations',
   events = 'events',
   blog = 'blog',
   who = 'who-did-this',
