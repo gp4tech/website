@@ -17,6 +17,7 @@
     "about": "About Us",
     "blog": "Blog",
     "contact-us": "CONTACT US",
+    "donate": "Donate",
     "events": "Events",
     "home": "Home",
     "who-did-this": "WHO DID THIS?"
@@ -130,5 +131,24 @@
   "events": {
     "title": "Events and Activities",
     "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque a felis tortor. Etiam laoreet felis mi, et sagittis lectus venenatis quis. Aliquam sit amet nisl molestie, varius mi ac, accumsan tortor. Mauris iaculis viverra dapibus. In hac habitasse platea dictumst. Nullam dolor justo, porta at egestas sollicitudin, dignissim eget erat. In efficitur est sit amet porta consectetur. Sed venenatis finibus hendrerit. In semper nunc et urna pharetra interdum. Proin vestibulum iaculis nulla nec vehicula. Aenean consectetur dapibus tellus, id tristique massa porta sed. Sed sed tortor id arcu ornare semper eget vitae dolor. Morbi aliquam congue ex in rhoncus. Aenean malesuada lobortis tortor, vitae iaculis neque suscipit in. Nulla malesuada blandit urna eget bibendum."
+  },
+  "donate": {
+    "aba-label": "ABA: ",
+    "account-number-label" :"Account Number: ",
+    "address": "1296 Camacho Avenue",
+    "beneficiary": "Beneficiary Bank",
+    "close": "Close",
+    "city": "La Paz - Bolivia",
+    "dollars-usa": "Dollars (USA)",
+    "dollars-germany": "Dollars (Germany)",
+    "euros": "Euros",
+    "note1": "*** Take into account the following characteristics for the reception of payments through the BANCO DO BRASIL:",
+    "note2": "1. Receipt of business-to-business or business-to-person payments of the COMMERCIAL type.",
+    "note3": "2. No payments and/or person-to-person transfers shall be made for any reason.",
+    "subtitle": "Thank you for considering making a donation to GP4Tech.",
+    "swift-code": "Swift Code: BNBOBOLXXXX",
+    "swift-code-label": "Swift Code: ",
+    "telephone": "Telephone: (591)-2313232 - 800107272",
+    "title": "Make a Donation"
   }
 }
