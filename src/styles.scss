@@ -44,7 +44,7 @@ div.google-visualization-tooltip {
   pointer-events: none;
 }
 
-/* Common classes and global customizations */ 
+/* Common classes and global customizations */
 #call-to-action {
   position: relative;
   padding-top: 1rem;
@@ -115,4 +115,8 @@ div.google-visualization-tooltip {
 
 .section-title {
   color: $primary-color;
+}
+
+.section-space {
+  margin: 8rem 0px 10rem;
 }
