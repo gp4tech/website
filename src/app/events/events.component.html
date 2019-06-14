@@ -1,3 +1,8 @@
+<div gpTransparentSection class="parallax-container">
+  <div gpParallax class="parallax">
+    <img src="assets/images/GP4Tech-Team.jpg">
+  </div>
+</div>
 <div class="container top">
   <div class="row">
     <h4 class="center-align">
@@ -11,9 +16,7 @@
   <div *ngFor="let event of events$ | async" class="row">
     <ng-container *ngIf="event.positionPic === position.RIGHT">
       <div class="col m6">
-        <img [src]="event.pic"
-             [alt]="event.nameEn"
-             class="responsive-img separator">
+        <img [src]="event.pic" [alt]="event.nameEn" class="responsive-img separator">
       </div>
       <div class="col m6">
         <div class="row center-align">
@@ -42,9 +45,7 @@
         </div>
       </div>
       <div class="col m6">
-        <img [src]="event.pic"
-             [alt]="event.nameEn"
-             class="responsive-img separator">
+        <img [src]="event.pic" [alt]="event.nameEn" class="responsive-img separator">
       </div>
     </ng-container>
   </div>

@@ -11,6 +11,7 @@ import { AppComponent } from './app.component';
 import { LayoutModule } from './layout/layout.module';
 import { HomeModule } from './home/home.module';
 import { LanguageService } from './core/language.service';
+import { ScrollTopService } from './core/scroll-top.service';
 
 describe('AppComponent', () => {
   beforeEach(async(() => {
@@ -24,7 +25,7 @@ describe('AppComponent', () => {
         })
       ],
       declarations: [AppComponent],
-      providers: [LanguageService]
+      providers: [LanguageService, ScrollTopService]
     }).compileComponents();
   }));
 
