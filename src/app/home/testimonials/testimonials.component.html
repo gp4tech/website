@@ -1,18 +1,22 @@
 <div *ngIf="!isLoading">
-  <div class="carousel carousel-slider grey lighten-4" gpCarousel>
+  <h4 class="center-align section-title">
+    {{'testimonials.title' | translate}}
+  </h4>
+  <div class="carousel carousel-slider" gpCarousel>
     <div class="carousel-item" *ngFor="let  testimonial of testimonials">
-      <div class="row testimonial-container">
-        <div class="col s12 m12 l6 student-picture hide-on-med-and-down">
+      <div class="row testimonial-container grey lighten-4">
+        <div class="col s12 m12 l6 student-picture hide-on-small-and-down">
           <img class="responsive-img" [src]="baseUrl + testimonial.storagePath" [alt]="testimonial.name">
         </div>
-        <div class="col m12 l6">
-          <h4 class="pink-text text-lighten-1">{{'testimonials.title' | translate}}</h4>
-          <h5>{{testimonial.name}}</h5>
-          <p>{{testimonial.school}}, {{testimonial.class}}</p>
-          <div class="testimonial-description-container testimonial-description">
-            <p class="">
-              {{testimonial.description}}
-            </p>
+        <div class="col s12 m12 l6 student-testimonial valign-wrapper">
+          <div>
+            <h5 class="teal-text">{{testimonial.name}}</h5>
+            <p><b>{{testimonial.school}}, {{testimonial.class}}</b></p>
+            <div class="testimonial-description-container testimonial-description">
+              <p class="flow-text">
+                {{testimonial.description}}
+              </p>
+            </div>
           </div>
         </div>
       </div>
