@@ -23,8 +23,9 @@
     "who-did-this": "WHO DID THIS?"
   },
   "banner": {
-    "slogan": "Learn, code, share",
-    "call-to-action": "I support this"
+    "slogan": "Girl Power 4 Technology",
+    "description": "GP4Tech es una comunidad que tiene el objetivo de involucrar a más mujeres en el área de la tecnología. Ven a conocernos en nuestro próximo evento: Weekend Coding. ¡Inscríbete ya!",
+    "call-to-action": "Register"
   },
   "activity-indicator-section": {
     "title": "Indicators",
@@ -134,7 +135,7 @@
   },
   "donate": {
     "aba-label": "ABA: ",
-    "account-number-label" :"Account Number: ",
+    "account-number-label": "Account Number: ",
     "address": "1296 Camacho Avenue",
     "beneficiary": "Beneficiary Bank",
     "close": "Close",

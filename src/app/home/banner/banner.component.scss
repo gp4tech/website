@@ -1,4 +1,14 @@
+@import '../../../styles-colors';
 @import '../../../styles-mat-variables';
+
+#layer {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba($primary-color, 0.2);
+  // background-color: rgba(95, 0, 237, 0.4);
+  // background-color: rgba(128, 128, 128, 0.5);
+}
 
 .parallax-container {
   height: 100vh;
@@ -12,10 +22,8 @@
 }
 
 .banner-container {
-  height: 50%;
-
-  @media #{$small-and-down} {
-    height: 100%;
-    text-align: center;
-  }
+  position: relative;
+  height: 100%;
+  text-align: center;
+  z-index: 1;
 }

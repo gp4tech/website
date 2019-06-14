@@ -23,8 +23,9 @@
     "who-did-this": "¿QUIÉN HIZO ESTO?"
   },
   "banner": {
-    "slogan": "Aprende, codifica, comparte",
-    "call-to-action": "Apoyo esto"
+    "slogan": "Girl Power 4 Technology",
+    "description": "GP4Tech es una comunidad que tiene el objetivo de involucrar a más mujeres en el área de la tecnología. Ven a conocernos en nuestro próximo evento: Weekend Coding. ¡Inscríbete ya!",
+    "call-to-action": "Inscribirse"
   },
   "activity-indicator-section": {
     "title": "Indicadores",
@@ -134,7 +135,7 @@
   },
   "donate": {
     "aba-label": "ABA: ",
-    "account-number-label" :"Número de Cuenta: ",
+    "account-number-label": "Número de Cuenta: ",
     "address": "Av. Camacho Esq. Colon # 1296",
     "beneficiary": "Banco del Beneficiario",
     "close": "Cerrar",
@@ -149,6 +150,6 @@
     "swift-code": "Código Swift: BNBOBOLXXXX",
     "swift-code-label": "Código Swift: ",
     "telephone": "Teléfono: (591)-2313232 - 800107272",
-    "title": "Haz una donación" 
+    "title": "Haz una donación"
   }
 }

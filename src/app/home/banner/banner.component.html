@@ -1,25 +1,31 @@
 <div gpTransparentSection class="parallax-container">
+  <span id="layer"></span>
   <div class="banner-container valign-wrapper">
     <div class="container">
       <div class="row">
         <h1 class="white-text">{{ 'banner.slogan' | translate }}</h1>
+        <div class="container">
+          <h6 class="white-text">{{ 'banner.description' | translate }}</h6>
+        </div>
+        <br>
+        <a id="call-to-action" class="white-text" href="#">
+          <svg class="gradient-border" viewBox="0 0 250 100" version="1.1" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <linearGradient x1="0%" y1="100%" x2="100%" y2="0%" id="gradient">
+                <stop class="gradient-border-secondary" offset="0%"></stop>
+                <stop class="gradient-border-primary" offset="100%"></stop>
+              </linearGradient>
+            </defs>
+            <path fill="none" d="M50,95 a45,45 0 0,1 0,-90 h150 a45,45 0 1,1 0,90 h-150" />
+            <path class="icon--plain" fill="url(#gradient)"
+              d="M50,95 a45,45 0 0,1 0,-90 h150 a45,45 0 1,1 0,90 h-150" />
+          </svg>
+          {{ 'banner.call-to-action' | translate }}
+        </a>
       </div>
-      <a id="call-to-action" class="white-text" href="#">
-        <svg class="gradient-border" viewBox="0 0 250 100" version="1.1" xmlns="http://www.w3.org/2000/svg">
-          <defs>
-            <linearGradient x1="0%" y1="100%" x2="100%" y2="0%" id="gradient">
-              <stop class="gradient-border-secondary" offset="0%"></stop>
-              <stop class="gradient-border-primary" offset="100%"></stop>
-            </linearGradient>
-          </defs>
-          <path fill="none" d="M50,95 a45,45 0 0,1 0,-90 h150 a45,45 0 1,1 0,90 h-150" />
-          <path class="icon--plain" fill="url(#gradient)" d="M50,95 a45,45 0 0,1 0,-90 h150 a45,45 0 1,1 0,90 h-150" />
-        </svg>
-        {{ 'banner.call-to-action' | translate }}
-      </a>
     </div>
   </div>
   <div gpParallax class="parallax">
-    <img src="assets/images/banner.jpg" alt="GP4Tech">
+    <img src="assets/images/girls.JPG" alt="GP4Tech">
   </div>
 </div>
