@@ -11,7 +11,7 @@
   },
   "footer": {
     "social-networks": "Social Networks",
-    "donations": "Donations"
+    "who-did-this": "Who Did This?"
   },
   "links": {
     "about": "About Us",
@@ -149,6 +149,7 @@
     "swift-code": "Swift Code: BNBOBOLXXXX",
     "swift-code-label": "Swift Code: ",
     "telephone": "Telephone: (591)-2313232 - 800107272",
-    "title": "Make a Donation"
+    "title": "Make a Donation",
+    "navbar-title": "Donate"
   }
 }
