@@ -12,17 +12,18 @@
           </div>
         </div>
       </div>
-      <div class="col s12 m4 social-links center-align">
+      <div class="col s12 m4 center-align">
         <p>{{ 'footer.social-networks' | translate}}</p>
         <div class="row">
-          <a *ngFor="let socialLink of socialLinks" target="_blank" rel="noopener noreferrer"
-            class="btn-floating grey darken-2" [href]="socialLink.link">
-            <i [class]="'fab ' + socialLink.faIcon"></i>
-          </a>
+          <div class="social-links" *ngFor="let socialLink of socialLinks">
+            <a [href]="socialLink.link" target="_blank" rel="noopener noreferrer">
+              <img class="responsive-img" [src]="'/assets/images/' + socialLink.icon">
+            </a>
+          </div>
         </div>
       </div>
       <div class="col s12 m3 donations-links center-align">
-        <p> {{ 'footer.donations' | translate }} </p>
+        <p> {{ 'footer.who-did-this' | translate }} </p>
         <div class="row">
           <a [routerLink]="[donation.link]"
             class="btn-floating grey darken-2" [href]="donation.link">
