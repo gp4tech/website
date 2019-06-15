@@ -10,6 +10,12 @@
           <li *ngFor="let route of appRoutes" [class.selected]="route === selectedRoute" (click)="onSelect(route)">
             <a [routerLink]="route.name">{{ route.i18n | translate | uppercase }}</a>
           </li>
+          <li>
+            <a class="waves-effect waves-light btn" [routerLink]="[ '/donations' ]">
+              <i class="fa fa-donate donate-icon"></i>
+              {{ 'donate.navbar-title' | translate }}
+            </a>
+          </li>
         </ul>
       </div>
     </div>
