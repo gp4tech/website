@@ -8,5 +8,7 @@ import { Component, Input } from '@angular/core';
 export class PageBannerComponent {
   @Input() title: string;
   @Input() description: string;
+  @Input() linkText: string;
+  @Input() link: string;
   @Input() picture = 'assets/images/GP4Tech-Team.jpg';
 }

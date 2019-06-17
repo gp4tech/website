@@ -4,7 +4,7 @@
       <div class="col s12 m3 sponsors-links center-align">
         <p>{{ 'sponsors.title' | translate }}</p>
         <div class="row">
-          <div class="col s6" [ngClass]="{ 'right-separator': i % 2 === 0, 'left-separator': i%2 !== 0 }"
+          <div class="col s6" [ngClass]="{ 'right-separator': i % 2 === 0, 'left-separator': i % 2 !== 0 }"
             *ngFor="let sponsor of sponsors; let i = index;">
             <a [href]="[sponsor.link]" target="_blank" rel="noopener noreferrer">
               <img class="responsive-img" [src]="sponsor.logoUrl" [alt]="sponsor.i18n | translate">
