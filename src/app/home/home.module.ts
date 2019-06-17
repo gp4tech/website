@@ -14,6 +14,7 @@ import { TestimonialsService } from './testimonials/testimonials.service';
 import { SponsorsComponent } from './sponsors/sponsors.component';
 import { SponsorsService } from './sponsors/sponsors.service';
 import { SharedModule } from '../shared/shared.module';
+import { CallToActionModule } from '../shared/components/call-to-action/call-to-action.module';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { SharedModule } from '../shared/shared.module';
     RouterModule,
     SharedModule,
     GetInvolvedModule,
-    BlogModule
+    BlogModule,
+    CallToActionModule
   ],
   providers: [
     ActivityIndicatorsService,

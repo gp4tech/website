@@ -8,6 +8,7 @@ import {
 } from '@ngx-translate/core';
 
 import { BannerComponent } from './banner.component';
+import { CallToActionComponent } from '../../shared/components/call-to-action/call-to-action.component';
 
 describe('BannerComponent', () => {
   let component: BannerComponent;
@@ -15,9 +16,7 @@ describe('BannerComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [
-        BannerComponent
-      ],
+      declarations: [BannerComponent, CallToActionComponent],
       imports: [
         RouterTestingModule,
         TranslateModule.forRoot({
