@@ -10,7 +10,7 @@ import { CollapsibleDirective } from './directives/collapsible/collapsible.direc
 import { TransparentSectionDirective } from './directives/transparent-section/transparent-section.directive';
 import { CarouselDirective } from './directives/carousel/carousel.directive';
 import { PageBannerComponent } from './components/page-banner/page-banner.component';
-import { CallToActionComponent } from './components/call-to-action/call-to-action.component';
+import { CallToActionModule } from './components/call-to-action/call-to-action.module';
 
 @NgModule({
   declarations: [
@@ -20,10 +20,9 @@ import { CallToActionComponent } from './components/call-to-action/call-to-actio
     CollapsibleDirective,
     TransparentSectionDirective,
     CarouselDirective,
-    PageBannerComponent,
-    CallToActionComponent
+    PageBannerComponent
   ],
-  imports: [CommonModule, TranslateModule],
+  imports: [CommonModule, TranslateModule, CallToActionModule],
   exports: [
     TranslateModule,
     ParallaxDirective,
@@ -32,8 +31,7 @@ import { CallToActionComponent } from './components/call-to-action/call-to-actio
     CollapsibleDirective,
     TransparentSectionDirective,
     CarouselDirective,
-    PageBannerComponent,
-    CallToActionComponent
+    PageBannerComponent
   ]
 })
 export class SharedModule {}
