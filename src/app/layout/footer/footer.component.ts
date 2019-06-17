@@ -26,38 +26,25 @@ export class FooterComponent {
 
   socialLinks = [
     {
-      faIcon: 'fa-instagram',
+      icon: 'instagram.png',
       i18n: '',
       link: 'https://www.instagram.com/gp4tech',
     },
     {
-      faIcon: 'fa-facebook',
+      icon: 'facebook.png',
       i18n: '',
       link: 'https://www.facebook.com/GP4TechJala',
     },
     {
-      faIcon: 'fa-twitter',
+      icon: 'twitter.png',
       i18n: '',
       link: 'https://twitter.com/GirlPowerJala',
     }
   ];
 
   donation = {
-      faIcon: 'fa-donate',
-      i18n: 'links.donate',
-      link: 'donations',
-  };
-
-  infoLinks = [
-    {
-      faIcon: '',
+      faIcon: 'fa-hammer',
       i18n: 'links.who-did-this',
       link: 'who-did-this',
-    },
-    {
-      faIcon: '',
-      i18n: 'links.contact-us',
-      link: 'contact-us',
-    },
-  ];
+  };
 }
