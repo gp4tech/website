@@ -1,12 +1,9 @@
+<gp-page-banner [title]="'who-did-this.title' | translate" [description]="'who-did-this.description' | translate">
+</gp-page-banner>
 <div class="team-container">
   <h4 class="center-align">
     ・{{ 'who-did-this.title' | translate | uppercase }}・
   </h4>
-  <div class="parallax-container">
-    <div gpParallax class="parallax">
-      <img src="assets/images/GP4Tech-Team.jpg">
-    </div>
-  </div>
   <div class="container all">
     <br>
     <div *ngFor="let team of teams">
@@ -22,9 +19,7 @@
         <div *ngIf="team == who.team" class="row padding-left-team-row">
           <div class="col s12 m3 center-on-small-only">
             <div class="image-container-members center-align">
-              <img [src]="who.pic"
-                    [alt]="who.name"
-                    class="circular responsive-member">
+              <img [src]="who.pic" [alt]="who.name" class="circular responsive-member">
             </div>
           </div>
           <div class="col s12 m9 padding-bio">
@@ -39,26 +34,17 @@
             </p>
             <div>
               <span>
-                <a target="_blank"
-                   rel="noopener noreferrer"
-                   class="btn-floating grey darken-2" 
-                   [href]="who.github">
+                <a target="_blank" rel="noopener noreferrer" class="btn-floating grey darken-2" [href]="who.github">
                   <i class="fab fa-github"></i>
                 </a>
               </span>
               <span class="margin-left-social-button">
-                <a target="_blank"
-                   rel="noopener noreferrer"
-                   class="btn-floating grey darken-2" 
-                   [href]="who.linkedin">
+                <a target="_blank" rel="noopener noreferrer" class="btn-floating grey darken-2" [href]="who.linkedin">
                   <i class="fab fa-linkedin"></i>
                 </a>
               </span>
               <span class="margin-left-social-button">
-                <a target="_blank"
-                    rel="noopener noreferrer"
-                    class="btn-floating grey darken-2" 
-                    [href]="who.twitter">
+                <a target="_blank" rel="noopener noreferrer" class="btn-floating grey darken-2" [href]="who.twitter">
                   <i class="fab fa-twitter"></i>
                 </a>
               </span>

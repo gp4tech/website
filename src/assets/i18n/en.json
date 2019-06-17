@@ -11,19 +11,21 @@
   },
   "footer": {
     "social-networks": "Social Networks",
-    "donations": "Donations"
+    "who-did-this": "Who Did This?"
   },
   "links": {
     "about": "About Us",
     "blog": "Blog",
     "contact-us": "CONTACT US",
+    "donate": "Donate",
     "events": "Events",
     "home": "Home",
     "who-did-this": "WHO DID THIS?"
   },
   "banner": {
-    "slogan": "Learn, code, share",
-    "call-to-action": "I support this"
+    "slogan": "Girl Power 4 Technology",
+    "description": "GP4Tech es una comunidad que tiene el objetivo de involucrar a más mujeres en el área de la tecnología. Ven a conocernos en nuestro próximo evento: Weekend Coding. ¡Inscríbete ya!",
+    "call-to-action": "Register"
   },
   "activity-indicator-section": {
     "title": "Indicators",
@@ -73,7 +75,8 @@
   },
   "about-us": {
     "who": {
-      "title": "Who are we?"
+      "title": "Who are we?",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
     },
     "members": {
       "title": "Members"
@@ -81,6 +84,7 @@
   },
   "who-did-this": {
     "title": "Who did this?",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
     "teams": {
       "dev": "Dev Team",
       "qa": "QA Team",
@@ -99,6 +103,7 @@
   },
   "contact-us": {
     "title": "Contact us",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
     "gpEmail": "GP4Tech@jalasoft.com",
     "email-title": "Email us",
     "company-name": "Jalasoft",
@@ -129,6 +134,27 @@
   },
   "events": {
     "title": "Events and Activities",
-    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque a felis tortor. Etiam laoreet felis mi, et sagittis lectus venenatis quis. Aliquam sit amet nisl molestie, varius mi ac, accumsan tortor. Mauris iaculis viverra dapibus. In hac habitasse platea dictumst. Nullam dolor justo, porta at egestas sollicitudin, dignissim eget erat. In efficitur est sit amet porta consectetur. Sed venenatis finibus hendrerit. In semper nunc et urna pharetra interdum. Proin vestibulum iaculis nulla nec vehicula. Aenean consectetur dapibus tellus, id tristique massa porta sed. Sed sed tortor id arcu ornare semper eget vitae dolor. Morbi aliquam congue ex in rhoncus. Aenean malesuada lobortis tortor, vitae iaculis neque suscipit in. Nulla malesuada blandit urna eget bibendum."
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque a felis tortor. Etiam laoreet felis mi, et sagittis lectus venenatis quis. Aliquam sit amet nisl molestie, varius mi ac, accumsan tortor. Mauris iaculis viverra dapibus. In hac habitasse platea dictumst. Nullam dolor justo, porta at egestas sollicitudin, dignissim eget erat. In efficitur est sit amet porta consectetur. Sed venenatis finibus hendrerit. In semper nunc et urna pharetra interdum. Proin vestibulum iaculis nulla nec vehicula. Aenean consectetur dapibus tellus, id tristique massa porta sed. Sed sed tortor id arcu ornare semper eget vitae dolor. Morbi aliquam congue ex in rhoncus.",
+    "call-to-action": "Past Events"
+  },
+  "donate": {
+    "aba-label": "ABA: ",
+    "account-number-label": "Account Number: ",
+    "address": "1296 Camacho Avenue",
+    "beneficiary": "Beneficiary Bank",
+    "close": "Close",
+    "city": "La Paz - Bolivia",
+    "dollars-usa": "Dollars (USA)",
+    "dollars-germany": "Dollars (Germany)",
+    "euros": "Euros",
+    "note1": "*** Take into account the following characteristics for the reception of payments through the BANCO DO BRASIL:",
+    "note2": "1. Receipt of business-to-business or business-to-person payments of the COMMERCIAL type.",
+    "note3": "2. No payments and/or person-to-person transfers shall be made for any reason.",
+    "subtitle": "Thank you for considering making a donation to GP4Tech.",
+    "swift-code": "Swift Code: BNBOBOLXXXX",
+    "swift-code-label": "Swift Code: ",
+    "telephone": "Telephone: (591)-2313232 - 800107272",
+    "title": "Make a Donation",
+    "navbar-title": "Donate"
   }
 }

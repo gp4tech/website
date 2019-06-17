@@ -8,7 +8,8 @@ export const FirebaseConfig = {
   databaseURL: '',
   projectId: '',
   storageBucket: '',
-  messagingSenderId: ''
+  messagingSenderId: '',
+  appId: ''
 };
 
 export const GoogleMapsKey = {

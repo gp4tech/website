@@ -1,21 +1,22 @@
-import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
 
-import { NavbarComponent } from './navbar/navbar.component';
 import { FooterComponent } from './footer/footer.component';
 import { LanguageButtonComponent } from './language-button/language-button.component';
-import { SidenavDirective } from './navbar/sidenav.directive';
+import { NavbarComponent } from './navbar/navbar.component';
 import { SharedModule } from '../shared/shared.module';
+import { SidenavDirective } from './navbar/sidenav.directive';
+
 
 @NgModule({
   declarations: [
-    NavbarComponent,
     FooterComponent,
     LanguageButtonComponent,
+    NavbarComponent,
     SidenavDirective
   ],
-  exports: [NavbarComponent, FooterComponent],
-  imports: [CommonModule, SharedModule, RouterModule]
+  exports: [FooterComponent, NavbarComponent],
+  imports: [CommonModule, RouterModule, SharedModule]
 })
 export class LayoutModule {}
