@@ -21,6 +21,7 @@ import { ArticlesService } from '../blog/articles.service';
 import { SponsorsService } from './sponsors/sponsors.service';
 import { TopArticleComponent } from '../blog/top-articles/top-article/top-article.component';
 import { TestimonialsService } from './testimonials/testimonials.service';
+import { SharedModule } from '../shared/shared.module';
 
 const activityIndicatorsServiceMock = {
   getAll: () => of([])
@@ -60,6 +61,7 @@ describe('HomeComponent', () => {
       ],
       imports: [
         RouterTestingModule,
+        SharedModule,
         GetInvolvedModule,
         TranslateModule.forRoot({
           loader: { provide: TranslateLoader, useClass: TranslateFakeLoader }

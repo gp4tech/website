@@ -11,6 +11,8 @@ import { AboutUsComponent } from './about-us.component';
 import { MembersComponent } from './members/members.component';
 import { MembersService } from './members/members.service';
 import { LanguageService } from '../core/language.service';
+import { PageBannerComponent } from '../shared/components/page-banner/page-banner.component';
+import { CallToActionComponent } from '../shared/components/call-to-action/call-to-action.component';
 
 const membersServiceMock = {
   getAll: () => of([]),
@@ -23,7 +25,12 @@ describe('AboutUsComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [AboutUsComponent, MembersComponent],
+      declarations: [
+        AboutUsComponent,
+        MembersComponent,
+        PageBannerComponent,
+        CallToActionComponent
+      ],
       imports: [
         TranslateModule.forRoot({
           loader: { provide: TranslateLoader, useClass: TranslateFakeLoader }
