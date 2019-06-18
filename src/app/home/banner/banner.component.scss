@@ -6,8 +6,9 @@
   width: 100%;
   height: 100%;
   // TODO 06162019: Define layer color if it will be used
-  // background-color: rgba(0, 0, 0, 0.6);
-  background-color: rgba($primary-color, 0.2);
+  // background-color: rgba($primary-color, 0.2);
+  // background-color: rgba(169, 169, 169, 0.2);
+  background-color: rgba(105, 105, 105, 0.4);
 }
 
 .parallax-container {
@@ -17,6 +18,16 @@
     @media #{$small-and-down} {
       left: 0px;
     }
+  }
+
+  #girl-power {
+    font-family: 'BebasNeue', sans-serif;
+    color: $secondary-color;
+  }
+
+  #technology {
+    font-family: 'Harrison', sans-serif;
+    color: $primary-color;
   }
 }
 
