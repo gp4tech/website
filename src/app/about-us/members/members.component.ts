@@ -13,6 +13,7 @@ import { LanguageService } from '../../core/language.service';
 })
 export class MembersComponent implements OnInit {
   members$: Observable<Member[]>;
+  selectedMemberId: string = null;
 
   constructor(
     public language: LanguageService,
@@ -21,5 +22,14 @@ export class MembersComponent implements OnInit {
 
   ngOnInit() {
     this.members$ = this.membersService.getAllMembers();
+  }
+
+  openMemberInfo(memberInfo) {
+    if (memberInfo.id === this.selectedMemberId) {
+      this.selectedMemberId = null;
+      return;
+    }
+
+    this.selectedMemberId = memberInfo.id;
   }
 }
