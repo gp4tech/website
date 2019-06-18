@@ -6,7 +6,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 ## Create keys file
 
-Run `env-keys-config:create-keys` and add your keys to the file: **src/environments/keys-config.ts**.
+Run `npm run env-keys-config:create-keys` and add your keys to the file: **src/environments/keys-config.ts**.
 
 ## Development server
 

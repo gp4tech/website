@@ -1,0 +1,33 @@
+@import '../../../../styles-mat-variables';
+
+.banner-container,
+.banner-row,
+.banner-info {
+  height: 100%;
+}
+
+.banner-row {
+  width: 100%;
+  margin-bottom: 0px;
+
+  .banner-info {
+    background-color: rgba(0, 0, 0, 0.7);
+    padding-top: 56px;
+
+    @media #{$medium-and-up} {
+      padding-top: 64px;
+    }
+
+    .banner-description {
+      overflow: hidden;
+      min-height: 50%;
+      max-height: 60%;
+    }
+
+    .call-to-action-container {
+      width: 100%;
+      margin-top: 30px;
+      text-align: center;
+    }
+  }
+}

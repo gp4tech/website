@@ -27,6 +27,11 @@ const routes: Routes = [
     path: AppBarRoutes.donate,
     loadChildren: './donate/donate.module#DonateModule'
   },
+  {
+    path: '**',
+    // TODO 06172019: Create a 404 component
+    component: HomeComponent
+  }
 ];
 
 @NgModule({
