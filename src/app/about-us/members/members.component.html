@@ -7,7 +7,7 @@
       <div class="image-wrapper" [ngClass]="{'not-opened': selectedMemberId !== member.id && selectedMemberId !== null}">
         <img class="responsive-img" [src]="member.picture" [alt]="member.displayName">
       </div>
-      <div class="member-name  scale-transition"
+      <div class="member-name scale-transition"
         [ngClass]="{'scale-out': member.id === selectedMemberId}">
         <span [ngClass]="{'pair-position': i % 2 === 0}">
           {{ member.displayName }}
