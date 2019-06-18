@@ -2,7 +2,7 @@
   {{ 'about-us.members.title' | translate }}
 </h4>
 <div class="row">
-  <div class="col s12 m3 member-card-wrapper center-align" *ngFor="let member of members$ | async; let i =index ">
+  <div class="col s12 m3 member-card-wrapper center-align" *ngFor="let member of members$ | async; let i = index ">
     <div class="member-card" (click)="openMemberInfo(member, $event)">
       <div class="image-wrapper" [ngClass]="{'not-opened': selectedMemberId !== member.id && selectedMemberId !== null}">
         <img class="responsive-img" [src]="member.picture" [alt]="member.displayName">
