@@ -1,12 +1,48 @@
-<h4 class="center-align">
-  ・{{ 'about-us.members.title' | translate | uppercase }}・
+<h4 class="section-title">
+  {{ 'about-us.members.title' | translate }}
 </h4>
+<p>{{selectedMemberId}}</p>
 <div class="row">
-  <div class="col s12 m6 member-card valign-wrapper" *ngFor="let member of members$ | async">
-    <div class="member-sub-card member-picture">
-      <img [src]="member.picture" [alt]="member.displayName">
+  <div class="col s12 m3 member-card-wrapper center-align" *ngFor="let member of members$ | async; let i =index ">
+    <div class="member-card" (click)="openMemberInfo(member, $event)">
+      <div class="image-wrapper" [ngClass]="{'not-opened': selectedMemberId !== member.id && selectedMemberId !== null}">
+        <img class="responsive-img" [src]="member.picture" [alt]="member.displayName">
+      </div>
+      <div class="member-name  scale-transition"
+        [ngClass]="{'scale-out': member.id === selectedMemberId}">
+        <span [ngClass]="{'pair-position': i % 2 === 0}">
+          {{ member.displayName }}
+          <i class="fas fa-sort-down"></i>
+        </span>
+      </div>
+      <div class="member-info-wrapper scale-transition"
+        [ngClass]="{ 'scale-out': member.id !== selectedMemberId, 'opened': member.id === selectedMemberId }">
+        <div class="member-info">
+          <span class="member-info-name" [ngClass]="{'pair-position': i % 2 === 0}">
+            {{ member.displayName }}
+            <i class="fas fa-sort-up"></i>
+          </span><br/>
+          {{ language.currentLanguage === 'es' ? member.careerSp : member.careerEn }}<br/>
+          {{ member.jalaRole }}<br/>
+          {{ member.mainTeam }}
+          <div class="icons">
+            <a *ngIf="member.linkedin" [href]="'https://www.linkedin.com/in/' + member.linkedin" target="_blank"
+              rel="noopener noreferrer">
+              <i class="fab fa-2x fa-linkedin"></i>
+            </a>
+            <a *ngIf="member.twitter" [href]="'https://twitter.com/' + member.twitter" target="_blank"
+              rel="noopener noreferrer">
+              <i class="fab fa-2x fa-twitter"></i>
+            </a>
+            <a *ngIf="member.facebook" [href]="'https://www.facebook.com/' + member.facebook" target="_blank"
+              rel="noopener noreferrer">
+              <i class="fab fa-2x fa-facebook"></i>
+            </a>
+          </div>
+        </div>
+      </div>
     </div>
-    <div class="member-sub-card member-info">
+    <!-- <div class="member-sub-card member-info">
       <p>{{ member.displayName }}</p>
       <p>{{ language.currentLanguage === 'es' ? member.careerSp : member.careerEn }}</p>
       <p>{{ member.jalaRole }}</p>
@@ -25,6 +61,6 @@
           <i class="fab fa-2x fa-facebook"></i>
         </a>
       </div>
-    </div>
+    </div> -->
   </div>
 </div>
