@@ -25,13 +25,11 @@ export class MembersComponent implements OnInit {
   }
 
   openMemberInfo(memberInfo) {
-    console.log(arguments)
     if (memberInfo.id === this.selectedMemberId) {
       this.selectedMemberId = null;
       return;
     }
 
     this.selectedMemberId = memberInfo.id;
-    console.log(memberInfo)
   }
 }

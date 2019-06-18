@@ -1,7 +1,6 @@
 <h4 class="section-title">
   {{ 'about-us.members.title' | translate }}
 </h4>
-<p>{{selectedMemberId}}</p>
 <div class="row">
   <div class="col s12 m3 member-card-wrapper center-align" *ngFor="let member of members$ | async; let i =index ">
     <div class="member-card" (click)="openMemberInfo(member, $event)">
@@ -25,7 +24,7 @@
           {{ language.currentLanguage === 'es' ? member.careerSp : member.careerEn }}<br/>
           {{ member.jalaRole }}<br/>
           {{ member.mainTeam }}
-          <div class="icons">
+          <div class="icons" [ngClass]="{'pair-position': i % 2 === 0}">
             <a *ngIf="member.linkedin" [href]="'https://www.linkedin.com/in/' + member.linkedin" target="_blank"
               rel="noopener noreferrer">
               <i class="fab fa-2x fa-linkedin"></i>
@@ -42,25 +41,5 @@
         </div>
       </div>
     </div>
-    <!-- <div class="member-sub-card member-info">
-      <p>{{ member.displayName }}</p>
-      <p>{{ language.currentLanguage === 'es' ? member.careerSp : member.careerEn }}</p>
-      <p>{{ member.jalaRole }}</p>
-      <p>{{ member.mainTeam }}</p>
-      <div class="icons">
-        <a *ngIf="member.linkedin" [href]="'https://www.linkedin.com/in/' + member.linkedin" target="_blank"
-          rel="noopener noreferrer">
-          <i class="fab fa-2x fa-linkedin"></i>
-        </a>
-        <a *ngIf="member.twitter" [href]="'https://twitter.com/' + member.twitter" target="_blank"
-          rel="noopener noreferrer">
-          <i class="fab fa-2x fa-twitter"></i>
-        </a>
-        <a *ngIf="member.facebook" [href]="'https://www.facebook.com/' + member.facebook" target="_blank"
-          rel="noopener noreferrer">
-          <i class="fab fa-2x fa-facebook"></i>
-        </a>
-      </div>
-    </div> -->
   </div>
 </div>
