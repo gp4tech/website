@@ -23,12 +23,15 @@
           </div>
         </div>
       </div>
-      <div class="col s12 m3 donations-links center-align">
+      <div class="col s12 m3 center-align">
         <p> {{ 'who-did-this.title' | translate }} </p>
         <div class="row">
-          <a [routerLink]="[donation.link]" class="btn-floating grey darken-2" [href]="donation.link">
-            <i [class]="'fas ' + donation.faIcon"></i>
-          </a>
+          <div class="who-did-this-link">
+            <a [routerLink]="whoDidThis.link" class="btn-floating grey darken-2">
+              <img class="responsive-img" [src]="'/assets/images/' + whoDidThis.icon"
+                [alt]="whoDidThis.i18n | translate">
+            </a>
+          </div>
         </div>
       </div>
       <div class="col s12 m2 donations-links center-align">

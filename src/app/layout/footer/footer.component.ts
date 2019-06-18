@@ -42,8 +42,8 @@ export class FooterComponent {
     }
   ];
 
-  donation = {
-      faIcon: 'fa-hammer',
+  whoDidThis = {
+      icon: 'who-did-this.png',
       i18n: 'links.who-did-this',
       link: 'who-did-this',
   };
