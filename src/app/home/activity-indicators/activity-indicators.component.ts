@@ -4,6 +4,7 @@ import { Observable } from 'rxjs';
 
 import { ActivityIndicatorsService } from './activity-indicators.service';
 import { ActivityIndicator } from '../../shared/models/activity-indicator.model';
+import { LanguageService } from '../../core/language.service';
 
 @Component({
   selector: 'gp-activity-indicators',
@@ -13,7 +14,10 @@ import { ActivityIndicator } from '../../shared/models/activity-indicator.model'
 export class ActivityIndicatorsComponent implements OnInit {
   activityIndicators$: Observable<ActivityIndicator[]>;
 
-  constructor(private activityIndicatorsService: ActivityIndicatorsService) {}
+  constructor(
+    private activityIndicatorsService: ActivityIndicatorsService,
+    public languageService: LanguageService
+  ) {}
 
   ngOnInit() {
     this.activityIndicators$ = this.activityIndicatorsService.getAll();

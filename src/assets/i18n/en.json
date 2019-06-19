@@ -30,16 +30,7 @@
     "call-to-action": "Register"
   },
   "activity-indicator-section": {
-    "title": "Indicators",
-    "labels": {
-      "trained-students": "Trained Students",
-      "hours-of-training": "Hours of Training",
-      "hackaton": "Hackaton",
-      "weekend-coding": "Weekend Coding",
-      "supporters": "Supporters",
-      "members": "Members",
-      "workshops": "Workshops"
-    }
+    "title": "Indicators"
   },
   "sponsors": {
     "title": "Powered By"
