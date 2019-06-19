@@ -9,6 +9,7 @@ import { of } from 'rxjs';
 
 import { ActivityIndicatorsComponent } from './activity-indicators.component';
 import { ActivityIndicatorsService } from './activity-indicators.service';
+import { LanguageService } from 'src/app/core/language.service';
 
 const activityIndicatorsServiceMock = {
   getAll: () => of([])
@@ -27,7 +28,8 @@ describe('ActivityIndicatorsComponent', () => {
         })
       ],
       providers: [
-        { provide: ActivityIndicatorsService, useValue: activityIndicatorsServiceMock }
+        { provide: ActivityIndicatorsService, useValue: activityIndicatorsServiceMock },
+        LanguageService
       ]
     }).compileComponents();
   }));
