@@ -1,9 +1,10 @@
-export interface WebTeamMembers {
+export interface WebTeamMember {
   id: string;
   name: string;
   bioEn: string;
   bioSp: string;
-  pic: string;
+  picture: string;
+  role: string;
   github: string;
   linkedin: string;
   twitter: string;

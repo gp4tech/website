@@ -14,6 +14,7 @@ import { Event } from '../shared/models/event.model';
 export class EventsComponent implements OnInit {
   events$: Observable<Event[]>;
   languages = { ES: 'es', EN: 'en' };
+  link = 'https://photos.app.goo.gl/h31gWfSy9YRfTgGq7';
 
   constructor(private eventsService: EventsService,
               public language: LanguageService) {}

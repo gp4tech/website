@@ -1,3 +1,9 @@
+@import '../../styles-colors';
+
 agm-map {
   height: 400px;
+}
+
+.secondary-color {
+  color: $secondary-color;
 }

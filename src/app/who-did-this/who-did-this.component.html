@@ -1,53 +1,40 @@
 <gp-page-banner [title]="'who-did-this.title' | translate" [description]="'who-did-this.description' | translate">
 </gp-page-banner>
-<div class="team-container">
-  <h4 class="center-align">
-    ・{{ 'who-did-this.title' | translate | uppercase }}・
-  </h4>
-  <div class="container all">
-    <br>
-    <div *ngFor="let team of teams">
+<div class="container">
+  <div class="section-space">
+    <div *ngFor="let role of roles">
       <div class="row">
-        <div class="col s11 offset-s1">
-          <h4 class="center-on-small-only">
-            {{ 'who-did-this.teams.' + team | translate }}
+        <div class="col s12 m11 offset-m1">
+          <h4>
+            {{ 'who-did-this.teams.' + role | translate }}
           </h4>
           <div class="divider"></div>
         </div>
       </div>
-      <ng-container *ngFor="let who of webTeamMembers$ | async">
-        <div *ngIf="team == who.team" class="row padding-left-team-row">
-          <div class="col s12 m3 center-on-small-only">
-            <div class="image-container-members center-align">
-              <img [src]="who.pic" [alt]="who.name" class="circular responsive-member">
+      <ng-container *ngFor="let member of webTeamMembers$ | async">
+        <div *ngIf="role === member.role" class="row">
+          <div class="col s12 m3">
+            <div class="member-image-container center-align">
+              <img [src]="member.picture" [alt]="member.name" class="circular">
             </div>
           </div>
-          <div class="col s12 m9 padding-bio">
+          <div class="col s12 m9">
             <h4>
-              {{ who.name }}
+              {{ member.name }}
             </h4>
-            <p *ngIf="language.currentLanguage === 'en'">
-              {{ who.bioEn }}
+            <p>
+              {{ language.currentLanguage === 'en' ? member.bioEn : member.bioSp }}
             </p>
-            <p *ngIf="language.currentLanguage === 'es'">
-              {{ who.bioSp }}
-            </p>
-            <div>
-              <span>
-                <a target="_blank" rel="noopener noreferrer" class="btn-floating grey darken-2" [href]="who.github">
-                  <i class="fab fa-github"></i>
-                </a>
-              </span>
-              <span class="margin-left-social-button">
-                <a target="_blank" rel="noopener noreferrer" class="btn-floating grey darken-2" [href]="who.linkedin">
-                  <i class="fab fa-linkedin"></i>
-                </a>
-              </span>
-              <span class="margin-left-social-button">
-                <a target="_blank" rel="noopener noreferrer" class="btn-floating grey darken-2" [href]="who.twitter">
-                  <i class="fab fa-twitter"></i>
-                </a>
-              </span>
+            <div class="social-buttons">
+              <a *ngIf="member.github" target="_blank" rel="noopener noreferrer" [href]="member.github">
+                <i class="fab fa-2x fa-github"></i>
+              </a>
+              <a *ngIf="member.linkedin" target="_blank" rel="noopener noreferrer" [href]="member.linkedin">
+                <i class="fab fa-2x fa-linkedin"></i>
+              </a>
+              <a *ngIf="member.twitter" target="_blank" rel="noopener noreferrer" [href]="member.twitter">
+                <i class="fab fa-2x fa-twitter"></i>
+              </a>
             </div>
           </div>
         </div>
