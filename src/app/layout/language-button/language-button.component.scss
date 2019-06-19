@@ -1,3 +1,5 @@
+@import '../../../styles-colors';
+
 a {
   color: inherit;
   font-family: 'BebasNeue';
@@ -6,5 +8,5 @@ a {
 
 .selected-language {
   text-decoration: underline;
-  color: #E7184F;
+  color: $primary-color;
 }

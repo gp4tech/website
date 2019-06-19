@@ -23,8 +23,10 @@
     "who-did-this": "WHO DID THIS?"
   },
   "banner": {
-    "slogan": "Girl Power 4 Technology",
-    "description": "GP4Tech is a community that aims to involve more women in the area of technology. Come and meet us at our next event: Weekend Coding.",
+    "slogan-line-1": "GIRL POWER FOR",
+    "slogan-line-2": "TECHNOLOGY",
+    "description-line-1": "GP4Tech is a community that aims to involve more women in the area of technology.",
+    "description-line-2": "Come and meet us at our next event: Weekend Coding.",
     "call-to-action": "Register"
   },
   "activity-indicator-section": {
