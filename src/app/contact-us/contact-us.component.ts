@@ -10,6 +10,7 @@ import { ContactInfo } from '../shared/models/contact-info.constant';
   styleUrls: ['./contact-us.component.scss']
 })
 export class ContactUsComponent implements OnInit {
+  displayEmailSection = false;
   email = this.initializeEmail();
   latitude = ContactInfo.companyAddress.latitude;
   longitude = ContactInfo.companyAddress.longitude;

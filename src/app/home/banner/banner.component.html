@@ -1,17 +1,20 @@
 <div gpTransparentSection class="parallax-container">
-  <!-- TODO 06162019: Define if the home banner will have a color layer -->
   <span id="layer"></span>
   <div class="banner-container valign-wrapper container">
     <div class="row">
-      <h1 class="white-text">{{ 'banner.slogan' | translate }}</h1>
+      <h1>
+        <span id="slogan-line-1" class="banner-text">{{ 'banner.slogan-line-1' | translate }} </span>
+        <span id="slogan-line-2" class="banner-text">{{ 'banner.slogan-line-2' | translate }}</span>
+      </h1>
       <div class="container">
-        <h5 class="white-text">{{ 'banner.description' | translate }}</h5>
+        <h5 class="white-text banner-text">{{ 'banner.description-line-1' | translate }}</h5>
+        <h5 class="white-text banner-text">{{ 'banner.description-line-2' | translate }}</h5>
       </div>
       <br>
       <gp-call-to-action [text]="'banner.call-to-action' | translate"></gp-call-to-action>
     </div>
   </div>
   <div gpParallax class="parallax">
-    <img src="assets/images/girls.JPG" alt="GP4Tech">
+    <img src="assets/images/banner.png" alt="GP4Tech">
   </div>
 </div>

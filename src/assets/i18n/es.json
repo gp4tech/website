@@ -11,7 +11,7 @@
   },
   "footer": {
     "social-networks": "Redes Sociales",
-    "who-did-this": "Quién Hizo Esto?"
+    "who-did-this": "¿Quién Hizo Esto?"
   },
   "links": {
     "about": "Sobre Nosotras",
@@ -23,8 +23,10 @@
     "who-did-this": "¿QUIÉN HIZO ESTO?"
   },
   "banner": {
-    "slogan": "Girl Power 4 Technology",
-    "description": "GP4Tech es una comunidad que tiene el objetivo de involucrar a más mujeres en el área de la tecnología. Ven a conocernos en nuestro próximo evento: Weekend Coding. ¡Inscríbete ya!",
+    "slogan-line-1": "GIRL POWER FOR",
+    "slogan-line-2": "TECHNOLOGY",
+    "description-line-1": "GP4Tech es una comunidad que tiene el objetivo de involucrar a más mujeres en el área de la tecnología.",
+    "description-line-2": "Ven a conocernos en nuestro próximo evento: Weekend Coding.",
     "call-to-action": "Inscribirse"
   },
   "activity-indicator-section": {
@@ -86,10 +88,10 @@
     "title": "¿Quién hizo esto?",
     "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
     "teams": {
-      "dev": "Equipo de Desarrolladores",
-      "qa": "Equipo de Control de Calidad",
+      "dev": "Desarrolladores de Software",
+      "qa": "Ingenieros de Calidad",
       "po": "Dueños del Producto",
-      "designers": "Diseñadores"
+      "designer": "Diseñadores"
     }
   },
   "blog": {
