@@ -30,16 +30,7 @@
     "call-to-action": "Register"
   },
   "activity-indicator-section": {
-    "title": "Indicators",
-    "labels": {
-      "trained-students": "Trained Students",
-      "hours-of-training": "Hours of Training",
-      "hackaton": "Hackaton",
-      "weekend-coding": "Weekend Coding",
-      "supporters": "Supporters",
-      "members": "Members",
-      "workshops": "Workshops"
-    }
+    "title": "Indicators"
   },
   "sponsors": {
     "title": "Powered By"
@@ -104,8 +95,8 @@
     }
   },
   "contact-us": {
-    "title": "Contact us",
-    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+    "title": "Let´s code a better world!",
+    "description": "Amazing things happen when we get together. GP4Tech is an internal community withing Jalasoft whose members make things happen! Do you have questions? Send us a message we will be more than happy to hear from you.",
     "gpEmail": "GP4Tech@jalasoft.com",
     "email-title": "Email us",
     "company-name": "Jalasoft",
@@ -126,7 +117,7 @@
     },
     "transportation": {
       "title": "Transportation",
-      "description": "The following public transportation lines can leave you near Jalasoft's facilities: 120, 230, A, Z12, 101"
+      "description": "The following public transportation lines can leave you near Jalasoft's facilities: 120, 230, A, Z12, 101, 110, 209"
     },
     "email": "Email",
     "subject": "Subject",

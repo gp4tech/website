@@ -11,7 +11,7 @@
             <div [class]="activity.progressColor + ' determinate'"></div>
           </div>
         </div>
-        <p>{{ 'activity-indicator-section.labels.' + activity.label | translate }}</p>
+        <p>{{ languageService.currentLanguage === 'es' ?  activity.labelSp : activity.labelEn }}</p>
       </div>
     </div>
   </div>
