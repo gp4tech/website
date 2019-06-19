@@ -104,8 +104,8 @@
     }
   },
   "contact-us": {
-    "title": "Contáctanos",
-    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+    "title": "Codifiquemos un mundo mejor!",
+    "description": "Cosas asombrosas suceden cuando nos juntamos. GP4Tech es una comunidad interna de Jalasoft cuyos miembros hacen que las cosas pasen! ¿Tienes preguntas? Envianos un mensaje, estaremos más que felices de escuchar de ti.",
     "gpEmail": "GP4Tech@jalasoft.com",
     "email-title": "Envíanos un correo",
     "company-name": "Jalasoft",
@@ -126,7 +126,7 @@
     },
     "transportation": {
       "title": "Transporte",
-      "description": "Las siguientes líneas de transporte público pueden dejarte cerca a las instalaciones de Jalasoft: 120, 230, A, Z12, 101"
+      "description": "Las siguientes líneas de transporte público pueden dejarte cerca a las instalaciones de Jalasoft: 120, 230, A, Z12, 101, 110, 209"
     },
     "email": "Correo",
     "subject": "Tema",
