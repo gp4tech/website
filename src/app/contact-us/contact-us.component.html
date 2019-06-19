@@ -1,78 +1,82 @@
 <gp-page-banner [title]="'contact-us.title' | translate" [description]="'contact-us.description' | translate">
 </gp-page-banner>
 <div class="container">
-  <h4 class="center-align">・{{ 'contact-us.title' | translate | uppercase }}・</h4>
-  <br>
-  <div class="row">
-    <div class="col s12 m8">
-      <div class="card-panel">
-        <agm-map [latitude]="latitude" [longitude]="longitude" [zoom]="zoom">
-          <agm-marker [latitude]="latitude" [longitude]="longitude" [markerDraggable]="true">
-            <agm-info-window [isOpen]="true">
-              <h5>{{ 'contact-us.company-name' | translate }}</h5>
-              <p>{{ 'contact-us.location.address' | translate }}</p>
-              <p>{{ 'contact-us.location.city' | translate }}</p>
-              <p>{{ 'contact-us.location.country' | translate }}</p>
-            </agm-info-window>
-          </agm-marker>
-        </agm-map>
+  <div class="section-space">
+    <div class="row">
+      <div class="col s12 m8">
+        <div class="card-panel">
+          <agm-map [latitude]="latitude" [longitude]="longitude" [zoom]="zoom" [scrollwheel]="false"
+            [clickableIcons]="false" [mapDraggable]="false" [streetViewControl]="false" [draggableCursor]="'default'"
+            [disableDoubleClickZoom]="false" [zoomControl]="false">
+            <agm-marker [latitude]="latitude" [longitude]="longitude" [markerDraggable]="true">
+              <agm-info-window [isOpen]="true">
+                <h5>{{ 'contact-us.company-name' | translate }}</h5>
+                <p>{{ 'contact-us.location.address' | translate }}</p>
+                <p>{{ 'contact-us.location.city' | translate }}</p>
+                <p>{{ 'contact-us.location.country' | translate }}</p>
+              </agm-info-window>
+            </agm-marker>
+          </agm-map>
+        </div>
+      </div>
+      <div class="col s12 m4 center-align">
+        <h5><i class="fas fa-map-marker-alt secondary-color" aria-hidden="true"></i>
+          {{ 'contact-us.company-name' | translate }}</h5>
+        <p>{{ 'contact-us.location.address' | translate }}</p>
+        <p>{{ 'contact-us.location.city' | translate }}</p>
+        <p>{{ 'contact-us.location.country' | translate }}</p>
+        <br>
+        <h5><i class="fa fa-phone secondary-color" aria-hidden="true"></i> {{ 'contact-us.phone.title' | translate }}
+        </h5>
+        <a href="tel:({{ 'contact-us.phone.code' | translate }}){{ 'contact-us.phone.number' | translate }}">
+          ({{ 'contact-us.phone.code' | translate }}){{ 'contact-us.phone.number' | translate }}
+        </a>
+        <br><br>
+        <h5><i class="fa fa-envelope secondary-color" aria-hidden="true"></i> {{ 'contact-us.email' | translate }}</h5>
+        <a href="mailto:{{'contact-us.gpEmail' | translate}}">{{ 'contact-us.gpEmail' | translate }}</a>
       </div>
     </div>
-    <div class="col s12 m4 center-align">
-      <h5><i class="fa fa-map-marker" aria-hidden="true"></i> {{ 'contact-us.company-name' | translate }}</h5>
-      <p>{{ 'contact-us.location.address' | translate }}</p>
-      <p>{{ 'contact-us.location.city' | translate }}</p>
-      <p>{{ 'contact-us.location.country' | translate }}</p>
-      <br>
-      <h5><i class="fa fa-phone" aria-hidden="true"></i> {{ 'contact-us.phone.title' | translate }}</h5>
-      <a href="tel:({{ 'contact-us.phone.code' | translate }}){{ 'contact-us.phone.number' | translate }}">
-        ({{ 'contact-us.phone.code' | translate }}){{ 'contact-us.phone.number' | translate }}
-      </a>
-      <br><br>
-      <h5><i class="fa fa-envelope-o" aria-hidden="true"></i> {{ 'contact-us.email' | translate }}</h5>
-      <a href="mailto:{{'contact-us.gpEmail' | translate}}">{{ 'contact-us.gpEmail' | translate }}</a>
-    </div>
-  </div>
 
-  <ul gpCollapsible class="collapsible popout">
-    <li>
-      <div class="collapsible-header">
-        <h6><i class="fa fa-bus" aria-hidden="true"></i>{{ 'contact-us.find-title' | translate }}</h6>
-      </div>
-      <div class="collapsible-body">
-        <p>
-          <strong>{{ 'contact-us.driving.title' | translate }}:</strong>
-          {{ 'contact-us.driving.description' | translate }}
-          <a href="http://www.google.com/maps/place/{{ latitude }},{{ longitude }}" target="_blank"
-            rel="noopener noreferrer">Google Maps.</a>
-        </p>
-        <p><strong> {{ 'contact-us.transportation.title' | translate }}:</strong>
-          {{ 'contact-us.transportation.description' | translate }}</p>
-      </div>
-    </li>
-  </ul>
-  <br>
-  <div class="row">
-    <h4 class="center-align">. {{ 'contact-us.email-title' | translate | uppercase }} .</h4>
-    <div class="card-panel">
-      <div class="row">
-        <div class="input-field col m6 s12">
-          <input id="subject" type="text" class="validate" [(ngModel)]="email.subject" />
-          <label class="active" for="subject">{{ 'contact-us.subject' | translate }}</label>
+    <ul gpCollapsible class="collapsible popout">
+      <li class="active">
+        <div class="collapsible-header">
+          <h6><i class="fa fa-bus secondary-color" aria-hidden="true"></i>{{ 'contact-us.find-title' | translate }}</h6>
         </div>
-        <div class="input-field col m6 s12">
-          <input id="user-email" type="email" class="validate" [(ngModel)]="email.from" />
-          <label class="active" for="user-email">{{ 'contact-us.From' | translate }}</label>
+        <div class="collapsible-body">
+          <p>
+            <strong>{{ 'contact-us.driving.title' | translate }}:</strong>
+            {{ 'contact-us.driving.description' | translate }}
+            <a href="http://www.google.com/maps/place/{{ latitude }},{{ longitude }}" target="_blank"
+              rel="noopener noreferrer">Google Maps.</a>
+          </p>
+          <p><strong> {{ 'contact-us.transportation.title' | translate }}:</strong>
+            {{ 'contact-us.transportation.description' | translate }}</p>
         </div>
-      </div>
-      <div class="row">
-        <div class="input-field col s12">
-          <textarea id="message" class="materialize-textarea" [(ngModel)]="email.content"></textarea>
-          <label class="active" for="message">{{ 'contact-us.Message' | translate }}</label>
+      </li>
+    </ul>
+    <br>
+    <div class="row" *ngIf="displayEmailSection">
+      <h4 class="center-align">. {{ 'contact-us.email-title' | translate | uppercase }} .</h4>
+      <div class="card-panel">
+        <div class="row">
+          <div class="input-field col m6 s12">
+            <input id="subject" type="text" class="validate" [(ngModel)]="email.subject" />
+            <label class="active" for="subject">{{ 'contact-us.subject' | translate }}</label>
+          </div>
+          <div class="input-field col m6 s12">
+            <input id="user-email" type="email" class="validate" [(ngModel)]="email.from" />
+            <label class="active" for="user-email">{{ 'contact-us.From' | translate }}</label>
+          </div>
         </div>
-      </div>
-      <div class="right-align">
-        <a class="btn-large waves-effect" (click)="sendEmail()">{{ 'contact-us.btn-send' | translate }}</a>
+        <div class="row">
+          <div class="input-field col s12">
+            <textarea id="message" class="materialize-textarea" [(ngModel)]="email.content"></textarea>
+            <label class="active" for="message">{{ 'contact-us.Message' | translate }}</label>
+          </div>
+        </div>
+        <div class="right-align">
+          <a class="btn-large waves-effect" (click)="sendEmail()">{{ 'contact-us.btn-send' | translate }}</a>
+        </div>
       </div>
     </div>
   </div>
