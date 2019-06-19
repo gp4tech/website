@@ -11,7 +11,7 @@
   },
   "footer": {
     "social-networks": "Redes Sociales",
-    "who-did-this": "Quién Hizo Esto?"
+    "who-did-this": "¿Quién Hizo Esto?"
   },
   "links": {
     "about": "Sobre Nosotras",
@@ -86,10 +86,10 @@
     "title": "¿Quién hizo esto?",
     "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
     "teams": {
-      "dev": "Equipo de Desarrolladores",
-      "qa": "Equipo de Control de Calidad",
+      "dev": "Desarrolladores de Software",
+      "qa": "Ingenieros de Calidad",
       "po": "Dueños del Producto",
-      "designers": "Diseñadores"
+      "designer": "Diseñadores"
     }
   },
   "blog": {

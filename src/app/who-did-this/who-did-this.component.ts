@@ -2,9 +2,9 @@ import { Component, OnInit } from '@angular/core';
 
 import { Observable } from 'rxjs';
 
-import { LanguageService } from '../core/language.service';
 import { WebTeamMembersService } from './web-team-members.service';
-import { WebTeamMembers } from '../shared/models/web-team-members.model';
+import { WebTeamMember } from '../shared/models/web-team-member.model';
+import { LanguageService } from '../core/language.service';
 
 @Component({
   selector: 'gp-who-did-this',
@@ -12,11 +12,13 @@ import { WebTeamMembers } from '../shared/models/web-team-members.model';
   styleUrls: ['./who-did-this.component.scss']
 })
 export class WhoDidThisComponent implements OnInit {
-  webTeamMembers$: Observable<WebTeamMembers[]>;
-  teams: string[] = ['dev', 'qa', 'po', 'designers'];
+  webTeamMembers$: Observable<WebTeamMember[]>;
+  roles: string[] = ['dev', 'qa', 'po', 'designer'];
 
-  constructor(private webTeamMembersService: WebTeamMembersService,
-              public language: LanguageService) {}
+  constructor(
+    private webTeamMembersService: WebTeamMembersService,
+    public language: LanguageService
+  ) {}
 
   ngOnInit() {
     this.webTeamMembers$ = this.webTeamMembersService.getAll();
