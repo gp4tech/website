@@ -136,8 +136,9 @@
   },
   "events": {
     "title": "Eventos y Actividades",
-    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque a felis tortor. Etiam laoreet felis mi, et sagittis lectus venenatis quis. Aliquam sit amet nisl molestie, varius mi ac, accumsan tortor. Mauris iaculis viverra dapibus. In hac habitasse platea dictumst. Nullam dolor justo, porta at egestas sollicitudin, dignissim eget erat. In efficitur est sit amet porta consectetur. Sed venenatis finibus hendrerit. In semper nunc et urna pharetra interdum. Proin vestibulum iaculis nulla nec vehicula. Aenean consectetur dapibus tellus, id tristique massa porta sed. Sed sed tortor id arcu ornare semper eget vitae dolor. Morbi aliquam congue ex in rhoncus.",
-    "call-to-action": "Ver Eventos"
+    "banner-title": "¿Qué Hacemos?",
+    "description": "Nuestro principal aliado es la educación, es por eso que hemos buscado maneras de compartir nuestro conocimiento mediante charlas, talleres, capacitaciones, y diferentes tipos de eventos y actividades que promuevan la inclusión de la mujer como también nos den visibilidad y propaguen la esperanza y ambición en jóvenes que están atravesando la etapa de elección de una carrera. Queremos hacer un cambio en el mundo, tenemos el talento y la esperanza de lograrlo.",
+    "call-to-action": "Ver Fotos"
   },
   "donate": {
     "aba-label": "ABA: ",
