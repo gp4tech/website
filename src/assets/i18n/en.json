@@ -136,8 +136,9 @@
   },
   "events": {
     "title": "Events and Activities",
-    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque a felis tortor. Etiam laoreet felis mi, et sagittis lectus venenatis quis. Aliquam sit amet nisl molestie, varius mi ac, accumsan tortor. Mauris iaculis viverra dapibus. In hac habitasse platea dictumst. Nullam dolor justo, porta at egestas sollicitudin, dignissim eget erat. In efficitur est sit amet porta consectetur. Sed venenatis finibus hendrerit. In semper nunc et urna pharetra interdum. Proin vestibulum iaculis nulla nec vehicula. Aenean consectetur dapibus tellus, id tristique massa porta sed. Sed sed tortor id arcu ornare semper eget vitae dolor. Morbi aliquam congue ex in rhoncus.",
-    "call-to-action": "Past Events"
+    "banner-title": "What We Do?",
+    "description": "Our main ally is education, that's why we have been searching ways to share our knowledge through informative talks, workshops, training, and different types of events and activities that promote the inclusion of women and give us the necessary visibility to spread hope and ambition among the young people that are going through the age of making a career choice. We want to make a change in the world, and we have the talent and hope to make it.",
+    "call-to-action": "View Photos"
   },
   "donate": {
     "aba-label": "ABA: ",
