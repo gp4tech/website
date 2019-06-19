@@ -30,16 +30,7 @@
     "call-to-action": "Inscribirse"
   },
   "activity-indicator-section": {
-    "title": "Indicadores",
-    "labels": {
-      "trained-students": "Estudiantes Entrenados",
-      "hours-of-training": "Horas Entrenamiento",
-      "hackaton": "Hackaton",
-      "weekend-coding": "Weekend Coding",
-      "supporters": "Seguidores",
-      "members": "Miembros",
-      "workshops": "Talleres"
-    }
+    "title": "Indicadores"
   },
   "sponsors": {
     "title": "Impulsado Por"
