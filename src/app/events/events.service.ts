@@ -15,12 +15,4 @@ export class EventsService extends DataService<Event> {
   constructor(http: HttpClient, db: AngularFirestore) {
     super(http, db, FirebaseCollections.events);
   }
-
-  getActivities(): Observable<Event[]> {
-    return this.getAllSorted('order', DataOrder.asc).pipe(
-      map(activities => {
-        return activities;
-      })
-    );
-  }
 }

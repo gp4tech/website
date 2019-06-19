@@ -4,6 +4,7 @@ import { Observable } from 'rxjs';
 
 import { LanguageService } from '../core/language.service';
 import { EventsService } from './events.service';
+import { DataOrder } from '../shared/models/data-type.model';
 import { Event } from '../shared/models/event.model';
 
 @Component({
@@ -20,6 +21,6 @@ export class EventsComponent implements OnInit {
               public language: LanguageService) {}
 
   ngOnInit() {
-    this.events$ = this.eventsService.getActivities();
+    this.events$ = this.eventsService.getAllSorted('order', DataOrder.asc);
   }
 }
