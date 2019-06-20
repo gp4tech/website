@@ -1,4 +1,5 @@
 @import '../../../styles-mat-variables.scss';
+@import '../../../styles-colors.scss';
 
 .testimonial-container {
   margin-bottom: 0px;
@@ -8,80 +9,73 @@
   padding: 0px 0px;
   overflow: hidden;
 
-  @media #{$medium-and-up} {
-    height: 400px !important;
-  }
+  .img {
+    height: 500px !important;
 
-  @media #{extra-large-and-up} {
-    height: 600px !important;
-    width: 60% !important;
-  }
+    @media #{$small-and-down} {
+      height: 400px !important;
+    }
 
-  @media only screen and (min-width: 993px) and (max-width: 1062px) {
-    height: 370px !important;
-  }
+    @media #{$medium-only} {
+      height: 400px !important;
+    }
 
-  @media only screen and (min-width: 2500px) {
-    height: 700px !important;
-    width: 60% !important;
-  }
-}
+    @media #{$large-and-up} {
+      height: 600px !important;
+    }
 
-.student-testimonial {
-  padding: 0px 30px;
+    @media only screen and (min-width: 2020px) {
+      height: 855px !important;
+    }
 
-  @media #{$medium-only} {
-    height: 300px !important;
-  }
-
-  @media #{$large-and-up} {
-    height: 400px !important;
-  }
-
-  @media #{extra-large-and-up} {
-    height: 600px !important;
-    width: 40% !important;
-  }
-
-  @media only screen and (min-width: 993px) and (max-width: 1062px) {
-    height: 370px !important;
-  }
-
-  @media only screen and (min-width: 2500px) {
-    height: 700px !important;
-    width: 40% !important;
+    background-size: cover;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
   }
 }
 
 .carousel {
-  margin-top: 35px;
-
-  @media #{$small-and-down} {
-    height: 340px !important;
-  }
-
-  @media #{$small-and-down} {
+  @media #{$medium-and-down} {
     background-color: color('grey', 'lighten-4');
   }
 
+  @media #{$small-and-down} {
+    height: 750px !important;
+  }
+
   @media #{$medium-only} {
-    height: 700px !important;
+    height: 650px !important;
   }
 
   @media #{$large-and-up} {
-    height: 450px !important;
+    height: 655px !important;
   }
 
-  @media #{extra-large-and-up} {
-    height: 650px !important;
-    width: 40% !important;
+  @media only screen and (min-width: 2020px) {
+    height: 900px !important;
+  }
+}
+
+.student-testimonial {
+  @media #{$large-and-up} {
+    height: 600px !important;
   }
 
-  @media only screen and (min-width: 993px) and (max-width: 1062px) {
-    height: 420px !important;
+  @media only screen and (min-width: 2020px) {
+    height: 855px !important;
   }
+}
 
-  @media only screen and (min-width: 2500px) {
-    height: 750px !important;
+.right-arrow i, .left-arrow i {
+  font-size: 50px;
+  color: $primary-color;
+  &:hover {
+    color: $primary-color-dark;
   }
+}
+
+.left-arrow {
+  height: 100%;
+  position: absolute;
+  padding-bottom: 50px;
 }

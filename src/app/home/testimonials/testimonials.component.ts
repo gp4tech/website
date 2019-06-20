@@ -1,10 +1,11 @@
-import { Component, OnInit, OnDestroy } from '@angular/core';
+import { Component, OnInit, OnDestroy, ViewChildren, ViewChild } from '@angular/core';
 
 import { Subscription } from 'rxjs';
 
 import { environment } from '../../../environments/environment';
 import { Testimonial } from '../../shared/models/testimonial.model';
 import { TestimonialsService } from './testimonials.service';
+import { CarouselDirective } from '../../shared/directives/carousel/carousel.directive';
 
 @Component({
   selector: 'gp-testimonials',
@@ -16,6 +17,8 @@ export class TestimonialsComponent implements OnInit, OnDestroy {
   testimonials: Testimonial[];
   baseUrl = environment.firebaseStorageUrl;
   isLoading = true;
+
+  @ViewChild(CarouselDirective) carouselView;
 
   constructor(private testimonialService: TestimonialsService) {}
 

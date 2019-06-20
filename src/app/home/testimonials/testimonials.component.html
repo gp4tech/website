@@ -1,14 +1,21 @@
 <div *ngIf="!isLoading">
-  <h4 class="center-align section-title">
+  <h4 class="center-align section-title section-title-bottom-space">
     {{'testimonials.title' | translate}}
   </h4>
   <div class="carousel carousel-slider" gpCarousel>
     <div class="carousel-item" *ngFor="let  testimonial of testimonials">
       <div class="row testimonial-container grey lighten-4">
-        <div class="col s12 m12 l6 student-picture hide-on-small-and-down">
-          <img class="responsive-img" [src]="baseUrl + testimonial.storagePath" [alt]="testimonial.name">
+        <div class="col s12 m12 l6 xl8 student-picture">
+          <div class="left-arrow col l6 xl8 valign-wrapper hide-on-med-and-down">
+            <div class="left">
+              <a class="waves-effect waves-light" (click)="carouselView.previous()">
+                <i class="fas fa-chevron-left"></i>
+              </a>
+            </div>
+          </div>
+          <div class="img" [style.backgroundImage]="'url(' + baseUrl + testimonial.storagePath + ')'"></div>
         </div>
-        <div class="col s12 m12 l6 student-testimonial valign-wrapper">
+        <div class="col s12 m12 l6 xl4 student-testimonial valign-wrapper">
           <div>
             <h5 class="teal-text">{{testimonial.name}}</h5>
             <p><b>{{testimonial.school}}, {{testimonial.class}}</b></p>
@@ -17,6 +24,11 @@
                 {{testimonial.description}}
               </p>
             </div>
+          </div>
+          <div class="right-arrow right hide-on-med-and-down">
+            <a class="waves-effect waves-light" (click)="carouselView.next()">
+              <i class="fas fa-chevron-right "></i>
+            </a>
           </div>
         </div>
       </div>
