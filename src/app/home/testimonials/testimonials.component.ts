@@ -5,7 +5,7 @@ import { Subscription } from 'rxjs';
 import { environment } from '../../../environments/environment';
 import { Testimonial } from '../../shared/models/testimonial.model';
 import { TestimonialsService } from './testimonials.service';
-import { CarouselDirective } from 'src/app/shared/directives/carousel/carousel.directive';
+import { CarouselDirective } from '../../shared/directives/carousel/carousel.directive';
 
 @Component({
   selector: 'gp-testimonials',
