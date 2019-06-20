@@ -1,10 +1,12 @@
-<h4 class="center-align section-title">{{ 'sponsors.title' | translate }}</h4>
-<div class="row">
-  <a *ngFor="let sponsor of sponsors$ | async"
-    class="col s12 m6 valign-wrapper gp4-supporters-logo"
-    [href]="sponsor.link"
-    target="_blank"
-    rel="noopener noreferrer">
-    <img [src]="baseUrl + sponsor.storagePath" [alt]="sponsor.label">
-  </a>
+<div id="sponsors" class="section-space">
+  <h4 class="center-align section-title section-title-bottom-space">{{ 'sponsors.title' | translate }}</h4>
+  <div class="row">
+    <a *ngFor="let sponsor of sponsors$ | async"
+      class="col s12 m6 valign-wrapper gp4-supporters-logo"
+      [href]="sponsor.link"
+      target="_blank"
+      rel="noopener noreferrer">
+      <img [src]="baseUrl + sponsor.storagePath" [alt]="sponsor.label">
+    </a>
+  </div>
 </div>
