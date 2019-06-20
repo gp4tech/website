@@ -151,5 +151,12 @@
     "telephone": "Telephone: (591)-2313232 - 800107272",
     "title": "Make a Donation",
     "navbar-title": "Donate"
+  },
+  "roles": {
+    "developer": "Developer",
+    "quality-assurance": "Quality Assurance",
+    "design": "Designer",
+    "devops": "DevOp",
+    "manager": "Manager"
   }
 }

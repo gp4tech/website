@@ -1,4 +1,4 @@
-<h4 class="section-title">
+<h4 class="section-title center-align">
   {{ 'about-us.members.title' | translate }}
 </h4>
 <div class="row">
@@ -21,19 +21,19 @@
             {{ member.displayName }}
             <i class="fas fa-sort-up"></i>
           </span><br/>
+          {{ member.jalaRole | roleConverter | translate }}<br/>
           {{ language.currentLanguage === 'es' ? member.careerSp : member.careerEn }}<br/>
-          {{ member.jalaRole }}<br/>
           {{ member.mainTeam }}
           <div class="icons" [ngClass]="{'pair-position': i % 2 === 0}">
-            <a *ngIf="member.linkedin" [href]="'https://www.linkedin.com/in/' + member.linkedin" target="_blank"
+            <a *ngIf="member.linkedin" href="{{ member.linkedin | fixUrl:'https://www.linkedin.com/in/' }}" target="_blank"
               rel="noopener noreferrer">
               <i class="fab fa-2x fa-linkedin"></i>
             </a>
-            <a *ngIf="member.twitter" [href]="'https://twitter.com/' + member.twitter" target="_blank"
+            <a *ngIf="member.twitter" href="{{ member.twitter | fixUrl:'https://twitter.com/' }}" target="_blank"
               rel="noopener noreferrer">
               <i class="fab fa-2x fa-twitter"></i>
             </a>
-            <a *ngIf="member.facebook" [href]="'https://www.facebook.com/' + member.facebook" target="_blank"
+            <a *ngIf="member.facebook" href="{{ member.facebook | fixUrl:'https://www.facebook.com/' }}" target="_blank"
               rel="noopener noreferrer">
               <i class="fab fa-2x fa-facebook"></i>
             </a>
