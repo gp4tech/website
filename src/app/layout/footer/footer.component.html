@@ -1,22 +1,19 @@
 <footer class="page-footer black">
   <div class="container">
     <div class="row">
-      <div class="col s12 m4 l4 address-info">
-        <p>
-          Edificio Jalasoft<br/>
-          {{ 'contact-us.location.address' | translate }}<br/>
-          {{ 'contact-us.location.city' | translate }} -
-          {{ 'contact-us.location.country' | translate }}<br/>
-          <span>
-            <i class="fa fa-phone" aria-hidden="true"></i>
-            <span class="phone-number">
-              ({{ 'contact-us.phone.code' | translate }}) 
-              {{ 'contact-us.phone.number' | translate }}
-            </span>
-          </span>
-        </p>
+      <div class="col s12 m4 l4 contact-us center-align">
+        <p class="">{{ 'footer.contact-us' | translate }}</p>
+        <i class="fa fa-phone" aria-hidden="true"></i>
+        <a href="tel:({{ 'contact-us.phone.code' | translate }}){{ 'contact-us.phone.number' | translate }}">
+          ({{ 'contact-us.phone.code' | translate }}){{ 'contact-us.phone.number' | translate }}
+        </a><br/>
+        <i class="fas fa-envelope" aria-hidden="true"></i>
+        <a href="mailto:{{'contact-us.gpEmail' | translate}}">
+          {{ 'contact-us.gpEmail' | translate }}
+        </a>
       </div>
-      <div class="col s12 m3 l3 center-align">
+  
+      <div class="col s12 m4 l3 center-align">
         <p>{{ 'footer.social-networks' | translate}}</p>
         <div class="row">
           <div class="social-links" *ngFor="let socialLink of socialLinks">
@@ -27,7 +24,7 @@
           </div>
         </div>
       </div>
-      <div class="col s12 m3 l3 center-align">
+      <div class="col s12 m2 l3 center-align">
         <p> {{ 'who-did-this.title' | translate }} </p>
         <div class="row">
           <div class="who-did-this-link">

@@ -18,13 +18,15 @@ footer {
     padding-top: 5px;
   }
 
-  .address-info {
-    @media #{$small-and-down} {
-      text-align: center;
+  .contact-us {
+    a {
+      margin-left: 5px;
+      color: #fff;
     }
 
-    .phone-number {
+    a:hover {
       margin-left: 5px;
+      color: #EF4D7E;
     }
   }
 }
