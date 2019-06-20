@@ -13,6 +13,8 @@ import { MembersService } from './members/members.service';
 import { LanguageService } from '../core/language.service';
 import { PageBannerComponent } from '../shared/components/page-banner/page-banner.component';
 import { CallToActionComponent } from '../shared/components/call-to-action/call-to-action.component';
+import { RoleConverterPipe } from '../shared/pipes/role-converter.pipe';
+import { FixUrlPipe } from './members/fix-url.pipe';
 
 const membersServiceMock = {
   getAll: () => of([]),
@@ -29,7 +31,9 @@ describe('AboutUsComponent', () => {
         AboutUsComponent,
         MembersComponent,
         PageBannerComponent,
-        CallToActionComponent
+        CallToActionComponent,
+        RoleConverterPipe,
+        FixUrlPipe
       ],
       imports: [
         TranslateModule.forRoot({
