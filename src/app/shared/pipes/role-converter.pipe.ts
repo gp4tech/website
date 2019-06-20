@@ -1,4 +1,5 @@
 import { Pipe, PipeTransform } from '@angular/core';
+
 import { MEMBER_ROLES } from '../models/member.model';
 
 @Pipe({
