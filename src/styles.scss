@@ -86,7 +86,7 @@ div.google-visualization-tooltip {
 .carousel.carousel-slider {
   .indicators {
     li.active {
-      background-color: $primary-color;
+      background-color: $primary-color-dark;
     }
 
     li {
@@ -102,6 +102,10 @@ div.google-visualization-tooltip {
 
 .section-title {
   color: $primary-color;
+}
+
+.section-title-bottom-space {
+  margin-bottom: 40px;
 }
 
 .section-space {

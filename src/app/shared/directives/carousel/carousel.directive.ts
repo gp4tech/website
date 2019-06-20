@@ -42,4 +42,12 @@ export class CarouselDirective implements AfterViewInit {
     clearInterval(this.intervalId);
     this.intervalId = null;
   }
+
+  next() {
+    this.carousel.next();
+  }
+
+  previous() {
+    this.carousel.prev();
+  }
 }

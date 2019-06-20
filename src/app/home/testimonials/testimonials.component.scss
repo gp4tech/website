@@ -1,4 +1,5 @@
 @import '../../../styles-mat-variables.scss';
+@import '../../../styles-colors.scss';
 
 .testimonial-container {
   margin-bottom: 0px;
@@ -63,4 +64,18 @@
   @media only screen and (min-width: 2020px) {
     height: 855px !important;
   }
+}
+
+.right-arrow i, .left-arrow i {
+  font-size: 50px;
+  color: $primary-color;
+  &:hover {
+    color: $primary-color-dark;
+  }
+}
+
+.left-arrow {
+  height: 100%;
+  position: absolute;
+  padding-bottom: 50px;
 }
