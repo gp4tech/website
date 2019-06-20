@@ -11,7 +11,8 @@
   },
   "footer": {
     "social-networks": "Social Networks",
-    "who-did-this": "Who Did This?"
+    "who-did-this": "Who Did This?",
+    "contact-us": "Contact Us"
   },
   "links": {
     "about": "About Us",
@@ -151,5 +152,12 @@
     "telephone": "Telephone: (591)-2313232 - 800107272",
     "title": "Make a Donation",
     "navbar-title": "Donate"
+  },
+  "roles": {
+    "developer": "Developer",
+    "quality-assurance": "Quality Assurance",
+    "design": "Designer",
+    "devops": "DevOp",
+    "manager": "Manager"
   }
 }

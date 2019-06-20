@@ -11,6 +11,7 @@ import { TransparentSectionDirective } from './directives/transparent-section/tr
 import { CarouselDirective } from './directives/carousel/carousel.directive';
 import { PageBannerComponent } from './components/page-banner/page-banner.component';
 import { CallToActionModule } from './components/call-to-action/call-to-action.module';
+import { RoleConverterPipe } from './pipes/role-converter.pipe';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { CallToActionModule } from './components/call-to-action/call-to-action.m
     CollapsibleDirective,
     TransparentSectionDirective,
     CarouselDirective,
-    PageBannerComponent
+    PageBannerComponent,
+    RoleConverterPipe
   ],
   imports: [CommonModule, TranslateModule, CallToActionModule],
   exports: [
@@ -31,7 +33,8 @@ import { CallToActionModule } from './components/call-to-action/call-to-action.m
     CollapsibleDirective,
     TransparentSectionDirective,
     CarouselDirective,
-    PageBannerComponent
+    PageBannerComponent,
+    RoleConverterPipe
   ]
 })
 export class SharedModule {}

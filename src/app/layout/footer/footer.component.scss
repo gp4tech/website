@@ -3,23 +3,7 @@
 footer {
   height: 100%;
 
-  .sponsors-links {
-    @media #{$medium-and-up} {
-      img {
-        width: 80px;
-      }
-
-      .left-separator {
-        border-left: 1px solid;
-      }
-  
-      .right-separator {
-        border-right: 1px solid;
-      }
-    }
-  }
-
-  .social-links {
+  .who-did-this-link, .social-links {
     width: 40px;
     height: 40px;
     display: inline-block;
@@ -29,5 +13,20 @@ footer {
       margin: 0px;
     }
   }
-  
+
+  .language-section {
+    padding-top: 5px;
+  }
+
+  .contact-us {
+    a {
+      margin-left: 5px;
+      color: #fff;
+    }
+
+    a:hover {
+      margin-left: 5px;
+      color: #EF4D7E;
+    }
+  }
 }
