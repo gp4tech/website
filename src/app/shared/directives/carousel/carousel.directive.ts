@@ -6,7 +6,7 @@ import { Carousel } from 'materialize-css';
   selector: '[gpCarousel]'
 })
 export class CarouselDirective implements AfterViewInit {
-  
+
   @Input() autoSlide = true;
   carousel: Carousel;
   intervalId = null;
