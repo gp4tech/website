@@ -3,22 +3,6 @@
 footer {
   height: 100%;
 
-  .sponsors-links {
-    @media #{$medium-and-up} {
-      img {
-        width: 80px;
-      }
-
-      .left-separator {
-        border-left: 1px solid;
-      }
-  
-      .right-separator {
-        border-right: 1px solid;
-      }
-    }
-  }
-
   .who-did-this-link, .social-links {
     width: 40px;
     height: 40px;
@@ -29,5 +13,18 @@ footer {
       margin: 0px;
     }
   }
-  
+
+  .language-section {
+    padding-top: 5px;
+  }
+
+  .address-info {
+    @media #{$small-and-down} {
+      text-align: center;
+    }
+
+    .phone-number {
+      margin-left: 5px;
+    }
+  }
 }
