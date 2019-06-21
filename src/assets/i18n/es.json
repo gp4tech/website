@@ -19,7 +19,7 @@
     "blog": "Blog",
     "contact-us": "CONTÁCTANOS",
     "donate": "Donar",
-    "events": "Eventos",
+    "events": "Actividades",
     "home": "Inicio",
     "who-did-this": "¿QUIÉN HIZO ESTO?"
   },
@@ -96,7 +96,7 @@
     }
   },
   "contact-us": {
-    "title": "Codifiquemos un mundo mejor!",
+    "title": "¡Codifiquemos un mundo mejor!",
     "description": "Cosas asombrosas suceden cuando nos juntamos. GP4Tech es una comunidad interna de Jalasoft cuyos miembros hacen que las cosas pasen! ¿Tienes preguntas? Envianos un mensaje, estaremos más que felices de escuchar de ti.",
     "gpEmail": "GP4Tech@jalasoft.com",
     "email-title": "Envíanos un correo",
@@ -128,7 +128,7 @@
   },
   "events": {
     "title": "Eventos y Actividades",
-    "banner-title": "¿Qué Hacemos?",
+    "banner-title": "¿Qué hacemos?",
     "description": "Nuestro principal aliado es la educación, es por eso que hemos buscado maneras de compartir nuestro conocimiento mediante charlas, talleres, capacitaciones, y diferentes tipos de eventos y actividades que promuevan la inclusión de la mujer como también nos den visibilidad y propaguen la esperanza y ambición en jóvenes que están atravesando la etapa de elección de una carrera. Queremos hacer un cambio en el mundo, tenemos el talento y la esperanza de lograrlo.",
     "call-to-action": "Ver Fotos"
   },
