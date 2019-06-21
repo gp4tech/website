@@ -25,6 +25,12 @@
     <li *ngFor="let route of appRoutes" [class.selected]="route === selectedRoute" (click)="onSelect(route)">
       <a [routerLink]="route.name" class="sidenav-close">{{ route.i18n | translate | uppercase }}</a>
     </li>
+    <li class="donate-button">
+      <a class="sidenav-close waves-effect waves-light btn" [routerLink]="[ '/donations' ]">
+        <i class="fa fa-donate white-text"></i>
+        {{ 'donate.navbar-title' | translate }}
+      </a>
+    </li>
   </ul>
 
   <div id="navbar-background"></div>
