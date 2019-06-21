@@ -1,6 +1,4 @@
-.top {
-  margin-top: 85px;
-}
+@import '../../styles-colors.scss';
 
 .text-justify {
   text-align: justify;
@@ -8,6 +6,7 @@
 
 .type {
   font-size: 1.7em;
+  color: $secondary-color;
 }
 
 .separator {

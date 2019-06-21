@@ -5,68 +5,70 @@
                 picture="assets/images/events-banner.jpg">
 </gp-page-banner>
 <div class="container">
-  <div class="row">
-    <h4 class="center-align section-title">
-      {{'events.title' | translate}}
-    </h4>
-  </div>
-  <div *ngFor="let event of events$ | async; index as i" class="row">
-    <div class="hide-on-small-only" *ngIf="i % 2 === 0">
-      <div class="col m6">
-        <img [src]="event.pic"
-             [alt]="event.nameEn"
-             class="responsive-img separator">
-      </div>
-      <div class="col m6">
-        <div class="row center-align">
-          <h2 class="type">
-            {{ language.currentLanguage === languages.EN ? event.nameEn : event.nameSp }}
-          </h2>
-        </div>
-        <div class="row valign-wrapper">
-          <p class="text-justify separator-p">
-            {{ language.currentLanguage === languages.EN ? event.descriptionEn : event.descriptionSp }}
-          </p>
-        </div>
-      </div>
+  <div class="section-space">
+    <div class="row">
+      <h4 class="center-align section-title">
+        {{'events.title' | translate}}
+      </h4>
     </div>
-    <div class="hide-on-small-only" *ngIf="i % 2 !== 0">
-      <div class="col m6">
-        <div class="row center-align">
-          <h2 class="type">
-            {{ language.currentLanguage === languages.EN ? event.nameEn : event.nameSp }}
-          </h2>
+    <div *ngFor="let event of events$ | async; index as i" class="row">
+      <div class="hide-on-small-only" *ngIf="i % 2 === 0">
+        <div class="col m6">
+          <img [src]="event.pic"
+              [alt]="event.nameEn"
+              class="responsive-img separator">
         </div>
-        <div class="row valign-wrapper">
-          <p class="text-justify separator-p">
-            {{ language.currentLanguage === languages.EN ? event.descriptionEn : event.descriptionSp }}
-          </p>
+        <div class="col m6">
+          <div class="row center-align">
+            <h2 class="type">
+              {{ language.currentLanguage === languages.EN ? event.nameEn : event.nameSp }}
+            </h2>
+          </div>
+          <div class="row valign-wrapper">
+            <p class="text-justify separator-p">
+              {{ language.currentLanguage === languages.EN ? event.descriptionEn : event.descriptionSp }}
+            </p>
+          </div>
         </div>
       </div>
-      <div class="col m6">
-        <img [src]="event.pic"
-             [alt]="event.nameEn"
-             class="responsive-img separator">
-      </div>
-    </div>
-    <div class="hide-on-med-and-up">
-      <div class="col s12 center-align">
-        <img [src]="event.pic"
-             [alt]="event.nameEn"
-             class="responsive-img separator">
-      </div>
-      <div class="col s12">
-        <div class="row center-align">
-          <h2 class="type">
-            {{ language.currentLanguage === languages.EN ? event.nameEn : event.nameSp }}
-          </h2>
+      <div class="hide-on-small-only" *ngIf="i % 2 !== 0">
+        <div class="col m6">
+          <div class="row center-align">
+            <h2 class="type">
+              {{ language.currentLanguage === languages.EN ? event.nameEn : event.nameSp }}
+            </h2>
+          </div>
+          <div class="row valign-wrapper">
+            <p class="text-justify separator-p">
+              {{ language.currentLanguage === languages.EN ? event.descriptionEn : event.descriptionSp }}
+            </p>
+          </div>
         </div>
-        <div class="row valign-wrapper">
-          <p class="text-justify separator-p">
-            {{ language.currentLanguage === languages.EN ? event.descriptionEn : event.descriptionSp }}
-          </p>
+        <div class="col m6">
+          <img [src]="event.pic"
+              [alt]="event.nameEn"
+              class="responsive-img separator">
         </div>
-        <hr>
+      </div>
+      <div class="hide-on-med-and-up">
+        <div class="col s12 center-align">
+          <img [src]="event.pic"
+              [alt]="event.nameEn"
+              class="responsive-img separator">
+        </div>
+        <div class="col s12">
+          <div class="row center-align">
+            <h2 class="type">
+              {{ language.currentLanguage === languages.EN ? event.nameEn : event.nameSp }}
+            </h2>
+          </div>
+          <div class="row valign-wrapper">
+            <p class="text-justify separator-p">
+              {{ language.currentLanguage === languages.EN ? event.descriptionEn : event.descriptionSp }}
+            </p>
+          </div>
+          <hr>
+        </div>
       </div>
     </div>
   </div>
