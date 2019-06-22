@@ -15,7 +15,7 @@
     "contact-us": "Contact Us"
   },
   "links": {
-    "about": "About Us",
+    "about": "Our Team",
     "blog": "Blog",
     "contact-us": "CONTACT US",
     "donate": "Donate",
@@ -70,7 +70,7 @@
   "about-us": {
     "who": {
       "title": "Who are we?",
-      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
+      "description": "Girl Power for Technology (GP4Tech) is an initiative of the Jala family, which encourages, develops and motivates the participation of women in technology, opening spaces for training, personal development, and skills necessary for the field. Our vision is to encourage the inclusion and professional development of women in technology at the Bolivian level."
     },
     "members": {
       "title": "Members"
