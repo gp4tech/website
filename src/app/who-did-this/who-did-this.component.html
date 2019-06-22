@@ -12,7 +12,7 @@ picture="assets/images/who-did-this-banner.jpeg">
           <div class="divider"></div>
         </div>
       </div>
-      <ng-container *ngFor="let member of webTeamMembers$ | async">
+      <ng-container *ngFor="let member of webTeamMembers$ | async">        
         <div *ngIf="role === member.role" class="row">
           <div class="col s12 m3">
             <div class="member-image-container center-align">
@@ -35,6 +35,9 @@ picture="assets/images/who-did-this-banner.jpeg">
               </a>
               <a *ngIf="member.twitter" target="_blank" rel="noopener noreferrer" [href]="member.twitter">
                 <i class="fab fa-2x fa-twitter"></i>
+              </a>
+              <a *ngIf="member.website" target="_blank" rel="noopener noreferrer" [href]="member.website">
+                <i class="fas fa-2x fa-globe"></i>
               </a>
             </div>
           </div>
