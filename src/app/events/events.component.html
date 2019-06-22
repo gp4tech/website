@@ -14,9 +14,6 @@
     <div *ngFor="let event of events$ | async; index as i" class="row">
       <div class="hide-on-small-only" *ngIf="i % 2 === 0">
         <div class="col m6 event-picture separator" [style.backgroundImage]="'url(' + event.pic + ')'">
-          <!-- <img [src]="event.pic"
-              [alt]="event.nameEn"
-              class="responsive-img separator"> -->
         </div>
         <div class="col m6">
           <div class="row center-align">
@@ -45,17 +42,10 @@
           </div>
         </div>
         <div class="col m6 event-picture separator" [style.backgroundImage]="'url(' + event.pic + ')'">
-
-          <!-- <img [src]="event.pic"
-              [alt]="event.nameEn"
-              class="responsive-img separator"> -->
         </div>
       </div>
       <div class="hide-on-med-and-up">
         <div class="col s12 center-align event-picture separator" [style.backgroundImage]="'url(' + event.pic + ')'">
-          <!-- <img [src]="event.pic"
-              [alt]="event.nameEn"
-              class="responsive-img separator"> -->
         </div>
         <div class="col s12">
           <div class="row center-align">
