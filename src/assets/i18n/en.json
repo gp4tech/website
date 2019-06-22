@@ -5,34 +5,36 @@
   },
   "home": {},
   "language": {
+    "title": "Languages",
     "english": "EN",
     "spanish": "ES"
   },
+  "footer": {
+    "social-networks": "Social Networks",
+    "who-did-this": "Who Did This?",
+    "contact-us": "Contact Us"
+  },
   "links": {
-    "about": "About Us",
+    "about": "Our Team",
     "blog": "Blog",
     "contact-us": "CONTACT US",
-    "events": "Events",
+    "donate": "Donate",
+    "events": "Activities",
     "home": "Home",
     "who-did-this": "WHO DID THIS?"
   },
   "banner": {
-    "slogan": "Learn, code, share",
-    "call-to-action": "I support this"
+    "slogan-line-1": "GIRL POWER FOR",
+    "slogan-line-2": "TECHNOLOGY",
+    "description-line-1": "GP4Tech is a community that aims to involve more women in the area of technology.",
+    "description-line-2": "Come and meet us at our next event: Weekend Coding.",
+    "call-to-action": "Register"
   },
   "activity-indicator-section": {
-    "title": "Indicators",
-    "labels": {
-      "trained-students": "Trained Students",
-      "hours-of-training": "Hours of Training",
-      "hackaton": "Hackaton",
-      "weekend-coding": "Weekend Coding",
-      "supporters": "Supporters",
-      "members": "Members"
-    }
+    "title": "Indicators"
   },
   "sponsors": {
-    "title": "Sponsors"
+    "title": "Powered By"
   },
   "testimonials": {
     "title": "Testimonials"
@@ -67,7 +69,8 @@
   },
   "about-us": {
     "who": {
-      "title": "Who are we?"
+      "title": "Who are we?",
+      "description": "Girl Power for Technology (GP4Tech) is an initiative of the Jala family, which encourages, develops and motivates the participation of women in technology, opening spaces for training, personal development, and skills necessary for the field. Our vision is to encourage the inclusion and professional development of women in technology at the Bolivian level."
     },
     "members": {
       "title": "Members"
@@ -75,11 +78,12 @@
   },
   "who-did-this": {
     "title": "Who did this?",
+    "description": "We are a talented group of people who enjoys eating, laughing and creating software. We code, we test and we make ideas come to life. Meet the people behind the curtain. Meet our web team.",
     "teams": {
-      "dev": "Dev Team",
-      "qa": "QA Team",
-      "po": "PO Team",
-      "designers": "Designers"
+      "dev": "Software Developers",
+      "qa": "Quality Engineers",
+      "po": "Product Owners",
+      "designer": "Designers"
     }
   },
   "blog": {
@@ -92,7 +96,8 @@
     }
   },
   "contact-us": {
-    "title": "Contact us",
+    "title": "Let´s code a better world!",
+    "description": "Amazing things happen when we get together. GP4Tech is an internal community withing Jalasoft whose members make things happen! Do you have questions? Send us a message we will be more than happy to hear from you.",
     "gpEmail": "GP4Tech@jalasoft.com",
     "email-title": "Email us",
     "company-name": "Jalasoft",
@@ -113,7 +118,7 @@
     },
     "transportation": {
       "title": "Transportation",
-      "description": "The following public transportation lines can leave you near Jalasoft's facilities: 120, 230, A, Z12, 101"
+      "description": "The following public transportation lines can leave you near Jalasoft's facilities: 120, 230, A, Z12, 101, 110, 209"
     },
     "email": "Email",
     "subject": "Subject",
@@ -123,6 +128,36 @@
   },
   "events": {
     "title": "Events and Activities",
-    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque a felis tortor. Etiam laoreet felis mi, et sagittis lectus venenatis quis. Aliquam sit amet nisl molestie, varius mi ac, accumsan tortor. Mauris iaculis viverra dapibus. In hac habitasse platea dictumst. Nullam dolor justo, porta at egestas sollicitudin, dignissim eget erat. In efficitur est sit amet porta consectetur. Sed venenatis finibus hendrerit. In semper nunc et urna pharetra interdum. Proin vestibulum iaculis nulla nec vehicula. Aenean consectetur dapibus tellus, id tristique massa porta sed. Sed sed tortor id arcu ornare semper eget vitae dolor. Morbi aliquam congue ex in rhoncus. Aenean malesuada lobortis tortor, vitae iaculis neque suscipit in. Nulla malesuada blandit urna eget bibendum."
+    "banner-title": "What we do?",
+    "description": "Our main ally is education, that's why we have been searching ways to share our knowledge through informative talks, workshops, training, and different types of events and activities that promote the inclusion of women and give us the necessary visibility to spread hope and ambition among the young people that are going through the age of making a career choice. We want to make a change in the world, and we have the talent and hope to make it.",
+    "call-to-action": "View Photos"
+  },
+  "donate": {
+    "aba-label": "ABA: ",
+    "account-number-label": "Account Number: ",
+    "address": "1296 Camacho Avenue",
+    "beneficiary": "Beneficiary Bank",
+    "close": "Close",
+    "city": "La Paz - Bolivia",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque a felis tortor. Etiam laoreet felis mi, et sagittis lectus venenatis quis. Aliquam sit amet nisl molestie, varius mi ac, accumsan tortor. Mauris iaculis viverra dapibus. In hac habitasse platea dictumst. Nullam dolor justo, porta at egestas sollicitudin, dignissim eget erat. In efficitur est sit amet porta consectetur. Sed venenatis finibus hendrerit. In semper nunc et urna pharetra interdum. Proin vestibulum iaculis nulla nec vehicula. Aenean consectetur dapibus tellus, id tristique massa porta sed. Sed sed tortor id arcu ornare semper eget vitae dolor. Morbi aliquam congue ex in rhoncus.",
+    "dollars-usa": "Dollars (USA)",
+    "dollars-germany": "Dollars (Germany)",
+    "euros": "Euros",
+    "note1": "*** Take into account the following characteristics for the reception of payments through the BANCO DO BRASIL:",
+    "note2": "1. Receipt of business-to-business or business-to-person payments of the COMMERCIAL type.",
+    "note3": "2. No payments and/or person-to-person transfers shall be made for any reason.",
+    "subtitle": "Thank you for considering making a donation to GP4Tech.",
+    "swift-code": "Swift Code: BNBOBOLXXXX",
+    "swift-code-label": "Swift Code: ",
+    "telephone": "Telephone: (591)-2313232 - 800107272",
+    "title": "Make a donation",
+    "navbar-title": "Donate"
+  },
+  "roles": {
+    "developer": "Developer",
+    "quality-assurance": "Quality Assurance",
+    "design": "Designer",
+    "devops": "DevOp",
+    "manager": "Manager"
   }
 }

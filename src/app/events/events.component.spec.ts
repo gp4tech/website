@@ -6,9 +6,11 @@ import { of } from 'rxjs';
 import { EventsComponent } from './events.component';
 import { EventsService } from './events.service';
 import { LanguageService } from '../core/language.service';
+import { PageBannerComponent } from '../shared/components/page-banner/page-banner.component';
+import { CallToActionComponent } from '../shared/components/call-to-action/call-to-action.component';
 
 const EventsServiceMock = {
-  getAll: () => of([])
+  getAllSorted: () => of([])
 };
 
 describe('EventsComponent', () => {
@@ -17,8 +19,12 @@ describe('EventsComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
+      declarations: [
+        EventsComponent,
+        PageBannerComponent,
+        CallToActionComponent
+      ],
       imports: [TranslateModule.forRoot()],
-      declarations: [EventsComponent],
       providers: [
         { provide: EventsService, useValue: EventsServiceMock },
         LanguageService

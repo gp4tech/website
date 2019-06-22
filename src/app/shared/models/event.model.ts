@@ -5,5 +5,5 @@ export interface Event {
   descriptionEn: string;
   descriptionSp: string;
   pic: string;
-  positionPic: string;
+  order: number;
 }

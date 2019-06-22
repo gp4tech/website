@@ -1,11 +1,4 @@
-.indicator-image {
-  background-image: url(/assets/images/activityIndicator3.gif);
-  height: 250px;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  position: relative;
-}
+@import '../../../styles-colors';
 
 .activity-container {
   justify-content: center !important;
@@ -15,30 +8,33 @@
   flex-wrap: wrap;
 }
 
-#indicators h4 {
-  font-size: 32px;
-  margin: 0 0 4% 0;
+.divider-width {
+  width: 70%;
+  display: inline-block;
 }
 
-#indicators p {
-  font-size: 16px;
-  margin: 0;
-  line-height: 1.1;
-}
-
-.center-content {
-  width: 54%;
-  height: 37%;
-  margin: auto;
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 20%;
-  right: 0;
-}
-
-@media only screen and (max-width: 600px) {
-  .center-content {
-    width: 65%;
+#indicators {
+  p {
+    margin-top: 0;
   }
+
+  h2 {
+    margin-bottom: 0;
+  }
+
+  .progress {
+    margin: 0;
+  }
+
+  .determinate {
+    width: 100%;
+  }
+}
+
+.primary-color {
+  background-color: $primary-color;
+}
+
+.secondary-color {
+  background-color: $secondary-color;
 }

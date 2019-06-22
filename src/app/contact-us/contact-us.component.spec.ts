@@ -11,6 +11,8 @@ import { AgmCoreModule } from '@agm/core';
 
 import { ContactUsComponent } from './contact-us.component';
 import { EmailService } from '../core/email.service';
+import { PageBannerComponent } from '../shared/components/page-banner/page-banner.component';
+import { CallToActionComponent } from '../shared/components/call-to-action/call-to-action.component';
 
 describe('ContactUsComponent', () => {
   let component: ContactUsComponent;
@@ -18,7 +20,11 @@ describe('ContactUsComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ContactUsComponent],
+      declarations: [
+        ContactUsComponent,
+        PageBannerComponent,
+        CallToActionComponent
+      ],
       imports: [
         FormsModule,
         HttpClientModule,

@@ -3,27 +3,30 @@
 footer {
   height: 100%;
 
-  .btn-floating {
-    margin-left: 10px;
-  }
+  .who-did-this-link, .social-links {
+    width: 40px;
+    height: 40px;
+    display: inline-block;
+    margin: 0px 5px;
 
-  @media #{$small-and-down} {
-    .social-links,
-    .info-links,
-    .language-section {
-      text-align: center;
-      padding-bottom: 10px;
+    a {
+      margin: 0px;
     }
   }
 
-  @media #{$medium-and-up} {
-    .row {
-      display: flex;
-      align-items: center;
+  .language-section {
+    padding-top: 5px;
+  }
+
+  .contact-us {
+    a {
+      margin-left: 5px;
+      color: #fff;
     }
 
-    .social-links {
-      text-align: right;
+    a:hover {
+      margin-left: 5px;
+      color: #EF4D7E;
     }
   }
 }

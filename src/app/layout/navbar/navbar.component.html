@@ -10,6 +10,12 @@
           <li *ngFor="let route of appRoutes" [class.selected]="route === selectedRoute" (click)="onSelect(route)">
             <a [routerLink]="route.name">{{ route.i18n | translate | uppercase }}</a>
           </li>
+          <li>
+            <a class="waves-effect waves-light btn" [routerLink]="[ '/donations' ]">
+              <i class="fa fa-donate donate-icon"></i>
+              {{ 'donate.navbar-title' | translate }}
+            </a>
+          </li>
         </ul>
       </div>
     </div>
@@ -18,6 +24,12 @@
   <ul gpSidenav class="sidenav" id="mobile-menu">
     <li *ngFor="let route of appRoutes" [class.selected]="route === selectedRoute" (click)="onSelect(route)">
       <a [routerLink]="route.name" class="sidenav-close">{{ route.i18n | translate | uppercase }}</a>
+    </li>
+    <li class="donate-button">
+      <a class="sidenav-close waves-effect waves-light btn" [routerLink]="[ '/donations' ]">
+        <i class="fa fa-donate white-text"></i>
+        {{ 'donate.navbar-title' | translate }}
+      </a>
     </li>
   </ul>
 

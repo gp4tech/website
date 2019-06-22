@@ -21,6 +21,8 @@ import { ArticlesService } from '../blog/articles.service';
 import { SponsorsService } from './sponsors/sponsors.service';
 import { TopArticleComponent } from '../blog/top-articles/top-article/top-article.component';
 import { TestimonialsService } from './testimonials/testimonials.service';
+import { CallToActionModule } from '../shared/components/call-to-action/call-to-action.module';
+import { LanguageService } from '../core/language.service';
 
 const activityIndicatorsServiceMock = {
   getAll: () => of([])
@@ -60,6 +62,7 @@ describe('HomeComponent', () => {
       ],
       imports: [
         RouterTestingModule,
+        CallToActionModule,
         GetInvolvedModule,
         TranslateModule.forRoot({
           loader: { provide: TranslateLoader, useClass: TranslateFakeLoader }
@@ -82,7 +85,8 @@ describe('HomeComponent', () => {
         {
           provide: TestimonialsService,
           useValue: testimonialsServiceMock
-        }
+        },
+        LanguageService
       ]
     }).compileComponents();
   }));

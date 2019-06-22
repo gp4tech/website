@@ -1,25 +1,37 @@
-<h4 class="center-align">・{{ 'testimonials.title' | translate }}・</h4>
-<div class="row">
-  <div class="col s12 m12 l4 student-picture">
-    <img src="/assets/images/photo_test.png">
-  </div>
-  <div class="col m12 l8 testimonial-description valign-wrapper">
-    <div>
-      <p>Claudia Martinez</p>
-      <p>Don Bosco, 5to de Secundaria B</p>
-      <p>
-        "Lorem ipsum dolor sit amet consectetur adipiscing elit gravida
-        penatibus feugiat, condimentum pellentesque vulputate ante commodo eros
-        dictum consequat facilisis mauris sociosqu, suscipit orci morbi iaculis
-        sodales aptent aenean non ullamcorper. Aenean feugiat leo integer
-        dapibus mattis, consequat fringilla tortor mi aliquet taciti, urna proin
-        euismod praesent. Tempus curae platea fusce augue scelerisque sodales
-        libero, quis viverra hendrerit pulvinar conubia sociis in luctus, dis
-        malesuada felis dictumst cursus ultricies.Feugiat phasellus eu proin
-        sapien nec hac mollis aliquam, augue praesent conubia nibh ultrices
-        vitae tortor rutrum sodales, malesuada vestibulum a nostra et pharetra
-        velit".
-      </p>
+<div *ngIf="!isLoading">
+  <h4 class="center-align section-title section-title-bottom-space">
+    {{'testimonials.title' | translate}}
+  </h4>
+  <div class="carousel carousel-slider" gpCarousel>
+    <div class="carousel-item" *ngFor="let  testimonial of testimonials">
+      <div class="row testimonial-container grey lighten-4">
+        <div class="col s12 m12 l6 xl8 student-picture">
+          <div class="left-arrow col l6 xl8 valign-wrapper hide-on-med-and-down">
+            <div class="left">
+              <a class="waves-effect waves-light" (click)="carouselView.previous()">
+                <i class="fas fa-chevron-left"></i>
+              </a>
+            </div>
+          </div>
+          <div class="img" [style.backgroundImage]="'url(' + baseUrl + testimonial.storagePath + ')'"></div>
+        </div>
+        <div class="col s12 m12 l6 xl4 student-testimonial valign-wrapper">
+          <div>
+            <h5 class="teal-text">{{testimonial.name}}</h5>
+            <p><b>{{testimonial.school}}, {{testimonial.class}}</b></p>
+            <div class="testimonial-description-container testimonial-description">
+              <p class="flow-text">
+                {{testimonial.description}}
+              </p>
+            </div>
+          </div>
+          <div class="right-arrow right hide-on-med-and-down">
+            <a class="waves-effect waves-light" (click)="carouselView.next()">
+              <i class="fas fa-chevron-right "></i>
+            </a>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </div>

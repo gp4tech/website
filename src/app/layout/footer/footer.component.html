@@ -1,20 +1,47 @@
-<footer class="page-footer grey darken-3">
+<footer class="page-footer black">
   <div class="container">
     <div class="row">
-      <div class="col s12 m4 info-links">
-        <a [routerLink]="[infoLink.link]" *ngFor="let infoLink of infoLinks; let i = index">
-          {{ infoLink.i18n | translate }}
-          <span *ngIf="(i + 1) !== infoLinks.length"> | </span>
+      <div class="col s12 m4 l4 contact-us center-align">
+        <p class="">{{ 'footer.contact-us' | translate }}</p>
+        <i class="fa fa-phone" aria-hidden="true"></i>
+        <a href="tel:({{ 'contact-us.phone.code' | translate }}){{ 'contact-us.phone.number' | translate }}">
+          ({{ 'contact-us.phone.code' | translate }}){{ 'contact-us.phone.number' | translate }}
+        </a><br/>
+        <i class="fas fa-envelope" aria-hidden="true"></i>
+        <a href="mailto:{{'contact-us.gpEmail' | translate}}">
+          {{ 'contact-us.gpEmail' | translate }}
         </a>
       </div>
-      <div class="col s12 m4 social-links">
-        <a *ngFor="let socialLink of socialLinks" target="_blank" rel="noopener noreferrer"
-          class="btn-floating grey darken-2" [href]="socialLink.link">
-          <i [class]="'fa ' + socialLink.faIcon"></i>
-        </a>
+  
+      <div class="col s12 m4 l3 center-align">
+        <p>{{ 'footer.social-networks' | translate}}</p>
+        <div class="row">
+          <div class="social-links" *ngFor="let socialLink of socialLinks">
+            <a [href]="socialLink.link" target="_blank" rel="noopener noreferrer">
+              <img class="responsive-img" [src]="'/assets/images/' + socialLink.icon"
+                [alt]="socialLink.i18n | translate">
+            </a>
+          </div>
+        </div>
       </div>
-      <div class="col s12 m4 right-align language-section">
-        <gp-language-button></gp-language-button>
+      <div class="col s12 m2 l3 center-align">
+        <p> {{ 'who-did-this.title' | translate }} </p>
+        <div class="row">
+          <div class="who-did-this-link">
+            <a [routerLink]="whoDidThis.link" class="btn-floating grey darken-2">
+              <img class="responsive-img" [src]="'/assets/images/' + whoDidThis.icon"
+                [alt]="whoDidThis.i18n | translate">
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="col s12 m2 l2 donations-links center-align">
+        <p>{{ 'language.title' | translate }} </p>
+        <div class="row">
+          <div class="language-section">
+            <gp-language-button></gp-language-button>
+          </div>
+        </div>
       </div>
     </div>
   </div>

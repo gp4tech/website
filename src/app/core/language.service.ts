@@ -3,10 +3,12 @@ import { Injectable } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
 import { Observable, Subject } from 'rxjs';
 
+const DEFAULT_LANGUAGES = ['en', 'es'];
+
 @Injectable()
 export class LanguageService {
   changeLanguage$: Observable<any>;
-  currentLanguage: string;
+  currentLanguage: string = DEFAULT_LANGUAGES[0];
   private languageChanged: Subject<any>;
 
   constructor(private translateService: TranslateService) {
@@ -15,8 +17,13 @@ export class LanguageService {
   }
 
   setDefaultLanguage(): void {
-    this.translateService.setDefaultLang('en');
-    this.switchLanguage(this.translateService.getBrowserLang());
+    const browserLanguage = this.translateService.getBrowserLang();
+    const isValidLanguage = DEFAULT_LANGUAGES.find(defaultLanguage => defaultLanguage === browserLanguage);
+    this.translateService.setDefaultLang(this.currentLanguage);
+
+    if (isValidLanguage) {
+      this.switchLanguage(browserLanguage);
+    }
   }
 
   switchLanguage(language: string): void {

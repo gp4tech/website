@@ -1,11 +1,18 @@
+@import '../../styles-colors.scss';
+
 .text-justify {
   text-align: justify;
 }
 
 .type {
   font-size: 1.7em;
+  color: $secondary-color;
 }
 
 .separator {
   padding: 25px;
+}
+
+.separator-p {
+  padding: 0 25px 25px;
 }

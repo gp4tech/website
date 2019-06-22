@@ -10,6 +10,8 @@ import { of } from 'rxjs';
 import { MembersComponent } from './members.component';
 import { MembersService } from './members.service';
 import { LanguageService } from '../../core/language.service';
+import { FixUrlPipe } from './fix-url.pipe';
+import { RoleConverterPipe } from 'src/app/shared/pipes/role-converter.pipe';
 
 const membersServiceMock = {
   getAll: () => of([]),
@@ -22,7 +24,11 @@ describe('MembersComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [MembersComponent],
+      declarations: [
+        FixUrlPipe,
+        RoleConverterPipe,
+        MembersComponent
+      ],
       imports: [
         TranslateModule.forRoot({
           loader: { provide: TranslateLoader, useClass: TranslateFakeLoader }

@@ -1,6 +1,12 @@
+[![CircleCI](https://circleci.com/gh/gp4tech/website.svg?style=svg)](https://circleci.com/gh/gp4tech/website)
+
 # Website
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.2.2.
+
+## Create keys file
+
+Run `npm run env-keys-config:create-keys` and add your keys to the file: **src/environments/keys-config.ts**.
 
 ## Development server
 
