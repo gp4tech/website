@@ -5,8 +5,8 @@ picture="assets/images/who-did-this-banner.jpeg">
   <div class="section-space">
     <div *ngFor="let role of roles">
       <div class="row">
-        <div class="col s12 m11 offset-m1">
-          <h4>
+        <div class="col s12">
+          <h4 class="section-title">
             {{ 'who-did-this.teams.' + role | translate }}
           </h4>
           <div class="divider"></div>
@@ -23,7 +23,7 @@ picture="assets/images/who-did-this-banner.jpeg">
             <h4>
               {{ member.name }}
             </h4>
-            <p>
+            <p class="text-justify">
               {{ language.currentLanguage === 'en' ? member.bioEn : member.bioSp }}
             </p>
             <div class="social-buttons">

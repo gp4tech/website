@@ -6,6 +6,7 @@ import { environment } from '../../../environments/environment';
 import { Testimonial } from '../../shared/models/testimonial.model';
 import { TestimonialsService } from './testimonials.service';
 import { CarouselDirective } from '../../shared/directives/carousel/carousel.directive';
+import { LanguageService } from '../../core/language.service';
 
 @Component({
   selector: 'gp-testimonials',
@@ -20,7 +21,7 @@ export class TestimonialsComponent implements OnInit, OnDestroy {
 
   @ViewChild(CarouselDirective) carouselView;
 
-  constructor(private testimonialService: TestimonialsService) {}
+  constructor(private testimonialService: TestimonialsService, public language: LanguageService) {}
 
   ngOnInit() {
     this.testimonialsSub = this.testimonialService

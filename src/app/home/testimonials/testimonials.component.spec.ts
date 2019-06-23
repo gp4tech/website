@@ -9,6 +9,7 @@ import { of } from 'rxjs';
 
 import { TestimonialsComponent } from './testimonials.component';
 import { TestimonialsService } from './testimonials.service';
+import { LanguageService } from 'src/app/core/language.service';
 
 const testimonialsServiceMock = {
   getAll: () => of([])
@@ -22,12 +23,11 @@ describe('TestimonialsComponent', () => {
     TestBed.configureTestingModule({
       declarations: [TestimonialsComponent],
       imports: [
-        TranslateModule.forRoot({
-          loader: { provide: TranslateLoader, useClass: TranslateFakeLoader }
-        })
+        TranslateModule.forRoot()
       ],
       providers: [
-        { provide: TestimonialsService, useValue: testimonialsServiceMock }
+        { provide: TestimonialsService, useValue: testimonialsServiceMock },
+        LanguageService
       ]
     }).compileComponents();
   }));

@@ -13,7 +13,7 @@ import { LanguageService } from '../core/language.service';
 })
 export class WhoDidThisComponent implements OnInit {
   webTeamMembers$: Observable<WebTeamMember[]>;
-  roles: string[] = ['dev', 'qa', 'po', 'designer'];
+  roles: string[] = ['dev', 'qa', 'po'];
 
   constructor(
     private webTeamMembersService: WebTeamMembersService,
