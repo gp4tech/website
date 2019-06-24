@@ -97,7 +97,7 @@
   },
   "contact-us": {
     "title": "¡Codifiquemos un mundo mejor!",
-    "description": "Cosas asombrosas suceden cuando nos juntamos. GP4Tech es una comunidad interna de Jalasoft cuyos miembros hacen que las cosas pasen! ¿Tienes preguntas? Envianos un mensaje, estaremos más que felices de escuchar de ti.",
+    "description": "Cosas asombrosas suceden cuando nos juntamos. ¡GP4Tech es una comunidad interna de Jalasoft cuyos miembros hacen que las cosas pasen! ¿Tienes preguntas? Envíanos un mensaje, estaremos más que felices de escuchar de ti.",
     "gpEmail": "GP4Tech@jalasoft.com",
     "email-title": "Envíanos un correo",
     "company-name": "Jalasoft",
@@ -113,7 +113,7 @@
     },
     "find-title": "Cómo encontrar Jalasoft",
     "driving": {
-      "title": "Conduciéndo",
+      "title": "Conduciendo",
       "description": "Consulte las instrucciones proporcionadas por"
     },
     "transportation": {
@@ -139,7 +139,7 @@
     "beneficiary": "Banco del Beneficiario",
     "close": "Cerrar",
     "city": "La Paz - Bolivia",
-    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque a felis tortor. Etiam laoreet felis mi, et sagittis lectus venenatis quis. Aliquam sit amet nisl molestie, varius mi ac, accumsan tortor. Mauris iaculis viverra dapibus. In hac habitasse platea dictumst. Nullam dolor justo, porta at egestas sollicitudin, dignissim eget erat. In efficitur est sit amet porta consectetur. Sed venenatis finibus hendrerit. In semper nunc et urna pharetra interdum. Proin vestibulum iaculis nulla nec vehicula. Aenean consectetur dapibus tellus, id tristique massa porta sed. Sed sed tortor id arcu ornare semper eget vitae dolor. Morbi aliquam congue ex in rhoncus.",
+    "description": "",
     "dollars-usa": "Dólares (EE.UU.)",
     "dollars-germany": "Dólares (Alemania)",
     "euros": "Euros",

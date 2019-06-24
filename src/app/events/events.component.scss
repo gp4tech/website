@@ -10,9 +10,21 @@
 }
 
 .separator {
-  padding: 25px;
+  padding: 35px;
 }
 
 .separator-p {
   padding: 0 25px 25px;
+}
+
+.event-picture {
+  width: 100%;
+  min-height: 400px;
+  background-size: cover;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+
+  box-shadow: 0px 9px 20px 4px #aeaeae;
+  border-radius: 10px;
+  border: 1px $secondary-color solid;
 }

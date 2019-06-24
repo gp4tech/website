@@ -25,16 +25,16 @@ jobs:
             - functions/node_modules
       - run:
           name: Linting
-          command: npm run lint
+          command: npm run lint:dev
       - run:
           name: Inject Firebase DB and Google Maps keys
           command: npm run env-keys-config:override-keys
       - run:
           name: Testing
-          command: npm run test:client
+          command: npm run test:dev
       - run:
           name: Building
-          command: npm run build:client
+          command: npm run build:dev
       - save_cache:
           key: v1-dist-{{ .Environment.CIRCLE_BRANCH }}-{{ .Environment.CIRCLE_SHA1 }}
           paths:

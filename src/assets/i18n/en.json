@@ -96,7 +96,7 @@
     }
   },
   "contact-us": {
-    "title": "Let´s code a better world!",
+    "title": "Let's code a better world!",
     "description": "Amazing things happen when we get together. GP4Tech is an internal community withing Jalasoft whose members make things happen! Do you have questions? Send us a message we will be more than happy to hear from you.",
     "gpEmail": "GP4Tech@jalasoft.com",
     "email-title": "Email us",
@@ -139,7 +139,7 @@
     "beneficiary": "Beneficiary Bank",
     "close": "Close",
     "city": "La Paz - Bolivia",
-    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque a felis tortor. Etiam laoreet felis mi, et sagittis lectus venenatis quis. Aliquam sit amet nisl molestie, varius mi ac, accumsan tortor. Mauris iaculis viverra dapibus. In hac habitasse platea dictumst. Nullam dolor justo, porta at egestas sollicitudin, dignissim eget erat. In efficitur est sit amet porta consectetur. Sed venenatis finibus hendrerit. In semper nunc et urna pharetra interdum. Proin vestibulum iaculis nulla nec vehicula. Aenean consectetur dapibus tellus, id tristique massa porta sed. Sed sed tortor id arcu ornare semper eget vitae dolor. Morbi aliquam congue ex in rhoncus.",
+    "description": "",
     "dollars-usa": "Dollars (USA)",
     "dollars-germany": "Dollars (Germany)",
     "euros": "Euros",
