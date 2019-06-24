@@ -7,9 +7,12 @@
 
 .member-card-wrapper {
   padding-left: 0px;
-  padding-right: 10px;
   margin-bottom: 35px;
+  padding-right: 10px;
 
+  @media #{$medium-and-down} {
+    padding-right: 0px;
+  }
 
   .image-wrapper {
     img {
