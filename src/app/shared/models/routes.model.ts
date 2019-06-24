@@ -7,7 +7,7 @@ export enum AppBarRoutes {
   home = 'home',
   about = 'about-us',
   donate = 'donations',
-  events = 'events',
+  events = 'activities',
   blog = 'blog',
   who = 'who-did-this',
   contact = 'contact-us'

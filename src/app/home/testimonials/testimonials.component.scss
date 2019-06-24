@@ -40,11 +40,23 @@
   }
 
   @media #{$small-and-down} {
-    height: 750px !important;
+    height: 850px !important;
   }
 
+  @media only screen and (max-width: 400px) {
+    height: 960px !important;
+  }
+
+  // @media only screen and (max-width: 400px) {
+  //   height: 950px !important;
+  // }
+
   @media #{$medium-only} {
-    height: 650px !important;
+    height: 755px !important;
+  }
+
+  @media only screen and (min-width: 800px) and (max-width: 992px) {
+    height: 700px !important;
   }
 
   @media #{$large-and-up} {
