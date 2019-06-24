@@ -13,6 +13,9 @@ import { DataOrder } from '../../shared/models/data-type.model';
 
 @Injectable()
 export class MembersService extends DataService<Member> {
+
+  height;
+
   constructor(http: HttpClient, db: AngularFirestore) {
     super(http, db, FirebaseCollections.members);
   }
@@ -34,5 +37,17 @@ export class MembersService extends DataService<Member> {
           })
         )
       );
+  }
+
+  getMaxHeight() {
+    return this.height;
+  }
+
+  setMaxHeight(offsetHeight: any) {
+    if (this.height > offsetHeight) {
+      return;
+    }
+
+    this.height = offsetHeight;
   }
 }
