@@ -2,26 +2,17 @@
   {{ 'about-us.members.title' | translate }}
 </h4>
 <div class="row">
-  <div class="col s12 m3 member-card-wrapper center-align" *ngFor="let member of members$ | async; let i = index ">
+  <div class="col s12 m6 l3 member-card-wrapper center-align" *ngFor="let member of members$ | async; let i = index ">
     <div class="member-card" (click)="openMemberInfo(member, $event)">
-      <div class="image-wrapper" [ngClass]="{'not-opened': selectedMemberId !== member.id && selectedMemberId !== null}">
-        <img class="responsive-img" [src]="member.picture" [alt]="member.displayName">
+      <div class="image-wrapper">
+        <img class="responsive-img" gpImageResizer [src]="member.picture" [alt]="member.displayName">
       </div>
-      <div class="member-name scale-transition"
-        [ngClass]="{'scale-out': member.id === selectedMemberId}">
-        <span [ngClass]="{'pair-position': i % 2 === 0}">
-          {{ member.displayName }}
-          <i class="fas fa-sort-down"></i>
-        </span>
-      </div>
-      <div class="member-info-wrapper scale-transition"
-        [ngClass]="{ 'scale-out': member.id !== selectedMemberId, 'opened': member.id === selectedMemberId }">
+      <div class="member-info-wrapper" gpMembers>
         <div class="member-info">
           <span class="member-info-name" [ngClass]="{'pair-position': i % 2 === 0}">
             {{ member.displayName }}
-            <i class="fas fa-sort-up"></i>
           </span><br/>
-          {{ member.jalaRole | roleConverter | translate }}<br/>
+          {{ member.jalaRole | roleConverter | translate }}<br *ngIf="member.jalaRole"/>
           {{ language.currentLanguage === 'es' ? member.careerSp : member.careerEn }}<br/>
           {{ member.mainTeam }}
           <div class="icons" [ngClass]="{'pair-position': i % 2 === 0}">
