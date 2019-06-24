@@ -10,6 +10,7 @@ import {
 
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
+import { Angulartics2Module } from 'angulartics2';
 
 import { EmailService } from './email.service';
 import { LanguageService } from './language.service';
@@ -34,7 +35,8 @@ export function HttpLoaderFactory(http: HttpClient) {
         useFactory: HttpLoaderFactory,
         deps: [HttpClient]
       }
-    })
+    }),
+    Angulartics2Module.forRoot()
   ],
   providers: [
     { provide: FirestoreSettingsToken, useValue: {} },
