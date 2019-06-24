@@ -16,9 +16,7 @@ export class MembersComponent implements OnInit {
   selectedMemberId: string = null;
 
   constructor(
-    public language: LanguageService,
-    private membersService: MembersService
-  ) {}
+    public language: LanguageService, private membersService: MembersService) {}
 
   ngOnInit() {
     this.members$ = this.membersService.getAllMembers();
