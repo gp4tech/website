@@ -9,6 +9,6 @@ export class ImageResizerDirective {
 
   @HostListener('load')
   onImageLoaded(): void {
-    this.elementRef.nativeElement.style.height = this.elementRef.nativeElement.offsetWidth+'px';
+    this.elementRef.nativeElement.style.height = this.elementRef.nativeElement.offsetWidth + 'px';
   }
 }

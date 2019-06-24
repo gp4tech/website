@@ -1,12 +1,12 @@
-import { Directive, Renderer2, ElementRef } from '@angular/core';
+import { Directive, Renderer2, ElementRef, AfterContentInit, AfterContentChecked } from '@angular/core';
 import { MembersService } from './members.service';
 
 @Directive({
   selector: '[gpMembers]'
 })
-export class MembersDirective {
+export class MembersDirective implements AfterContentInit, AfterContentChecked {
 
-  constructor(private elementRef: ElementRef, 
+  constructor(private elementRef: ElementRef,
     private membersService: MembersService) { }
 
   ngAfterContentInit(): void {

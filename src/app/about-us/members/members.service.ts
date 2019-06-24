@@ -45,7 +45,7 @@ export class MembersService extends DataService<Member> {
 
   setMaxHeight(offsetHeight: any) {
     if (this.height > offsetHeight) {
-      return; 
+      return;
     }
 
     this.height = offsetHeight;
