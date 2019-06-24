@@ -6,6 +6,7 @@ import {
   TranslateLoader,
   TranslateFakeLoader
 } from '@ngx-translate/core';
+import { Angulartics2Module } from 'angulartics2';
 
 import { AppComponent } from './app.component';
 import { LayoutModule } from './layout/layout.module';
@@ -22,7 +23,8 @@ describe('AppComponent', () => {
         HomeModule,
         TranslateModule.forRoot({
           loader: { provide: TranslateLoader, useClass: TranslateFakeLoader }
-        })
+        }),
+        Angulartics2Module.forRoot()
       ],
       declarations: [AppComponent],
       providers: [LanguageService, ScrollTopService]
