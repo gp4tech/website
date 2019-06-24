@@ -6,7 +6,7 @@
     "start": "ng serve",
     "build:dev": "ng build",
     "build:prod": "run-s build:client build:prerender",
-    "build:client": "ng build --prod --build-optimizer",
+    "build:client": "ng build --prod=false --build-optimizer",
     "build:prerender": "node prerender.js",
     "test": "ng test",
     "test:client": "ng test --watch=false",
