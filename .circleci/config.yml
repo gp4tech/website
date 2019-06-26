@@ -33,6 +33,9 @@ jobs:
           name: Testing
           command: npm run test:dev
       - run:
+          name: Disallow indexing for dev site
+          command: npm run robots:create-dev-file
+      - run:
           name: Building
           command: npm run build:dev
       - save_cache:
