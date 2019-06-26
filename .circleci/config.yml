@@ -34,7 +34,7 @@ jobs:
           command: npm run test:dev
       - run:
           name: Disallow indexing for dev site
-          command: npm run robots:create-dev-file
+          command: sed -i 's/<!-- <meta name="robots" content="noindex"> -->/<meta name="robots" content="noindex">/' src/index.html
       - run:
           name: Building
           command: npm run build:dev
