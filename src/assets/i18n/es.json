@@ -135,8 +135,11 @@
   "donate": {
     "aba-label": "ABA: ",
     "account-number-label": "Número de Cuenta: ",
+    "account-number": "3500503237 - BNB Caja de Ahorros",
     "address": "Av. Camacho Esq. Colon # 1296",
     "beneficiary": "Banco del Beneficiario",
+    "beneficiary-name": "Nombre del Beneficiario: Helen Paola Tamayo Arce",
+    "beneficiary-ci": "Cédula de Identidad: 5922462 CB",
     "close": "Cerrar",
     "city": "La Paz - Bolivia",
     "description": "Somos una iniciativa que trabaja voluntariamente. Dado que nuestras actividades se enfocan en estudiantes de colegio proporcionamos eventos en su mayoría gratuitos, haciéndolos accesibles a todo el mundo. En caso de que puedas darnos una mano para poder conllevar estos eventos, ¡te lo agradecemos! Recuerda que cualquier ayuda es bienvenida.",

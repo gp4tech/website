@@ -135,8 +135,11 @@
   "donate": {
     "aba-label": "ABA: ",
     "account-number-label": "Account Number: ",
+    "account-number": "3500503237 - BNB Savings Bank",
     "address": "1296 Camacho Avenue",
     "beneficiary": "Beneficiary Bank",
+    "beneficiary-name": "Beneficiary Name: Helen Paola Tamayo Arce",
+    "beneficiary-ci": "Identity Card: 5922462 CB",
     "close": "Close",
     "city": "La Paz - Bolivia",
     "description": "We are an initiative that works voluntarily. Since our activities focus on college students, we provide mostly free events, making them accessible to everyone. In case you can give us a hand to carry these events, we appreciate it! Remember that any help is welcome.",
