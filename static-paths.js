@@ -3,7 +3,8 @@ module.exports = {
     '',
     'about-us',
     'activities',
-    'donations',
+    // TODO 07182019: Determine what will happen with donations
+    // 'donations',
     'who-did-this'
   ]
-}
+};
