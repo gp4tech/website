@@ -33,6 +33,9 @@ jobs:
           name: Testing
           command: npm run test:dev
       - run:
+          name: Disallow indexing for dev site
+          command: sed -i 's/<!-- <meta name="robots" content="noindex"> -->/<meta name="robots" content="noindex">/' src/index.html
+      - run:
           name: Building
           command: npm run build:dev
       - save_cache:

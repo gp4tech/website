@@ -23,10 +23,11 @@ const routes: Routes = [
     path: AppBarRoutes.contact,
     loadChildren: './contact-us/contact-us.module#ContactUsModule'
   },
-  {
-    path: AppBarRoutes.donate,
-    loadChildren: './donate/donate.module#DonateModule'
-  },
+  // TODO 07182019: Determine what will happen with donations
+  // {
+  //   path: AppBarRoutes.donate,
+  //   loadChildren: './donate/donate.module#DonateModule'
+  // },
   {
     path: '**',
     // TODO 06172019: Create a 404 component
