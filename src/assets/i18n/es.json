@@ -26,8 +26,9 @@
   "banner": {
     "slogan-line-1": "GIRL POWER FOR",
     "slogan-line-2": "TECHNOLOGY",
-    "description-line-1": "GP4Tech es una comunidad que tiene el objetivo de involucrar a más mujeres en el área de la tecnología.",
-    "description-line-2": "Ven a conocernos en nuestro próximo evento: Weekend Coding.",
+    "description-line-1": "GP4Tech es una comunidad que tiene el objetivo de involucrar a más mujeres en el área de la tecnología",
+    "description-line-2": "Ven a conocernos en nuestro próximo evento",
+    "event": "Weekend Coding",
     "call-to-action": "Inscribirse"
   },
   "activity-indicator-section": {
