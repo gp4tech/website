@@ -8,20 +8,27 @@ const routes: Routes = [
   { path: '', component: HomeComponent },
   {
     path: AppBarRoutes.about,
-    loadChildren: './about-us/about-us.module#AboutUsModule'
+    loadChildren: () =>
+      import('./about-us/about-us.module').then(m => m.AboutUsModule)
   },
   {
     path: AppBarRoutes.events,
-    loadChildren: './events/events.module#EventsModule'
+    loadChildren: () =>
+      import('./events/events.module').then(m => m.EventsModule)
   },
-  { path: AppBarRoutes.blog, loadChildren: './blog/blog.module#BlogModule' },
+  {
+    path: AppBarRoutes.blog,
+    loadChildren: () => import('./blog/blog.module').then(m => m.BlogModule)
+  },
   {
     path: AppBarRoutes.who,
-    loadChildren: './who-did-this/who-did-this.module#WhoDidThisModule'
+    loadChildren: () =>
+      import('./who-did-this/who-did-this.module').then(m => m.WhoDidThisModule)
   },
   {
     path: AppBarRoutes.contact,
-    loadChildren: './contact-us/contact-us.module#ContactUsModule'
+    loadChildren: () =>
+      import('./contact-us/contact-us.module').then(m => m.ContactUsModule)
   },
   // TODO 07182019: Determine what will happen with donations
   // {

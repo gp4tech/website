@@ -3,7 +3,7 @@ jobs:
   build:
     working_directory: ~/project
     docker:
-      - image: circleci/node:10.15.3-browsers
+      - image: circleci/node:12.9.1-browsers
     steps:
       - checkout
       - run:
@@ -48,7 +48,7 @@ jobs:
             - .firebaserc
   deploy:
     docker:
-      - image: circleci/node:10.15.3-browsers
+      - image: circleci/node:12.9.1-browsers
     working_directory: ~/project
     steps:
       - run:
@@ -65,7 +65,7 @@ jobs:
 
 workflows:
   version: 2
-  -deploy:
+  build_and_deploy:
     jobs:
       - build:
           filters:
