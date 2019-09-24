@@ -34,7 +34,7 @@ export class CarouselDirective implements AfterViewInit {
     if (this.autoSlide && !this.intervalId) {
       this.intervalId = setInterval(() => {
         this.carousel.next();
-      }, 8000);
+      }, 20000);
     }
   }
 
