@@ -1,6 +1,6 @@
 [![CircleCI](https://circleci.com/gh/gp4tech/website.svg?style=svg)](https://circleci.com/gh/gp4tech/website)
 
-# Website 
+# Website
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.2.2.
 
@@ -33,6 +33,7 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 Access [here](https://gp4techsite.firebaseapp.com/) for current develop site.
 
 In order to deploy follow these steps:
+
 - Install firebase tools globally if you don't have it: `npm install -g firebase-tools`
 - Login to your firebase account the first time: `firebase login`
 - Deploy the site after building it for production: `firebase deploy`
@@ -43,7 +44,7 @@ In order to deploy follow these steps:
 
 ##### Local
 
-To run locally these cloud functions you need to add missing environment variables in the *.runtimeconfig.json*.
+To run locally these cloud functions you need to add missing environment variables in the _.runtimeconfig.json_.
 
 To only run the functions execute:
 
