@@ -15,6 +15,7 @@ import { PageBannerComponent } from '../shared/components/page-banner/page-banne
 import { CallToActionComponent } from '../shared/components/call-to-action/call-to-action.component';
 import { RoleConverterPipe } from '../shared/pipes/role-converter.pipe';
 import { FixUrlPipe } from './members/fix-url.pipe';
+import { MissionVisionComponent } from './mission-vision/mission-vision.component';
 
 const membersServiceMock = {
   getAll: () => of([]),
@@ -33,7 +34,8 @@ describe('AboutUsComponent', () => {
         PageBannerComponent,
         CallToActionComponent,
         RoleConverterPipe,
-        FixUrlPipe
+        FixUrlPipe,
+        MissionVisionComponent
       ],
       imports: [
         TranslateModule.forRoot({

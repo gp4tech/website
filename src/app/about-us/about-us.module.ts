@@ -9,9 +9,10 @@ import { MembersService } from './members/members.service';
 import { FixUrlPipe } from './members/fix-url.pipe';
 import { MembersDirective } from './members/members.directive';
 import { ImageResizerDirective } from './members/image-resizer.directive';
+import { MissionVisionComponent } from './mission-vision/mission-vision.component';
 
 @NgModule({
-  declarations: [AboutUsComponent, MembersComponent, FixUrlPipe, MembersDirective, ImageResizerDirective],
+  declarations: [AboutUsComponent, MembersComponent, FixUrlPipe, MembersDirective, ImageResizerDirective, MissionVisionComponent],
   imports: [CommonModule, SharedModule, AboutUsRoutingModule],
   providers: [MembersService]
 })

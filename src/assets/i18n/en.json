@@ -73,6 +73,14 @@
       "title": "Who are we?",
       "description": "Girl Power for Technology (GP4Tech) is an initiative of the Jala family, which encourages, develops and motivates the participation of women in technology, opening spaces for training, personal development, and skills necessary for the field. Our vision is to encourage the inclusion and professional development of women in technology at the Bolivian level."
     },
+    "mission": {
+      "title": "Mission",
+      "description": "Girl Power for Technology it's a Jalasoft initiative. It's purpose it's to encourage, develop, and motivate the participation of women in technology. By starting training opportunities for personal development and needed abilities in the field."
+    },
+    "vision": {
+      "title": "Vision",
+      "description": "To encourage the inclusion of professional development of Bolivian women looking to grow in technology."
+    },
     "members": {
       "title": "Members"
     }
