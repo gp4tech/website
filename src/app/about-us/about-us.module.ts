@@ -12,7 +12,14 @@ import { ImageResizerDirective } from './members/image-resizer.directive';
 import { MissionVisionComponent } from './mission-vision/mission-vision.component';
 
 @NgModule({
-  declarations: [AboutUsComponent, MembersComponent, FixUrlPipe, MembersDirective, ImageResizerDirective, MissionVisionComponent],
+  declarations: [
+    AboutUsComponent,
+    MembersComponent,
+    FixUrlPipe,
+    MembersDirective,
+    ImageResizerDirective,
+    MissionVisionComponent
+  ],
   imports: [CommonModule, SharedModule, AboutUsRoutingModule],
   providers: [MembersService]
 })
