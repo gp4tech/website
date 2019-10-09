@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 import { AuthenticationService } from '../services/authentication.service';
-import { LanguageService } from '../language.service';
 
 @Component({
   selector: 'gp-login',
@@ -13,8 +12,7 @@ export class LoginComponent implements OnInit {
   loginForm: FormGroup;
 
   constructor(private fb: FormBuilder,
-              private authService: AuthenticationService,
-              public language: LanguageService) {
+              private authService: AuthenticationService) {
     this.createLoginForm();
   }
 
