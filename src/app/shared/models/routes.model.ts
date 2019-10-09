@@ -10,7 +10,8 @@ export enum AppBarRoutes {
   events = 'activities',
   blog = 'blog',
   who = 'who-did-this',
-  contact = 'contact-us'
+  contact = 'contact-us',
+  login = 'login'
 }
 
 export const AppRoutes: AppRoute[] = [
@@ -19,5 +20,6 @@ export const AppRoutes: AppRoute[] = [
   { name: AppBarRoutes.events, i18n: 'links.events' },
   // TODO 06092019: Hidden for initial release
   // { name: AppBarRoutes.blog, i18n: 'links.blog' },
-  { name: AppBarRoutes.contact, i18n: 'links.contact-us' }
+  { name: AppBarRoutes.contact, i18n: 'links.contact-us' },
+  { name: AppBarRoutes.login, i18n: 'links.login' }
 ];
