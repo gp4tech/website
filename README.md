@@ -1,12 +1,34 @@
 [![CircleCI](https://circleci.com/gh/gp4tech/website.svg?style=svg)](https://circleci.com/gh/gp4tech/website)
 
-# Website
+# GP4Tech Website
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.2.2.
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli).
+
+## Setup your environment
+
+- Install [Node.js](https://nodejs.org/en/).
+- Install [Angular CLI](https://cli.angular.io/).
+- Clone the repo:
+```
+git clone https://github.com/gp4tech/weekend-coding.git
+```
+- Install dependencies:
+```
+cd website
+```
+```
+npm install
+```
+- [Create the keys file](#create-keys-file).
+- Run the project locally on the [Development server](#development-server).
 
 ## Create keys file
 
 Run `npm run env-keys-config:create-keys` and add your keys to the file: **src/environments/keys-config.ts**.
+
+### Firebase keys
+
+You can find the firebase keys for dev site in the following [link](https://console.firebase.google.com/project/gp4techsite/settings/general/web:MDE4MTE4MTAtYmMzOS00MzE0LThmNDMtYmY5MTQ3NTgzNTM3).
 
 ## Development server
 
@@ -19,6 +41,10 @@ Run `ng generate component component-name` to generate a new component. You can 
 ## Build
 
 Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+
+## Running lint
+
+Run `ng lint` to execute linting.
 
 ## Running unit tests
 
@@ -65,6 +91,10 @@ To review which environment variables already are configured on firebase project
 ```
 firebase functions:config:get
 ```
+
+## CI/CD
+
+Continuous Integration and Continuous Deployment is made with [CircleCI](https://circleci.com/gh/gp4tech).
 
 ## Further help
 
