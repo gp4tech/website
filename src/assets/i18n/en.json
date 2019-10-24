@@ -46,14 +46,14 @@
     "people-involved": "People Involved",
     "subscription": {
       "title": "Support this",
-      "intro": "Because... Aliquam ac viverra sem. Nunc dictum diam arcu. Mauris a bibendum turpis, a fermentum ligula. Morbi eu dolor ac elit accumsan consequat. Sed feugiat dapibus blandit. Nunc posuere tempus neque, et pulvinar nunc fermentum vitae. Etiam at ex rutrum, interdum metus eu, venenatis purus. Sed viverra sed nibh eget pharetra.",
+      "intro": "Thanks for your interest in being part of our change. We want to share with you our events and the opportunity of being part of our activities. Please fill the following data to keep in touch.",
       "twitter": "Support via Twitter",
       "facebook": "Support via Facebook",
       "google": "Support via Google",
       "or": "OR",
       "form": {
-        "firstname": "First Name",
-        "lastname": "Last Name",
+        "name": "First Name",
+        "age": "Edad",
         "email": "Email",
         "choose-country": "Choose your country",
         "country": "Country",

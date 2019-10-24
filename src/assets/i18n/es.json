@@ -46,14 +46,14 @@
     "people-involved": "Personas Involucradas",
     "subscription": {
       "title": "Apoyar esto",
-      "intro": "Porque... Aliquam ac viverra sem. Nunc dictum diam arcu. Mauris a bibendum turpis, a fermentum ligula. Morbi eu dolor ac elit accumsan consequat. Sed feugiat dapibus blandit. Nunc posuere tempus neque, et pulvinar nunc fermentum vitae. Etiam at ex rutrum, interdum metus eu, venenatis purus. Sed viverra sed nibh eget pharetra.",
+      "intro": "Gracias por tu interés en ser parte de nuestro cambio. Queremos compartir contigo nuestros futuros eventos y la oportunidad de ser parte de nuestras actividades. Por favor completa los siguientes datos para mantenernos en contacto.",
       "twitter": "Apoyar via Twitter",
       "facebook": "Apoyar via Facebook",
       "google": "Apoyar via Google",
       "or": "O",
       "form": {
-        "firstname": "Nombre",
-        "lastname": "Apellido",
+        "name": "Nombre",
+        "age": "Edad",
         "email": "Correo Electronico",
         "choose-country": "Elije tu País",
         "country": "País",

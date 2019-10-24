@@ -3,5 +3,5 @@ export interface Supporter {
   email: string;
   gender: string;
   name: string;
-  lastname: string;
+  age: string;
 }

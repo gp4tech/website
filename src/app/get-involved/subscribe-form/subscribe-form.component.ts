@@ -4,6 +4,8 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { TranslateService } from '@ngx-translate/core';
 
 import { Countries } from '../../shared/models/countries.constant';
+import { EducationLevel } from '../../shared/models/education-level.constant';
+import { Ages } from '../../shared/models/ages.constant';
 import { FormHelper } from '../../shared/models/form-helper';
 import { Supporter } from '../../shared/models/supporter';
 
@@ -18,14 +20,17 @@ export class SubscribeFormComponent implements OnInit {
 
   form: FormGroup;
   countries = Countries;
+  ages = Ages;
+  educationLevels = EducationLevel;
   isLoading = true;
   genderOptions: {value: string, label: string}[];
   formHelper = FormHelper;
 
   constructor(private translateService: TranslateService, private formBuilder: FormBuilder) {
     this.form = this.formBuilder.group({
-      firstname: ['', Validators.required],
-      lastname: ['', Validators.required],
+      name: ['', Validators.required],
+      age: ['', Validators.required],
+      education: ['', Validators.required],
       email: ['', [Validators.email, Validators.required]],
       country: ['Bolivia'],
       gender: ['female'],
