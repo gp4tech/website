@@ -1,4 +1,6 @@
-[![CircleCI](https://circleci.com/gh/gp4tech/website.svg?style=svg)](https://circleci.com/gh/gp4tech/website)
+[![CircleCI branch](https://img.shields.io/circleci/project/github/angular/angular-cli/master.svg?label=CircleCI)](https://circleci.com/gh/gp4tech/website)
+
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](/LICENSE)
 
 # GP4Tech Website
 
@@ -94,7 +96,7 @@ firebase functions:config:get
 
 ## CI/CD
 
-Continuous Integration and Continuous Deployment is made with [CircleCI](https://circleci.com/gh/gp4tech).
+Continuous Integration and Continuous Deployment is made with [CircleCI](https://circleci.com/gh/gp4tech/website).
 
 ## Further help
 
