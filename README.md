@@ -10,7 +10,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 - Install [Angular CLI](https://cli.angular.io/).
 - Clone the repo:
 ```
-git clone https://github.com/gp4tech/weekend-coding.git
+git clone https://github.com/gp4tech/website.git
 ```
 - Install dependencies:
 ```
