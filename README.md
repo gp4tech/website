@@ -1,4 +1,4 @@
-[![CircleCI](https://img.shields.io/circleci/project/github/angular/angular-cli/master.svg?label=CircleCI)](https://circleci.com/gh/gp4tech/website)
+[![CircleCI](https://img.shields.io/circleci/project/github/gp4tech/website/develop.svg?label=CircleCI)](https://circleci.com/gh/gp4tech/website)
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](/LICENSE)
 
