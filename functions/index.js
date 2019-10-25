@@ -17,7 +17,10 @@ const db = admin.firestore();
 const ALLOWED_ORIGINS = [
   'http://127.0.0.1:4200',
   'http://127.0.0.1:8080',
-  'https://gp4techsite.firebaseapp.com'
+  'https://gp4techsite.firebaseapp.com',
+  'https://gp4techpreview.firebaseapp.com',
+  'https://gp4techsite.web.app',
+  'https://gp4techpreview.web.app'
 ];
 const ARTICLES_COLLECTION = 'articles';
 const SUPPORTERS_COLLECTION = 'supporters';
@@ -126,12 +129,12 @@ exports.httpEmail = functions.https.onRequest((req, res) => {
 exports.createSupporter = functions.https.onRequest((req, res) => {
   cors(req, res, () => {
     verifyOrigin(req, res);
-    
+
     if (req.method !== 'POST') {
       const error = new Error('Only POST requests are accepted');
       res.status(405).send(error)
     }
-    
+
     const supporter = req.body;
     let error = 'UNKNOWN_ERROR';
 
@@ -148,7 +151,7 @@ exports.createSupporter = functions.https.onRequest((req, res) => {
           return createDocument(COUNTRY_SUPPORTERS_COLLECTION, {
             id: null,
             count: 1,
-            country: supporter.country 
+            country: supporter.country
           });
         }
 
