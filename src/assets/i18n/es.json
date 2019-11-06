@@ -1,7 +1,7 @@
 {
   "form-errors": {
     "required": "Requerido",
-    "email": "Email invalido"
+    "email": "Correo electrónico inválido"
   },
   "home": {},
   "language": {
@@ -21,7 +21,8 @@
     "donate": "Donar",
     "events": "Actividades",
     "home": "Inicio",
-    "who-did-this": "¿QUIÉN HIZO ESTO?"
+    "who-did-this": "¿QUIÉN HIZO ESTO?",
+    "login": "Iniciar sesión"
   },
   "banner": {
     "slogan-line-1": "GIRL POWER FOR",
@@ -163,5 +164,15 @@
     "design": "Diseñador",
     "devops": "DevOp",
     "manager": "Administrador de Proyecto"
+  },
+  "login": {
+    "title": "Inicio de Sesión",
+    "email": "Correo electrónico",
+    "password": "Contraseña",
+    "submit": "Enviar",
+    "form-errors": {
+      "email": "Correo electrónico es requerido.",
+      "password": "Contraseña es requerido."
+    }
   }
 }

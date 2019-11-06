@@ -21,7 +21,8 @@
     "donate": "Donate",
     "events": "Activities",
     "home": "Home",
-    "who-did-this": "WHO DID THIS?"
+    "who-did-this": "WHO DID THIS?",
+    "login": "Login"
   },
   "banner": {
     "slogan-line-1": "GIRL POWER FOR",
@@ -163,5 +164,15 @@
     "design": "Designer",
     "devops": "DevOp",
     "manager": "Manager"
+  },
+  "login": {
+    "title": "Login",
+    "email": "Email",
+    "password": "Password",
+    "submit": "Submit",
+    "form-errors": {
+      "email": "Email is required.",
+      "password": "Password is required."
+    }
   }
 }

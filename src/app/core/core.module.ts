@@ -16,6 +16,7 @@ import { EmailService } from './email.service';
 import { LanguageService } from './language.service';
 import { ScrollTopService } from './scroll-top.service';
 import { environment } from '../../environments/environment';
+import { AngularFireAuthModule } from '@angular/fire/auth';
 
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http);
@@ -29,6 +30,7 @@ export function HttpLoaderFactory(http: HttpClient) {
     HttpClientModule,
     AngularFireModule.initializeApp(environment.firebase),
     AngularFirestoreModule,
+    AngularFireAuthModule,
     TranslateModule.forRoot({
       loader: {
         provide: TranslateLoader,

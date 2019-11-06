@@ -36,6 +36,11 @@ const routes: Routes = [
   //   loadChildren: './donate/donate.module#DonateModule'
   // },
   {
+    path: AppBarRoutes.login,
+    loadChildren: () =>
+      import('./core/login/login.module').then(m => m.LoginModule)
+  },
+  {
     path: '**',
     // TODO 06172019: Create a 404 component
     component: HomeComponent
