@@ -1,5 +1,5 @@
-<div class="center-align">
-  <h4>・{{ 'get-involved.title' | translate }}・</h4>
+<div class="center-align section-title">
+  <h4>{{ 'get-involved.title' | translate }}</h4>
   <div [ngClass]="{'container': enableMapContainer }">
     <div class="row">
       <div class="col s12">
@@ -16,7 +16,7 @@
       </div>
     </div>
     <div class="row" *ngIf="!isLoading">
-      <a class="waves-effect btn-large get-involved" [routerLink]="[ '/support-this' ]">{{ 'get-involved.support-this' | translate}}</a>
+      <a class="waves-effect btn-large get-involved" [routerLink]="[ '/get-involved' ]">{{ 'get-involved.support-this' | translate}}</a>
     </div>
   </div>
 </div>
