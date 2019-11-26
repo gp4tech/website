@@ -30,6 +30,11 @@ const routes: Routes = [
     loadChildren: () =>
       import('./contact-us/contact-us.module').then(m => m.ContactUsModule)
   },
+  {
+    path: AppBarRoutes.getInvolved,
+    loadChildren: () =>
+      import('./get-involved/get-involved.module').then(m => m.GetInvolvedModule)
+  },
   // TODO 07182019: Determine what will happen with donations
   // {
   //   path: AppBarRoutes.donate,
