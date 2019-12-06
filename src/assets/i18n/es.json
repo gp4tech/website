@@ -73,6 +73,14 @@
       "title": "¿Quiénes somos?",
       "description": "Girl Power for Technology es una iniciativa de la familia Jala, que fomenta, desarrolla y motiva la participación de mujeres en tecnología, abriendo espacios de capacitación, desarrollo personal y de habilidades necesarias para el rubro. Nuestra visión es fomentar la inclusión y desarrollo profesional de mujeres en tecnología a nivel Bolivia."
     },
+    "mission": {
+      "title": "Misión",
+      "description": "Girl Power for Technology es una iniciativa de la familia Jala, que fomenta, desarrolla y motiva la participación de mujeres en tecnología, abriendo espacios de capacitación, desarrollo personal y de habilidades necesarias para el rubro."
+    },
+    "vision": {
+      "title": "Visión",
+      "description": "Fomentar la inclusión y desarrollo profesional de mujeres en tecnología a nivel Bolivia."
+    },
     "members": {
       "title": "Miembros"
     }
