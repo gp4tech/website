@@ -1,0 +1,10 @@
+<div class="container">
+  <div class="row">
+    <h4 class="center-align margin-top">
+      {{ article.title | uppercase }}
+    </h4>
+    <ng-container>
+      <div class="row" [innerHTML]="article.content"></div>
+    </ng-container>
+  </div>
+</div>

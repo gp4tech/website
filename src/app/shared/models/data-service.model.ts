@@ -40,6 +40,10 @@ export abstract class DataService<T extends DataType> {
       .valueChanges();
   }
 
+  getById(id: string): Observable<T> {
+    return this.dataCollection.doc<T>(id).valueChanges();
+  }
+
   updateUsingCloudFunction(id: string, functionName: string): Observable<T> {
     const url = `${environment.functionsUrl}/${functionName}`;
     const data: DataType = { id };
@@ -51,5 +55,11 @@ export abstract class DataService<T extends DataType> {
     const url = `${environment.functionsUrl}/${functionName}`;
 
     return this.http.post<T>(url, data);
+  }
+
+  create(data: T) {
+    const id = this.angularFirestoreService.createId();
+    data.id = id;
+    this.dataCollection.doc(id).set(data, { merge: true });
   }
 }

@@ -30,7 +30,10 @@
                 <p>{{ article.description ? article.description : defaultText }}</p>
               </div>
               <div class="card-action">
-                <a (click)="updateArticleViews(article)" [href]="article.url" target="_blank" rel="noopener noreferrer">
+                <a *ngIf="article.url && article.url.length > 0" (click)="updateArticleViews(article)" [href]="article.url" target="_blank" rel="noopener noreferrer">
+                  {{ 'blog.articles.read-more' | translate }}
+                </a>
+                <a *ngIf="article.content && article.content.length > 0" (click)="updateArticleViews(article)" [routerLink]="['/blog/article', article.id]">
                   {{ 'blog.articles.read-more' | translate }}
                 </a>
               </div>
