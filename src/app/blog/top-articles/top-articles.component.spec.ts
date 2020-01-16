@@ -1,4 +1,5 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { RouterModule } from '@angular/router';
 
 import {
   TranslateModule,
@@ -26,7 +27,8 @@ describe('TopArticlesComponent', () => {
       imports: [
         TranslateModule.forRoot({
           loader: { provide: TranslateLoader, useClass: TranslateFakeLoader }
-        })
+        }),
+        RouterModule
       ],
       providers: [{ provide: ArticlesService, useValue: articlesServiceMock }]
     }).compileComponents();

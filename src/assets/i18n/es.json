@@ -104,6 +104,22 @@
       "read-more": "Leer Más"
     }
   },
+  "article": {
+    "create-title": "Crer Articulo",
+    "author": "Autor",
+    "description": "Descripción",
+    "image-url": "URL de la Imagen",
+    "title": "Titulo",
+    "page-url": "URL de la pagina",
+    "content": "Contenido",
+    "custom-html": "HTML Personalizado",
+    "url": "URL",
+    "save": "Guardar",
+    "cancel": "Cancelar",
+    "errors": {
+      "field-required": "Este campo es requerido."
+    }
+  },
   "contact-us": {
     "title": "¡Codifiquemos un mundo mejor!",
     "description": "Cosas asombrosas suceden cuando nos juntamos. ¡GP4Tech es una comunidad interna de Jalasoft cuyos miembros hacen que las cosas pasen! ¿Tienes preguntas? Envíanos un mensaje, estaremos más que felices de escuchar de ti.",

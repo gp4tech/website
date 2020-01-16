@@ -4,6 +4,7 @@ import { AngularFirestore } from '@angular/fire/firestore';
 
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
+import { firestore } from 'firebase';
 
 import { Article } from '../shared/models/article.model';
 import { DataService } from '../shared/models/data-service.model';
@@ -39,6 +40,12 @@ export class ArticlesService extends DataService<Article> {
         return articles;
       })
     );
+  }
+
+  postArticle(article: Article) {
+    article.views = 0;
+    article.date = firestore.Timestamp.fromDate(new Date());
+    this.create(article);
   }
 
   private isArticleIncomplete(article: Article): boolean {

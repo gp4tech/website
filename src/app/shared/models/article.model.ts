@@ -9,4 +9,5 @@ export interface Article {
   image?: string;
   views?: number;
   date?: firestore.Timestamp;
+  content?: string;
 }

@@ -1,0 +1,206 @@
+<div class="container">
+  <div class="row">
+    <h4 class="center-align margin-top">
+      {{ "article.create-title" | translate | uppercase }}
+    </h4>
+    <ng-container>
+      <div class="row">
+        <form class="col s12" [formGroup]="articleForm">
+          <div class="row">
+            <div class="input-field col s12">
+              <input
+                id="title"
+                type="text"
+                class="validate"
+                formControlName="title"
+                [ngClass]="{
+                  invalid:
+                    !articleForm.controls.title.valid &&
+                    !articleForm.controls.title.pristine
+                }"
+              />
+              <label for="title">{{ "article.title" | translate }}</label>
+              <span
+                id="title-required-error"
+                *ngIf="
+                  !articleForm.controls.title.valid &&
+                  !articleForm.controls.title.pristine
+                "
+                class="inline-error-message"
+              >
+                {{ "article.errors.field-required" | translate }}
+              </span>
+            </div>
+          </div>
+          <div class="row">
+            <div class="input-field col s12">
+              <textarea
+                id="description"
+                class="materialize-textarea validate"
+                formControlName="description"
+                [ngClass]="{
+                  invalid:
+                    !articleForm.controls.description.valid &&
+                    !articleForm.controls.description.pristine
+                }"
+              ></textarea>
+              <label for="description">{{
+                "article.description" | translate
+              }}</label>
+              <span
+                id="inline-description-error"
+                *ngIf="
+                  !articleForm.controls.description.valid &&
+                  !articleForm.controls.description.pristine
+                "
+                class="inline-error-message"
+              >
+                {{ "article.errors.field-required" | translate }}
+              </span>
+            </div>
+          </div>
+          <div class="row">
+            <div class="input-field col s12">
+              <input
+                id="author"
+                type="text"
+                class="validate"
+                formControlName="author"
+                [ngClass]="{
+                  invalid:
+                    !articleForm.controls.author.valid &&
+                    !articleForm.controls.author.pristine
+                }"
+              />
+              <label for="author">{{ "article.author" | translate }}</label>
+              <span
+                id="inline-author-error"
+                *ngIf="
+                  !articleForm.controls.author.valid &&
+                  !articleForm.controls.author.pristine
+                "
+                class="inline-error-message"
+              >
+                {{ "article.errors.field-required" | translate }}
+              </span>
+            </div>
+          </div>
+          <div class="row">
+            <div class="input-field col s12">
+              <input
+                id="image-url"
+                type="text"
+                class="validate"
+                formControlName="image"
+                [ngClass]="{
+                  invalid:
+                    !articleForm.controls.image.valid &&
+                    !articleForm.controls.image.pristine
+                }"
+              />
+              <label for="image-url">{{
+                "article.image-url" | translate
+              }}</label>
+              <span
+                id="inline-image-url-error"
+                *ngIf="
+                  !articleForm.controls.image.valid &&
+                  !articleForm.controls.image.pristine
+                "
+                class="inline-error-message"
+              >
+                {{ "article.errors.field-required" | translate }}
+              </span>
+            </div>
+          </div>
+          <div class="row">
+            <div class="switch">
+              <label>
+                {{ "article.url" | translate }}
+                <input
+                  id="custom-option"
+                  type="checkbox"
+                  formControlName="isCustomHTML"
+                />
+                <span class="lever"></span>
+                {{ "article.custom-html" | translate }}
+              </label>
+            </div>
+          </div>
+          <div class="row" *ngIf="isCustomHTMLSelected">
+            <div class="input-field col s12">
+              <textarea
+                id="content"
+                class="materialize-textarea validate"
+                formControlName="content"
+                [ngClass]="{
+                  invalid:
+                    !articleForm.controls.content.valid &&
+                    !articleForm.controls.content.pristine
+                }"
+              ></textarea>
+              <label for="content">{{ "article.content" | translate }}</label>
+              <span
+                id="inline-content-error"
+                *ngIf="
+                  !articleForm.controls.content.valid &&
+                  !articleForm.controls.content.pristine
+                "
+                class="inline-error-message"
+              >
+                {{ "article.errors.field-required" | translate }}
+              </span>
+            </div>
+          </div>
+          <div class="row" *ngIf="!isCustomHTMLSelected">
+            <div class="input-field col s12">
+              <input
+                id="page-url"
+                type="text"
+                class="validate"
+                formControlName="url"
+                [ngClass]="{
+                  invalid:
+                    !articleForm.controls.url.valid &&
+                    !articleForm.controls.url.pristine
+                }"
+              />
+              <label for="page-url">{{ "article.page-url" | translate }}</label>
+              <span
+                class="helper-text"
+                data-error="article.errors.field-required | translate"
+              ></span>
+              <span
+                id="inline-page-url-error"
+                *ngIf="
+                  !articleForm.controls.url.valid &&
+                  !articleForm.controls.url.pristine
+                "
+                class="inline-error-message"
+              >
+                {{ "article.errors.field-required" | translate }}
+              </span>
+            </div>
+          </div>
+          <div class="row right">
+            <div class="input-field col s12">
+              <button class="btn waves-effect waves-light" (click)="cancel()">
+                {{ "article.cancel" | translate }}
+                <i class="fas fa-times material-icons left"></i>
+              </button>
+              &nbsp;&nbsp;&nbsp;
+              <button
+                class="btn waves-effect waves-light"
+                (click)="save()"
+                [disabled]="!articleForm.valid"
+              >
+                {{ "article.save" | translate }}
+                <i class="fas fa-check material-icons left"></i>
+              </button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </ng-container>
+  </div>
+</div>
