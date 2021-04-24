@@ -6,7 +6,7 @@ import { HttpClientModule } from '@angular/common/http';
 import {
   TranslateModule,
   TranslateLoader,
-  TranslateFakeLoader
+  TranslateFakeLoader,
 } from '@ngx-translate/core';
 
 import { TopArticleComponent } from './top-article.component';
@@ -15,18 +15,18 @@ import { Article } from '../../../shared/models/article.model';
 import { LanguageService } from '../../../core/language.service';
 
 const angularFirestoreMock = {
-  collection: () => {}
+  collection: () => {},
 };
 
 describe('TopArticleComponent', () => {
   @Component({
     selector: 'gp-top-article-wrapper',
-    template: '<gp-top-article [article]="article"></gp-top-article>'
+    template: '<gp-top-article [article]="article"></gp-top-article>',
   })
   class TopArticleWrapperComponent {
     article: Article = {
       id: '',
-      url: ''
+      url: '',
     };
   }
 
@@ -39,14 +39,14 @@ describe('TopArticleComponent', () => {
       imports: [
         HttpClientModule,
         TranslateModule.forRoot({
-          loader: { provide: TranslateLoader, useClass: TranslateFakeLoader }
-        })
+          loader: { provide: TranslateLoader, useClass: TranslateFakeLoader },
+        }),
       ],
       providers: [
         ArticlesService,
         LanguageService,
-        { provide: AngularFirestore, useValue: angularFirestoreMock }
-      ]
+        { provide: AngularFirestore, useValue: angularFirestoreMock },
+      ],
     }).compileComponents();
   }));
 

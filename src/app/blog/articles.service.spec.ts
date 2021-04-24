@@ -5,7 +5,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { ArticlesService } from './articles.service';
 
 const angularFirestoreMock = {
-  collection: () => {}
+  collection: () => {},
 };
 
 describe('ArticlesService', () => {
@@ -14,9 +14,9 @@ describe('ArticlesService', () => {
       imports: [HttpClientModule],
       providers: [
         ArticlesService,
-        { provide: AngularFirestore, useValue: angularFirestoreMock }
-      ]
-    })
+        { provide: AngularFirestore, useValue: angularFirestoreMock },
+      ],
+    }),
   );
 
   it('should be created', () => {

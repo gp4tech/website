@@ -11,7 +11,7 @@ import { CountrySupportersService } from './country-supporters.service';
 import { SharedModule } from '../shared/shared.module';
 
 const countrySupportersServiceMock = {
-  getAll: () => of([])
+  getAll: () => of([]),
 };
 
 describe('GetInvolvedComponent', () => {
@@ -24,12 +24,15 @@ describe('GetInvolvedComponent', () => {
         TranslateModule.forRoot(),
         GoogleChartsModule,
         SharedModule,
-        RouterTestingModule
+        RouterTestingModule,
       ],
       declarations: [GetInvolvedComponent],
       providers: [
-        { provide: CountrySupportersService, useValue: countrySupportersServiceMock }
-      ]
+        {
+          provide: CountrySupportersService,
+          useValue: countrySupportersServiceMock,
+        },
+      ],
     }).compileComponents();
   }));
 

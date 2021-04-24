@@ -9,7 +9,7 @@ describe('PageBannerComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [PageBannerComponent, CallToActionComponent]
+      declarations: [PageBannerComponent, CallToActionComponent],
     }).compileComponents();
   }));
 

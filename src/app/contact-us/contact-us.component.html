@@ -1,5 +1,8 @@
-<gp-page-banner [title]="'contact-us.title' | translate" [description]="'contact-us.description' | translate"
-picture="assets/images/contact-us-banner.JPG">
+<gp-page-banner
+  [title]="'contact-us.title' | translate"
+  [description]="'contact-us.description' | translate"
+  picture="assets/images/contact-us-banner.JPG"
+>
 </gp-page-banner>
 <div class="container">
   <div class="section-space">
@@ -22,62 +25,117 @@ picture="assets/images/contact-us-banner.JPG">
         </div>
       </div> -->
       <div class="col s12 center-align">
-        <h5><i class="fas fa-map-marker-alt secondary-color" aria-hidden="true"></i>
-          {{ 'contact-us.company-name' | translate }}</h5>
+        <h5
+          ><i
+            class="fas fa-map-marker-alt secondary-color"
+            aria-hidden="true"
+          ></i>
+          {{ 'contact-us.company-name' | translate }}</h5
+        >
         <p>{{ 'contact-us.location.address' | translate }}</p>
         <p>{{ 'contact-us.location.city' | translate }}</p>
         <p>{{ 'contact-us.location.country' | translate }}</p>
-        <br>
-        <h5><i class="fa fa-phone secondary-color" aria-hidden="true"></i> {{ 'contact-us.phone.title' | translate }}
+        <br />
+        <h5
+          ><i class="fa fa-phone secondary-color" aria-hidden="true"></i>
+          {{ 'contact-us.phone.title' | translate }}
         </h5>
-        <a href="tel:({{ 'contact-us.phone.code' | translate }}){{ 'contact-us.phone.number' | translate }}">
-          ({{ 'contact-us.phone.code' | translate }}){{ 'contact-us.phone.number' | translate }}
+        <a
+          href="tel:({{ 'contact-us.phone.code' | translate }}){{
+            'contact-us.phone.number' | translate
+          }}"
+        >
+          ({{ 'contact-us.phone.code' | translate }}){{
+            'contact-us.phone.number' | translate
+          }}
         </a>
-        <br><br>
-        <h5><i class="fa fa-envelope secondary-color" aria-hidden="true"></i> {{ 'contact-us.email' | translate }}</h5>
-        <a href="mailto:{{'contact-us.gpEmail' | translate}}">{{ 'contact-us.gpEmail' | translate }}</a>
+        <br /><br />
+        <h5
+          ><i class="fa fa-envelope secondary-color" aria-hidden="true"></i>
+          {{ 'contact-us.email' | translate }}</h5
+        >
+        <a href="mailto:{{ 'contact-us.gpEmail' | translate }}">{{
+          'contact-us.gpEmail' | translate
+        }}</a>
       </div>
     </div>
 
     <ul gpCollapsible class="collapsible popout">
       <li class="active secondary-border">
         <div class="collapsible-header">
-          <h6><i class="fa fa-bus secondary-color" aria-hidden="true"></i>{{ 'contact-us.find-title' | translate }}</h6>
+          <h6
+            ><i class="fa fa-bus secondary-color" aria-hidden="true"></i
+            >{{ 'contact-us.find-title' | translate }}</h6
+          >
         </div>
         <div class="collapsible-body">
           <p>
             <strong>{{ 'contact-us.driving.title' | translate }}:</strong>
             {{ 'contact-us.driving.description' | translate }}
-            <a href="http://www.google.com/maps/place/{{ latitude }},{{ longitude }}" target="_blank"
-              rel="noopener noreferrer">Google Maps.</a>
+            <a
+              href="http://www.google.com/maps/place/{{ latitude }},{{
+                longitude
+              }}"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Google Maps.</a
+            >
           </p>
-          <p><strong> {{ 'contact-us.transportation.title' | translate }}:</strong>
-            {{ 'contact-us.transportation.description' | translate }}</p>
+          <p
+            ><strong>
+              {{ 'contact-us.transportation.title' | translate }}:</strong
+            >
+            {{ 'contact-us.transportation.description' | translate }}</p
+          >
         </div>
       </li>
     </ul>
-    <br>
+    <br />
     <div class="row" *ngIf="displayEmailSection">
-      <h4 class="center-align">. {{ 'contact-us.email-title' | translate | uppercase }} .</h4>
+      <h4 class="center-align"
+        >. {{ 'contact-us.email-title' | translate | uppercase }} .</h4
+      >
       <div class="card-panel">
         <div class="row">
           <div class="input-field col m6 s12">
-            <input id="subject" type="text" class="validate" [(ngModel)]="email.subject" />
-            <label class="active" for="subject">{{ 'contact-us.subject' | translate }}</label>
+            <input
+              id="subject"
+              type="text"
+              class="validate"
+              [(ngModel)]="email.subject"
+            />
+            <label class="active" for="subject">{{
+              'contact-us.subject' | translate
+            }}</label>
           </div>
           <div class="input-field col m6 s12">
-            <input id="user-email" type="email" class="validate" [(ngModel)]="email.from" />
-            <label class="active" for="user-email">{{ 'contact-us.From' | translate }}</label>
+            <input
+              id="user-email"
+              type="email"
+              class="validate"
+              [(ngModel)]="email.from"
+            />
+            <label class="active" for="user-email">{{
+              'contact-us.From' | translate
+            }}</label>
           </div>
         </div>
         <div class="row">
           <div class="input-field col s12">
-            <textarea id="message" class="materialize-textarea" [(ngModel)]="email.content"></textarea>
-            <label class="active" for="message">{{ 'contact-us.Message' | translate }}</label>
+            <textarea
+              id="message"
+              class="materialize-textarea"
+              [(ngModel)]="email.content"
+            ></textarea>
+            <label class="active" for="message">{{
+              'contact-us.Message' | translate
+            }}</label>
           </div>
         </div>
         <div class="right-align">
-          <a class="btn-large waves-effect" (click)="sendEmail()">{{ 'contact-us.btn-send' | translate }}</a>
+          <a class="btn-large waves-effect" (click)="sendEmail()">{{
+            'contact-us.btn-send' | translate
+          }}</a>
         </div>
       </div>
     </div>

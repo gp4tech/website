@@ -9,14 +9,16 @@ import { LanguageService } from '../../core/language.service';
 @Component({
   selector: 'gp-members',
   templateUrl: './members.component.html',
-  styleUrls: ['./members.component.scss']
+  styleUrls: ['./members.component.scss'],
 })
 export class MembersComponent implements OnInit {
   members$: Observable<Member[]>;
   selectedMemberId: string = null;
 
   constructor(
-    public language: LanguageService, private membersService: MembersService) {}
+    public language: LanguageService,
+    private membersService: MembersService,
+  ) {}
 
   ngOnInit() {
     this.members$ = this.membersService.getAllMembers();

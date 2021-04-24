@@ -15,6 +15,6 @@ registerLocaleData(localeEs, 'es');
   declarations: [BlogComponent, TopArticlesComponent, TopArticleComponent],
   imports: [CommonModule, SharedModule, BlogRoutingModule],
   exports: [TopArticlesComponent],
-  providers: [ArticlesService]
+  providers: [ArticlesService],
 })
 export class BlogModule {}

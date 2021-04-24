@@ -4,7 +4,7 @@ import { RouterTestingModule } from '@angular/router/testing';
 import {
   TranslateModule,
   TranslateLoader,
-  TranslateFakeLoader
+  TranslateFakeLoader,
 } from '@ngx-translate/core';
 
 import { FooterComponent } from './footer.component';
@@ -21,10 +21,10 @@ describe('FooterComponent', () => {
       imports: [
         RouterTestingModule,
         TranslateModule.forRoot({
-          loader: { provide: TranslateLoader, useClass: TranslateFakeLoader }
-        })
+          loader: { provide: TranslateLoader, useClass: TranslateFakeLoader },
+        }),
       ],
-      providers: [LanguageService]
+      providers: [LanguageService],
     }).compileComponents();
   }));
 

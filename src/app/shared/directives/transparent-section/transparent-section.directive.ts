@@ -6,18 +6,18 @@ import {
   Inject,
   PLATFORM_ID,
   OnInit,
-  Renderer2
+  Renderer2,
 } from '@angular/core';
 import { isPlatformBrowser } from '@angular/common';
 
 @Directive({
-  selector: '[gpTransparentSection]'
+  selector: '[gpTransparentSection]',
 })
 export class TransparentSectionDirective implements OnInit, AfterViewInit {
   constructor(
     @Inject(PLATFORM_ID) private platformId: Object,
     private renderer: Renderer2,
-    private elementRef: ElementRef
+    private elementRef: ElementRef,
   ) {}
 
   ngOnInit(): void {

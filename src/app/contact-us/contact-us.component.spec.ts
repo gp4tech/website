@@ -5,7 +5,7 @@ import { FormsModule } from '@angular/forms';
 import {
   TranslateModule,
   TranslateLoader,
-  TranslateFakeLoader
+  TranslateFakeLoader,
 } from '@ngx-translate/core';
 import { AgmCoreModule } from '@agm/core';
 
@@ -23,19 +23,19 @@ describe('ContactUsComponent', () => {
       declarations: [
         ContactUsComponent,
         PageBannerComponent,
-        CallToActionComponent
+        CallToActionComponent,
       ],
       imports: [
         FormsModule,
         HttpClientModule,
         TranslateModule.forRoot({
-          loader: { provide: TranslateLoader, useClass: TranslateFakeLoader }
+          loader: { provide: TranslateLoader, useClass: TranslateFakeLoader },
         }),
         AgmCoreModule.forRoot({
-          apiKey: ''
-        })
+          apiKey: '',
+        }),
       ],
-      providers: [EmailService]
+      providers: [EmailService],
     }).compileComponents();
   }));
 

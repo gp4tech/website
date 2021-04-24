@@ -8,15 +8,14 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { SharedModule } from '../shared/shared.module';
 import { SidenavDirective } from './navbar/sidenav.directive';
 
-
 @NgModule({
   declarations: [
     FooterComponent,
     LanguageButtonComponent,
     NavbarComponent,
-    SidenavDirective
+    SidenavDirective,
   ],
   exports: [FooterComponent, NavbarComponent],
-  imports: [CommonModule, RouterModule, SharedModule]
+  imports: [CommonModule, RouterModule, SharedModule],
 })
 export class LayoutModule {}

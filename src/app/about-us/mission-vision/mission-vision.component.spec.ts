@@ -1,6 +1,10 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { TranslateModule, TranslateLoader, TranslateFakeLoader } from '@ngx-translate/core';
+import {
+  TranslateModule,
+  TranslateLoader,
+  TranslateFakeLoader,
+} from '@ngx-translate/core';
 
 import { MissionVisionComponent } from './mission-vision.component';
 
@@ -10,14 +14,13 @@ describe('MissionVisionComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ MissionVisionComponent ],
+      declarations: [MissionVisionComponent],
       imports: [
         TranslateModule.forRoot({
-          loader: { provide: TranslateLoader, useClass: TranslateFakeLoader }
-        })
-      ]
-    })
-    .compileComponents();
+          loader: { provide: TranslateLoader, useClass: TranslateFakeLoader },
+        }),
+      ],
+    }).compileComponents();
   }));
 
   beforeEach(() => {

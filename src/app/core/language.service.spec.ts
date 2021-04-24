@@ -3,7 +3,7 @@ import { TestBed } from '@angular/core/testing';
 import {
   TranslateLoader,
   TranslateModule,
-  TranslateFakeLoader
+  TranslateFakeLoader,
 } from '@ngx-translate/core';
 
 import { LanguageService } from './language.service';
@@ -13,11 +13,11 @@ describe('LanguageService', () => {
     TestBed.configureTestingModule({
       imports: [
         TranslateModule.forRoot({
-          loader: { provide: TranslateLoader, useClass: TranslateFakeLoader }
-        })
+          loader: { provide: TranslateLoader, useClass: TranslateFakeLoader },
+        }),
       ],
-      providers: [LanguageService]
-    })
+      providers: [LanguageService],
+    }),
   );
 
   it('should be created', () => {

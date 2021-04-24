@@ -19,19 +19,16 @@ describe('SubscribeComponent', () => {
         ReactiveFormsModule,
         SharedModule,
         TranslateModule.forRoot(),
-        RouterTestingModule
+        RouterTestingModule,
       ],
-      declarations: [
-        SubscribeComponent,
-        SubscribeFormComponent
-      ],
+      declarations: [SubscribeComponent, SubscribeFormComponent],
       providers: [
         {
-          provide: SupporterService, useValue: {}
-        }
-      ]
-    })
-    .compileComponents();
+          provide: SupporterService,
+          useValue: {},
+        },
+      ],
+    }).compileComponents();
   }));
 
   beforeEach(() => {

@@ -1,5 +1,8 @@
-<gp-page-banner [title]="'who-did-this.title' | translate" [description]="'who-did-this.description' | translate"
-picture="assets/images/who-did-this-banner.jpeg">
+<gp-page-banner
+  [title]="'who-did-this.title' | translate"
+  [description]="'who-did-this.description' | translate"
+  picture="assets/images/who-did-this-banner.jpeg"
+>
 </gp-page-banner>
 <div class="container">
   <div class="section-space">
@@ -16,7 +19,11 @@ picture="assets/images/who-did-this-banner.jpeg">
         <div *ngIf="role === member.role" class="row">
           <div class="col s12 m3">
             <div class="member-image-container center-align">
-              <img [src]="member.picture" [alt]="member.name" class="circular">
+              <img
+                [src]="member.picture"
+                [alt]="member.name"
+                class="circular"
+              />
             </div>
           </div>
           <div class="col s12 m9">
@@ -24,19 +31,41 @@ picture="assets/images/who-did-this-banner.jpeg">
               {{ member.name }}
             </h4>
             <p class="text-justify">
-              {{ language.currentLanguage === 'en' ? member.bioEn : member.bioSp }}
+              {{
+                language.currentLanguage === 'en' ? member.bioEn : member.bioSp
+              }}
             </p>
             <div class="social-buttons">
-              <a *ngIf="member.github" target="_blank" rel="noopener noreferrer" [href]="member.github">
+              <a
+                *ngIf="member.github"
+                target="_blank"
+                rel="noopener noreferrer"
+                [href]="member.github"
+              >
                 <i class="fab fa-2x fa-github"></i>
               </a>
-              <a *ngIf="member.linkedin" target="_blank" rel="noopener noreferrer" [href]="member.linkedin">
+              <a
+                *ngIf="member.linkedin"
+                target="_blank"
+                rel="noopener noreferrer"
+                [href]="member.linkedin"
+              >
                 <i class="fab fa-2x fa-linkedin"></i>
               </a>
-              <a *ngIf="member.twitter" target="_blank" rel="noopener noreferrer" [href]="member.twitter">
+              <a
+                *ngIf="member.twitter"
+                target="_blank"
+                rel="noopener noreferrer"
+                [href]="member.twitter"
+              >
                 <i class="fab fa-2x fa-twitter"></i>
               </a>
-              <a *ngIf="member.website" target="_blank" rel="noopener noreferrer" [href]="member.website">
+              <a
+                *ngIf="member.website"
+                target="_blank"
+                rel="noopener noreferrer"
+                [href]="member.website"
+              >
                 <i class="fas fa-2x fa-globe"></i>
               </a>
             </div>

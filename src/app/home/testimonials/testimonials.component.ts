@@ -1,9 +1,4 @@
-import {
-  Component,
-  OnInit,
-  OnDestroy,
-  ViewChild
-} from '@angular/core';
+import { Component, OnInit, OnDestroy, ViewChild } from '@angular/core';
 
 import { Subscription } from 'rxjs';
 
@@ -16,7 +11,7 @@ import { environment } from '../../../environments/environment';
 @Component({
   selector: 'gp-testimonials',
   templateUrl: './testimonials.component.html',
-  styleUrls: ['./testimonials.component.scss']
+  styleUrls: ['./testimonials.component.scss'],
 })
 export class TestimonialsComponent implements OnInit, OnDestroy {
   testimonialsSub: Subscription;
@@ -28,7 +23,7 @@ export class TestimonialsComponent implements OnInit, OnDestroy {
 
   constructor(
     private testimonialService: TestimonialsService,
-    public language: LanguageService
+    public language: LanguageService,
   ) {}
 
   ngOnInit() {

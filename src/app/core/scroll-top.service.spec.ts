@@ -7,8 +7,8 @@ describe('ScrollTopService', () => {
   beforeEach(() =>
     TestBed.configureTestingModule({
       imports: [RouterTestingModule],
-      providers: [ScrollTopService]
-    })
+      providers: [ScrollTopService],
+    }),
   );
 
   it('should be created', () => {

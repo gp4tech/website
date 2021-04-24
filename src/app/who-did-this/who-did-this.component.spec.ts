@@ -10,7 +10,7 @@ import { PageBannerComponent } from '../shared/components/page-banner/page-banne
 import { CallToActionComponent } from '../shared/components/call-to-action/call-to-action.component';
 
 const WebTeamMembersServiceMock = {
-  getAll: () => of([])
+  getAll: () => of([]),
 };
 
 describe('WhoDidThisComponent', () => {
@@ -22,13 +22,13 @@ describe('WhoDidThisComponent', () => {
       declarations: [
         WhoDidThisComponent,
         PageBannerComponent,
-        CallToActionComponent
+        CallToActionComponent,
       ],
       imports: [TranslateModule.forRoot()],
       providers: [
         { provide: WebTeamMembersService, useValue: WebTeamMembersServiceMock },
-        LanguageService
-      ]
+        LanguageService,
+      ],
     }).compileComponents();
   }));
 

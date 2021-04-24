@@ -18,9 +18,9 @@ import { MissionVisionComponent } from './mission-vision/mission-vision.componen
     FixUrlPipe,
     MembersDirective,
     ImageResizerDirective,
-    MissionVisionComponent
+    MissionVisionComponent,
   ],
   imports: [CommonModule, SharedModule, AboutUsRoutingModule],
-  providers: [MembersService]
+  providers: [MembersService],
 })
 export class AboutUsModule {}

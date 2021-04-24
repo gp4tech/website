@@ -15,6 +15,9 @@ export class SupporterService extends DataService<Supporter> {
   }
 
   createSupporter(supporter: Supporter): Observable<any> {
-    return this.createUsingCloudFunction(supporter, CloudFunctions.createSupporter);
+    return this.createUsingCloudFunction(
+      supporter,
+      CloudFunctions.createSupporter,
+    );
   }
 }

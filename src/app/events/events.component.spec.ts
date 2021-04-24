@@ -10,7 +10,7 @@ import { PageBannerComponent } from '../shared/components/page-banner/page-banne
 import { CallToActionComponent } from '../shared/components/call-to-action/call-to-action.component';
 
 const EventsServiceMock = {
-  getAllSorted: () => of([])
+  getAllSorted: () => of([]),
 };
 
 describe('EventsComponent', () => {
@@ -22,13 +22,13 @@ describe('EventsComponent', () => {
       declarations: [
         EventsComponent,
         PageBannerComponent,
-        CallToActionComponent
+        CallToActionComponent,
       ],
       imports: [TranslateModule.forRoot()],
       providers: [
         { provide: EventsService, useValue: EventsServiceMock },
-        LanguageService
-      ]
+        LanguageService,
+      ],
     }).compileComponents();
   }));
 

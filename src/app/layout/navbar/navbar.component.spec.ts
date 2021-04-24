@@ -4,7 +4,7 @@ import { RouterTestingModule } from '@angular/router/testing';
 import {
   TranslateModule,
   TranslateLoader,
-  TranslateFakeLoader
+  TranslateFakeLoader,
 } from '@ngx-translate/core';
 
 import { NavbarComponent } from './navbar.component';
@@ -18,10 +18,10 @@ describe('NavbarComponent', () => {
       declarations: [NavbarComponent],
       imports: [
         TranslateModule.forRoot({
-          loader: { provide: TranslateLoader, useClass: TranslateFakeLoader }
+          loader: { provide: TranslateLoader, useClass: TranslateFakeLoader },
         }),
-        RouterTestingModule
-      ]
+        RouterTestingModule,
+      ],
     }).compileComponents();
   }));
 

@@ -22,7 +22,7 @@ import { RoleConverterPipe } from './pipes/role-converter.pipe';
     TransparentSectionDirective,
     CarouselDirective,
     PageBannerComponent,
-    RoleConverterPipe
+    RoleConverterPipe,
   ],
   imports: [CommonModule, TranslateModule, CallToActionModule],
   exports: [
@@ -34,7 +34,7 @@ import { RoleConverterPipe } from './pipes/role-converter.pipe';
     TransparentSectionDirective,
     CarouselDirective,
     PageBannerComponent,
-    RoleConverterPipe
-  ]
+    RoleConverterPipe,
+  ],
 })
 export class SharedModule {}

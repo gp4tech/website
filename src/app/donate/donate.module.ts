@@ -7,16 +7,8 @@ import { DonateComponent } from './donate.component';
 import { DonateService } from './donate.service';
 
 @NgModule({
-  declarations: [
-    DonateComponent
-  ],
-  imports: [
-    CommonModule,
-    DonateRoutingModule,
-    SharedModule
-  ],
-  providers: [
-    DonateService
-  ]
+  declarations: [DonateComponent],
+  imports: [CommonModule, DonateRoutingModule, SharedModule],
+  providers: [DonateService],
 })
-export class DonateModule { }
+export class DonateModule {}

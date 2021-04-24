@@ -13,7 +13,6 @@ import { DataOrder } from '../../shared/models/data-type.model';
 
 @Injectable()
 export class MembersService extends DataService<Member> {
-
   height;
 
   constructor(http: HttpClient, db: AngularFirestore) {
@@ -22,20 +21,20 @@ export class MembersService extends DataService<Member> {
 
   getAllMembers(): Observable<Member[]> {
     return this.angularFirestoreService
-      .collection<Member>(this.collectionName, ref =>
-        ref.orderBy('displayName', DataOrder.asc)
+      .collection<Member>(this.collectionName, (ref) =>
+        ref.orderBy('displayName', DataOrder.asc),
       )
       .snapshotChanges()
       .pipe(
-        map(actions =>
-          actions.map(a => {
+        map((actions) =>
+          actions.map((a) => {
             const md5 = new Md5();
             const data = a.payload.doc.data() as Member;
             md5.appendStr(data.email);
             data.picture = `https://www.gravatar.com/avatar/${md5.end()}?s=300&d=mp`;
             return data;
-          })
-        )
+          }),
+        ),
       );
   }
 

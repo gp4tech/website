@@ -4,7 +4,7 @@ import { RouterTestingModule } from '@angular/router/testing';
 import {
   TranslateModule,
   TranslateLoader,
-  TranslateFakeLoader
+  TranslateFakeLoader,
 } from '@ngx-translate/core';
 
 import { BannerComponent } from './banner.component';
@@ -20,9 +20,9 @@ describe('BannerComponent', () => {
       imports: [
         RouterTestingModule,
         TranslateModule.forRoot({
-          loader: { provide: TranslateLoader, useClass: TranslateFakeLoader }
-        })
-      ]
+          loader: { provide: TranslateLoader, useClass: TranslateFakeLoader },
+        }),
+      ],
     }).compileComponents();
   }));
 

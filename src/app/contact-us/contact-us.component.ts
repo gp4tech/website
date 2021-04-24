@@ -7,7 +7,7 @@ import { ContactInfo } from '../shared/models/contact-info.constant';
 @Component({
   selector: 'gp-contact-us',
   templateUrl: './contact-us.component.html',
-  styleUrls: ['./contact-us.component.scss']
+  styleUrls: ['./contact-us.component.scss'],
 })
 export class ContactUsComponent implements OnInit {
   displayEmailSection = false;
@@ -31,7 +31,7 @@ export class ContactUsComponent implements OnInit {
       from: '',
       to: ContactInfo.email,
       subject: '',
-      content: ''
+      content: '',
     };
   }
 }

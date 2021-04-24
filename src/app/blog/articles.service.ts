@@ -25,19 +25,19 @@ export class ArticlesService extends DataService<Article> {
 
   getAllArticles(): Observable<Article[]> {
     return this.getAll().pipe(
-      map(articles => {
+      map((articles) => {
         this.verifyArticlesAndUpdateMetadata(articles);
         return articles;
-      })
+      }),
     );
   }
 
   getTopArticles(quantity: number): Observable<Article[]> {
     return this.getAllSorted('views', DataOrder.desc, quantity).pipe(
-      map(articles => {
+      map((articles) => {
         this.verifyArticlesAndUpdateMetadata(articles);
         return articles;
-      })
+      }),
     );
   }
 
@@ -46,11 +46,11 @@ export class ArticlesService extends DataService<Article> {
   }
 
   private verifyArticlesAndUpdateMetadata(articles: Article[]): void {
-    articles.forEach(article => {
+    articles.forEach((article) => {
       if (this.isArticleIncomplete(article)) {
         this.updateUsingCloudFunction(
           article.id,
-          CloudFunctions.updateArticleMetadata
+          CloudFunctions.updateArticleMetadata,
         ).subscribe();
       }
     });

@@ -3,7 +3,7 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import {
   TranslateModule,
   TranslateLoader,
-  TranslateFakeLoader
+  TranslateFakeLoader,
 } from '@ngx-translate/core';
 import { of } from 'rxjs';
 
@@ -19,7 +19,7 @@ import { MissionVisionComponent } from './mission-vision/mission-vision.componen
 
 const membersServiceMock = {
   getAll: () => of([]),
-  getAllMembers: () => of([])
+  getAllMembers: () => of([]),
 };
 
 describe('AboutUsComponent', () => {
@@ -35,20 +35,20 @@ describe('AboutUsComponent', () => {
         CallToActionComponent,
         RoleConverterPipe,
         FixUrlPipe,
-        MissionVisionComponent
+        MissionVisionComponent,
       ],
       imports: [
         TranslateModule.forRoot({
-          loader: { provide: TranslateLoader, useClass: TranslateFakeLoader }
-        })
+          loader: { provide: TranslateLoader, useClass: TranslateFakeLoader },
+        }),
       ],
       providers: [
         {
           provide: MembersService,
-          useValue: membersServiceMock
+          useValue: membersServiceMock,
         },
-        LanguageService
-      ]
+        LanguageService,
+      ],
     }).compileComponents();
   }));
 

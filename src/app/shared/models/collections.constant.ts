@@ -7,5 +7,5 @@ export const FirebaseCollections = {
   sponsors: 'sponsors',
   webTeamMembers: 'web-team-members',
   testimonials: 'testimonials',
-  members: 'members'
+  members: 'members',
 };

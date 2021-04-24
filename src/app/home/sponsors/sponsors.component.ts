@@ -9,7 +9,7 @@ import { environment } from '../../../environments/environment';
 @Component({
   selector: 'gp-sponsors',
   templateUrl: './sponsors.component.html',
-  styleUrls: ['./sponsors.component.scss']
+  styleUrls: ['./sponsors.component.scss'],
 })
 export class SponsorsComponent implements OnInit {
   sponsors$: Observable<Sponsor[]>;

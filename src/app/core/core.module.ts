@@ -5,7 +5,7 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { AngularFireModule } from '@angular/fire';
 import {
   AngularFirestoreModule,
-  FirestoreSettingsToken
+  FirestoreSettingsToken,
 } from '@angular/fire/firestore';
 
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
@@ -33,16 +33,16 @@ export function HttpLoaderFactory(http: HttpClient) {
       loader: {
         provide: TranslateLoader,
         useFactory: HttpLoaderFactory,
-        deps: [HttpClient]
-      }
+        deps: [HttpClient],
+      },
     }),
-    Angulartics2Module.forRoot()
+    Angulartics2Module.forRoot(),
   ],
   providers: [
     { provide: FirestoreSettingsToken, useValue: {} },
     EmailService,
     LanguageService,
-    ScrollTopService
-  ]
+    ScrollTopService,
+  ],
 })
 export class CoreModule {}

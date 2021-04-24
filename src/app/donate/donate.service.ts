@@ -7,7 +7,7 @@ import { Donate } from '../shared/models/donate.model';
 import { FirebaseCollections } from '../shared/models/collections.constant';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class DonateService extends DataService<Donate> {
   constructor(http: HttpClient, db: AngularFirestore) {

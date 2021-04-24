@@ -6,12 +6,12 @@ import { SubscribeComponent } from './subscribe/subscribe.component';
 const routes: Routes = [
   {
     path: '',
-    component: SubscribeComponent
-  }
+    component: SubscribeComponent,
+  },
 ];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
 export class GetInvolvedRoutingModule {}

@@ -16,8 +16,8 @@ import { environment } from 'src/environments/environment';
     CommonModule,
     ContactUsRoutingModule,
     SharedModule,
-    AgmCoreModule.forRoot(environment.googleMaps)
+    AgmCoreModule.forRoot(environment.googleMaps),
   ],
-  providers: [EmailService]
+  providers: [EmailService],
 })
 export class ContactUsModule {}

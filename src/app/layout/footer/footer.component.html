@@ -4,22 +4,35 @@
       <div class="col s12 m4 l4 contact-us center-align">
         <p class="">{{ 'footer.contact-us' | translate }}</p>
         <i class="fa fa-phone" aria-hidden="true"></i>
-        <a href="tel:({{ 'contact-us.phone.code' | translate }}){{ 'contact-us.phone.number' | translate }}">
-          ({{ 'contact-us.phone.code' | translate }}){{ 'contact-us.phone.number' | translate }}
-        </a><br/>
+        <a
+          href="tel:({{ 'contact-us.phone.code' | translate }}){{
+            'contact-us.phone.number' | translate
+          }}"
+        >
+          ({{ 'contact-us.phone.code' | translate }}){{
+            'contact-us.phone.number' | translate
+          }} </a
+        ><br />
         <i class="fas fa-envelope" aria-hidden="true"></i>
-        <a href="mailto:{{'contact-us.gpEmail' | translate}}">
+        <a href="mailto:{{ 'contact-us.gpEmail' | translate }}">
           {{ 'contact-us.gpEmail' | translate }}
         </a>
       </div>
 
       <div class="col s12 m4 l3 center-align">
-        <p>{{ 'footer.social-networks' | translate}}</p>
+        <p>{{ 'footer.social-networks' | translate }}</p>
         <div class="row">
           <div class="social-links" *ngFor="let socialLink of socialLinks">
-            <a [href]="socialLink.link" target="_blank" rel="noopener noreferrer">
-              <img class="responsive-img" [src]="'/assets/images/' + socialLink.icon"
-                [alt]="socialLink.i18n | translate">
+            <a
+              [href]="socialLink.link"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img
+                class="responsive-img"
+                [src]="'/assets/images/' + socialLink.icon"
+                [alt]="socialLink.i18n | translate"
+              />
             </a>
           </div>
         </div>
@@ -28,9 +41,15 @@
         <p> {{ 'who-did-this.title' | translate }} </p>
         <div class="row">
           <div class="who-did-this-link">
-            <a [routerLink]="whoDidThis.link" class="btn-floating grey darken-2">
-              <img class="responsive-img" [src]="'/assets/images/' + whoDidThis.icon"
-                [alt]="whoDidThis.i18n | translate">
+            <a
+              [routerLink]="whoDidThis.link"
+              class="btn-floating grey darken-2"
+            >
+              <img
+                class="responsive-img"
+                [src]="'/assets/images/' + whoDidThis.icon"
+                [alt]="whoDidThis.i18n | translate"
+              />
             </a>
           </div>
         </div>

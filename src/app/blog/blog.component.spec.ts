@@ -3,7 +3,7 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import {
   TranslateModule,
   TranslateLoader,
-  TranslateFakeLoader
+  TranslateFakeLoader,
 } from '@ngx-translate/core';
 import { of } from 'rxjs';
 
@@ -14,7 +14,7 @@ import { LanguageService } from '../core/language.service';
 
 const articlesServiceMock = {
   getAllArticles: () => of([]),
-  getTopArticles: () => of([])
+  getTopArticles: () => of([]),
 };
 
 describe('BlogComponent', () => {
@@ -26,13 +26,13 @@ describe('BlogComponent', () => {
       declarations: [BlogComponent, TopArticleComponent],
       imports: [
         TranslateModule.forRoot({
-          loader: { provide: TranslateLoader, useClass: TranslateFakeLoader }
-        })
+          loader: { provide: TranslateLoader, useClass: TranslateFakeLoader },
+        }),
       ],
       providers: [
         { provide: ArticlesService, useValue: articlesServiceMock },
-        LanguageService
-      ]
+        LanguageService,
+      ],
     }).compileComponents();
   }));
 

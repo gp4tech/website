@@ -5,7 +5,7 @@ import { AngularFirestore } from '@angular/fire/firestore';
 import { TestimonialsService } from './testimonials.service';
 
 const angularFirestoreMock = {
-  collection: () => {}
+  collection: () => {},
 };
 
 describe('TestimonialsService', () => {
@@ -14,9 +14,9 @@ describe('TestimonialsService', () => {
       imports: [HttpClientModule],
       providers: [
         TestimonialsService,
-        { provide: AngularFirestore, useValue: angularFirestoreMock }
-      ]
-    })
+        { provide: AngularFirestore, useValue: angularFirestoreMock },
+      ],
+    }),
   );
 
   it('should be created', () => {

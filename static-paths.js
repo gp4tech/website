@@ -5,6 +5,6 @@ module.exports = {
     'activities',
     // TODO 07182019: Determine what will happen with donations
     // 'donations',
-    'who-did-this'
-  ]
+    'who-did-this',
+  ],
 };

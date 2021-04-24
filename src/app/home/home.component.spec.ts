@@ -4,7 +4,7 @@ import { RouterTestingModule } from '@angular/router/testing';
 import {
   TranslateModule,
   TranslateLoader,
-  TranslateFakeLoader
+  TranslateFakeLoader,
 } from '@ngx-translate/core';
 import { of } from 'rxjs';
 
@@ -25,24 +25,24 @@ import { CallToActionModule } from '../shared/components/call-to-action/call-to-
 import { LanguageService } from '../core/language.service';
 
 const activityIndicatorsServiceMock = {
-  getAll: () => of([])
+  getAll: () => of([]),
 };
 
 const countrySupportersServiceMock = {
-  getAll: () => of([])
+  getAll: () => of([]),
 };
 
 const articlesServiceMock = {
   getAllArticles: () => of([]),
-  getTopArticles: () => of([])
+  getTopArticles: () => of([]),
 };
 
 const sponsorsServiceMock = {
-  getAll: () => of([])
+  getAll: () => of([]),
 };
 
 const testimonialsServiceMock = {
-  getAll: () => of([])
+  getAll: () => of([]),
 };
 
 describe('HomeComponent', () => {
@@ -58,36 +58,36 @@ describe('HomeComponent', () => {
         TestimonialsComponent,
         SponsorsComponent,
         TopArticlesComponent,
-        TopArticleComponent
+        TopArticleComponent,
       ],
       imports: [
         RouterTestingModule,
         CallToActionModule,
         GetInvolvedModule,
         TranslateModule.forRoot({
-          loader: { provide: TranslateLoader, useClass: TranslateFakeLoader }
-        })
+          loader: { provide: TranslateLoader, useClass: TranslateFakeLoader },
+        }),
       ],
       providers: [
         {
           provide: ActivityIndicatorsService,
-          useValue: activityIndicatorsServiceMock
+          useValue: activityIndicatorsServiceMock,
         },
         {
           provide: CountrySupportersService,
-          useValue: countrySupportersServiceMock
+          useValue: countrySupportersServiceMock,
         },
         { provide: ArticlesService, useValue: articlesServiceMock },
         {
           provide: SponsorsService,
-          useValue: sponsorsServiceMock
+          useValue: sponsorsServiceMock,
         },
         {
           provide: TestimonialsService,
-          useValue: testimonialsServiceMock
+          useValue: testimonialsServiceMock,
         },
-        LanguageService
-      ]
+        LanguageService,
+      ],
     }).compileComponents();
   }));
 

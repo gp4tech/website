@@ -1,12 +1,17 @@
-import { Directive, ElementRef, AfterViewInit, Input, HostListener } from '@angular/core';
+import {
+  Directive,
+  ElementRef,
+  AfterViewInit,
+  Input,
+  HostListener,
+} from '@angular/core';
 
 import { Carousel } from 'materialize-css';
 
 @Directive({
-  selector: '[gpCarousel]'
+  selector: '[gpCarousel]',
 })
 export class CarouselDirective implements AfterViewInit {
-
   @Input() autoSlide = true;
   carousel: Carousel;
   intervalId = null;
@@ -16,7 +21,7 @@ export class CarouselDirective implements AfterViewInit {
   ngAfterViewInit(): void {
     this.carousel = Carousel.init(this.elementRef.nativeElement, {
       fullWidth: true,
-      indicators: true
+      indicators: true,
     });
 
     this.startAutoSlide();

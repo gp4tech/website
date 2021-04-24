@@ -6,6 +6,6 @@ import { CallToActionComponent } from './call-to-action.component';
 @NgModule({
   declarations: [CallToActionComponent],
   imports: [CommonModule],
-  exports: [CallToActionComponent]
+  exports: [CallToActionComponent],
 })
 export class CallToActionModule {}

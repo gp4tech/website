@@ -7,16 +7,8 @@ import { WhoDidThisComponent } from './who-did-this.component';
 import { WebTeamMembersService } from './web-team-members.service';
 
 @NgModule({
-  declarations: [
-    WhoDidThisComponent
-  ],
-  imports: [
-    CommonModule,
-    WhoDidThisRoutingModule,
-    SharedModule
-  ],
-  providers: [
-    WebTeamMembersService
-  ]
+  declarations: [WhoDidThisComponent],
+  imports: [CommonModule, WhoDidThisRoutingModule, SharedModule],
+  providers: [WebTeamMembersService],
 })
-export class WhoDidThisModule { }
+export class WhoDidThisModule {}

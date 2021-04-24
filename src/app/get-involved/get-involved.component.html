@@ -1,22 +1,29 @@
 <div class="center-align section-title">
   <h4>{{ 'get-involved.title' | translate }}</h4>
-  <div [ngClass]="{'container': enableMapContainer }">
+  <div [ngClass]="{ 'container': enableMapContainer }">
     <div class="row">
       <div class="col s12">
         <div class="valign-wrapper default-height" *ngIf="isLoading">
           <gp-waiting-spinner></gp-waiting-spinner>
         </div>
-        <google-chart *ngIf="!isLoading" [dynamicResize]="true"
+        <google-chart
+          *ngIf="!isLoading"
+          [dynamicResize]="true"
           [title]="chart.title"
           [type]="chart.type"
           [data]="chart.data"
           [columnNames]="chart.columnNames"
-          [options]="chart.options">
+          [options]="chart.options"
+        >
         </google-chart>
       </div>
     </div>
     <div class="row" *ngIf="!isLoading">
-      <a class="waves-effect btn-large get-involved" [routerLink]="[ '/get-involved' ]">{{ 'get-involved.support-this' | translate}}</a>
+      <a
+        class="waves-effect btn-large get-involved"
+        [routerLink]="['/get-involved']"
+        >{{ 'get-involved.support-this' | translate }}</a
+      >
     </div>
   </div>
 </div>

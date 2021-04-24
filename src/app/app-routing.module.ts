@@ -9,31 +9,35 @@ const routes: Routes = [
   {
     path: AppBarRoutes.about,
     loadChildren: () =>
-      import('./about-us/about-us.module').then(m => m.AboutUsModule)
+      import('./about-us/about-us.module').then((m) => m.AboutUsModule),
   },
   {
     path: AppBarRoutes.events,
     loadChildren: () =>
-      import('./events/events.module').then(m => m.EventsModule)
+      import('./events/events.module').then((m) => m.EventsModule),
   },
   {
     path: AppBarRoutes.blog,
-    loadChildren: () => import('./blog/blog.module').then(m => m.BlogModule)
+    loadChildren: () => import('./blog/blog.module').then((m) => m.BlogModule),
   },
   {
     path: AppBarRoutes.who,
     loadChildren: () =>
-      import('./who-did-this/who-did-this.module').then(m => m.WhoDidThisModule)
+      import('./who-did-this/who-did-this.module').then(
+        (m) => m.WhoDidThisModule,
+      ),
   },
   {
     path: AppBarRoutes.contact,
     loadChildren: () =>
-      import('./contact-us/contact-us.module').then(m => m.ContactUsModule)
+      import('./contact-us/contact-us.module').then((m) => m.ContactUsModule),
   },
   {
     path: AppBarRoutes.getInvolved,
     loadChildren: () =>
-      import('./get-involved/get-involved.module').then(m => m.GetInvolvedModule)
+      import('./get-involved/get-involved.module').then(
+        (m) => m.GetInvolvedModule,
+      ),
   },
   // TODO 07182019: Determine what will happen with donations
   // {
@@ -43,12 +47,12 @@ const routes: Routes = [
   {
     path: '**',
     // TODO 06172019: Create a 404 component
-    component: HomeComponent
-  }
+    component: HomeComponent,
+  },
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
 export class AppRoutingModule {}

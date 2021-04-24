@@ -1,29 +1,42 @@
-<gp-page-banner [title]="'events.banner-title' | translate"
-                [description]="'events.description' | translate"
-                [linkText]="'events.call-to-action' | translate"
-                [link]="link"
-                picture="assets/images/activities.JPG">
+<gp-page-banner
+  [title]="'events.banner-title' | translate"
+  [description]="'events.description' | translate"
+  [linkText]="'events.call-to-action' | translate"
+  [link]="link"
+  picture="assets/images/activities.JPG"
+>
 </gp-page-banner>
 <div class="container">
   <div class="section-space">
     <div class="row">
       <h4 class="center-align section-title">
-        {{'events.title' | translate}}
+        {{ 'events.title' | translate }}
       </h4>
     </div>
     <div *ngFor="let event of events$ | async; index as i" class="row">
       <div class="hide-on-small-only" *ngIf="i % 2 === 0">
-        <div class="col m6 event-picture separator" [style.backgroundImage]="'url(' + event.pic + ')'">
+        <div
+          class="col m6 event-picture separator"
+          [style.backgroundImage]="'url(' + event.pic + ')'"
+        >
         </div>
         <div class="col m6">
           <div class="row center-align">
             <h2 class="type">
-              {{ language.currentLanguage === languages.EN ? event.nameEn : event.nameSp }}
+              {{
+                language.currentLanguage === languages.EN
+                  ? event.nameEn
+                  : event.nameSp
+              }}
             </h2>
           </div>
           <div class="row valign-wrapper">
             <p class="text-justify separator-p">
-              {{ language.currentLanguage === languages.EN ? event.descriptionEn : event.descriptionSp }}
+              {{
+                language.currentLanguage === languages.EN
+                  ? event.descriptionEn
+                  : event.descriptionSp
+              }}
             </p>
           </div>
         </div>
@@ -32,33 +45,55 @@
         <div class="col m6">
           <div class="row center-align">
             <h2 class="type">
-              {{ language.currentLanguage === languages.EN ? event.nameEn : event.nameSp }}
+              {{
+                language.currentLanguage === languages.EN
+                  ? event.nameEn
+                  : event.nameSp
+              }}
             </h2>
           </div>
           <div class="row valign-wrapper">
             <p class="text-justify separator-p">
-              {{ language.currentLanguage === languages.EN ? event.descriptionEn : event.descriptionSp }}
+              {{
+                language.currentLanguage === languages.EN
+                  ? event.descriptionEn
+                  : event.descriptionSp
+              }}
             </p>
           </div>
         </div>
-        <div class="col m6 event-picture separator" [style.backgroundImage]="'url(' + event.pic + ')'">
+        <div
+          class="col m6 event-picture separator"
+          [style.backgroundImage]="'url(' + event.pic + ')'"
+        >
         </div>
       </div>
       <div class="hide-on-med-and-up">
-        <div class="col s12 center-align event-picture separator" [style.backgroundImage]="'url(' + event.pic + ')'">
+        <div
+          class="col s12 center-align event-picture separator"
+          [style.backgroundImage]="'url(' + event.pic + ')'"
+        >
         </div>
         <div class="col s12">
           <div class="row center-align">
             <h2 class="type">
-              {{ language.currentLanguage === languages.EN ? event.nameEn : event.nameSp }}
+              {{
+                language.currentLanguage === languages.EN
+                  ? event.nameEn
+                  : event.nameSp
+              }}
             </h2>
           </div>
           <div class="row valign-wrapper">
             <p class="text-justify separator-p">
-              {{ language.currentLanguage === languages.EN ? event.descriptionEn : event.descriptionSp }}
+              {{
+                language.currentLanguage === languages.EN
+                  ? event.descriptionEn
+                  : event.descriptionSp
+              }}
             </p>
           </div>
-          <hr>
+          <hr />
         </div>
       </div>
     </div>

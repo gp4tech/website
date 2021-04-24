@@ -22,7 +22,7 @@ import { CallToActionModule } from '../shared/components/call-to-action/call-to-
     BannerComponent,
     ActivityIndicatorsComponent,
     TestimonialsComponent,
-    SponsorsComponent
+    SponsorsComponent,
   ],
   imports: [
     CommonModule,
@@ -30,13 +30,13 @@ import { CallToActionModule } from '../shared/components/call-to-action/call-to-
     SharedModule,
     GetInvolvedModule,
     BlogModule,
-    CallToActionModule
+    CallToActionModule,
   ],
   providers: [
     ActivityIndicatorsService,
     ArticlesService,
     SponsorsService,
-    TestimonialsService
-  ]
+    TestimonialsService,
+  ],
 })
 export class HomeModule {}

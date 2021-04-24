@@ -10,34 +10,39 @@ import { Supporter } from '../../shared/models/supporter';
 @Component({
   selector: 'gp-subscribe-form',
   templateUrl: './subscribe-form.component.html',
-  styleUrls: ['./subscribe-form.component.scss']
+  styleUrls: ['./subscribe-form.component.scss'],
 })
 export class SubscribeFormComponent implements OnInit {
-
   @Output() subscriptionSubmitted = new EventEmitter<Supporter>();
 
   form: FormGroup;
   countries = Countries;
   isLoading = true;
-  genderOptions: {value: string, label: string}[];
+  genderOptions: { value: string; label: string }[];
   formHelper = FormHelper;
 
-  constructor(private translateService: TranslateService, private formBuilder: FormBuilder) {
+  constructor(
+    private translateService: TranslateService,
+    private formBuilder: FormBuilder,
+  ) {
     this.form = this.formBuilder.group({
       firstname: ['', Validators.required],
       lastname: ['', Validators.required],
       email: ['', [Validators.email, Validators.required]],
       country: ['Bolivia'],
       gender: ['female'],
-      agreement: [true]
+      agreement: [true],
     });
   }
 
   ngOnInit() {
-    this.translateService.get('get-involved.subscription.form.gender-options')
+    this.translateService
+      .get('get-involved.subscription.form.gender-options')
       .subscribe((genderOptions) => {
-        this.genderOptions = Object.keys(genderOptions)
-          .map((key: string) => ({ value: key, label: genderOptions[key] }));
+        this.genderOptions = Object.keys(genderOptions).map((key: string) => ({
+          value: key,
+          label: genderOptions[key],
+        }));
         this.isLoading = false;
       });
   }

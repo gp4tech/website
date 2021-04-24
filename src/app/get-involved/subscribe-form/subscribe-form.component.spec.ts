@@ -12,14 +12,9 @@ describe('SubscribeFormComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      imports: [
-        ReactiveFormsModule,
-        TranslateModule.forRoot(),
-        SharedModule
-      ],
-      declarations: [ SubscribeFormComponent ]
-    })
-    .compileComponents();
+      imports: [ReactiveFormsModule, TranslateModule.forRoot(), SharedModule],
+      declarations: [SubscribeFormComponent],
+    }).compileComponents();
   }));
 
   beforeEach(() => {

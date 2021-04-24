@@ -13,18 +13,19 @@ import { SubscribeComponent } from './subscribe/subscribe.component';
 import { SupporterService } from './supporter.service';
 
 @NgModule({
-  declarations: [GetInvolvedComponent, SubscribeFormComponent, SubscribeComponent],
+  declarations: [
+    GetInvolvedComponent,
+    SubscribeFormComponent,
+    SubscribeComponent,
+  ],
   imports: [
     CommonModule,
     ReactiveFormsModule,
     SharedModule,
     GetInvolvedRoutingModule,
-    GoogleChartsModule.forRoot()
+    GoogleChartsModule.forRoot(),
   ],
   exports: [GetInvolvedComponent],
-  providers: [
-    CountrySupportersService,
-    SupporterService
-  ]
+  providers: [CountrySupportersService, SupporterService],
 })
 export class GetInvolvedModule {}

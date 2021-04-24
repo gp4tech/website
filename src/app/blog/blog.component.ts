@@ -12,7 +12,7 @@ const MAX_TOP_ARTICLES_LENGTH = 3;
 @Component({
   selector: 'gp-blog',
   templateUrl: './blog.component.html',
-  styleUrls: ['./blog.component.scss']
+  styleUrls: ['./blog.component.scss'],
 })
 export class BlogComponent implements OnInit {
   articles$: Observable<Article[]>;
@@ -23,13 +23,13 @@ export class BlogComponent implements OnInit {
 
   constructor(
     public languageService: LanguageService,
-    private articlesService: ArticlesService
+    private articlesService: ArticlesService,
   ) {}
 
   ngOnInit(): void {
     this.articles$ = this.articlesService.getAllArticles();
     this.topArticles$ = this.articlesService.getTopArticles(
-      MAX_TOP_ARTICLES_LENGTH
+      MAX_TOP_ARTICLES_LENGTH,
     );
     this.defaultText = this.articlesService.defaultText;
     this.defaultImage = this.articlesService.defaultImage;

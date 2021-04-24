@@ -5,7 +5,7 @@ import { TestBed } from '@angular/core/testing';
 import { DonateService } from './donate.service';
 
 const angularFirestoreMock = {
-  collection: () => {}
+  collection: () => {},
 };
 
 describe('DonateService', () => {
@@ -14,9 +14,9 @@ describe('DonateService', () => {
       imports: [HttpClientModule],
       providers: [
         DonateService,
-        { provide: AngularFirestore, useValue: angularFirestoreMock }
-      ]
-    })
+        { provide: AngularFirestore, useValue: angularFirestoreMock },
+      ],
+    }),
   );
 
   it('should be created', () => {

@@ -10,7 +10,7 @@ import { PageBannerComponent } from '../shared/components/page-banner/page-banne
 import { CallToActionComponent } from '../shared/components/call-to-action/call-to-action.component';
 
 const DonateServiceMock = {
-  getAll: () => of([])
+  getAll: () => of([]),
 };
 
 describe('DonateComponent', () => {
@@ -22,13 +22,13 @@ describe('DonateComponent', () => {
       declarations: [
         DonateComponent,
         PageBannerComponent,
-        CallToActionComponent
+        CallToActionComponent,
       ],
       imports: [TranslateModule.forRoot()],
       providers: [
         { provide: DonateService, useValue: DonateServiceMock },
-        LanguageService
-      ]
+        LanguageService,
+      ],
     }).compileComponents();
   }));
 

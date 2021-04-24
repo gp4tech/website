@@ -5,17 +5,19 @@ import { AngularFirestore } from '@angular/fire/firestore';
 import { SupporterService } from './supporter.service';
 
 const angularFirestoreMock = {
-  collection: () => {}
+  collection: () => {},
 };
 
 describe('SupporterService', () => {
-  beforeEach(() => TestBed.configureTestingModule({
-    imports: [HttpClientModule],
-    providers: [
-      { provide: AngularFirestore, useValue: angularFirestoreMock },
-      SupporterService
-    ]
-  }));
+  beforeEach(() =>
+    TestBed.configureTestingModule({
+      imports: [HttpClientModule],
+      providers: [
+        { provide: AngularFirestore, useValue: angularFirestoreMock },
+        SupporterService,
+      ],
+    }),
+  );
 
   it('should be created', () => {
     const service: SupporterService = TestBed.get(SupporterService);

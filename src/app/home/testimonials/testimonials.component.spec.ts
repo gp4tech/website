@@ -3,7 +3,7 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import {
   TranslateModule,
   TranslateLoader,
-  TranslateFakeLoader
+  TranslateFakeLoader,
 } from '@ngx-translate/core';
 import { of } from 'rxjs';
 
@@ -12,7 +12,7 @@ import { TestimonialsService } from './testimonials.service';
 import { LanguageService } from 'src/app/core/language.service';
 
 const testimonialsServiceMock = {
-  getAll: () => of([])
+  getAll: () => of([]),
 };
 
 describe('TestimonialsComponent', () => {
@@ -22,13 +22,11 @@ describe('TestimonialsComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       declarations: [TestimonialsComponent],
-      imports: [
-        TranslateModule.forRoot()
-      ],
+      imports: [TranslateModule.forRoot()],
       providers: [
         { provide: TestimonialsService, useValue: testimonialsServiceMock },
-        LanguageService
-      ]
+        LanguageService,
+      ],
     }).compileComponents();
   }));
 

@@ -1,6 +1,10 @@
 <div class="card left-align">
   <div class="card-image waves-effect waves-block waves-light">
-    <img class="activator" [src]="article.image? article.image : defaultImage" [alt]="article.title">
+    <img
+      class="activator"
+      [src]="article.image ? article.image : defaultImage"
+      [alt]="article.title"
+    />
   </div>
   <div class="card-content">
     <span class="activator">
@@ -10,9 +14,17 @@
       {{ article.title ? article.title : defaultText }}
     </span>
     <p class="card-author-and-date">
-      {{ article.author ? article.author : defaultText }}・{{ (article.date ? article.date.toDate() : onInitDate) | date : 'mediumDate' : undefined : languageService.currentLanguage }}
+      {{ article.author ? article.author : defaultText }}・{{
+        (article.date ? article.date.toDate() : onInitDate)
+          | date: 'mediumDate':undefined:languageService.currentLanguage
+      }}
     </p>
-    <a (click)="updateArticleViews(article)" [href]="article.url" target="_blank" rel="noopener noreferrer">
+    <a
+      (click)="updateArticleViews(article)"
+      [href]="article.url"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
       {{ 'blog.articles.read-more' | translate }}
     </a>
   </div>

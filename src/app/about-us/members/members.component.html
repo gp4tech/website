@@ -2,30 +2,60 @@
   {{ 'about-us.members.title' | translate }}
 </h4>
 <div class="row">
-  <div class="col s12 m6 l3 member-card-wrapper center-align" *ngFor="let member of members$ | async; let i = index ">
+  <div
+    class="col s12 m6 l3 member-card-wrapper center-align"
+    *ngFor="let member of members$ | async; let i = index"
+  >
     <div class="member-card" (click)="openMemberInfo(member, $event)">
       <div class="image-wrapper">
-        <img class="responsive-img" gpImageResizer [src]="member.picture" [alt]="member.displayName">
+        <img
+          class="responsive-img"
+          gpImageResizer
+          [src]="member.picture"
+          [alt]="member.displayName"
+        />
       </div>
       <div class="member-info-wrapper" gpMembers>
         <div class="member-info">
-          <span class="member-info-name" [ngClass]="{'pair-position': i % 2 === 0}">
-            {{ member.displayName }}
-          </span><br/>
-          {{ member.jalaRole | roleConverter | translate }}<br *ngIf="member.jalaRole"/>
-          {{ language.currentLanguage === 'es' ? member.careerSp : member.careerEn }}<br/>
+          <span
+            class="member-info-name"
+            [ngClass]="{ 'pair-position': i % 2 === 0 }"
+          >
+            {{ member.displayName }} </span
+          ><br />
+          {{ member.jalaRole | roleConverter | translate
+          }}<br *ngIf="member.jalaRole" />
+          {{
+            language.currentLanguage === 'es'
+              ? member.careerSp
+              : member.careerEn
+          }}<br />
           {{ member.mainTeam }}
-          <div class="icons" [ngClass]="{'pair-position': i % 2 === 0}">
-            <a *ngIf="member.linkedin" href="{{ member.linkedin | fixUrl:'https://www.linkedin.com/in/' }}" target="_blank"
-              rel="noopener noreferrer">
+          <div class="icons" [ngClass]="{ 'pair-position': i % 2 === 0 }">
+            <a
+              *ngIf="member.linkedin"
+              href="{{
+                member.linkedin | fixUrl: 'https://www.linkedin.com/in/'
+              }}"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <i class="fab fa-2x fa-linkedin"></i>
             </a>
-            <a *ngIf="member.twitter" href="{{ member.twitter | fixUrl:'https://twitter.com/' }}" target="_blank"
-              rel="noopener noreferrer">
+            <a
+              *ngIf="member.twitter"
+              href="{{ member.twitter | fixUrl: 'https://twitter.com/' }}"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <i class="fab fa-2x fa-twitter"></i>
             </a>
-            <a *ngIf="member.facebook" href="{{ member.facebook | fixUrl:'https://www.facebook.com/' }}" target="_blank"
-              rel="noopener noreferrer">
+            <a
+              *ngIf="member.facebook"
+              href="{{ member.facebook | fixUrl: 'https://www.facebook.com/' }}"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <i class="fab fa-2x fa-facebook"></i>
             </a>
           </div>

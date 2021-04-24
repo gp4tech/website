@@ -9,7 +9,7 @@ import { LanguageService } from '../core/language.service';
 @Component({
   selector: 'gp-who-did-this',
   templateUrl: './who-did-this.component.html',
-  styleUrls: ['./who-did-this.component.scss']
+  styleUrls: ['./who-did-this.component.scss'],
 })
 export class WhoDidThisComponent implements OnInit {
   webTeamMembers$: Observable<WebTeamMember[]>;
@@ -17,7 +17,7 @@ export class WhoDidThisComponent implements OnInit {
 
   constructor(
     private webTeamMembersService: WebTeamMembersService,
-    public language: LanguageService
+    public language: LanguageService,
   ) {}
 
   ngOnInit() {

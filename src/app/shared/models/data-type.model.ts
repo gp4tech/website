@@ -4,5 +4,5 @@ export interface DataType {
 
 export enum DataOrder {
   asc = 'asc',
-  desc = 'desc'
+  desc = 'desc',
 }

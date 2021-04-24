@@ -9,9 +9,9 @@ export const FirebaseConfig = {
   projectId: '',
   storageBucket: '',
   messagingSenderId: '',
-  appId: ''
+  appId: '',
 };
 
 export const GoogleMapsKey = {
-  apiKey: ''
+  apiKey: '',
 };

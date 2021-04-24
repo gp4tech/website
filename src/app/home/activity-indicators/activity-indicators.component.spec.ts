@@ -3,7 +3,7 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import {
   TranslateModule,
   TranslateLoader,
-  TranslateFakeLoader
+  TranslateFakeLoader,
 } from '@ngx-translate/core';
 import { of } from 'rxjs';
 
@@ -12,7 +12,7 @@ import { ActivityIndicatorsService } from './activity-indicators.service';
 import { LanguageService } from 'src/app/core/language.service';
 
 const activityIndicatorsServiceMock = {
-  getAll: () => of([])
+  getAll: () => of([]),
 };
 
 describe('ActivityIndicatorsComponent', () => {
@@ -24,13 +24,16 @@ describe('ActivityIndicatorsComponent', () => {
       declarations: [ActivityIndicatorsComponent],
       imports: [
         TranslateModule.forRoot({
-          loader: { provide: TranslateLoader, useClass: TranslateFakeLoader }
-        })
+          loader: { provide: TranslateLoader, useClass: TranslateFakeLoader },
+        }),
       ],
       providers: [
-        { provide: ActivityIndicatorsService, useValue: activityIndicatorsServiceMock },
-        LanguageService
-      ]
+        {
+          provide: ActivityIndicatorsService,
+          useValue: activityIndicatorsServiceMock,
+        },
+        LanguageService,
+      ],
     }).compileComponents();
   }));
 

@@ -8,7 +8,7 @@ import { CloudFunctions } from '../../../shared/models/cloud-functions.constant'
 @Component({
   selector: 'gp-top-article',
   templateUrl: './top-article.component.html',
-  styleUrls: ['./top-article.component.scss']
+  styleUrls: ['./top-article.component.scss'],
 })
 export class TopArticleComponent implements OnInit {
   @Input() article: Article;
@@ -18,7 +18,7 @@ export class TopArticleComponent implements OnInit {
 
   constructor(
     public languageService: LanguageService,
-    private articlesService: ArticlesService
+    private articlesService: ArticlesService,
   ) {}
 
   ngOnInit(): void {

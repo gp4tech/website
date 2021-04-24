@@ -9,12 +9,15 @@
           {{ description }}
         </h6>
         <div class="call-to-action-container">
-          <gp-call-to-action [text]="linkText" [link]="link"></gp-call-to-action>
+          <gp-call-to-action
+            [text]="linkText"
+            [link]="link"
+          ></gp-call-to-action>
         </div>
       </div>
     </div>
   </div>
   <div gpParallax class="parallax">
-    <img [src]="picture" [alt]="title">
+    <img [src]="picture" [alt]="title" />
   </div>
 </div>

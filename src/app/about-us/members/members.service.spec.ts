@@ -5,7 +5,7 @@ import { AngularFirestore } from '@angular/fire/firestore';
 import { MembersService } from './members.service';
 
 const angularFirestoreMock = {
-  collection: () => {}
+  collection: () => {},
 };
 
 describe('MembersService', () => {
@@ -16,10 +16,10 @@ describe('MembersService', () => {
         MembersService,
         {
           provide: AngularFirestore,
-          useValue: angularFirestoreMock
-        }
-      ]
-    })
+          useValue: angularFirestoreMock,
+        },
+      ],
+    }),
   );
 
   it('should be created', () => {

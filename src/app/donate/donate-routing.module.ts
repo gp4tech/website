@@ -6,12 +6,12 @@ import { DonateComponent } from './donate.component';
 const routes: Routes = [
   {
     path: '',
-    component: DonateComponent
-  }
+    component: DonateComponent,
+  },
 ];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class DonateRoutingModule { }
+export class DonateRoutingModule {}

@@ -11,16 +11,21 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 - Install [Node.js](https://nodejs.org/en/).
 - Install [Angular CLI](https://cli.angular.io/).
 - Clone the repo:
+
 ```
 git clone https://github.com/gp4tech/website.git
 ```
+
 - Install dependencies:
+
 ```
 cd website
 ```
+
 ```
 npm install
 ```
+
 - [Create the keys file](#create-keys-file).
 - Run the project locally on the [Development server](#development-server).
 

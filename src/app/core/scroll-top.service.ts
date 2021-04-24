@@ -6,7 +6,7 @@ import { isPlatformBrowser } from '@angular/common';
 export class ScrollTopService {
   constructor(
     @Inject(PLATFORM_ID) private platformId: Object,
-    private router: Router
+    private router: Router,
   ) {}
 
   activateScrollTop() {

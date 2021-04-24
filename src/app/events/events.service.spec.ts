@@ -5,7 +5,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { EventsService } from './events.service';
 
 const angularFirestoreMock = {
-  collection: () => {}
+  collection: () => {},
 };
 
 describe('EventsService', () => {
@@ -14,9 +14,9 @@ describe('EventsService', () => {
       imports: [HttpClientModule],
       providers: [
         EventsService,
-        { provide: AngularFirestore, useValue: angularFirestoreMock }
-      ]
-    })
+        { provide: AngularFirestore, useValue: angularFirestoreMock },
+      ],
+    }),
   );
 
   it('should be created', () => {

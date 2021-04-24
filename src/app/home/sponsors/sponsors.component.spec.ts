@@ -3,7 +3,7 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import {
   TranslateModule,
   TranslateLoader,
-  TranslateFakeLoader
+  TranslateFakeLoader,
 } from '@ngx-translate/core';
 import { of } from 'rxjs';
 
@@ -11,7 +11,7 @@ import { SponsorsComponent } from './sponsors.component';
 import { SponsorsService } from './sponsors.service';
 
 const sponsorsServiceMock = {
-  getAll: () => of([])
+  getAll: () => of([]),
 };
 
 describe('SponsorsComponent', () => {
@@ -23,10 +23,10 @@ describe('SponsorsComponent', () => {
       declarations: [SponsorsComponent],
       imports: [
         TranslateModule.forRoot({
-          loader: { provide: TranslateLoader, useClass: TranslateFakeLoader }
-        })
+          loader: { provide: TranslateLoader, useClass: TranslateFakeLoader },
+        }),
       ],
-      providers: [{ provide: SponsorsService, useValue: sponsorsServiceMock }]
+      providers: [{ provide: SponsorsService, useValue: sponsorsServiceMock }],
     }).compileComponents();
   }));
 

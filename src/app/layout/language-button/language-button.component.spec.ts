@@ -3,7 +3,7 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import {
   TranslateModule,
   TranslateLoader,
-  TranslateFakeLoader
+  TranslateFakeLoader,
 } from '@ngx-translate/core';
 
 import { LanguageButtonComponent } from './language-button.component';
@@ -18,10 +18,10 @@ describe('LanguageButtonComponent', () => {
       declarations: [LanguageButtonComponent],
       imports: [
         TranslateModule.forRoot({
-          loader: { provide: TranslateLoader, useClass: TranslateFakeLoader }
-        })
+          loader: { provide: TranslateLoader, useClass: TranslateFakeLoader },
+        }),
       ],
-      providers: [LanguageService]
+      providers: [LanguageService],
     }).compileComponents();
   }));
 

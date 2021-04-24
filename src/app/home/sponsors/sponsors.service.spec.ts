@@ -5,7 +5,7 @@ import { AngularFirestore } from '@angular/fire/firestore';
 import { SponsorsService } from './sponsors.service';
 
 const angularFirestoreMock = {
-  collection: () => {}
+  collection: () => {},
 };
 
 describe('SponsorsService', () => {
@@ -14,9 +14,9 @@ describe('SponsorsService', () => {
       imports: [HttpClientModule],
       providers: [
         SponsorsService,
-        { provide: AngularFirestore, useValue: angularFirestoreMock }
-      ]
-    })
+        { provide: AngularFirestore, useValue: angularFirestoreMock },
+      ],
+    }),
   );
 
   it('should be created', () => {

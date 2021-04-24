@@ -4,7 +4,7 @@ import { RouterTestingModule } from '@angular/router/testing';
 import {
   TranslateModule,
   TranslateLoader,
-  TranslateFakeLoader
+  TranslateFakeLoader,
 } from '@ngx-translate/core';
 import { Angulartics2Module } from 'angulartics2';
 
@@ -22,12 +22,12 @@ describe('AppComponent', () => {
         LayoutModule,
         HomeModule,
         TranslateModule.forRoot({
-          loader: { provide: TranslateLoader, useClass: TranslateFakeLoader }
+          loader: { provide: TranslateLoader, useClass: TranslateFakeLoader },
         }),
-        Angulartics2Module.forRoot()
+        Angulartics2Module.forRoot(),
       ],
       declarations: [AppComponent],
-      providers: [LanguageService, ScrollTopService]
+      providers: [LanguageService, ScrollTopService],
     }).compileComponents();
   }));
 

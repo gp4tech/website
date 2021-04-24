@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import {
   AngularFirestore,
-  AngularFirestoreCollection
+  AngularFirestoreCollection,
 } from '@angular/fire/firestore';
 
 import { Observable } from 'rxjs';
@@ -15,7 +15,7 @@ export abstract class DataService<T extends DataType> {
   constructor(
     protected http: HttpClient,
     protected angularFirestoreService: AngularFirestore,
-    protected collectionName: string
+    protected collectionName: string,
   ) {
     this.dataCollection = angularFirestoreService.collection<T>(collectionName);
   }
@@ -27,10 +27,10 @@ export abstract class DataService<T extends DataType> {
   getAllSorted(
     field: string,
     order: DataOrder,
-    maxLimit?: number
+    maxLimit?: number,
   ): Observable<T[]> {
     return this.angularFirestoreService
-      .collection<T>(this.collectionName, ref => {
+      .collection<T>(this.collectionName, (ref) => {
         let query = ref.orderBy(field, order);
         if (maxLimit) {
           query = query.limit(maxLimit);

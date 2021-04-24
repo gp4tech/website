@@ -3,7 +3,7 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import {
   TranslateModule,
   TranslateLoader,
-  TranslateFakeLoader
+  TranslateFakeLoader,
 } from '@ngx-translate/core';
 import { of } from 'rxjs';
 
@@ -15,7 +15,7 @@ import { RoleConverterPipe } from 'src/app/shared/pipes/role-converter.pipe';
 
 const membersServiceMock = {
   getAll: () => of([]),
-  getAllMembers: () => of([])
+  getAllMembers: () => of([]),
 };
 
 describe('MembersComponent', () => {
@@ -24,23 +24,19 @@ describe('MembersComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [
-        FixUrlPipe,
-        RoleConverterPipe,
-        MembersComponent
-      ],
+      declarations: [FixUrlPipe, RoleConverterPipe, MembersComponent],
       imports: [
         TranslateModule.forRoot({
-          loader: { provide: TranslateLoader, useClass: TranslateFakeLoader }
-        })
+          loader: { provide: TranslateLoader, useClass: TranslateFakeLoader },
+        }),
       ],
       providers: [
         {
           provide: MembersService,
-          useValue: membersServiceMock
+          useValue: membersServiceMock,
         },
-        LanguageService
-      ]
+        LanguageService,
+      ],
     }).compileComponents();
   }));
 

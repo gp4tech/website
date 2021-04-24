@@ -5,7 +5,7 @@ import { AppRoutes } from '../../shared/models/routes.model';
 @Component({
   selector: 'gp-navbar',
   templateUrl: './navbar.component.html',
-  styleUrls: ['./navbar.component.scss']
+  styleUrls: ['./navbar.component.scss'],
 })
 export class NavbarComponent {
   appRoutes = AppRoutes;

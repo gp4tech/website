@@ -9,15 +9,17 @@ import { LanguageService } from '../core/language.service';
 @Component({
   selector: 'gp-donate',
   templateUrl: './donate.component.html',
-  styleUrls: ['./donate.component.scss']
+  styleUrls: ['./donate.component.scss'],
 })
 export class DonateComponent implements OnInit {
   donate$: Observable<Donate[]>;
   currency = 'dollar';
   from = 'usa';
 
-  constructor(private donateService: DonateService,
-              public language: LanguageService ) { }
+  constructor(
+    private donateService: DonateService,
+    public language: LanguageService,
+  ) {}
 
   ngOnInit() {
     this.donate$ = this.donateService.getAll();

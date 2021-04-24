@@ -7,16 +7,8 @@ import { EventsRoutingModule } from './events-routing.module';
 import { EventsService } from './events.service';
 
 @NgModule({
-  declarations: [
-    EventsComponent
-  ],
-  imports: [
-    CommonModule,
-    SharedModule,
-    EventsRoutingModule
-  ],
-  providers: [
-    EventsService
-  ]
+  declarations: [EventsComponent],
+  imports: [CommonModule, SharedModule, EventsRoutingModule],
+  providers: [EventsService],
 })
 export class EventsModule {}

@@ -6,12 +6,12 @@ import { WhoDidThisComponent } from './who-did-this.component';
 const routes: Routes = [
   {
     path: '',
-    component: WhoDidThisComponent
-  }
+    component: WhoDidThisComponent,
+  },
 ];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class WhoDidThisRoutingModule { }
+export class WhoDidThisRoutingModule {}

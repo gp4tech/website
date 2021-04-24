@@ -1,60 +1,75 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>GP4Tech</title>
+    <base href="/" />
 
-<head>
-  <meta charset="utf-8">
-  <title>GP4Tech</title>
-  <base href="/">
+    <!-- <meta name="robots" content="noindex"> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="GP4Tech is a tech community, where women involved in tech share their knowledge and experience. Our goal is to encourage and motivate more women to participate in the tech area, through talks and activities, organized by Jala engineers."
+    />
+    <meta
+      name="keywords"
+      content="GP4Tech, Girl Power, Girl Power For Technology"
+    />
+    <meta name="og:title" content="GP4Tech" />
+    <meta name="og:image" content="assets/images/gp4tech.png" />
+    <meta name="og:site_name" content="GP4Tech" />
+    <meta
+      name="og:description"
+      content="GP4Tech is a tech community, where women involved in tech share their knowledge and experience. Our goal is to encourage and motivate more women to participate in the tech area, through talks and activities, organized by Jala engineers."
+    />
+    <meta
+      name="google-site-verification"
+      content="0HhsyYZC6FG6au_jVBr_qEPbCjnwfLb77zOfKo-FLUc"
+    />
+    <link rel="icon" type="image/x-icon" href="favicon.ico?v=GP4Tech" />
+    <link rel="canonical" href="https://gp4tech.com" />
+    <script>
+      var gaProp;
+      var trackingMode = 'auto';
 
-  <!-- <meta name="robots" content="noindex"> -->
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description"
-    content="GP4Tech is a tech community, where women involved in tech share their knowledge and experience. Our goal is to encourage and motivate more women to participate in the tech area, through talks and activities, organized by Jala engineers.">
-  <meta name="keywords" content="GP4Tech, Girl Power, Girl Power For Technology">
-  <meta name="og:title" content="GP4Tech">
-  <meta name="og:image" content="assets/images/gp4tech.png">
-  <meta name="og:site_name" content="GP4Tech">
-  <meta name="og:description"
-    content="GP4Tech is a tech community, where women involved in tech share their knowledge and experience. Our goal is to encourage and motivate more women to participate in the tech area, through talks and activities, organized by Jala engineers.">
-  <meta name="google-site-verification" content="0HhsyYZC6FG6au_jVBr_qEPbCjnwfLb77zOfKo-FLUc">
-  <link rel="icon" type="image/x-icon" href="favicon.ico?v=GP4Tech">
-  <link rel="canonical" href="https://gp4tech.com">
-  <script>
-    var gaProp;
-    var trackingMode = 'auto';
+      switch (window.location.hostname) {
+        case 'localhost':
+          gaProp = 'UA-142635114-2'; // development
+          trackingMode = 'none';
+          break;
+        case 'gp4tech.com':
+          gaProp = 'UA-142635114-1'; // production
+          break;
+        default:
+          gaProp = 'UA-142635114-2'; // development
+      }
 
-    switch (window.location.hostname) {
-      case 'localhost':
-        gaProp = 'UA-142635114-2'; // development
-        trackingMode = 'none';
-        break;
-      case 'gp4tech.com':
-        gaProp = 'UA-142635114-1'; // production
-        break;
-      default:
-        gaProp = 'UA-142635114-2'; // development
-    }
+      (function (i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r;
+        (i[r] =
+          i[r] ||
+          function () {
+            (i[r].q = i[r].q || []).push(arguments);
+          }),
+          (i[r].l = 1 * new Date());
+        (a = s.createElement(o)), (m = s.getElementsByTagName(o)[0]);
+        a.async = 1;
+        a.src = g;
+        m.parentNode.insertBefore(a, m);
+      })(
+        window,
+        document,
+        'script',
+        'https://www.google-analytics.com/analytics.js',
+        'ga',
+      );
 
-    (function (i, s, o, g, r, a, m) {
-      i['GoogleAnalyticsObject'] = r;
-      i[r] = i[r] || function () {
-        (i[r].q = i[r].q || []).push(arguments)
-      }, i[r].l = 1 * new Date();
-      a = s.createElement(o),
-        m = s.getElementsByTagName(o)[0];
-      a.async = 1;
-      a.src = g;
-      m.parentNode.insertBefore(a, m)
-    })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+      ga('create', gaProp, trackingMode);
+      // ga('send', 'pageview'); // Angulartics sets this when start to track.
+    </script>
+  </head>
 
-    ga('create', gaProp, trackingMode);
-    // ga('send', 'pageview'); // Angulartics sets this when start to track.
-
-  </script>
-</head>
-
-<body>
-  <gp-root></gp-root>
-</body>
-
+  <body>
+    <gp-root></gp-root>
+  </body>
 </html>

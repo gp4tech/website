@@ -5,20 +5,24 @@ import { HttpClientModule } from '@angular/common/http';
 import { ActivityIndicatorsService } from './activity-indicators.service';
 
 const angularFirestoreMock = {
-  collection: () => {}
+  collection: () => {},
 };
 
 describe('ActivityIndicatorsService', () => {
-  beforeEach(() => TestBed.configureTestingModule({
-    imports: [HttpClientModule],
-    providers: [
-      ActivityIndicatorsService,
-      { provide: AngularFirestore, useValue: angularFirestoreMock },
-    ]
-  }));
+  beforeEach(() =>
+    TestBed.configureTestingModule({
+      imports: [HttpClientModule],
+      providers: [
+        ActivityIndicatorsService,
+        { provide: AngularFirestore, useValue: angularFirestoreMock },
+      ],
+    }),
+  );
 
   it('should be created', () => {
-    const service: ActivityIndicatorsService = TestBed.get(ActivityIndicatorsService);
+    const service: ActivityIndicatorsService = TestBed.get(
+      ActivityIndicatorsService,
+    );
     expect(service).toBeTruthy();
   });
 });
